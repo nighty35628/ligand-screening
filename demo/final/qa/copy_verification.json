@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "scope": "Humanizer copy-only revision",
+  "four_stages": true,
+  "methods_panel": true,
+  "viewports": [
+    1440,
+    390,
+    320
+  ],
+  "no_page_overflow": true,
+  "metrics_unchanged": true,
+  "errors": []
+}
