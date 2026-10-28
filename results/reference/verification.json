@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "pools": 15,
+  "methods": [
+    "random",
+    "paired_RF",
+    "paired_RF_CI",
+    "paired_ET",
+    "direct_Q_ET",
+    "equal_rank"
+  ],
+  "rows": 90,
+  "independent_max_absolute_error": 4.440892098500626e-16,
+  "raw_labels_recomputed": true,
+  "ties_enumerated_exactly": true,
+  "all_predictions_sealed_before_evaluation": true,
+  "retrospective": true,
+  "new_blind_confirmation": false
+}

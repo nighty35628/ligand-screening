@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "checked_pool_budget_states": 75,
+  "strategy_selections_checked": 450,
+  "source": "unified_verified_results",
+  "new_fits": 0,
+  "offline_file_protocol": true,
+  "external_network_requests": 0,
+  "browser_errors": [],
+  "desktop_viewport": [
+    1440,
+    1000
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "mobile_page_overflow": false,
+  "keyboard_candidate_selection": true,
+  "hidden_on_pool_or_budget_change": true
+}

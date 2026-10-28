@@ -1,0 +1,64 @@
+{
+  "support_replacement": false,
+  "primary_comparisons": [
+    {
+      "scope": "all",
+      "method": "equal_rank",
+      "baseline": "paired_ET",
+      "AUR_improvement": 0.01159520896781624,
+      "replicate_improvement": [
+        0.0035831932583384614,
+        -0.0008538951365176795,
+        0.03205632878162794
+      ],
+      "wins_ties_losses": [
+        4,
+        6,
+        5
+      ],
+      "leave_one_pool_out_min_improvement": 0.0017039770894714961,
+      "B3_Q_improvement": -0.006730250222538133
+    },
+    {
+      "scope": "all",
+      "method": "equal_rank",
+      "baseline": "direct_Q_ET",
+      "AUR_improvement": 0.027717346527814223,
+      "replicate_improvement": [
+        0.040820048596602085,
+        -0.012762851055372153,
+        0.05509484204221275
+      ],
+      "wins_ties_losses": [
+        10,
+        3,
+        2
+      ],
+      "leave_one_pool_out_min_improvement": 0.01550401115285908,
+      "B3_Q_improvement": 0.01096927356975465
+    }
+  ],
+  "criteria": [
+    {
+      "baseline": "paired_ET",
+      "mean_AUR_positive": true,
+      "at_least_two_partitions_positive": true,
+      "all_leave_one_pool_out_positive": true,
+      "B3_Q_noninferior": false
+    },
+    {
+      "baseline": "direct_Q_ET",
+      "mean_AUR_positive": true,
+      "at_least_two_partitions_positive": true,
+      "all_leave_one_pool_out_positive": true,
+      "B3_Q_noninferior": true
+    }
+  ],
+  "retrospective": true,
+  "independent_confirmation": false,
+  "new_fits": 0,
+  "weights": [
+    0.5,
+    0.5
+  ]
+}

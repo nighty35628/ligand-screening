@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>先测哪个配体？ · 配体优选</title>
+  <style>/*__STYLE__*/</style>
+</head>
+<body>
+<a class="skip" href="#candidates">跳到候选配体</a>
+<header class="masthead">
+  <div class="brand">配体优选 <span>/ CsPbBr₃ 纳米晶</span></div>
+  <span class="evidence-tag">90 种公开实测配体 · 回顾性验证</span>
+</header>
+<main>
+  <section class="intro">
+    <h1>先测哪个配体？</h1>
+    <p>为 CsPbBr₃ 钙钛矿纳米晶寻找更好的发光配体。从历史结构与用量响应中学习，用两路判断合成一份推荐名单，帮助实验团队安排优先测试的配体。</p>
+    <ol class="journey" aria-label="演示流程"><li><a href="#candidates">看候选</a></li><li><a href="#prediction">看两路预测</a></li><li><a href="#comparison">看融合与对照</a></li><li><a href="#reveal">揭晓实测</a></li></ol>
+  </section>
+  <section id="overview" class="overview" aria-label="全部候选池的验证结果"></section>
+  <section class="controls" aria-label="回放设置">
+    <label>固定候选池<select id="pool-select"></select></label>
+    <label>推荐预算<select id="budget-select"><option value="1">1 个配体</option><option value="2">2 个配体</option><option value="3" selected>3 个配体</option><option value="4">4 个配体</option><option value="5">5 个配体</option></select></label>
+    <div class="pool-context"><span id="pool-context"></span><small>同一历史数据与候选池 · 每个名额为一种配体</small></div>
+    <button id="reveal-button" class="primary">揭晓实测结果 <span aria-hidden="true">↗</span></button>
+  </section>
+  <div id="status" class="status" role="status" aria-live="polite"></div>
+  <section class="workspace">
+    <div class="candidates" id="candidates">
+      <div class="section-title"><h2>01 <span>候选配体</span></h2><span>点击一行查看结构与预测</span></div>
+      <p class="small">按融合排名排列。名次越小越优；同分次序固定为已有 seed 42 回放。</p>
+      <div class="table-scroll"><table><caption class="sr-only">18 个候选配体的预测名次</caption><thead><tr><th scope="col">配体</th><th scope="col" class="pair-color">成对</th><th scope="col" class="direct-color">直接</th><th scope="col" class="fusion-color">融合</th><th scope="col">实测 Q</th></tr></thead><tbody id="candidate-rows"></tbody></table></div>
+      <p class="small table-note">配体编号沿用公开档案。两路名次来自预测 Q，融合名次值是两路名次的平均。</p>
+    </div>
+    <section class="detail" id="prediction" aria-label="选中配体的预测详情"><div id="ligand-detail"></div></section>
+  </section>
+  <section id="comparison" class="comparison">
+    <div class="section-title"><h2>02 <span>同样的预算，比较六种选择</span></h2><span id="budget-caption"></span></div>
+    <p class="small">融合固定为两路名次各占 50%。同时保留随机选择、成对 RF 的两种选择规则，以及两个 ET 单模型，所有方法共享历史数据和推荐预算。</p>
+    <div id="strategy-grid" class="strategy-grid"></div>
+  </section>
+  <section id="reveal" class="reveal-section">
+    <div class="section-title"><h2>03 <span>揭晓后，比较选得怎样</span></h2><span id="reveal-state"></span></div>
+    <div id="outcomes"></div>
+  </section>
+  <section class="method-notes">
+    <h2>这段演示应该怎么理解</h2>
+    <div class="notes-grid"><p><strong>我们改的是筛选决策。</strong>成对 ET 从参考配体推断 40 个用量点，再计算 Q；直接评分 ET 直接预测 Q。两路名次等权融合，优先测试共同看好的候选。</p><p><strong>Q 衡量什么？</strong>40 个用量点中，最高 4 个实测相对发光指标 FOM 的平均。它不是绝对光致发光量子产率，也不是最高单点发光值。</p><p><strong>这不是一场新实验。</strong>预测与答案都来自已核验档案；“揭晓”只控制界面显示。这里展示一次固定候选池筛选，没有现场训练，也不模拟多轮主动学习。</p></div>
+    <details><summary>查看数据来源与评估口径</summary><div id="provenance"></div></details>
+  </section>
+</main>
+<footer>配体优选 · 固定模型回放 · 本页面不现场训练 <a href="#">回到顶部 ↑</a></footer>
+<script id="demo-data" type="application/json">/*__DATA__*/</script>
+<script>/*__APP__*/</script>
+</body>
+</html>

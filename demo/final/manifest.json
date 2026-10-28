@@ -1,0 +1,14 @@
+{
+  "source_run": "outputs/project-unified-20261028",
+  "source_delivery_sha256": "1ebb3edaa1ff781a9536213f3357f52c09929e7c62d14d0ccea8cfd32bace617",
+  "structure_source": "demo/data.json",
+  "structure_source_sha256": "2ea575d393e3445cdc904ea613ed5630e9448b0ca59ac5529bb10aeb943511a0",
+  "export_new_fits": 0,
+  "files": {
+    "index.html": "232914c20dbce19f9e8a357905198e69d35a24464efb6ec29f3caa5a043e6352",
+    "data.json": "1bccc8f19e9ad932373157b2d7410705fe74de66b3c661de0230db5b04637666",
+    "template.html": "2c746bf8b6ace8e96ade7624ddf50d2db15702ae2ad2c248e282d4b0233a79bd",
+    "style.css": "676caa3015cf1e05d80f5e25590ed82fbcd70d03b345577869022b59f6e771b2",
+    "app.js": "0d17b37b458cf501e1709d58dc1807d6246db631de187449af0b91aaa9c6e1d0"
+  }
+}

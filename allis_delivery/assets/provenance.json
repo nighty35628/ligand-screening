@@ -1,0 +1,189 @@
+{
+  "data_url": "https://raw.githubusercontent.com/qai222/ALLiS/1796d18496c669d554fa165a88d83e7b3cd9a905/workplace/OneLigand/learning_AL0503/reaction_collection_train_AL0503.json.gz",
+  "paper_doi": "10.1021/acsnano.4c02094",
+  "source_commit": "1796d18496c669d554fa165a88d83e7b3cd9a905",
+  "raw_sha256": "69551e9f1b0e37a74df6089ca8e6e5db9f3560c0e2dac54e09e47634528c8241",
+  "original_features": "Author-provided precomputed 42 descriptors; new SMILES descriptor generation is out of scope",
+  "morgan": "RDKit count Morgan radius=2 fpSize=2048 includeChirality=False; precomputed",
+  "evaluation": "Retrospective, repeatedly observed 90-ligand archive; no new blind test or wet experiment",
+  "sources": {
+    "data/inputs.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/inputs.npz",
+      "sha256": "d41f9e9073dc425c44b5e42730f6e915ae425bfa36892c8fcfe59509e0be3f1d"
+    },
+    "data/metadata.json": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/metadata.json",
+      "sha256": "eba0393701d639a113f1eb19093982743eeb79903f28c66c508f1a862f221cf5"
+    },
+    "data/splits.json": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/splits.json",
+      "sha256": "0fdfedb0e26fad0ee2c52751ce2cd3d7f364fd84650fe90c0b36291954f08b8b"
+    },
+    "data/reaction_collection_train_AL0503.json.gz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/evidence/reaction_collection_train_AL0503.json.gz",
+      "sha256": "69551e9f1b0e37a74df6089ca8e6e5db9f3560c0e2dac54e09e47634528c8241"
+    },
+    "data/pairs_r0_f0.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r0_f0.npz",
+      "sha256": "70551217a00f1cfa73955d45081317ce70166602f4323f46874175a25fb0549d"
+    },
+    "cache/r0_f0.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r0_f0_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "74b1b9298934f39289fdc1a997d1bdfe380679515e9c7ed3d469adc7e0f0586d",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r0_f0_Q_ET_morgan.npz",
+      "direct_source_sha256": "f4c2ff18b834a0b06c4da8da71ae50613515c52de85a5bb8344d41d5ababbe48"
+    },
+    "data/pairs_r0_f1.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r0_f1.npz",
+      "sha256": "e5d200ac1421db751486106f853d05e7af116b98e984e4427c769afd4344a789"
+    },
+    "cache/r0_f1.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r0_f1_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "33fdacd9a606c690eec2d5e081824f17c5bc957501190c3353e580a0868b1bb8",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r0_f1_Q_ET_morgan.npz",
+      "direct_source_sha256": "765ca78f3211216c82d4fcb9d1d520fbba31729d851e63ccbdb9321c3f78149a"
+    },
+    "data/pairs_r0_f2.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r0_f2.npz",
+      "sha256": "bb41f81ee0b1dc7952ea3993fbcf607b633035143b5321861ec6978cd2386abc"
+    },
+    "cache/r0_f2.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r0_f2_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "bd4a6cec8070cad85f1b1b439c5b8544d99be719a4d574b004288ec3ddb33e78",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r0_f2_Q_ET_morgan.npz",
+      "direct_source_sha256": "6649ed9305a410c0907ef490b6f4dd3b9ec3931a91fb3f0a75c9aa4446ca84d4"
+    },
+    "data/pairs_r0_f3.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r0_f3.npz",
+      "sha256": "dc5c700d96f18eee90ea9906ea7e156f6e8a7b668e394f2547ae4c5a412868f1"
+    },
+    "cache/r0_f3.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r0_f3_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "4735137ac9ffc2b12663e007405f2e7f86325d36f4a5f99bd0aaab298064bb3a",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r0_f3_Q_ET_morgan.npz",
+      "direct_source_sha256": "8a35197bd236aceee62fc7f0e16f1150ff077444e4331b2b289da51cfcac8b4a"
+    },
+    "data/pairs_r0_f4.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r0_f4.npz",
+      "sha256": "54c3767e0cc9d0a95617920ddbf6d8417bb2abb3d6a76ce6a3d111e57de9c5d2"
+    },
+    "cache/r0_f4.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r0_f4_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "dde26a5adb37400c2de281f3b3d6dfd2c4088d3737e7cd3fb6227940e4d892c8",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r0_f4_Q_ET_morgan.npz",
+      "direct_source_sha256": "e8f331a3f29ae7f0a689398aa554a2c742b3ef3e2603f3c7b6961dc9d1042540"
+    },
+    "data/pairs_r1_f0.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r1_f0.npz",
+      "sha256": "e5d200ac1421db751486106f853d05e7af116b98e984e4427c769afd4344a789"
+    },
+    "cache/r1_f0.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r1_f0_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "c449a34f3a40b47df7158e9ba30c61bae72afc386f54ee8ca0d3f305073ba6bb",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r1_f0_Q_ET_morgan.npz",
+      "direct_source_sha256": "ab23e15e58d8bc6c749e725e89c049a93ce369a12c803018954b807a6b1ca16b"
+    },
+    "data/pairs_r1_f1.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r1_f1.npz",
+      "sha256": "bb41f81ee0b1dc7952ea3993fbcf607b633035143b5321861ec6978cd2386abc"
+    },
+    "cache/r1_f1.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r1_f1_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "496fc89339a18494c6cf34b826037c5b69deefc80b6bffd57bc4799b914c43cb",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r1_f1_Q_ET_morgan.npz",
+      "direct_source_sha256": "a7d501f9ca643ec32f38ffe5276b06d3550c16d7ba0625e7e575ff7adb5f83ae"
+    },
+    "data/pairs_r1_f2.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r1_f2.npz",
+      "sha256": "dc5c700d96f18eee90ea9906ea7e156f6e8a7b668e394f2547ae4c5a412868f1"
+    },
+    "cache/r1_f2.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r1_f2_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "70a1c8534ea8cb063a0fb4045f8427ca3e73f7f51aff9e8e9596ac3abcc53ef7",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r1_f2_Q_ET_morgan.npz",
+      "direct_source_sha256": "1069c373a6200b46c2762726b498f696362b0be4cac5140cc8ad2964326c7a5d"
+    },
+    "data/pairs_r1_f3.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r1_f3.npz",
+      "sha256": "54c3767e0cc9d0a95617920ddbf6d8417bb2abb3d6a76ce6a3d111e57de9c5d2"
+    },
+    "cache/r1_f3.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r1_f3_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "39ec91f131f33a3c94d23f75143b3375aeb159f2134c3b5622eafeea9187ad9e",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r1_f3_Q_ET_morgan.npz",
+      "direct_source_sha256": "0a6ac3193885956ee2a0575aa23a6593e142d5cf8f82888a0d0de57a8ed7c06b"
+    },
+    "data/pairs_r1_f4.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r1_f4.npz",
+      "sha256": "adc2c4789e1a638fa784b36d7d3609fe21691f633aff7e301eb48c039358dcac"
+    },
+    "cache/r1_f4.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r1_f4_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "45d8c74905001247978474a943ba372f0d55b6188138a2a25a904f9bbe648a16",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r1_f4_Q_ET_morgan.npz",
+      "direct_source_sha256": "e4fc0fd542ceb63f316975fd80c6a88dc3dab5cfd2d9af56f66635b410e8b139"
+    },
+    "data/pairs_r2_f0.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r2_f0.npz",
+      "sha256": "bb41f81ee0b1dc7952ea3993fbcf607b633035143b5321861ec6978cd2386abc"
+    },
+    "cache/r2_f0.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r2_f0_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "c3703c0b12d2f5a993ed1c1ce14154606a15ac82047c6601e400e3d8dcda6f80",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r2_f0_Q_ET_morgan.npz",
+      "direct_source_sha256": "a0d75e1dd965c17000db00197a2009d085fe2ded867f2f04f1b403eb56104354"
+    },
+    "data/pairs_r2_f1.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r2_f1.npz",
+      "sha256": "dc5c700d96f18eee90ea9906ea7e156f6e8a7b668e394f2547ae4c5a412868f1"
+    },
+    "cache/r2_f1.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r2_f1_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "3dfd2a4f1886a4e97dbc192ee4f6ca48a0f4643046b892fd864f0aa4bcd872ce",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r2_f1_Q_ET_morgan.npz",
+      "direct_source_sha256": "205c37baf0cb52241325004bdf1668a5e61dcc03b3835e1575ecca3acdb73343"
+    },
+    "data/pairs_r2_f2.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r2_f2.npz",
+      "sha256": "54c3767e0cc9d0a95617920ddbf6d8417bb2abb3d6a76ce6a3d111e57de9c5d2"
+    },
+    "cache/r2_f2.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r2_f2_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "e6a358bb28eac3c6e964ee153ae4543b460cd123451a0364bb010d0eacffe217",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r2_f2_Q_ET_morgan.npz",
+      "direct_source_sha256": "fc193e14332e429705b5ee1306e00bba54035689e0e1faf7e787022e4fa7e1a4"
+    },
+    "data/pairs_r2_f3.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r2_f3.npz",
+      "sha256": "adc2c4789e1a638fa784b36d7d3609fe21691f633aff7e301eb48c039358dcac"
+    },
+    "cache/r2_f3.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r2_f3_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "4ccec615d464a329cb96a2789069bf1f32fd7d75fad7cfacbb6cb4eab68b85c2",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r2_f3_Q_ET_morgan.npz",
+      "direct_source_sha256": "5333813570e086685e450020db42f730d7eaf88a93394c5b7778f0aaded29e83"
+    },
+    "data/pairs_r2_f4.npz": {
+      "original_project_path": "research/2026-10-24/allis_family_hierarchy_validation/pairs_r2_f4.npz",
+      "sha256": "4e79b7500f5520c2c2d4383d3605d1a4084c183f6aee26c944d39917c9b46a65"
+    },
+    "cache/r2_f4.npz": {
+      "paired_source": "research/2026-10-24/allis_goal_search/target_alignment_audit/results/r2_f4_twin_ET_48_morgan.npz",
+      "paired_source_sha256": "c472188f37a90312003aa1f3127bb06714f6293505aa163454efd32b75bb8af1",
+      "direct_source": "research/2026-10-24/allis_family_hierarchy_validation/results/r2_f4_Q_ET_morgan.npz",
+      "direct_source_sha256": "71b9c253d8c8a1beabdb983fda2d10e5f0a76ec161f535d525567ae227cd6337"
+    },
+    "reference/metrics.json": {
+      "original_project_path": "research/2026-10-24/allis_equal_rank_fusion/results/metrics.json",
+      "sha256": "ccd38239669dd93e9d1715c0687d58d3a62290fe2bdb2641045489e93a998ee0"
+    },
+    "reference/ranks.json": {
+      "original_project_path": "research/2026-10-24/allis_equal_rank_fusion/results/ranks.json",
+      "sha256": "21f9f5f1acaddcada57f10c103e6ecdc944d167164ad7f4f034c374cee62ce81"
+    },
+    "reference/research_decision.json": {
+      "original_project_path": "research/2026-10-24/allis_equal_rank_fusion/results/decision.json",
+      "sha256": "93d63bd92405b79e7cc762ab6af05643673ba2737609acdad708ae04c285f8a6"
+    }
+  }
+}

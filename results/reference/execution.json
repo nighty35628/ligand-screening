@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "completed_splits": [
+    "r0_f0",
+    "r0_f1",
+    "r0_f2",
+    "r0_f3",
+    "r0_f4",
+    "r1_f0",
+    "r1_f1",
+    "r1_f2",
+    "r1_f3",
+    "r1_f4",
+    "r2_f0",
+    "r2_f1",
+    "r2_f2",
+    "r2_f3",
+    "r2_f4"
+  ],
+  "mode": "baseline-retrain",
+  "new_fits": 15,
+  "seconds": 117.96561333299906,
+  "failed_attempts": 0,
+  "failure": null,
+  "historical_ET_fits": 30,
+  "historical_RF_reference_fits": 15,
+  "hyperparameter_search": false
+}

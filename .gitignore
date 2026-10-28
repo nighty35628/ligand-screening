@@ -1,0 +1,15 @@
+# Local environments and generated runs
+.venv*/
+outputs/
+__pycache__/
+*.py[cod]
+*.joblib
+.DS_Store
+.env
+.env.*
+!.env.example
+.pytest_cache/
+# Research history and local submission material are intentionally excluded
+research/
+submission/
+tmp/

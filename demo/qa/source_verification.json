@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "source_seal_verified": true,
+  "inline_payload_matches_export": true,
+  "export_hashes_verified": true,
+  "molecule_id_structure_truth_checks": 90,
+  "prediction_rank_selection_pool_checks": 15,
+  "summary_exact_match": true,
+  "new_fits": 0,
+  "html_sha256": "f7bde632dcea9bff96ea85d0cf9edf5c6086fea536587476b2c2b372f413f7ae"
+}

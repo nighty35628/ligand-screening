@@ -1,0 +1,17 @@
+{
+  "new_fits": 0,
+  "source_run": "outputs/allis_retrain_verified",
+  "source_delivery_seal_sha256": "3ef2d0e654d7ef2f3846fce3293122e32cebbc66dfece4907d75dabd1d8cd264",
+  "source_verification_sha256": "5851166177e9172cd2866c87c925e9b9e2c0785abd17b3640f187bff9732fe1b",
+  "rdkit_version": "2025.09.6",
+  "pool_count": 15,
+  "molecule_count": 90,
+  "files": {
+    "index.html": "f7bde632dcea9bff96ea85d0cf9edf5c6086fea536587476b2c2b372f413f7ae",
+    "data.json": "2ea575d393e3445cdc904ea613ed5630e9448b0ca59ac5529bb10aeb943511a0",
+    "template.html": "4b30f4740bd32fe6568b0596d624efcdc690e7c658b733763e5eb048f40fcb5d",
+    "style.css": "894467c245d58cb1a3953a141aa878bd68c9bf189b5c19f850477a0da959ddda",
+    "app.js": "6a101c2569f0e1bc8bcdb384515f1b07a2949bfba5084602d0cb21bd23e2b2cd",
+    "build_demo.py": "64f23623ffef444920c92e5311af3ca5d950e65b809a1190eb24cc007c698c83"
+  }
+}

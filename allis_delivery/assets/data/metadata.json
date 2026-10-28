@@ -1,0 +1,6024 @@
+{
+  "molecules": [
+    {
+      "id": "InChI=1S/C10H22S2/c11-9-7-5-3-1-2-4-6-8-10-12/h11-12H,1-10H2",
+      "smiles": "SCCCCCCCCCCS",
+      "group_key": "SCCCCCCCCCCS",
+      "batch_names": [
+        "2022_0525_SL10_0020_0002_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "10",
+      "head_types": [
+        "thiol_S"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C10H6N2O4/c13-11(14)9-5-1-3-7-8(9)4-2-6-10(7)12(15)16/h1-6H",
+      "smiles": "O=[N+]([O-])c1cccc2c([N+](=O)[O-])cccc12",
+      "group_key": "O=[N+]([O-])c1cccc2c([N+](=O)[O-])cccc12",
+      "batch_names": [
+        "2023-05-03_AL07003_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "",
+      "head_types": [],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C10H8N2/c1-3-7-11-9(5-1)10-6-2-4-8-12-10/h1-8H",
+      "smiles": "c1ccc(-c2ccccn2)nc1",
+      "group_key": "c1ccc(-c2ccccn2)nc1",
+      "batch_names": [
+        "2022_0520_SL07_0013_0021_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "2",
+      "head_types": [
+        "aza_aromatic_N"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C10H8O3/c1-6-7-4-2-3-5-8(7)13-9(6)10(11)12/h2-5H,1H3,(H,11,12)",
+      "smiles": "Cc1c(C(=O)O)oc2ccccc12",
+      "group_key": "Cc1c(C(=O)O)oc2ccccc12",
+      "batch_names": [
+        "2023-05-03_AL07001_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "4,7",
+      "head_types": [
+        "carboxylic_acid_group",
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C10H9F3O2/c11-10(12,13)8-4-2-1-3-7(8)5-6-9(14)15/h1-4H,5-6H2,(H,14,15)",
+      "smiles": "O=C(O)CCc1ccccc1C(F)(F)F",
+      "group_key": "O=C(O)CCc1ccccc1C(F)(F)F",
+      "batch_names": [
+        "2022_1024_AL1_03_st0008_st0012_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "4",
+      "head_types": [
+        "carboxylic_acid_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C11H11NO/c13-10-5-4-8-2-1-3-9-6-7-12(10)11(8)9/h1-3H,4-7H2",
+      "smiles": "O=C1CCc2cccc3c2N1CC3",
+      "group_key": "O=C1CCc2cccc3c2N1CC3",
+      "batch_names": [
+        "2022_1212_AL02001_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "6",
+      "head_types": [
+        "other_carbonyl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C11H15BrO2/c1-3-13-11(14-4-2)9-5-7-10(12)8-6-9/h5-8,11H,3-4H2,1-2H3",
+      "smiles": "CCOC(OCC)c1ccc(Br)cc1",
+      "group_key": "CCOC(OCC)c1ccc(Br)cc1",
+      "batch_names": [
+        "2023-05-03_AL07003_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "7",
+      "head_types": [
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C11H18O2/c12-7-10-2-8-1-9(3-10)5-11(13,4-8)6-10/h8-9,12-13H,1-7H2",
+      "smiles": "OCC12CC3CC(CC(O)(C3)C1)C2",
+      "group_key": "OCC12CC3CC(CC(O)(C3)C1)C2",
+      "batch_names": [
+        "2022_1212_AL02001_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "8",
+      "head_types": [
+        "alcohol_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C11H7F2N/c12-8-4-5-9(10(13)7-8)11-3-1-2-6-14-11/h1-7H",
+      "smiles": "Fc1ccc(-c2ccccn2)c(F)c1",
+      "group_key": "Fc1ccc(-c2ccccn2)c(F)c1",
+      "batch_names": [
+        "2023-03-31-AL06004-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "2",
+      "head_types": [
+        "aza_aromatic_N"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C11H7F3N2O2/c12-11(13,14)9-8(10(17)18)6-15-16(9)7-4-2-1-3-5-7/h1-6H,(H,17,18)",
+      "smiles": "O=C(O)c1cnn(-c2ccccc2)c1C(F)(F)F",
+      "group_key": "O=C(O)c1cnn(-c2ccccc2)c1C(F)(F)F",
+      "batch_names": [
+        "2023-03-02-AL05001-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "2,4",
+      "head_types": [
+        "aza_aromatic_N",
+        "carboxylic_acid_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C11H8O2/c12-7-10-9-4-2-1-3-8(9)5-6-11(10)13/h1-7,13H",
+      "smiles": "O=Cc1c(O)ccc2ccccc12",
+      "group_key": "O=Cc1c(O)ccc2ccccc12",
+      "batch_names": [
+        "2022_1025_AL1_05_st0010_st0015_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "6,9",
+      "head_types": [
+        "other_carbonyl_O",
+        "phenol_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H16F3O3P/c1-3-17-19(16,18-4-2)9-10-5-7-11(8-6-10)12(13,14)15/h5-8H,3-4,9H2,1-2H3",
+      "smiles": "CCOP(=O)(Cc1ccc(C(F)(F)F)cc1)OCC",
+      "group_key": "CCOP(=O)(Cc1ccc(C(F)(F)F)cc1)OCC",
+      "batch_names": [
+        "2022_1025_AL1_06_st0016_st0017_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "12",
+      "head_types": [
+        "phosphoryl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H17BrO2/c1-4-14-12(3,15-5-2)10-6-8-11(13)9-7-10/h6-9H,4-5H2,1-3H3",
+      "smiles": "CCOC(C)(OCC)c1ccc(Br)cc1",
+      "group_key": "CCOC(C)(OCC)c1ccc(Br)cc1",
+      "batch_names": [
+        "2023-03-31-AL06004-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "7",
+      "head_types": [
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H17N/c1-2-4-11(5-3-1)10-12-6-8-13-9-7-12/h1-5,12-13H,6-10H2",
+      "smiles": "c1ccc(CC2CCNCC2)cc1",
+      "group_key": "c1ccc(CC2CCNCC2)cc1",
+      "batch_names": [
+        "2022_1222_AL03001_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H19O3P/c1-4-14-16(13,15-5-2)10-12-8-6-11(3)7-9-12/h6-9H,4-5,10H2,1-3H3",
+      "smiles": "CCOP(=O)(Cc1ccc(C)cc1)OCC",
+      "group_key": "CCOP(=O)(Cc1ccc(C)cc1)OCC",
+      "batch_names": [
+        "2023-05-03_AL07006_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "12",
+      "head_types": [
+        "phosphoryl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H24O2/c1-2-3-4-5-6-7-8-9-10-11-12(13)14/h2-11H2,1H3,(H,13,14)",
+      "smiles": "CCCCCCCCCCCC(=O)O",
+      "group_key": "CCCCCCCCCCCC(=O)O",
+      "batch_names": [
+        "2022_0525_SL09_0000_0001_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "4",
+      "head_types": [
+        "carboxylic_acid_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H26O/c1-3-5-7-9-11-13-12-10-8-6-4-2/h3-12H2,1-2H3",
+      "smiles": "CCCCCCOCCCCCC",
+      "group_key": "CCCCCCOCCCCCC",
+      "batch_names": [
+        "2022_0907_AL1_04_mf0007_mt0008_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "7",
+      "head_types": [
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H27N/c1-2-3-4-5-6-7-8-9-10-11-12-13/h2-13H2,1H3",
+      "smiles": "CCCCCCCCCCCCN",
+      "group_key": "CCCCCCCCCCCCN",
+      "batch_names": [
+        "2022_0525_SL11_0005_0022_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H27N/c1-4-7-10-13(11-8-5-2)12-9-6-3/h4-12H2,1-3H3",
+      "smiles": "CCCCN(CCCC)CCCC",
+      "group_key": "CCCCN(CCCC)CCCC",
+      "batch_names": [
+        "2022_0520_SL05_0018_0014_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H27O3P/c1-2-3-4-5-6-7-8-9-10-11-12-16(13,14)15/h2-12H2,1H3,(H2,13,14,15)",
+      "smiles": "CCCCCCCCCCCCP(=O)(O)O",
+      "group_key": "CCCCCCCCCCCCP(=O)(O)O",
+      "batch_names": [
+        "2022_0520_SL06_0003_0010_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "12",
+      "head_types": [
+        "phosphoryl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H27O4P/c1-2-3-4-5-6-7-8-9-10-11-12-16-17(13,14)15/h2-12H2,1H3,(H2,13,14,15)",
+      "smiles": "CCCCCCCCCCCCOP(=O)(O)O",
+      "group_key": "CCCCCCCCCCCCOP(=O)(O)O",
+      "batch_names": [
+        "2023-03-31-AL06005-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "12",
+      "head_types": [
+        "phosphoryl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H8N2/c1-2-6-10-9(5-1)13-11-7-3-4-8-12(11)14-10/h1-8H",
+      "smiles": "c1ccc2nc3ccccc3nc2c1",
+      "group_key": "c1ccc2nc3ccccc3nc2c1",
+      "batch_names": [
+        "2023-03-31-AL06002-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "2",
+      "head_types": [
+        "aza_aromatic_N"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C12H8S2/c1-2-6-10-9(5-1)13-11-7-3-4-8-12(11)14-10/h1-8H",
+      "smiles": "c1ccc2c(c1)Sc1ccccc1S2",
+      "group_key": "c1ccc2c(c1)Sc1ccccc1S2",
+      "batch_names": [
+        "2023-03-31-AL06002-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "11",
+      "head_types": [
+        "other_neutral_S"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C13H11NO2/c15-13(16)11-8-4-5-9-12(11)14-10-6-2-1-3-7-10/h1-9,14H,(H,15,16)",
+      "smiles": "O=C(O)c1ccccc1Nc1ccccc1",
+      "group_key": "O=C(O)c1ccccc1Nc1ccccc1",
+      "batch_names": [
+        "2023-03-02-AL05003-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "1,4",
+      "head_types": [
+        "aniline_N",
+        "carboxylic_acid_group"
+      ],
+      "head_counts": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C13H12O3/c1-2-16-11-8-7-9-5-3-4-6-10(9)12(11)13(14)15/h3-8H,2H2,1H3,(H,14,15)",
+      "smiles": "CCOc1ccc2ccccc2c1C(=O)O",
+      "group_key": "CCOc1ccc2ccccc2c1C(=O)O",
+      "batch_names": [
+        "2023_0130_AL04004_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "4,7",
+      "head_types": [
+        "carboxylic_acid_group",
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C13H12O3/c1-2-16-13(15)11-7-9-5-3-4-6-10(9)8-12(11)14/h3-8,14H,2H2,1H3",
+      "smiles": "CCOC(=O)c1cc2ccccc2cc1O",
+      "group_key": "CCOC(=O)c1cc2ccccc2cc1O",
+      "batch_names": [
+        "2022_1222_AL03002_robot-013"
+      ],
+      "is_initial": false,
+      "head_signature": "5,9",
+      "head_types": [
+        "ester_group",
+        "phenol_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C13H18O2/c1-2-3-4-8-11-15-13(14)12-9-6-5-7-10-12/h5-7,9-10H,2-4,8,11H2,1H3",
+      "smiles": "CCCCCCOC(=O)c1ccccc1",
+      "group_key": "CCCCCCOC(=O)c1ccccc1",
+      "batch_names": [
+        "2023_0130_AL04003_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "5",
+      "head_types": [
+        "ester_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C13H18O5S/c1-10-4-6-12(7-5-10)19(14,15)17-9-11-8-16-13(2,3)18-11/h4-7,11H,8-9H2,1-3H3",
+      "smiles": "Cc1ccc(S(=O)(=O)OCC2COC(C)(C)O2)cc1",
+      "group_key": "Cc1ccc(S(=O)(=O)OCC2COC(C)(C)O2)cc1",
+      "batch_names": [
+        "2023-03-02-AL05006-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "7,13",
+      "head_types": [
+        "ether_or_aromatic_O",
+        "sulfonyl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C14H10O3/c15-10-5-1-3-8-7-9-4-2-6-11(16)13(9)14(17)12(8)10/h1-6,15-16H,7H2",
+      "smiles": "O=C1c2c(O)cccc2Cc2cccc(O)c21",
+      "group_key": "Oc1cccc2cc3cccc(O)c3c(O)c12",
+      "batch_names": [
+        "2023-03-02-AL05002-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "6,9",
+      "head_types": [
+        "other_carbonyl_O",
+        "phenol_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C14H11F3O/c15-14(16,17)12-8-4-7-11(9-12)13(18)10-5-2-1-3-6-10/h1-9,13,18H",
+      "smiles": "OC(c1ccccc1)c1cccc(C(F)(F)F)c1",
+      "group_key": "OC(c1ccccc1)c1cccc(C(F)(F)F)c1",
+      "batch_names": [
+        "2022_1024_AL1_02_mt0011_st0011_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "8",
+      "head_types": [
+        "alcohol_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C14H12N2/c1-9-3-5-11-7-8-12-6-4-10(2)16-14(12)13(11)15-9/h3-8H,1-2H3",
+      "smiles": "Cc1ccc2ccc3ccc(C)nc3c2n1",
+      "group_key": "Cc1ccc2ccc3ccc(C)nc3c2n1",
+      "batch_names": [
+        "2023-05-03_AL07004_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "2",
+      "head_types": [
+        "aza_aromatic_N"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C14H12O3/c15-14(16)12-8-4-5-9-13(12)17-10-11-6-2-1-3-7-11/h1-9H,10H2,(H,15,16)",
+      "smiles": "O=C(O)c1ccccc1OCc1ccccc1",
+      "group_key": "O=C(O)c1ccccc1OCc1ccccc1",
+      "batch_names": [
+        "2023-03-02-AL05005-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "4,7",
+      "head_types": [
+        "carboxylic_acid_group",
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C14H12O3/c15-14(16)13-9-5-4-6-11(13)10-17-12-7-2-1-3-8-12/h1-9H,10H2,(H,15,16)",
+      "smiles": "O=C(O)c1ccccc1COc1ccccc1",
+      "group_key": "O=C(O)c1ccccc1COc1ccccc1",
+      "batch_names": [
+        "2023-05-03_AL07004_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "4,7",
+      "head_types": [
+        "carboxylic_acid_group",
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C14H13NO/c16-14(13-9-5-2-6-10-13)15-11-12-7-3-1-4-8-12/h1-10H,11H2,(H,15,16)",
+      "smiles": "OC(=NCc1ccccc1)c1ccccc1",
+      "group_key": "O=C(NCc1ccccc1)c1ccccc1",
+      "batch_names": [
+        "2023_0130_AL04002_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "3",
+      "head_types": [
+        "imine_N"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C14H14O2/c1-3-7-13(8-4-1)15-11-12-16-14-9-5-2-6-10-14/h1-10H,11-12H2",
+      "smiles": "c1ccc(OCCOc2ccccc2)cc1",
+      "group_key": "c1ccc(OCCOc2ccccc2)cc1",
+      "batch_names": [
+        "2023_0130_AL04001_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "7",
+      "head_types": [
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C14H16O6/c1-3-18-12(15)9-20-14(17)11-8-6-5-7-10(11)13(16)19-4-2/h5-8H,3-4,9H2,1-2H3",
+      "smiles": "CCOC(=O)COC(=O)c1ccccc1C(=O)OCC",
+      "group_key": "CCOC(=O)COC(=O)c1ccccc1C(=O)OCC",
+      "batch_names": [
+        "2022_1222_AL03003_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "5",
+      "head_types": [
+        "ester_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C14H26N2/c1-3-4-5-6-7-8-9-10-12-16-13-11-15-14(16)2/h11,13H,3-10,12H2,1-2H3",
+      "smiles": "CCCCCCCCCCn1ccnc1C",
+      "group_key": "CCCCCCCCCCn1ccnc1C",
+      "batch_names": [
+        "2023-05-03_AL07005_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "2",
+      "head_types": [
+        "aza_aromatic_N"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C14H9F3O2/c15-14(16,17)10-7-5-9(6-8-10)11-3-1-2-4-12(11)13(18)19/h1-8H,(H,18,19)",
+      "smiles": "O=C(O)c1ccccc1-c1ccc(C(F)(F)F)cc1",
+      "group_key": "O=C(O)c1ccccc1-c1ccc(C(F)(F)F)cc1",
+      "batch_names": [
+        "2022_1025_AL1_06_st0016_st0017_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "4",
+      "head_types": [
+        "carboxylic_acid_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C15H12O3/c1-18-15(17)13-10-6-5-9-12(13)14(16)11-7-3-2-4-8-11/h2-10H,1H3",
+      "smiles": "COC(=O)c1ccccc1C(=O)c1ccccc1",
+      "group_key": "COC(=O)c1ccccc1C(=O)c1ccccc1",
+      "batch_names": [
+        "2023_0130_AL04002_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "5,6",
+      "head_types": [
+        "ester_group",
+        "other_carbonyl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C15H14O5/c1-19-9-3-5-11(13(16)7-9)15(18)12-6-4-10(20-2)8-14(12)17/h3-8,16-17H,1-2H3",
+      "smiles": "COc1ccc(C(=O)c2ccc(OC)cc2O)c(O)c1",
+      "group_key": "COc1ccc(C(=O)c2ccc(OC)cc2O)c(O)c1",
+      "batch_names": [
+        "2022_1212_AL02002_robot__mt0020__QA"
+      ],
+      "is_initial": false,
+      "head_signature": "6,7,9",
+      "head_types": [
+        "other_carbonyl_O",
+        "ether_or_aromatic_O",
+        "phenol_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C15H16N2O2S/c1-12-8-10-15(11-9-12)20(18,19)17-16-13(2)14-6-4-3-5-7-14/h3-11,17H,1-2H3",
+      "smiles": "CC(=NNS(=O)(=O)c1ccc(C)cc1)c1ccccc1",
+      "group_key": "CC(=NNS(=O)(=O)c1ccc(C)cc1)c1ccccc1",
+      "batch_names": [
+        "2022_1222_AL03004_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "3,13",
+      "head_types": [
+        "imine_N",
+        "sulfonyl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C15H17N/c16-12-11-15(13-7-3-1-4-8-13)14-9-5-2-6-10-14/h1-10,15H,11-12,16H2",
+      "smiles": "NCCC(c1ccccc1)c1ccccc1",
+      "group_key": "NCCC(c1ccccc1)c1ccccc1",
+      "batch_names": [
+        "2022_0520_SL03_0017_0004_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C15H18O6/c1-4-19-13(16)10-7-11(14(17)20-5-2)9-12(8-10)15(18)21-6-3/h7-9H,4-6H2,1-3H3",
+      "smiles": "CCOC(=O)c1cc(C(=O)OCC)cc(C(=O)OCC)c1",
+      "group_key": "CCOC(=O)c1cc(C(=O)OCC)cc(C(=O)OCC)c1",
+      "batch_names": [
+        "2022_1024_AL1_01_mt0010_st0007_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "5",
+      "head_types": [
+        "ester_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C15H24O2/c1-14(2,3)11-7-10(9-16)8-12(13(11)17)15(4,5)6/h7-8,16-17H,9H2,1-6H3",
+      "smiles": "CC(C)(C)c1cc(CO)cc(C(C)(C)C)c1O",
+      "group_key": "CC(C)(C)c1cc(CO)cc(C(C)(C)C)c1O",
+      "batch_names": [
+        "2023-05-03_AL07001_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "8,9",
+      "head_types": [
+        "alcohol_O",
+        "phenol_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C15H30N2/c1-16-10-6-14(7-11-16)4-3-5-15-8-12-17(2)13-9-15/h14-15H,3-13H2,1-2H3",
+      "smiles": "CN1CCC(CCCC2CCN(C)CC2)CC1",
+      "group_key": "CN1CCC(CCCC2CCN(C)CC2)CC1",
+      "batch_names": [
+        "2022_0907_AL1_01_st0003_mf0002_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C16H20N2/c1-3-7-15(8-4-1)13-17-11-12-18-14-16-9-5-2-6-10-16/h1-10,17-18H,11-14H2",
+      "smiles": "c1ccc(CNCCNCc2ccccc2)cc1",
+      "group_key": "c1ccc(CNCCNCc2ccccc2)cc1",
+      "batch_names": [
+        "2022_1222_AL03005_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C16H22O4/c1-15(2,13(17)18)9-11-6-5-7-12(8-11)10-16(3,4)14(19)20/h5-8H,9-10H2,1-4H3,(H,17,18)(H,19,20)",
+      "smiles": "CC(C)(Cc1cccc(CC(C)(C)C(=O)O)c1)C(=O)O",
+      "group_key": "CC(C)(Cc1cccc(CC(C)(C)C(=O)O)c1)C(=O)O",
+      "batch_names": [
+        "2022_1222_AL03002_robot-009"
+      ],
+      "is_initial": false,
+      "head_signature": "4",
+      "head_types": [
+        "carboxylic_acid_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C16H30O2/c1-4-5-6-7-8-9-10-11-12-13-14-18-16(17)15(2)3/h2,4-14H2,1,3H3",
+      "smiles": "C=C(C)C(=O)OCCCCCCCCCCCC",
+      "group_key": "C=C(C)C(=O)OCCCCCCCCCCCC",
+      "batch_names": [
+        "2022_1212_AL02004_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "5",
+      "head_types": [
+        "ester_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C16H34O/c1-3-5-7-9-11-13-15-17-16-14-12-10-8-6-4-2/h3-16H2,1-2H3",
+      "smiles": "CCCCCCCCOCCCCCCCC",
+      "group_key": "CCCCCCCCOCCCCCCCC",
+      "batch_names": [
+        "2022_0907_AL1_03_mf0005_mf0006_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "7",
+      "head_types": [
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C16H35N/c1-3-5-7-9-11-13-15-17-16-14-12-10-8-6-4-2/h17H,3-16H2,1-2H3",
+      "smiles": "CCCCCCCCNCCCCCCCC",
+      "group_key": "CCCCCCCCNCCCCCCCC",
+      "batch_names": [
+        "2022_0520_SL07_0013_0021_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C17H23NO4/c1-17(2,3)22-16(21)18-9-7-12(8-10-18)13-5-4-6-14(11-13)15(19)20/h4-6,11-12H,7-10H2,1-3H3,(H,19,20)",
+      "smiles": "CC(C)(C)OC(=O)N1CCC(c2cccc(C(=O)O)c2)CC1",
+      "group_key": "CC(C)(C)OC(=O)N1CCC(c2cccc(C(=O)O)c2)CC1",
+      "batch_names": [
+        "2022_1222_AL03005_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "4,5",
+      "head_types": [
+        "carboxylic_acid_group",
+        "ester_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C18H14O/c19-18-16(14-8-3-1-4-9-14)12-7-13-17(18)15-10-5-2-6-11-15/h1-13,19H",
+      "smiles": "Oc1c(-c2ccccc2)cccc1-c1ccccc1",
+      "group_key": "Oc1c(-c2ccccc2)cccc1-c1ccccc1",
+      "batch_names": [
+        "2022_1212_AL02002_robot__st0025__QA"
+      ],
+      "is_initial": false,
+      "head_signature": "9",
+      "head_types": [
+        "phenol_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C18H24N2/c1-17(2,3)13-7-9-19-15(11-13)16-12-14(8-10-20-16)18(4,5)6/h7-12H,1-6H3",
+      "smiles": "CC(C)(C)c1ccnc(-c2cc(C(C)(C)C)ccn2)c1",
+      "group_key": "CC(C)(C)c1ccnc(-c2cc(C(C)(C)C)ccn2)c1",
+      "batch_names": [
+        "2022_0525_SL11_0005_0022_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "2",
+      "head_types": [
+        "aza_aromatic_N"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C18H34O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18(19)20/h9-10H,2-8,11-17H2,1H3,(H,19,20)/b10-9-",
+      "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)O",
+      "group_key": "CCCCCCCCC=CCCCCCCCC(=O)O",
+      "batch_names": [
+        "2022_0520_SL06_0003_0010_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "4",
+      "head_types": [
+        "carboxylic_acid_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C18H36O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18(19)20/h2-17H2,1H3,(H,19,20)",
+      "smiles": "CCCCCCCCCCCCCCCCCC(=O)O",
+      "group_key": "CCCCCCCCCCCCCCCCCC(=O)O",
+      "batch_names": [
+        "2022_0525_SL10_0020_0002_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "4",
+      "head_types": [
+        "carboxylic_acid_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C18H37N/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19/h9-10H,2-8,11-19H2,1H3/b10-9-",
+      "smiles": "CCCCCCCC/C=C\\CCCCCCCCN",
+      "group_key": "CCCCCCCCC=CCCCCCCCCN",
+      "batch_names": [
+        "2022_0519_SL02_0007_0012_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C18H38S/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19/h19H,2-18H2,1H3",
+      "smiles": "CCCCCCCCCCCCCCCCCCS",
+      "group_key": "CCCCCCCCCCCCCCCCCCS",
+      "batch_names": [
+        "2022_0519_SL01_0008_0015_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "10",
+      "head_types": [
+        "thiol_S"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C18H39N/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19/h2-19H2,1H3",
+      "smiles": "CCCCCCCCCCCCCCCCCCN",
+      "group_key": "CCCCCCCCCCCCCCCCCCN",
+      "batch_names": [
+        "2022_0520_SL04_0006_0009_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C19H21NO2/c1-19(2,3)22-17(21)14-20-18(15-10-6-4-7-11-15)16-12-8-5-9-13-16/h4-13H,14H2,1-3H3",
+      "smiles": "CC(C)(C)OC(=O)CN=C(c1ccccc1)c1ccccc1",
+      "group_key": "CC(C)(C)OC(=O)CN=C(c1ccccc1)c1ccccc1",
+      "batch_names": [
+        "2022_1222_AL03004_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "3,5",
+      "head_types": [
+        "imine_N",
+        "ester_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C19H24O2/c1-11-7-15(8-12(2)17(11)20)19(5,6)16-9-13(3)18(21)14(4)10-16/h7-10,20-21H,1-6H3",
+      "smiles": "Cc1cc(C(C)(C)c2cc(C)c(O)c(C)c2)cc(C)c1O",
+      "group_key": "Cc1cc(C(C)(C)c2cc(C)c(O)c(C)c2)cc(C)c1O",
+      "batch_names": [
+        "2022_1212_AL02003_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "9",
+      "head_types": [
+        "phenol_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C21H30N2/c1-5-16-10-14(11-17(6-2)20(16)22)9-15-12-18(7-3)21(23)19(8-4)13-15/h10-13H,5-9,22-23H2,1-4H3",
+      "smiles": "CCc1cc(Cc2cc(CC)c(N)c(CC)c2)cc(CC)c1N",
+      "group_key": "CCc1cc(Cc2cc(CC)c(N)c(CC)c2)cc(CC)c1N",
+      "batch_names": [
+        "2023_0130_AL04001_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "1",
+      "head_types": [
+        "aniline_N"
+      ],
+      "head_counts": [
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C23H36N2S/c1-2-3-4-5-6-7-8-9-10-11-12-16-19-21-22(25-23(24)26-21)20-17-14-13-15-18-20/h13-15,17-18H,2-12,16,19H2,1H3,(H2,24,25)",
+      "smiles": "CCCCCCCCCCCCCCc1sc(=N)[nH]c1-c1ccccc1",
+      "group_key": "CCCCCCCCCCCCCCc1sc(N)nc1-c1ccccc1",
+      "batch_names": [
+        "2023-03-02-AL05004-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "3,11",
+      "head_types": [
+        "imine_N",
+        "other_neutral_S"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C24H51N/c1-4-7-10-13-16-19-22-25(23-20-17-14-11-8-5-2)24-21-18-15-12-9-6-3/h4-24H2,1-3H3",
+      "smiles": "CCCCCCCCN(CCCCCCCC)CCCCCCCC",
+      "group_key": "CCCCCCCCN(CCCCCCCC)CCCCCCCC",
+      "batch_names": [
+        "2022_0519_SL01_0008_0015_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C5H2Br2N2O2/c6-3-1-4(9(10)11)5(7)8-2-3/h1-2H",
+      "smiles": "O=[N+]([O-])c1cc(Br)cnc1Br",
+      "group_key": "O=[N+]([O-])c1cc(Br)cnc1Br",
+      "batch_names": [
+        "2023-03-02-AL05003-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "2",
+      "head_types": [
+        "aza_aromatic_N"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C5H3BrN2O2/c6-5-2-1-4(3-7-5)8(9)10/h1-3H",
+      "smiles": "O=[N+]([O-])c1ccc(Br)nc1",
+      "group_key": "O=[N+]([O-])c1ccc(Br)nc1",
+      "batch_names": [
+        "2023-03-31-AL06001-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "2",
+      "head_types": [
+        "aza_aromatic_N"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C5H7BrO3/c1-2-9-5(8)4(7)3-6/h2-3H2,1H3",
+      "smiles": "CCOC(=O)C(=O)CBr",
+      "group_key": "CCOC(=O)C(=O)CBr",
+      "batch_names": [
+        "2023-03-31-AL06003-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "5,6",
+      "head_types": [
+        "ester_group",
+        "other_carbonyl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C5H7F6O3P/c1-15(12,13-2-4(6,7)8)14-3-5(9,10)11/h2-3H2,1H3",
+      "smiles": "CP(=O)(OCC(F)(F)F)OCC(F)(F)F",
+      "group_key": "CP(=O)(OCC(F)(F)F)OCC(F)(F)F",
+      "batch_names": [
+        "2022_1024_AL1_04_st0009_st0013_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "12",
+      "head_types": [
+        "phosphoryl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C6H2BrF3/c7-4-1-3(8)2-5(9)6(4)10/h1-2H",
+      "smiles": "Fc1cc(F)c(F)c(Br)c1",
+      "group_key": "Fc1cc(F)c(F)c(Br)c1",
+      "batch_names": [
+        "2023-05-03_AL07005_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "",
+      "head_types": [],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C6H4BrF2N/c7-5-3-4(6(8)9)1-2-10-5/h1-3,6H",
+      "smiles": "FC(F)c1ccnc(Br)c1",
+      "group_key": "FC(F)c1ccnc(Br)c1",
+      "batch_names": [
+        "2022_1222_AL03003_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "2",
+      "head_types": [
+        "aza_aromatic_N"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C7H10Br2O4/c1-3-12-5(10)7(8,9)6(11)13-4-2/h3-4H2,1-2H3",
+      "smiles": "CCOC(=O)C(Br)(Br)C(=O)OCC",
+      "group_key": "CCOC(=O)C(Br)(Br)C(=O)OCC",
+      "batch_names": [
+        "2023_0130_AL04003_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "5",
+      "head_types": [
+        "ester_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C7H4BrF3O/c8-5-3-1-2-4-6(5)12-7(9,10)11/h1-4H",
+      "smiles": "FC(F)(F)Oc1ccccc1Br",
+      "group_key": "FC(F)(F)Oc1ccccc1Br",
+      "batch_names": [
+        "2023-03-02-AL05006-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "7",
+      "head_types": [
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C7H5BrF2/c8-6-4-2-1-3-5(6)7(9)10/h1-4,7H",
+      "smiles": "FC(F)c1ccccc1Br",
+      "group_key": "FC(F)c1ccccc1Br",
+      "batch_names": [
+        "2022_1222_AL03001_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "",
+      "head_types": [],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C7H5BrO2/c8-6-4-2-1-3-5(6)7(9)10/h1-4H,(H,9,10)",
+      "smiles": "O=C(O)c1ccccc1Br",
+      "group_key": "O=C(O)c1ccccc1Br",
+      "batch_names": [
+        "2022_1212_AL02003_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "4",
+      "head_types": [
+        "carboxylic_acid_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C7H6F3NO2S/c1-2-13-5(12)4-3-11-6(14-4)7(8,9)10/h3H,2H2,1H3",
+      "smiles": "CCOC(=O)c1cnc(C(F)(F)F)s1",
+      "group_key": "CCOC(=O)c1cnc(C(F)(F)F)s1",
+      "batch_names": [
+        "2022_1024_AL1_03_st0008_st0012_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "2,5,11",
+      "head_types": [
+        "aza_aromatic_N",
+        "ester_group",
+        "other_neutral_S"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C7H8O3/c1-4-3-6(7(8)9)5(2)10-4/h3H,1-2H3,(H,8,9)",
+      "smiles": "Cc1cc(C(=O)O)c(C)o1",
+      "group_key": "Cc1cc(C(=O)O)c(C)o1",
+      "batch_names": [
+        "2023-05-03_AL07002_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "4,7",
+      "head_types": [
+        "carboxylic_acid_group",
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H16O2/c1-2-3-4-5-6-7-8(9)10/h2-7H2,1H3,(H,9,10)",
+      "smiles": "CCCCCCCC(=O)O",
+      "group_key": "CCCCCCCC(=O)O",
+      "batch_names": [
+        "2022_0525_SL09_0000_0001_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "4",
+      "head_types": [
+        "carboxylic_acid_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H19N/c1-2-3-4-5-6-7-8-9/h2-9H2,1H3",
+      "smiles": "CCCCCCCCN",
+      "group_key": "CCCCCCCCN",
+      "batch_names": [
+        "2022_0520_SL03_0017_0004_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H19N/c1-3-5-7-9-8-6-4-2/h9H,3-8H2,1-2H3",
+      "smiles": "CCCCNCCCC",
+      "group_key": "CCCCNCCCC",
+      "batch_names": [
+        "2022_0519_SL02_0007_0012_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "0",
+      "head_types": [
+        "aliphatic_amine_N"
+      ],
+      "head_counts": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H19O3P/c1-2-3-4-5-6-7-8-12(9,10)11/h2-8H2,1H3,(H2,9,10,11)",
+      "smiles": "CCCCCCCCP(=O)(O)O",
+      "group_key": "CCCCCCCCP(=O)(O)O",
+      "batch_names": [
+        "2022_0520_SL04_0006_0009_robotinput"
+      ],
+      "is_initial": true,
+      "head_signature": "12",
+      "head_types": [
+        "phosphoryl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H3BrF6/c9-6-2-1-4(7(10,11)12)3-5(6)8(13,14)15/h1-3H",
+      "smiles": "FC(F)(F)c1ccc(Br)c(C(F)(F)F)c1",
+      "group_key": "FC(F)(F)c1ccc(Br)c(C(F)(F)F)c1",
+      "batch_names": [
+        "2023-03-02-AL05002-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "",
+      "head_types": [],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H4F3NO3/c9-8(10,11)6-2-1-5(4-13)7(3-6)12(14)15/h1-4H",
+      "smiles": "O=Cc1ccc(C(F)(F)F)cc1[N+](=O)[O-]",
+      "group_key": "O=Cc1ccc(C(F)(F)F)cc1[N+](=O)[O-]",
+      "batch_names": [
+        "2022_1025_AL1_07_mt0016_mt0017_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "6",
+      "head_types": [
+        "other_carbonyl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H4F4O/c9-7-5(4-13)2-1-3-6(7)8(10,11)12/h1-4H",
+      "smiles": "O=Cc1cccc(C(F)(F)F)c1F",
+      "group_key": "O=Cc1cccc(C(F)(F)F)c1F",
+      "batch_names": [
+        "2022_1025_AL1_05_st0010_st0015_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "6",
+      "head_types": [
+        "other_carbonyl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H5F3O2/c9-8(10,11)13-7-4-2-1-3-6(7)5-12/h1-5H",
+      "smiles": "O=Cc1ccccc1OC(F)(F)F",
+      "group_key": "O=Cc1ccccc1OC(F)(F)F",
+      "batch_names": [
+        "2023-03-31-AL06001-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "6,7",
+      "head_types": [
+        "other_carbonyl_O",
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H5F6NO4S2/c9-7(10,11)20(16,17)15(6-4-2-1-3-5-6)21(18,19)8(12,13)14/h1-5H",
+      "smiles": "O=S(=O)(N(c1ccccc1)S(=O)(=O)C(F)(F)F)C(F)(F)F",
+      "group_key": "O=S(=O)(N(c1ccccc1)S(=O)(=O)C(F)(F)F)C(F)(F)F",
+      "batch_names": [
+        "2022_1024_AL1_02_mt0011_st0011_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "13",
+      "head_types": [
+        "sulfonyl_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H6BrNO4/c1-4(11)6-2-5(9)3-7(8(6)12)10(13)14/h2-3,12H,1H3",
+      "smiles": "CC(=O)c1cc(Br)cc([N+](=O)[O-])c1O",
+      "group_key": "CC(=O)c1cc(Br)cc([N+](=O)[O-])c1O",
+      "batch_names": [
+        "2022_1025_AL1_07_mt0016_mt0017_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "6,9",
+      "head_types": [
+        "other_carbonyl_O",
+        "phenol_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H6N2/c1-2-4-8-6-10-9-5-7(8)3-1/h1-6H",
+      "smiles": "c1ccc2cnncc2c1",
+      "group_key": "c1ccc2cnncc2c1",
+      "batch_names": [
+        "2023-03-31-AL06003-robot"
+      ],
+      "is_initial": false,
+      "head_signature": "2",
+      "head_types": [
+        "aza_aromatic_N"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H7F3O2/c1-12-6-2-4-7(5-3-6)13-8(9,10)11/h2-5H,1H3",
+      "smiles": "COc1ccc(OC(F)(F)F)cc1",
+      "group_key": "COc1ccc(OC(F)(F)F)cc1",
+      "batch_names": [
+        "2022_1024_AL1_01_mt0010_st0007_robotinput"
+      ],
+      "is_initial": false,
+      "head_signature": "7",
+      "head_types": [
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C8H8F6O2/c1-4(2)5(15)16-3-7(10,11)6(9)8(12,13)14/h6H,1,3H2,2H3",
+      "smiles": "C=C(C)C(=O)OCC(F)(F)C(F)C(F)(F)F",
+      "group_key": "C=C(C)C(=O)OCC(F)(F)C(F)C(F)(F)F",
+      "batch_names": [
+        "2022_1212_AL02005_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "5",
+      "head_types": [
+        "ester_group"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C9H11BrO3/c1-11-7-5-4-6(10)8(12-2)9(7)13-3/h4-5H,1-3H3",
+      "smiles": "COc1ccc(Br)c(OC)c1OC",
+      "group_key": "COc1ccc(Br)c(OC)c1OC",
+      "batch_names": [
+        "2022_1212_AL02004_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "7",
+      "head_types": [
+        "ether_or_aromatic_O"
+      ],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "InChI=1S/C9H15N/c1-2-6-9(5-1)10-7-3-4-8-10/h5H,1-4,6-8H2",
+      "smiles": "C1=C(N2CCCC2)CCC1",
+      "group_key": "C1=C(N2CCCC2)CCC1",
+      "batch_names": [
+        "2023-05-03_AL07002_robot"
+      ],
+      "is_initial": false,
+      "head_signature": "",
+      "head_types": [],
+      "head_counts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "original_feature_names": [
+    "avgpol",
+    "axxpol",
+    "ayypol",
+    "azzpol",
+    "molpol",
+    "ASA+",
+    "ASA-",
+    "ASA_H",
+    "ASA_P",
+    "asa",
+    "maximalprojectionarea",
+    "maximalprojectionradius",
+    "minimalprojectionarea",
+    "minimalprojectionradius",
+    "psa",
+    "vdwsa",
+    "volume",
+    "chainatomcount",
+    "chainbondcount",
+    "fsp3",
+    "fusedringcount",
+    "rotatablebondcount",
+    "acceptorcount",
+    "accsitecount",
+    "donorcount",
+    "donsitecount",
+    "mass",
+    "hararyindex",
+    "balabanindex",
+    "hyperwienerindex",
+    "wienerindex",
+    "wienerpolarity",
+    "dipole",
+    "nHeavyAtom",
+    "nC",
+    "nN",
+    "nO",
+    "nS",
+    "nP",
+    "fragCpx",
+    "nRing",
+    "SLogP"
+  ],
+  "headgroup_feature_names": [
+    "aliphatic_amine_N",
+    "aniline_N",
+    "aza_aromatic_N",
+    "imine_N",
+    "carboxylic_acid_group",
+    "ester_group",
+    "other_carbonyl_O",
+    "ether_or_aromatic_O",
+    "alcohol_O",
+    "phenol_O",
+    "thiol_S",
+    "other_neutral_S",
+    "phosphoryl_O",
+    "sulfonyl_O"
+  ],
+  "annotations": [
+    {
+      "sites": [
+        0,
+        11
+      ],
+      "owners": {
+        "0": "atom:0",
+        "11": "atom:11"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "thiol_S",
+          "atoms": [
+            0
+          ],
+          "group": "atom:0",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "thiol_S",
+          "atoms": [
+            11
+          ],
+          "group": "atom:11",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [],
+      "owners": {},
+      "conditional_sites": [],
+      "matches": [],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        0,
+        1,
+        2,
+        9,
+        10,
+        11
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        9,
+        10
+      ],
+      "owners": {
+        "9": "atom:9",
+        "10": "atom:10"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            9
+          ],
+          "group": "atom:9",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            10
+          ],
+          "group": "atom:10",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            9,
+            10
+          ],
+          "distance": 3,
+          "feature": "NN_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4,
+        5,
+        6
+      ],
+      "owners": {
+        "4": "acid:3",
+        "5": "acid:3",
+        "6": "atom:6"
+      },
+      "conditional_sites": [
+        5
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            4,
+            5
+          ],
+          "group": "acid:3",
+          "conditional_atoms": [
+            5
+          ]
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            6
+          ],
+          "group": "atom:6",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            4,
+            6
+          ],
+          "distance": 3,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            5,
+            6
+          ],
+          "distance": 3,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        2
+      ],
+      "owners": {
+        "0": "acid:1",
+        "2": "acid:1"
+      },
+      "conditional_sites": [
+        2
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            0,
+            2
+          ],
+          "group": "acid:1",
+          "conditional_atoms": [
+            2
+          ]
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0
+      ],
+      "owners": {
+        "0": "atom:0"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "other_carbonyl_O",
+          "atoms": [
+            0
+          ],
+          "group": "atom:0",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        10
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2,
+        4
+      ],
+      "owners": {
+        "2": "atom:2",
+        "4": "atom:4"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            2
+          ],
+          "group": "atom:2",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            4
+          ],
+          "group": "atom:4",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        9
+      ],
+      "owners": {
+        "0": "atom:0",
+        "9": "atom:9"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "alcohol_O",
+          "atoms": [
+            0
+          ],
+          "group": "atom:0",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "alcohol_O",
+          "atoms": [
+            9
+          ],
+          "group": "atom:9",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        10
+      ],
+      "owners": {
+        "10": "atom:10"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            10
+          ],
+          "group": "atom:10",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        2,
+        5
+      ],
+      "owners": {
+        "0": "acid:1",
+        "2": "acid:1",
+        "5": "atom:5"
+      },
+      "conditional_sites": [
+        2
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            0,
+            2
+          ],
+          "group": "acid:1",
+          "conditional_atoms": [
+            2
+          ]
+        },
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            5
+          ],
+          "group": "atom:5",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            0,
+            5
+          ],
+          "distance": 4,
+          "feature": "NO_distance_3_4"
+        },
+        {
+          "atoms": [
+            2,
+            5
+          ],
+          "distance": 4,
+          "feature": "NO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [
+        6
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        4
+      ],
+      "owners": {
+        "0": "atom:0",
+        "4": "atom:4"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "other_carbonyl_O",
+          "atoms": [
+            0
+          ],
+          "group": "atom:0",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "phenol_O",
+          "atoms": [
+            4
+          ],
+          "group": "atom:4",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            0,
+            4
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4
+      ],
+      "owners": {
+        "4": "oxo:3"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "phosphoryl_O",
+          "atoms": [
+            4
+          ],
+          "group": "oxo:3",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        2,
+        3,
+        16
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2,
+        5
+      ],
+      "owners": {
+        "2": "atom:2",
+        "5": "atom:5"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            2
+          ],
+          "group": "atom:2",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            5
+          ],
+          "group": "atom:5",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        8
+      ],
+      "owners": {
+        "8": "atom:8"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4
+      ],
+      "owners": {
+        "4": "oxo:3"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "phosphoryl_O",
+          "atoms": [
+            4
+          ],
+          "group": "oxo:3",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        2,
+        3,
+        13
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        12,
+        13
+      ],
+      "owners": {
+        "12": "acid:11",
+        "13": "acid:11"
+      },
+      "conditional_sites": [
+        13
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            12,
+            13
+          ],
+          "group": "acid:11",
+          "conditional_atoms": [
+            13
+          ]
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        6
+      ],
+      "owners": {
+        "6": "atom:6"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            6
+          ],
+          "group": "atom:6",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        12
+      ],
+      "owners": {
+        "12": "atom:12"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            12
+          ],
+          "group": "atom:12",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4
+      ],
+      "owners": {
+        "4": "atom:4"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            4
+          ],
+          "group": "atom:4",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        13,
+        14,
+        15
+      ],
+      "owners": {
+        "13": "oxo:12",
+        "14": "oxo:12",
+        "15": "oxo:12"
+      },
+      "conditional_sites": [
+        14,
+        15
+      ],
+      "matches": [
+        {
+          "feature": "phosphoryl_O",
+          "atoms": [
+            13
+          ],
+          "group": "oxo:12",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "conditional_P_or_S_OH",
+          "atoms": [
+            14
+          ],
+          "group": "oxo:12"
+        },
+        {
+          "feature": "conditional_P_or_S_OH",
+          "atoms": [
+            15
+          ],
+          "group": "oxo:12"
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        12
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        14,
+        15,
+        16
+      ],
+      "owners": {
+        "14": "oxo:13",
+        "15": "oxo:13",
+        "16": "oxo:13"
+      },
+      "conditional_sites": [
+        15,
+        16
+      ],
+      "matches": [
+        {
+          "feature": "phosphoryl_O",
+          "atoms": [
+            14
+          ],
+          "group": "oxo:13",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "conditional_P_or_S_OH",
+          "atoms": [
+            15
+          ],
+          "group": "oxo:13"
+        },
+        {
+          "feature": "conditional_P_or_S_OH",
+          "atoms": [
+            16
+          ],
+          "group": "oxo:13"
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        12,
+        13
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4,
+        11
+      ],
+      "owners": {
+        "4": "atom:4",
+        "11": "atom:11"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            4
+          ],
+          "group": "atom:4",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            11
+          ],
+          "group": "atom:11",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            4,
+            11
+          ],
+          "distance": 3,
+          "feature": "NN_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        6,
+        13
+      ],
+      "owners": {
+        "6": "atom:6",
+        "13": "atom:13"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "other_neutral_S",
+          "atoms": [
+            6
+          ],
+          "group": "atom:6",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "other_neutral_S",
+          "atoms": [
+            13
+          ],
+          "group": "atom:13",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            6,
+            13
+          ],
+          "distance": 3,
+          "feature": "S_pair_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        2,
+        9
+      ],
+      "owners": {
+        "0": "acid:1",
+        "2": "acid:1",
+        "9": "atom:9"
+      },
+      "conditional_sites": [
+        2
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            0,
+            2
+          ],
+          "group": "acid:1",
+          "conditional_atoms": [
+            2
+          ]
+        },
+        {
+          "feature": "aniline_N",
+          "atoms": [
+            9
+          ],
+          "group": "atom:9",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            0,
+            9
+          ],
+          "distance": 4,
+          "feature": "NO_distance_3_4"
+        },
+        {
+          "atoms": [
+            2,
+            9
+          ],
+          "distance": 4,
+          "feature": "NO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2,
+        14,
+        15
+      ],
+      "owners": {
+        "14": "acid:13",
+        "15": "acid:13",
+        "2": "atom:2"
+      },
+      "conditional_sites": [
+        15
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            14,
+            15
+          ],
+          "group": "acid:13",
+          "conditional_atoms": [
+            15
+          ]
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            2
+          ],
+          "group": "atom:2",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            2,
+            14
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            2,
+            15
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2,
+        4,
+        15
+      ],
+      "owners": {
+        "4": "ester:3",
+        "2": "ester:3",
+        "15": "atom:15"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ester_group",
+          "atoms": [
+            4,
+            2
+          ],
+          "group": "ester:3",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "phenol_O",
+          "atoms": [
+            15
+          ],
+          "group": "atom:15",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            2,
+            15
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            4,
+            15
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        6,
+        8
+      ],
+      "owners": {
+        "8": "ester:7",
+        "6": "ester:7"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ester_group",
+          "atoms": [
+            8,
+            6
+          ],
+          "group": "ester:7",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        6,
+        7,
+        12,
+        16
+      ],
+      "owners": {
+        "6": "oxo:5",
+        "7": "oxo:5",
+        "12": "atom:12",
+        "16": "atom:16"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "sulfonyl_O",
+          "atoms": [
+            6
+          ],
+          "group": "oxo:5",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "sulfonyl_O",
+          "atoms": [
+            7
+          ],
+          "group": "oxo:5",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            12
+          ],
+          "group": "atom:12",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            16
+          ],
+          "group": "atom:16",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        5,
+        8
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        4,
+        15
+      ],
+      "owners": {
+        "0": "atom:0",
+        "4": "atom:4",
+        "15": "atom:15"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "other_carbonyl_O",
+          "atoms": [
+            0
+          ],
+          "group": "atom:0",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "phenol_O",
+          "atoms": [
+            4
+          ],
+          "group": "atom:4",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "phenol_O",
+          "atoms": [
+            15
+          ],
+          "group": "atom:15",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            0,
+            4
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            0,
+            15
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0
+      ],
+      "owners": {
+        "0": "atom:0"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "alcohol_O",
+          "atoms": [
+            0
+          ],
+          "group": "atom:0",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        12,
+        15
+      ],
+      "owners": {
+        "12": "atom:12",
+        "15": "atom:15"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            12
+          ],
+          "group": "atom:12",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            15
+          ],
+          "group": "atom:15",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            12,
+            15
+          ],
+          "distance": 3,
+          "feature": "NN_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        2,
+        9
+      ],
+      "owners": {
+        "0": "acid:1",
+        "2": "acid:1",
+        "9": "atom:9"
+      },
+      "conditional_sites": [
+        2
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            0,
+            2
+          ],
+          "group": "acid:1",
+          "conditional_atoms": [
+            2
+          ]
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            9
+          ],
+          "group": "atom:9",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            0,
+            9
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            2,
+            9
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        2,
+        10
+      ],
+      "owners": {
+        "0": "acid:1",
+        "2": "acid:1",
+        "10": "atom:10"
+      },
+      "conditional_sites": [
+        2
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            0,
+            2
+          ],
+          "group": "acid:1",
+          "conditional_atoms": [
+            2
+          ]
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            10
+          ],
+          "group": "atom:10",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2
+      ],
+      "owners": {
+        "2": "atom:2"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "imine_N",
+          "atoms": [
+            2
+          ],
+          "group": "atom:2",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        0
+      ],
+      "warnings": [
+        {
+          "atom": 0,
+          "reason": "enol_or_imidic_OH_not_assumed_alcohol"
+        }
+      ],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4,
+        7
+      ],
+      "owners": {
+        "4": "atom:4",
+        "7": "atom:7"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            4
+          ],
+          "group": "atom:4",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            7
+          ],
+          "group": "atom:7",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            4,
+            7
+          ],
+          "distance": 3,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2,
+        4,
+        6,
+        8,
+        16,
+        17
+      ],
+      "owners": {
+        "4": "ester:3",
+        "2": "ester:3",
+        "8": "ester:7",
+        "6": "ester:7",
+        "16": "ester:15",
+        "17": "ester:15"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ester_group",
+          "atoms": [
+            4,
+            2
+          ],
+          "group": "ester:3",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ester_group",
+          "atoms": [
+            8,
+            6
+          ],
+          "group": "ester:7",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ester_group",
+          "atoms": [
+            16,
+            17
+          ],
+          "group": "ester:15",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            2,
+            6
+          ],
+          "distance": 3,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            4,
+            6
+          ],
+          "distance": 3,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        13
+      ],
+      "owners": {
+        "13": "atom:13"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            13
+          ],
+          "group": "atom:13",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        10
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        2
+      ],
+      "owners": {
+        "0": "acid:1",
+        "2": "acid:1"
+      },
+      "conditional_sites": [
+        2
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            0,
+            2
+          ],
+          "group": "acid:1",
+          "conditional_atoms": [
+            2
+          ]
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        1,
+        3,
+        11
+      ],
+      "owners": {
+        "3": "ester:2",
+        "1": "ester:2",
+        "11": "atom:11"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ester_group",
+          "atoms": [
+            3,
+            1
+          ],
+          "group": "ester:2",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "other_carbonyl_O",
+          "atoms": [
+            11
+          ],
+          "group": "atom:11",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        1,
+        7,
+        12,
+        16,
+        18
+      ],
+      "owners": {
+        "1": "atom:1",
+        "7": "atom:7",
+        "12": "atom:12",
+        "16": "atom:16",
+        "18": "atom:18"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            1
+          ],
+          "group": "atom:1",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "other_carbonyl_O",
+          "atoms": [
+            7
+          ],
+          "group": "atom:7",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            12
+          ],
+          "group": "atom:12",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "phenol_O",
+          "atoms": [
+            16
+          ],
+          "group": "atom:16",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "phenol_O",
+          "atoms": [
+            18
+          ],
+          "group": "atom:18",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            1,
+            18
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            7,
+            16
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            7,
+            18
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            12,
+            16
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2,
+        5,
+        6
+      ],
+      "owners": {
+        "5": "oxo:4",
+        "6": "oxo:4",
+        "2": "atom:2"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "sulfonyl_O",
+          "atoms": [
+            5
+          ],
+          "group": "oxo:4",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "sulfonyl_O",
+          "atoms": [
+            6
+          ],
+          "group": "oxo:4",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "imine_N",
+          "atoms": [
+            2
+          ],
+          "group": "atom:2",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            2,
+            5
+          ],
+          "distance": 3,
+          "feature": "NO_distance_3_4"
+        },
+        {
+          "atoms": [
+            2,
+            6
+          ],
+          "distance": 3,
+          "feature": "NO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [
+        3,
+        4
+      ],
+      "warnings": [
+        {
+          "atom": 2,
+          "reason": "imine_conjugation_or_tautomer_state"
+        }
+      ],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0
+      ],
+      "owners": {
+        "0": "atom:0"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            0
+          ],
+          "group": "atom:0",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2,
+        4,
+        9,
+        10,
+        16,
+        17
+      ],
+      "owners": {
+        "4": "ester:3",
+        "2": "ester:3",
+        "9": "ester:8",
+        "10": "ester:8",
+        "16": "ester:15",
+        "17": "ester:15"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ester_group",
+          "atoms": [
+            4,
+            2
+          ],
+          "group": "ester:3",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ester_group",
+          "atoms": [
+            9,
+            10
+          ],
+          "group": "ester:8",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ester_group",
+          "atoms": [
+            16,
+            17
+          ],
+          "group": "ester:15",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        8,
+        16
+      ],
+      "owners": {
+        "8": "atom:8",
+        "16": "atom:16"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "alcohol_O",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "phenol_O",
+          "atoms": [
+            16
+          ],
+          "group": "atom:16",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        1,
+        11
+      ],
+      "owners": {
+        "1": "atom:1",
+        "11": "atom:11"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            1
+          ],
+          "group": "atom:1",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            11
+          ],
+          "group": "atom:11",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        5,
+        8
+      ],
+      "owners": {
+        "5": "atom:5",
+        "8": "atom:8"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            5
+          ],
+          "group": "atom:5",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            5,
+            8
+          ],
+          "distance": 3,
+          "feature": "NN_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        14,
+        15,
+        18,
+        19
+      ],
+      "owners": {
+        "14": "acid:13",
+        "15": "acid:13",
+        "18": "acid:17",
+        "19": "acid:17"
+      },
+      "conditional_sites": [
+        15,
+        19
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            14,
+            15
+          ],
+          "group": "acid:13",
+          "conditional_atoms": [
+            15
+          ]
+        },
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            18,
+            19
+          ],
+          "group": "acid:17",
+          "conditional_atoms": [
+            19
+          ]
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4,
+        5
+      ],
+      "owners": {
+        "4": "ester:3",
+        "5": "ester:3"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ester_group",
+          "atoms": [
+            4,
+            5
+          ],
+          "group": "ester:3",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        8
+      ],
+      "owners": {
+        "8": "atom:8"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        8
+      ],
+      "owners": {
+        "8": "atom:8"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4,
+        6,
+        17,
+        18
+      ],
+      "owners": {
+        "17": "acid:16",
+        "18": "acid:16",
+        "6": "ester:5",
+        "4": "ester:5"
+      },
+      "conditional_sites": [
+        18
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            17,
+            18
+          ],
+          "group": "acid:16",
+          "conditional_atoms": [
+            18
+          ]
+        },
+        {
+          "feature": "ester_group",
+          "atoms": [
+            6,
+            4
+          ],
+          "group": "ester:5",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        7
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0
+      ],
+      "owners": {
+        "0": "atom:0"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "phenol_O",
+          "atoms": [
+            0
+          ],
+          "group": "atom:0",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        7,
+        18
+      ],
+      "owners": {
+        "7": "atom:7",
+        "18": "atom:18"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            7
+          ],
+          "group": "atom:7",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            18
+          ],
+          "group": "atom:18",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            7,
+            18
+          ],
+          "distance": 3,
+          "feature": "NN_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        18,
+        19
+      ],
+      "owners": {
+        "18": "acid:17",
+        "19": "acid:17"
+      },
+      "conditional_sites": [
+        19
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            18,
+            19
+          ],
+          "group": "acid:17",
+          "conditional_atoms": [
+            19
+          ]
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        18,
+        19
+      ],
+      "owners": {
+        "18": "acid:17",
+        "19": "acid:17"
+      },
+      "conditional_sites": [
+        19
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            18,
+            19
+          ],
+          "group": "acid:17",
+          "conditional_atoms": [
+            19
+          ]
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        18
+      ],
+      "owners": {
+        "18": "atom:18"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            18
+          ],
+          "group": "atom:18",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        18
+      ],
+      "owners": {
+        "18": "atom:18"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "thiol_S",
+          "atoms": [
+            18
+          ],
+          "group": "atom:18",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        18
+      ],
+      "owners": {
+        "18": "atom:18"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            18
+          ],
+          "group": "atom:18",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4,
+        6,
+        8
+      ],
+      "owners": {
+        "6": "ester:5",
+        "4": "ester:5",
+        "8": "atom:8"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ester_group",
+          "atoms": [
+            6,
+            4
+          ],
+          "group": "ester:5",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "imine_N",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            4,
+            8
+          ],
+          "distance": 3,
+          "feature": "NO_distance_3_4"
+        },
+        {
+          "atoms": [
+            6,
+            8
+          ],
+          "distance": 3,
+          "feature": "NO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        12,
+        20
+      ],
+      "owners": {
+        "12": "atom:12",
+        "20": "atom:20"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "phenol_O",
+          "atoms": [
+            12
+          ],
+          "group": "atom:12",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "phenol_O",
+          "atoms": [
+            20
+          ],
+          "group": "atom:20",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        12,
+        22
+      ],
+      "owners": {
+        "12": "atom:12",
+        "22": "atom:22"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aniline_N",
+          "atoms": [
+            12
+          ],
+          "group": "atom:12",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "aniline_N",
+          "atoms": [
+            22
+          ],
+          "group": "atom:22",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        15,
+        17
+      ],
+      "owners": {
+        "15": "atom:15",
+        "17": "atom:17"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "other_neutral_S",
+          "atoms": [
+            15
+          ],
+          "group": "atom:15",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "imine_N",
+          "atoms": [
+            17
+          ],
+          "group": "atom:17",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        18
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        8
+      ],
+      "owners": {
+        "8": "atom:8"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        8
+      ],
+      "owners": {
+        "8": "atom:8"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        0,
+        1,
+        2
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        8
+      ],
+      "owners": {
+        "8": "atom:8"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        0,
+        1,
+        2
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2,
+        4,
+        6
+      ],
+      "owners": {
+        "4": "ester:3",
+        "2": "ester:3",
+        "6": "atom:6"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ester_group",
+          "atoms": [
+            4,
+            2
+          ],
+          "group": "ester:3",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "other_carbonyl_O",
+          "atoms": [
+            6
+          ],
+          "group": "atom:6",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            2,
+            6
+          ],
+          "distance": 3,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            4,
+            6
+          ],
+          "distance": 3,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2
+      ],
+      "owners": {
+        "2": "oxo:1"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "phosphoryl_O",
+          "atoms": [
+            2
+          ],
+          "group": "oxo:1",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        1,
+        3,
+        9
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [],
+      "owners": {},
+      "conditional_sites": [],
+      "matches": [],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        6
+      ],
+      "owners": {
+        "6": "atom:6"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            6
+          ],
+          "group": "atom:6",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2,
+        4,
+        9,
+        10
+      ],
+      "owners": {
+        "4": "ester:3",
+        "2": "ester:3",
+        "9": "ester:8",
+        "10": "ester:8"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ester_group",
+          "atoms": [
+            4,
+            2
+          ],
+          "group": "ester:3",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ester_group",
+          "atoms": [
+            9,
+            10
+          ],
+          "group": "ester:8",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            2,
+            9
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            2,
+            10
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            4,
+            9
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            4,
+            10
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4
+      ],
+      "owners": {
+        "4": "atom:4"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            4
+          ],
+          "group": "atom:4",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [],
+      "owners": {},
+      "conditional_sites": [],
+      "matches": [],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        2
+      ],
+      "owners": {
+        "0": "acid:1",
+        "2": "acid:1"
+      },
+      "conditional_sites": [
+        2
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            0,
+            2
+          ],
+          "group": "acid:1",
+          "conditional_atoms": [
+            2
+          ]
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2,
+        4,
+        7,
+        13
+      ],
+      "owners": {
+        "4": "ester:3",
+        "2": "ester:3",
+        "7": "atom:7",
+        "13": "atom:13"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ester_group",
+          "atoms": [
+            4,
+            2
+          ],
+          "group": "ester:3",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            7
+          ],
+          "group": "atom:7",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "other_neutral_S",
+          "atoms": [
+            13
+          ],
+          "group": "atom:13",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            2,
+            7
+          ],
+          "distance": 4,
+          "feature": "NO_distance_3_4"
+        },
+        {
+          "atoms": [
+            2,
+            13
+          ],
+          "distance": 3,
+          "feature": "S_pair_distance_3_4"
+        },
+        {
+          "atoms": [
+            4,
+            7
+          ],
+          "distance": 4,
+          "feature": "NO_distance_3_4"
+        },
+        {
+          "atoms": [
+            4,
+            13
+          ],
+          "distance": 3,
+          "feature": "S_pair_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        5,
+        6,
+        9
+      ],
+      "owners": {
+        "5": "acid:4",
+        "6": "acid:4",
+        "9": "atom:9"
+      },
+      "conditional_sites": [
+        6
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            5,
+            6
+          ],
+          "group": "acid:4",
+          "conditional_atoms": [
+            6
+          ]
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            9
+          ],
+          "group": "atom:9",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            5,
+            9
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            6,
+            9
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        8,
+        9
+      ],
+      "owners": {
+        "8": "acid:7",
+        "9": "acid:7"
+      },
+      "conditional_sites": [
+        9
+      ],
+      "matches": [
+        {
+          "feature": "carboxylic_acid_group",
+          "atoms": [
+            8,
+            9
+          ],
+          "group": "acid:7",
+          "conditional_atoms": [
+            9
+          ]
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        8
+      ],
+      "owners": {
+        "8": "atom:8"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4
+      ],
+      "owners": {
+        "4": "atom:4"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aliphatic_amine_N",
+          "atoms": [
+            4
+          ],
+          "group": "atom:4",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        9,
+        10,
+        11
+      ],
+      "owners": {
+        "9": "oxo:8",
+        "10": "oxo:8",
+        "11": "oxo:8"
+      },
+      "conditional_sites": [
+        10,
+        11
+      ],
+      "matches": [
+        {
+          "feature": "phosphoryl_O",
+          "atoms": [
+            9
+          ],
+          "group": "oxo:8",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "conditional_P_or_S_OH",
+          "atoms": [
+            10
+          ],
+          "group": "oxo:8"
+        },
+        {
+          "feature": "conditional_P_or_S_OH",
+          "atoms": [
+            11
+          ],
+          "group": "oxo:8"
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        8
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [],
+      "owners": {},
+      "conditional_sites": [],
+      "matches": [],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0
+      ],
+      "owners": {
+        "0": "atom:0"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "other_carbonyl_O",
+          "atoms": [
+            0
+          ],
+          "group": "atom:0",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        12,
+        13,
+        14
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0
+      ],
+      "owners": {
+        "0": "atom:0"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "other_carbonyl_O",
+          "atoms": [
+            0
+          ],
+          "group": "atom:0",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        8
+      ],
+      "owners": {
+        "0": "atom:0",
+        "8": "atom:8"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "other_carbonyl_O",
+          "atoms": [
+            0
+          ],
+          "group": "atom:0",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            0,
+            8
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        0,
+        2,
+        11,
+        12
+      ],
+      "owners": {
+        "0": "oxo:1",
+        "2": "oxo:1",
+        "11": "oxo:10",
+        "12": "oxo:10"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "sulfonyl_O",
+          "atoms": [
+            0
+          ],
+          "group": "oxo:1",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "sulfonyl_O",
+          "atoms": [
+            2
+          ],
+          "group": "oxo:1",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "sulfonyl_O",
+          "atoms": [
+            11
+          ],
+          "group": "oxo:10",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "sulfonyl_O",
+          "atoms": [
+            12
+          ],
+          "group": "oxo:10",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            0,
+            11
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            0,
+            12
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            2,
+            11
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            2,
+            12
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [
+        1,
+        3,
+        10
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        2,
+        13
+      ],
+      "owners": {
+        "2": "atom:2",
+        "13": "atom:13"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "other_carbonyl_O",
+          "atoms": [
+            2
+          ],
+          "group": "atom:2",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "phenol_O",
+          "atoms": [
+            13
+          ],
+          "group": "atom:13",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            2,
+            13
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [
+        9,
+        10,
+        11
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        5,
+        6
+      ],
+      "owners": {
+        "5": "atom:5",
+        "6": "atom:6"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            5
+          ],
+          "group": "atom:5",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "aza_aromatic_N",
+          "atoms": [
+            6
+          ],
+          "group": "atom:6",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        1,
+        6
+      ],
+      "owners": {
+        "1": "atom:1",
+        "6": "atom:6"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            1
+          ],
+          "group": "atom:1",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            6
+          ],
+          "group": "atom:6",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        4,
+        5
+      ],
+      "owners": {
+        "4": "ester:3",
+        "5": "ester:3"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ester_group",
+          "atoms": [
+            4,
+            5
+          ],
+          "group": "ester:3",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [
+        1,
+        8,
+        11
+      ],
+      "owners": {
+        "1": "atom:1",
+        "8": "atom:8",
+        "11": "atom:11"
+      },
+      "conditional_sites": [],
+      "matches": [
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            1
+          ],
+          "group": "atom:1",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            8
+          ],
+          "group": "atom:8",
+          "conditional_atoms": []
+        },
+        {
+          "feature": "ether_or_aromatic_O",
+          "atoms": [
+            11
+          ],
+          "group": "atom:11",
+          "conditional_atoms": []
+        }
+      ],
+      "topological_pairs": [
+        {
+          "atoms": [
+            1,
+            8
+          ],
+          "distance": 4,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            1,
+            11
+          ],
+          "distance": 3,
+          "feature": "OO_distance_3_4"
+        },
+        {
+          "atoms": [
+            8,
+            11
+          ],
+          "distance": 3,
+          "feature": "OO_distance_3_4"
+        }
+      ],
+      "unmatched_heteroatoms": [],
+      "warnings": [],
+      "net_formal_charge": 0
+    },
+    {
+      "sites": [],
+      "owners": {},
+      "conditional_sites": [],
+      "matches": [],
+      "topological_pairs": [],
+      "unmatched_heteroatoms": [
+        2
+      ],
+      "warnings": [],
+      "net_formal_charge": 0
+    }
+  ]
+}
