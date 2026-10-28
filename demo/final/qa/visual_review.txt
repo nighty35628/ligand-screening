@@ -18,3 +18,11 @@ Final browser verification: 75 pool/budget combinations; recommendations match f
 Presentation: quiet warm-white surface, real molecular SVGs, green primary action, blue/brown prediction paths. Full candidate list, structural identifiers and methodology are progressively disclosed. The only upfront mode note is “演示模式”; detailed explanation of cached predictions and presentation timing lives in “方法与数据”.
 
 Evidence: browser_verification.json and stage screenshots. desktop-hidden.png is a compatibility copy of desktop-recommendation.png, not an old-version screenshot.
+
+2026-10-28 audience-context and motion update
+
+Verified the original paper's introduction and screening workflow against the existing supplied full text and public abstract. Added a labeled geometric schematic of surface ligands, a short explanation of existing AI-guided robotic screening, and our specific two-route recommendation change. No initial outcome metrics introduced. Comparison now visibly separates the 72.2% complete-scheme gain against the fixed-budget RF baseline and the 12.4% fusion gain against the curve component, including the budget-3 tradeoff. Scientific scope and source notes are in SCIENTIFIC_CONTEXT.md.
+
+Mechanical detector: no findings. Batched desktop/mobile inspection: text and diagram readable, no overlaps; mobile reads background before choosing a budget. No visual correction required this round.
+
+Progress is monotonic sinusoidal modulation with unequal stage weights and durations. Natural-run samples from the browser: 5,9,18,25,28,32,39,49,55,61,64,65,70,75,83,90,93,98 percent. Verified natural completion, skip, cancellation and reduced motion. Full 75-case regression passes; no JavaScript errors, no offline external requests, no horizontal overflow at 1440/390/320px. Prediction and metric values remain unchanged.

@@ -49,6 +49,20 @@ const source = process.env.DEMO_URL || pathToFileURL(path.join(root, 'index.html
     await page.locator('#cancel-progress').click();
     await page.waitForTimeout(150);
     await absent(); assert(await page.locator('#start-analysis').isVisible());
+    // Observe the full nonuniform timeline, then independently check skip.
+    await page.locator('#start-analysis').click();
+    const samples = [];
+    for (let i = 0; i < 24; i++) {
+      await page.waitForTimeout(240);
+      if (!(await page.locator('#analysis-progress').count())) break;
+      samples.push(Number(await page.locator('#analysis-progress').getAttribute('aria-valuenow')));
+    }
+    await page.locator('#reveal-results').waitFor();
+    assert(samples.length >= 10);
+    assert(samples.every((v, i) => i === 0 || v >= samples[i - 1]));
+    const increments = samples.slice(1).map((v, i) => v - samples[i]);
+    assert(Math.max(...increments) >= Math.min(...increments) + 4, 'Progress must have perceptible speed variation');
+    await reset();
     await page.locator('#start-analysis').click();
     await page.locator('#skip-progress').click();
     await page.locator('#reveal-results').waitFor();
@@ -115,7 +129,7 @@ const source = process.env.DEMO_URL || pathToFileURL(path.join(root, 'index.html
       pass: true, checked_pool_budget_states: checked, unchanged_data_sha256: crypto.createHash('sha256').update(fs.readFileSync(path.join(root, 'data.json'))).digest('hex'),
       new_fits: 0, source: process.env.DEMO_URL ? source : 'offline file://', external_requests: network.length, browser_errors: errors,
       initial_results_hidden: true, truth_hidden_until_reveal: true, rank_recomputed_against_frozen_outputs: true,
-      progress_animated_cancelable_skippable: true, reduced_motion_supported: true, keyboard_selection: true,
+      progress_animated_cancelable_skippable: true, monotonic_variable_speed_samples: samples, reduced_motion_supported: true, keyboard_selection: true,
       reset_clears_results: true, viewports: [[1440,1000],[390,844],[320,700]], mobile_overflow: false,
       metrics_checked_per_state: D.methods.length * 2,
     };
