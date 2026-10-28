@@ -5,11 +5,11 @@
   "structure_source_sha256": "2ea575d393e3445cdc904ea613ed5630e9448b0ca59ac5529bb10aeb943511a0",
   "export_new_fits": 0,
   "files": {
-    "index.html": "2cb1f015c9b8d712cd2f40b782be271968c87374c26c205c2bd85c709ee667ba",
+    "index.html": "d66034cbbac20fd979a27692f9cba4afef5af820c7ac153759f230a55c3b5d9e",
     "data.json": "1bccc8f19e9ad932373157b2d7410705fe74de66b3c661de0230db5b04637666",
     "template.html": "daab303147964da82523386f21f7e9eabbec1d60df5ff4ea2f8acf0b85312eb1",
-    "style.css": "44e756354db50427a097990f97cbaf7a8542a2fdd2dc0616877fd42a7d792843",
-    "app.js": "dfc60f8d62fd75390d85acb4aec3143397d7ccfd9673853d57e0fa49ec9eb4f9"
+    "style.css": "2e23e2841b95addb1bb17116ca8c7380911b88bd88ac681b2f2f388d892d6f27",
+    "app.js": "03624bf00d563ff4dd12c92f7de017951bae24c9fb247cc1b1285f18891884df"
   },
   "ui_flow": "setup_analysis_recommendation_measurement_comparison",
   "data_changed_by_ui_redesign": false

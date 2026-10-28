@@ -9,3 +9,4 @@ Copy: one sentence per stage, technical details in method drawer; use source ide
 Accessibility: progressbar + live status, keyboard steps, disabled future steps, focus on stage heading, reduced-motion route, no horizontal page overflow.
 
 Audience refinement: lead with the material and surface-ligand problem, explain existing model-guided screening and our two-route recommendation, and separate overall baseline gains from fusion-only gains in the final stage.
+New result section: per-round resource comparison under predictions. Inputs for illustrative cost/time; full enumeration and equal-budget random/AI columns. Outcomes gated until reveal. Mobile displays all three methods as three values under each row label instead of clipped horizontal tables.

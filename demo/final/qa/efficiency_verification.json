@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "budgets_checked": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "reference": "exhaustive subset enumeration across all 15 pools",
+  "predicted_state_hides_oracles": true,
+  "estimate_input_edges_pass": true,
+  "estimates_persist_on_reveal": true,
+  "mobile_page_overflow": false,
+  "mobile_all_three_columns_visible": true,
+  "full_flow_pass": true,
+  "new_model_fits": 0,
+  "errors": []
+}

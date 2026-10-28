@@ -32,3 +32,9 @@ Progress is monotonic sinusoidal modulation with unequal stage weights and durat
 Copy-only change: “existing research” now means the surface-treatment and known-condition-optimization background discussed in the source paper's introduction. “Our approach” presents the adopted end-to-end recommendation framework and the added second route/fusion. Expanded attribution retains ALLiS and separates its original robot experiments from this implementation. Comparison labels now describe the basic and enhanced versions of the same AI screening workflow.
 
 Targeted four-stage smoke check passed; baseline/ensemble metrics unchanged. Desktop/mobile screenshots checked together; no layout repair needed. No overflow at 1440/390/320px. Frozen data unchanged. Full 75-combination verification from the preceding functional revision remains applicable; no ranking or animation code changed in this copy revision.
+
+2026-10-28 resource and selection-effect comparison
+
+Added a below-prediction comparison for complete testing, same-budget random selection and AI priority selection. Time/cost are editable assumptions per complete 40-point curve; outcomes stay hidden until measured reveal. All predictions/data remain unchanged. New hit probabilities independently verified by exhaustive subset enumeration for every pool and budget 1–5; expected best scores match sealed metrics to 1e-10.
+
+Browser checks cover all five budgets, oracle gating, cost/time edits, persistence on reveal, empty/negative/zero/out-of-range values, backward navigation, and comparison-page continuation. No errors or page overflow. Desktop/mobile batched visual inspection found the narrow table hid AI's column; corrected mobile layout to show all three methods under each row label. One confirmation pass passed, with a screenshot of the final mobile layout. No other visual changes or model fitting. See efficiency_verification.json and efficiency-*.png.
