@@ -44,7 +44,7 @@ function reportVisuals(){
  const max=Math.max(1,...ids.map(id=>latest[id].value));
  return `<section class="sheet"><h2>候选结构与响应曲线</h2><div class="report-figures">${shown.filter(id=>map[id]).slice(0,6).map(id=>{const c=map[id];return `<figure><div class="figure-title">${c.svg?'<div class="structure">'+c.svg+'</div>':''}<div><h3>${esc(c.name)}</h3><small>${esc(c.formula||a.metric)}</small></div></div>${chart(c)||'<p>预测 '+num(c.prediction)+'</p>'}<figcaption>预测 ${num(c.prediction)}${latest[id]?' · 实测 '+num(latest[id].value):''}</figcaption></figure>`;}).join('')}</div></section>${ids.length?`<section class="sheet"><h2>本轮实测表现</h2><p class="step-note">当前项目的已记录结果 · ${esc(a.metric)}</p><div class="result-bars">${ids.sort((a,b)=>latest[b].value-latest[a].value).map(id=>`<div><span>${esc(map[id]?.name||id)}</span><div class="bar-track"><i style="width:${Math.max(0,latest[id].value)/max*100}%"></i></div><strong>${num(latest[id].value)}</strong></div>`).join('')}</div><div class="table-wrap"><table><thead><tr><th>候选</th><th>曲线分支预测</th><th>直接评分预测</th><th>实测 ${esc(a.metric)}</th><th>来源</th></tr></thead><tbody>${ids.map(id=>`<tr><td>${esc(map[id]?.name||id)}</td><td>${num(map[id]?.prediction)}</td><td>${num(map[id]?.direct)}</td><td>${num(latest[id].value)}</td><td>${esc(latest[id].source)}</td></tr>`).join('')}</tbody></table></div></section>`:''}`;
 }
-function reportView(){const a=p.analysis;return `<div class="page-intro"><h1>研究报告</h1><p>汇总目标、分析、实验安排和已记录的结果。</p></div><div class="btn-row" style="margin-bottom:22px"><a class="btn primary" href="/api/projects/${p.id}/report" target="_blank">打开完整报告 / 保存 PDF</a>${plan()?`<a class="btn" href="/api/projects/${p.id}/csv" download>导出已保存实验表</a>`:''}</div>${reportVisuals()}<article class="sheet report-preview"><div class="wordmark">Amadeus</div><h1>${esc(p.title)}</h1><h2>研究目标</h2><p>${esc(p.task.goal)}</p><h2>分析与决策</h2><p>${a?esc(a.model)+'\n历史记录：'+a.training_count+'，候选：'+a.candidates.length: '结合检索资料与实验行动卡开展研究。'}</p>${a?.scores?scoreTable(a):''}<h2>实验进展</h2><p>已保存 ${p.plans.length} 份计划，记录 ${p.measurements.length} 条实验结果，当前第 ${p.round} 轮。</p>${p.messages.filter(m=>m.role==='assistant').slice(-1).map(m=>'<h2>最近的研究建议</h2><p>'+rich(m.content)+'</p>').join('')}<details><summary>运行与数据记录</summary><p>${a?.source?esc(a.source):'使用项目中载入的数据与资料。'}</p><a href="/api/projects/${p.id}/export" download>导出项目 JSON</a></details></article>${sources()}`;}
+function reportView(){const a=p.analysis;const ready=localStorage.getItem('amadeus-report-'+p.id)!=='pending';return `<div class="page-intro"><h1>研究报告</h1><p>汇总目标、分析、实验安排和已记录的结果。</p></div><div class="btn-row" style="margin-bottom:22px"><a class="btn primary" href="/api/projects/${p.id}/report" target="_blank">打开完整报告 / 保存 PDF</a>${plan()?`<a class="btn" href="/api/projects/${p.id}/csv" download>导出已保存实验表</a>`:''}</div>${ready?`${reportVisuals()}<article class="sheet report-preview"><div class="wordmark">Amadeus</div><h1>${esc(p.title)}</h1><h2>研究目标</h2><p>${esc(p.task.goal)}</p><h2>分析与决策</h2><p>${a?esc(a.model)+'\n历史记录：'+a.training_count+'，候选：'+a.candidates.length: '结合检索资料与实验行动卡开展研究。'}</p>${a?.scores?scoreTable(a):''}<h2>实验进展</h2><p>已保存 ${p.plans.length} 份计划，记录 ${p.measurements.length} 条实验结果，当前第 ${p.round} 轮。</p>${p.messages.filter(m=>m.role==='assistant').slice(-1).map(m=>'<h2>最近的研究建议</h2><p>'+rich(m.content)+'</p>').join('')}<details><summary>运行与数据记录</summary><p>${a?.source?esc(a.source):'使用项目中载入的数据与资料。'}</p><a href="/api/projects/${p.id}/export" download>导出项目 JSON</a></details></article>${sources()}`:'<div class="report-pending" role="status">正在整理研究报告，完成后将在这里展示图表和正文。</div>'}`;}
 function flowMeter(){
  if(!p)return '';
  const labels=['明确目标','分析候选','安排实验','记录结果','下一轮','报告'];
@@ -65,7 +65,7 @@ async function playDemo(){
  const run={step:0,completed:0,phase:'准备研究问题',stopped:false};autoDemo=run;
  try{
   await newProject('提高 CsPbBr₃ 纳米晶的发光表现。','纳米晶发光优化 · 自动演示');
-  const id=p.id;
+  const id=p.id;localStorage.setItem('amadeus-report-'+id,'pending');
   const steps=[
    ['我想提高CsPbBr3纳米晶的发光表现，这一轮先测试3种配体，帮我选出优先候选。','overview'],
    ['第二个买不到，换一个，这一轮改为测试4个。','overview'],
@@ -76,7 +76,7 @@ async function playDemo(){
   ];
   for(let i=0;i<steps.length;i++){
    if(run.stopped||p?.id!==id)break;
-   run.step=i+1;run.phase=['想一想研究目标','查看排名，调整名额','整理这一轮计划','准备查看实测结果','比较结果，继续筛选','整理研究报告'][i];if(i!==5)view=steps[i][1];chatDraft='';render();await pause(650+Math.random()*850);if(run.stopped)break;run.phase='正在输入…';render();
+   run.step=i+1;run.phase=['想一想研究目标','查看排名，调整名额','整理这一轮计划','准备查看实测结果','比较结果，继续筛选','整理研究报告'][i];view=steps[i][1];chatDraft='';render();await pause(650+Math.random()*850);if(run.stopped)break;run.phase='正在输入…';render();
    const box=$('#chat-input');box.readOnly=true;box.focus();
    let burst=0;
    for(const char of steps[i][0]){
@@ -109,6 +109,7 @@ async function playDemo(){
     await pause(700);
     if(run.stopped)break;
    }
+   if(i===5&&!run.stopped)localStorage.setItem('amadeus-report-'+id,'ready');
    run.completed=i+1;run.phase='查看'+['候选排序','更新后的名单','已保存计划','历史实测','下一轮建议','研究报告'][i];view=steps[i][1];render();
    await pause(900);
    const pane=$('.workspace-body');
