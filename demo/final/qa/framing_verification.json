@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "scope": "copy-only research framing",
+  "initial_results_hidden": true,
+  "source_attribution_preserved": true,
+  "all_four_stages_pass": true,
+  "unchanged_metric": 0.0818,
+  "viewports": [
+    1440,
+    390,
+    320
+  ],
+  "errors": []
+}

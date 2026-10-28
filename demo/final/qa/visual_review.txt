@@ -26,3 +26,9 @@ Verified the original paper's introduction and screening workflow against the ex
 Mechanical detector: no findings. Batched desktop/mobile inspection: text and diagram readable, no overlaps; mobile reads background before choosing a budget. No visual correction required this round.
 
 Progress is monotonic sinusoidal modulation with unequal stage weights and durations. Natural-run samples from the browser: 5,9,18,25,28,32,39,49,55,61,64,65,70,75,83,90,93,98 percent. Verified natural completion, skip, cancellation and reduced motion. Full 75-case regression passes; no JavaScript errors, no offline external requests, no horizontal overflow at 1440/390/320px. Prediction and metric values remain unchanged.
+
+2026-10-28 pipeline-framing correction
+
+Copy-only change: “existing research” now means the surface-treatment and known-condition-optimization background discussed in the source paper's introduction. “Our approach” presents the adopted end-to-end recommendation framework and the added second route/fusion. Expanded attribution retains ALLiS and separates its original robot experiments from this implementation. Comparison labels now describe the basic and enhanced versions of the same AI screening workflow.
+
+Targeted four-stage smoke check passed; baseline/ensemble metrics unchanged. Desktop/mobile screenshots checked together; no layout repair needed. No overflow at 1440/390/320px. Frozen data unchanged. Full 75-combination verification from the preceding functional revision remains applicable; no ranking or animation code changed in this copy revision.
