@@ -197,7 +197,7 @@ document.addEventListener('submit',async e=>{e.preventDefault();if(autoDemo)retu
  case 'results-form':{const records=readRows('[data-result-id]').filter(r=>r.value!==''||r.note.trim()||r.status==='failed');if(!records.length){toast('先填写测量值或结果说明。');return;}await act('record',{records},'results');break;}}
  }catch(err){toast(err.message);}});
 document.addEventListener('click',e=>{
- const link=e.target.closest('a[href^="/api/projects/"]');if(!window.AmadeusDemo||!link)return;
+ const link=e.target.closest('a[href^="/api/projects/"]');if(!link||(!window.AmadeusDemo&&!(p&&projectContext()&&link.getAttribute('href').endsWith('/report'))))return;
  e.preventDefault();if(!p)return;
  const type=link.getAttribute('href').split('/').at(-1);
  if(type==='report'){
