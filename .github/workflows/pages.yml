@@ -1,10 +1,11 @@
-name: Deploy demo to GitHub Pages
+name: Deploy Amadeus to GitHub Pages
 
 on:
   push:
     branches: [main]
     paths:
       - 'demo/final/**'
+      - 'amadeus/web/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -39,11 +40,20 @@ jobs:
               if actual != digest:
                   raise SystemExit(f'Demo integrity check failed: {name}')
           print('All frozen demo files verified; no model training required.')
+          root = Path('amadeus/web')
+          for name, digest in json.loads(Path('amadeus/web-manifest.json').read_text()).items():
+              if hashlib.sha256((root / name).read_bytes()).hexdigest() != digest:
+                  raise SystemExit(f'Amadeus asset integrity check failed: {name}')
+          print('Amadeus workbench assets verified.')
           PY
       - name: Prepare static site
         run: |
+          node --check amadeus/web/app.js
+          python3 -m py_compile amadeus/server.py
           mkdir _site
-          cp demo/final/{index.html,data.json,manifest.json,app.js,style.css,template.html} _site/
+          cp amadeus/web/{index.html,app.js,style.css,mark.svg,replay.json} _site/
+          mkdir -p _site/legacy
+          cp demo/final/{index.html,data.json,manifest.json,app.js,style.css,template.html} _site/legacy/
           touch _site/.nojekyll
       - name: Configure Pages
         uses: actions/configure-pages@v5

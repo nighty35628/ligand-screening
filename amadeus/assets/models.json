@@ -1,0 +1,8 @@
+{
+  "r0_f0": {
+    "file": "r0_f0.joblib",
+    "sha256": "c90b1fdce8583ea4afd3b8cda915e44affde3f1d52828dc4ed70c201945a0456",
+    "source": "previously trained fixed r0_f0 model; no new fitting",
+    "training_ligands": 36
+  }
+}

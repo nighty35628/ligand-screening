@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-28",
+  "training_fits": 0,
+  "new_effectiveness_experiments": 0,
+  "saved_model_inference_runs": 2,
+  "prediction_max_abs_difference": 2.220446049250313e-16,
+  "browser_live_seconds": 2.853,
+  "default_recommendations": [
+    "L27689",
+    "L39858",
+    "L00007"
+  ],
+  "other_pool_budget_one_replay": "pass",
+  "csv_record_count": "pass",
+  "report_with_measured_results": "pass",
+  "history_after_service_restart": "pass",
+  "candidate_labels_withheld_from_prediction": "pass",
+  "static_private_routes_blocked": "pass",
+  "invalid_budget_rejected": "pass",
+  "js_syntax": "pass",
+  "python_compile": "pass"
+}

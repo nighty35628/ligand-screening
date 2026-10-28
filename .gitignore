@@ -4,6 +4,7 @@ outputs/
 __pycache__/
 *.py[cod]
 *.joblib
+!amadeus/assets/r0_f0.joblib
 .DS_Store
 .env
 .env.*
