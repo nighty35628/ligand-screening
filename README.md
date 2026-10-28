@@ -1,54 +1,48 @@
 # Amadeus · 科研助手
 
-从已有实验和模型预测出发，比较候选，形成下一轮实验建议。
+把研究问题、数据分析和下一轮实验安排放在同一个工作区。
 
-Amadeus提供完整的本机工作台：**设置任务 → 实际计算 → 查看推荐 → 实测对照 → 导出报告**。材料研发是首个落地领域，CsPbBr₃纳米晶配体筛选是基于公开实测数据的首个案例。
+**[在线案例展示](https://nighty35628.github.io/ligand-screening/)** · [四分钟演示](docs/DEMO.md) · [验收记录](docs/DELIVERY.md) · [原计算流程](PIPELINE.md) · [资源归属](THIRD_PARTY.md)
 
-**[打开在线演示](https://nighty35628.github.io/ligand-screening/)** · [四分钟讲解流程](docs/DEMO.md) · [原计算流程与基线](PIPELINE.md) · [资源归属](THIRD_PARTY.md)
+![Amadeus研究工作区](docs/screenshots/workspace-desktop.jpg)
 
-![Amadeus候选建议](docs/screenshots/recommendations.jpg)
+## 本机启动
 
-## 在本机启动
-
-需要 `uv` 或 Python 3.12。首次启动安装锁定依赖；依赖就绪后无需网络、API Key或平台账号。
+需要 uv 或 Python 3.12。首次运行安装锁定依赖。
 
 ```bash
 git clone https://github.com/nighty35628/ligand-screening.git
 cd ligand-screening
+cp .env.example .env.local
+# 在 .env.local 填写 DeepSeek API Key
 ./run_amadeus.sh
 ```
 
-打开 **http://127.0.0.1:8787**。端口占用可用 `./run_amadeus.sh --port 8788`。
+打开 http://127.0.0.1:8787 。现成环境可用 `AMADEUS_PYTHON=/absolute/path/to/python ./run_amadeus.sh`；换端口使用 `--port 8788`。
 
-使用现成Python环境：
+对话、联网检索和网页读取使用 DeepSeek。固定模型推断、CSV 建模、计划编辑和报告导出在本机运行。密钥放在被 Git 忽略的 `.env.local`，不会传给浏览器。
 
-```bash
-AMADEUS_PYTHON=/absolute/path/to/python ./run_amadeus.sh
-```
+## 三种起点，同一份研究记录
 
-### 两种运行方式
+- **有明确问题**：直接输入目标，助手检索资料，生成带出处、测试条件和观察指标的行动卡，编辑后保存为实验计划。
+- **有自己的数据**：上传历史表和候选表，选择目标、特征、分组及优化方向。自动比较 ET、线性模型、梯度提升树和简单参照，输出候选排序。支持数值回归与二分类；二分类按目标类别概率排序。
+- **想先体验完整案例**：载入 CsPbBr₃ 纳米晶配体筛选，实际调用已保存的成对 ET、直接评分 ET 和等权排名融合，查看结构、用量响应和两路排名。
 
-| 方式 | 实际执行 | 可用范围 |
-|---|---|---|
-| 本机模型推断 | 加载已训练权重，计算响应曲线、直接评分及融合排名 | 仓库自带候选组01的模型 |
-| 快速回放 | 读取已核验的预测，重新计算排名与固定融合 | 全部15组；本机和在线演示均可用 |
+对话会实际修改工作区。例如“第二个买不到，换一个”“这一轮测试6个”“就按这个名单保存”。候选编号保持不变，名额和排除条件只调整名单；科学模型的原始预测保持不变。
 
-此次产品升级没有训练、调参或新增机制。主方法保持成对ET、直接评分ET、等权排名融合。默认36种历史配体、18个候选，可选择1—5个推荐名额。两路并列使用固定seed 42。说明由真实结果驱动的模板生成，不调用外部大模型。
+保存计划后，可以手动回填、导入结果 CSV，或在公开案例中揭晓历史实测。下一轮排除已完成候选；CSV 工作流还可把累积的新观测纳入重新建模。计划按轮次保存版本，结果保留记录，报告与实验表可导出。项目存储在本机 `outputs/amadeus-workspace/`。
 
-已有其他池权重可通过 `AMADEUS_MODEL_DIR=/path/to/models` 接入；仅加载自己信任、符合本仓库模型协议的文件。首版使用预计算分子特征，不支持任意SMILES自动预测。
+## 展示与运行
 
-## 可以做什么
+| 入口 | 内容 |
+|---|---|
+| 本机工作台 `/` | 对话、检索、CSV 建模、实验计划、结果、下一轮、报告 |
+| 完整案例 `/classic.html` | 原固定模型推断、15个候选池回放及基线对照 |
+| GitHub Pages | 首页与完整案例静态回放；通用工作台通过本机服务运行 |
 
-- 设置测试名额，查看候选结构和数据范围。
-- 真正调用已保存模型，或快速回放历史预测。
-- 查看推荐候选、两路排名、用量响应曲线与分歧说明。
-- 揭晓历史实测结果，切换本池对照和全部15组汇总。
-- 下载候选CSV、运行JSON；打开含曲线的报告，打印或保存PDF。
-- 返回运行记录，重新查看和导出。记录保存在 `outputs/amadeus/`，不上传GitHub。
+固定案例自带第一池权重，36种历史配体、18种候选。通用表格示例使用另一个公开纳米晶配方数据子集：80条历史记录与12条候选，按原分组拆分，用于展示数据工作流。来源见 THIRD_PARTY.md。
 
-本机服务只监听回环地址。推荐接口不返回候选实测标签，点击揭晓后才请求答案。GitHub Pages是独立的静态回放，包含公开档案答案，不用于盲测或新输入的模型推断。
-
-![Amadeus验证页面](docs/screenshots/evidence.jpg)
+当前升级扩展的是工作流程。CsPbBr₃ 的原模型、特征、融合规则和历史评估结果保持不变。
 
 ## 当前案例效果
 
@@ -66,16 +60,13 @@ AMADEUS_PYTHON=/absolute/path/to/python ./run_amadeus.sh
 
 这些是公开数据的回顾性结果，不是发光增强百分比、真实实验成本节省或新增湿实验。全部结果与原有基线保留，参见 [统一报告](results/reference/REPORT.md) 和 [原计算流程](PIPELINE.md)。
 
-## 目录
+## 代码入口
 
-```text
-amadeus/server.py       本机服务、保存模型推断、运行记录、报告
-amadeus/web/            响应式工作台及静态回放
-amadeus/assets/         首池已训练模型及SHA256清单
-allis_delivery/        已有固定模型和排名函数（原计算内核保留）
-allis_benchmark/        已有统一基线比较
-docs/                  演示讲解、截图、运行验收记录
-demo/final/            保留的早期演示
-```
+- `amadeus/server.py`：本机 HTTP 服务与固定案例推断。
+- `amadeus/workflow.py`：项目状态、对话工具、计划、结果与导出。
+- `amadeus/provider.py`：DeepSeek 对话、Search 和 Fetch。
+- `amadeus/tabular.py`：通用表格模型比较与预测。
+- `amadeus/web/`：主工作台及保留的案例回放。
+- `amadeus/assets/`：固定案例权重及校验清单。
 
-SciencePal接入暂不在当前产品范围。跨材料或跨领域任务需要适配特征、模型和验证；当前完整案例为CsPbBr₃配体筛选。
+服务监听本机回环地址。关闭后再启动，项目与已保存计划会恢复。

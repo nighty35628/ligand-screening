@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-28",
+  "scope": "v2 workflow engineering acceptance; no new scientific effectiveness experiments",
+  "specialist": {
+    "default_selection": [
+      "L27689",
+      "L39858",
+      "L00007"
+    ],
+    "prediction_max_abs_difference": 2.220446049250313e-16,
+    "conversation_replacement_budget6_save_record_next_round": "pass"
+  },
+  "tabular": {
+    "group_validation": "pass",
+    "candidates": 12,
+    "compared_models": 4,
+    "accumulated_training_rows": [
+      80,
+      81,
+      82
+    ],
+    "classification_update": [
+      18,
+      19
+    ],
+    "classification_direction_consistency": "pass"
+  },
+  "literature": {
+    "project": "a0e1c22d0d8c",
+    "sources": 10,
+    "actions": 2,
+    "status": "pass"
+  },
+  "browser": {
+    "desktop": "pass",
+    "mobile_390": "pass",
+    "edit_and_save_plan": "pass"
+  },
+  "review": {
+    "disposition": "ship",
+    "scope": "three identified workflow fixes resolved"
+  }
+}

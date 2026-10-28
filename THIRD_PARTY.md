@@ -12,3 +12,9 @@
 资产目录保留来源路径、配置、固定输入、预测及哈希，便于追溯。原始资料许可未在本次上传中重新作法律判定，本仓库不对原数据、原代码或派生产物作统一MIT等再许可声明。
 
 本项目新增部分包括：固定等权的双模型排名融合、统一回顾性比较入口、保存加载预测、独立指标复算和交互回放界面。方法组合的适用效果由实际结果描述，不据此宣称全新算法原理或新材料发现。
+
+## 通用表格工作流示例
+
+`amadeus/web/sample-history.csv`（80行）与 `sample-candidates.csv`（12行）来自已有公开配方数据审计结果。按原 group 前80组/后续12组选取，历史与候选不共享group；候选文件去除目标peak。字段保留PbBr2、Cs-oleate、Aceton加入体积。用于功能演示，不作为本项目新增性能结论。
+
+Lampe et al., *Rapid Data-Efficient Optimization of Perovskite Nanocrystal Syntheses through Machine Learning Algorithm Fusion*, DOI https://doi.org/10.1002/adma.202208772 。作者代码 https://github.com/benkour/Quantum_Dot_optimization ，审计固定提交 `659e2c37ec6cf11e3f972ca21e7b6745c49285a4`。

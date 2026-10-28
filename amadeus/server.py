@@ -1,4 +1,4 @@
-"""Local-only workbench. Reuses frozen models; never fits or tunes estimators."""
+"""Local workbench: frozen specialist models and project-based research tools."""
 from __future__ import annotations
 
 import argparse
@@ -10,12 +10,14 @@ import io
 import json
 import mimetypes
 import os
+import sys
 from pathlib import Path
 import threading
 import time
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
+from . import workflow
 import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -209,6 +211,21 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         path = urlparse(self.path).path
         try:
+            if path == '/api/config':
+                return self.send({'local': True, 'provider': 'DeepSeek', 'configured': bool(workflow.provider.settings().get('DEEPSEEK_API_KEY'))})
+            if path == '/api/projects':
+                return self.send(workflow.listing())
+            if path.startswith('/api/projects/'):
+                parts = path.strip('/').split('/')
+                project = workflow.load(parts[2])
+                if len(parts) == 3:
+                    return self.send(workflow.visible(project))
+                if parts[3] == 'report':
+                    return self.send(workflow.export_report(project), content_type='text/html; charset=utf-8')
+                if parts[3] == 'csv':
+                    return self.send(workflow.export_csv(project), content_type='text/csv; charset=utf-8', filename='amadeus-plan.csv')
+                if parts[3] == 'export':
+                    return self.send(project, filename='amadeus-project.json')
             if path == '/api/catalog':
                 return self.send(catalog())
             if path == '/api/history':
@@ -233,7 +250,9 @@ class Handler(BaseHTTPRequestHandler):
                     return self.send(csv_report(job), content_type='text/csv; charset=utf-8', filename=f'amadeus-{job["id"]}.csv')
             # Explicit static allowlist: raw data, models and archived answers are not served locally.
             files = {'/': 'index.html', '/index.html': 'index.html', '/app.js': 'app.js',
-                     '/style.css': 'style.css', '/mark.svg': 'mark.svg'}
+                     '/style.css': 'style.css', '/mark.svg': 'mark.svg', '/classic.html':'classic.html',
+                     '/workbench.js':'workbench.js', '/workbench.css':'workbench.css', '/case-molecule.svg':'case-molecule.svg',
+                     '/sample-history.csv':'sample-history.csv', '/sample-candidates.csv':'sample-candidates.csv'}
             if path in files:
                 file = WEB / files[path]
                 return self.send(file.read_bytes(), content_type=mimetypes.guess_type(file.name)[0] or 'application/octet-stream')
@@ -246,7 +265,24 @@ class Handler(BaseHTTPRequestHandler):
         origin = self.headers.get('Origin')
         if origin and origin != f'http://{self.headers.get("Host")}':
             return self.send({'error': '跨来源请求已拒绝。'}, 403)
-        if urlparse(self.path).path != '/api/run':
+        path = urlparse(self.path).path
+        if path == '/api/projects' or path.startswith('/api/projects/'):
+            try:
+                length = int(self.headers.get('Content-Length', 0))
+                if not 0 < length <= 8_000_000:
+                    raise ValueError('请使用小于8MB的请求。')
+                data = json.loads(self.rfile.read(length))
+                if path == '/api/projects':
+                    return self.send(workflow.visible(workflow.create(data)))
+                parts = path.strip('/').split('/')
+                if len(parts) == 4 and parts[3] == 'action':
+                    return self.send(workflow.start(parts[2], data), 202)
+                if len(parts) == 4 and parts[3] == 'cancel':
+                    return self.send(workflow.cancel(parts[2]))
+                return self.send({'error':'路径不存在。'},404)
+            except (ValueError, KeyError, TypeError) as exc:
+                return self.send({'error':str(exc)},400)
+        if path != '/api/run':
             return self.send({'error': '路径不存在。'}, 404)
         try:
             length = int(self.headers.get('Content-Length', 0))
@@ -286,6 +322,7 @@ def main():
                     JOBS[job['id']] = job
             except (ValueError, KeyError):
                 continue
+    workflow.init(sys.modules[__name__])
     print(f'Amadeus is ready: http://127.0.0.1:{args.port}', flush=True)
     ThreadingHTTPServer(('127.0.0.1', args.port), Handler).serve_forever()
 
