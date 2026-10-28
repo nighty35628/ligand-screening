@@ -514,6 +514,37 @@ def export_csv(p):
     return ('\ufeff'+out.getvalue()).encode()
 
 
+def report_figures(p):
+    e=html.escape; a=p.get('analysis') or {}; known=candidate_map(p)
+    latest={m['candidate_id']:m for m in p['measurements'] if m.get('analysis_id')==a.get('id') and m['value'] is not None}
+    ids=list(latest) or p['selected']; output='<h2>候选结构与响应曲线</h2><div class="figures">'
+    for ident in ids[:6]:
+        c=known.get(ident)
+        if not c: continue
+        output+='<figure><h3>'+e(c['name'])+'</h3><div class="molecule">'+c.get('svg','')+'</div>'
+        curve=c.get('curve'); measured=c.get('measured_curve')
+        if curve:
+            dose=c['dose']; values=curve+(measured or []); lo=min(0,min(values)); hi=max(values)*1.08 or 1
+            def points(v):
+                return ' '.join(f'{40+410*(dose[i]-dose[0])/(dose[-1]-dose[0] or 1):.2f},{150-120*(y-lo)/(hi-lo):.2f}' for i,y in enumerate(v))
+            output+='<svg viewBox="0 0 480 200" role="img" aria-label="预测与历史实测曲线"><path d="M40 25V150H450" fill="none" stroke="#bfc3cc"/>'
+            for t in (0,.5,1):
+                output+=f'<text x="4" y="{154-120*t}">{lo+(hi-lo)*t:.2f}</text>'
+            output+='<polyline points="'+points(curve)+'" fill="none" stroke="#245dcc" stroke-width="2"/>'
+            if measured: output+='<polyline points="'+points(measured)+'" fill="none" stroke="#99582a" stroke-width="2"/>'
+            output+=f'<text x="40" y="175">{dose[0]:.1f}</text><text x="415" y="175">{dose[-1]:.1f}</text><text x="170" y="195">加入量 / nmol</text></svg><p>蓝：预测 FOM · 棕：历史实测 FOM</p>'
+        output+='<figcaption>预测 '+str(round(c['prediction'],3))
+        if ident in latest: output+=' · 实测 '+str(round(latest[ident]['value'],3))
+        output+='</figcaption></figure>'
+    output+='</div>'
+    if latest:
+        maximum=max(1,max(m['value'] for m in latest.values()))
+        output+='<h2>已记录结果对比</h2>'
+        for ident,m in sorted(latest.items(),key=lambda kv:-kv[1]['value']):
+            output+='<div class="barrow"><span>'+e(known.get(ident,{}).get('name',ident))+'</span><div class="track"><i style="width:'+str(max(0,m['value'])/maximum*100)+'%"></i></div><b>'+str(round(m['value'],3))+'</b></div>'
+    return output
+
+
 def export_report(p):
     e=html.escape
     def table(headers, rows):
@@ -525,6 +556,7 @@ def export_report(p):
         body+='<h2>分析结果</h2><p>'+e(a['model'])+'</p>'
         body+=table(['候选','预测 '+a.get('metric',''),'直接评分','融合名次'],[(known[i]['name'],round(known[i]['prediction'],4),known[i].get('direct',''),known[i].get('rank','')) for i in p['selected']])
         if a.get('scores'): body+='<p>'+e(a['validation'])+'</p>'+table(['模型',a['score_label']],[(s['model'],round(s['score'],5)) for s in a['scores']])
+    if a: body+=report_figures(p)
     for action in p['actions']:
         body+='<h2>'+e(action['title'])+'</h2><p>'+e(action['reason'])+'</p><p>'+e(action['condition'])+'</p>'
     for plan in p['plans']:
@@ -536,4 +568,4 @@ def export_report(p):
         if m['role']=='assistant': body+='<p style="white-space:pre-wrap">'+e(m['content'])+'</p>'
     if a.get('source'): body+='<p>'+e(a['source'])+'</p>'
     if p['sources']: body+='<h2>资料来源</h2>'+''.join('<p><a href="'+e(s['url'],quote=True)+'">'+e(s['title'])+'</a></p>' for s in p['sources'])
-    return ('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Amadeus 研究报告</title><style>body{font:15px/1.8 system-ui;color:#243b32;max-width:1000px;margin:40px auto;padding:24px}h1{font-size:30px}h2{margin-top:32px;font-size:20px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid #ddd;overflow-wrap:anywhere}a{color:#275e47}@media print{button{display:none}body{margin:0;padding:10px}tr{break-inside:avoid}}</style><button onclick="print()">打印 / 保存 PDF</button>'+body+'</html>').encode()
+    return ('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Amadeus 研究报告</title><style>.figures{display:grid;grid-template-columns:1fr 1fr;gap:24px}figure{margin:0;break-inside:avoid}figure svg{max-width:100%;font:12px system-ui}.molecule svg{width:150px;height:90px}figcaption,figure p{font-size:12px}.barrow{display:grid;grid-template-columns:180px 1fr 65px;gap:15px;align-items:center;margin:12px 0}.track{background:#eceef2;height:14px}.track i{display:block;background:#245dcc;height:100%}body{font:15px/1.8 system-ui;color:#25262b;max-width:1000px;margin:40px auto;padding:24px}h1{font-size:30px}h2{margin-top:32px;font-size:20px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid #ddd;overflow-wrap:anywhere}a{color:#275e47}@media print{button{display:none}body{margin:0;padding:10px}tr{break-inside:avoid}}</style><button onclick="print()">打印 / 保存 PDF</button>'+body+'</html>').encode()
