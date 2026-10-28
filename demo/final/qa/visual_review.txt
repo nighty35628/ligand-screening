@@ -1,13 +1,20 @@
-界面验收：现有演示的功能扩展，未重设视觉体系。
-本次由同一执行代理进行内联界面复核，未调用独立设计审查代理；技能上下文加载器因执行权限不可用，改读PRODUCT.md和既有样式。
+2026-10-28 guided-flow interface review
 
-首轮发现：桌面局部截图截取在滚动中间，不能作为首屏证据；手机汇总标题旁的预算文字因继承宽度换行。已固定截图前瞬时滚动到顶，并取消该处最大宽度。
-最终色彩检查：新增RF上界文字由#977932改为#80631f，对暖白背景对比度从3.74提高至5.12；其他新增方法文字对比度均至少4.5。
+Scope: existing light scientific demo, reorganized into setup → analysis → recommendations → measured results → comparison. Frozen research data unchanged; no model fits.
 
-persistence：保留PRODUCT.md和旧demo；新增版本放在demo/final，未改动旧演示资产及封存数据。已有产品说明仅描述旧三策略版本，当前扩展范围由demo/final/README.md记录。
-fidelity：暖白背景、两栏候选与结构详情、蓝/棕/绿模型标识保持；新增顶部六策略汇总、RF用量曲线、随机及RF名单属于本轮已授权功能。
-ceiling：离线页面支持所有固定候选池与预算；本页面不进行实时训练，真正预测由统一CLI完成。
-material_fixes：截图起始位置、移动端预算换行和新增色彩对比度已修正；最终截图由浏览器检查脚本重新生成。
-keep：保留全部池、全部预算及负结果；不改变默认首池；预测值、名次和实测分开显示。
+Skill: impeccable, using distill/animate/craft-floor guidance. Context launcher ran via sh. Mechanical detector ran once on the UI sources; its only finding was an inherited Inter font token, removed in favor of the system stack.
 
-文档核对：原样式、demo/final/style.css与README对应。作为现有界面的扩展，不另建一套设计系统；原有系统字体、字符箭头等既有做法没有被当作新的设计规范推广。
+Review: inline by the implementing agent. Desktop 1440×1000 and phone 390×844 screenshots were inspected together, followed by one correction/confirmation batch. No independent design-review agent was used.
+
+First-pass findings and corrections:
+- Desktop Chinese headline wrapped its final character; removed a Latin-ch width limit.
+- 320px layout overflowed; wrapped setup actions/chemical metadata and stacked narrow step labels.
+- Stage-transition screenshots captured partial opacity; screenshots now wait for the short fade to finish.
+- Programmatic heading focus produced an unnecessary browser outline; heading keeps accessibility focus without decorative outline. Interactive controls retain visible keyboard focus.
+- Increased mobile SVG chart label size.
+
+Final browser verification: 75 pool/budget combinations; recommendations match frozen tie order; two predictions and actual values checked; all six method metrics checked in global and per-pool views. No JavaScript errors or external network requests for offline use. Initial results hidden; true labels hidden until reveal; reset clears results; processing supports cancellation and skipping; reduced motion and keyboard selection pass. No page overflow at tested widths 1440, 390 and 320.
+
+Presentation: quiet warm-white surface, real molecular SVGs, green primary action, blue/brown prediction paths. Full candidate list, structural identifiers and methodology are progressively disclosed. The only upfront mode note is “演示模式”; detailed explanation of cached predictions and presentation timing lives in “方法与数据”.
+
+Evidence: browser_verification.json and stage screenshots. desktop-hidden.png is a compatibility copy of desktop-recommendation.png, not an old-version screenshot.

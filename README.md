@@ -26,7 +26,7 @@ cd ligand-screening
 ./run_demo.sh
 ```
 
-打开终端打印的本地地址。也可以直接用浏览器打开 [demo/final/index.html](demo/final/index.html)。页面可离线运行，支持候选结构、两路预测、融合名次、RF曲线、推荐名单和实测揭晓。
+打开终端打印的本地地址。也可以直接用浏览器打开 [demo/final/index.html](demo/final/index.html)。页面可离线运行，按“设置 → 推荐 → 揭晓实测 → 效果对比”逐步展开。首页不显示结果；短进度动画可以跳过或取消。候选结构、两路预测与曲线在推荐阶段出现，完整方法说明按需展开。
 
 ![演示界面](demo/final/qa/desktop-overview.png)
 
