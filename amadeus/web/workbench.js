@@ -5,6 +5,7 @@ const icons={plus:'M12 5v14M5 12h14',send:'m4 12 16-8-6 16-3-7-7-1Z M11 13l9-9',
 const icon=n=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${icons[n]}"/></svg>`;
 const num=v=>v==null?'—':Number(v).toFixed(3), date=v=>new Date(v).toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'});
 let local=false,configured=false,projects=[],p=null,view='overview',chatDraft='',selectedDetail=null,poll=null,busy=false;
+let autoDemo=null;
 const views={overview:'研究工作区',data:'数据与候选',plan:'实验计划',results:'实验结果',report:'研究报告'};
 function rich(text){return esc(text).replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,'<a href="$2" target="_blank" rel="noreferrer">$1</a>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');}
 async function api(path,body){const response=await fetch(path,body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{});const data=await response.json();if(!response.ok)throw Error(data.error||'请求未完成');return data;}
@@ -18,7 +19,7 @@ function side(){return `<aside class="side"><a href="./" class="brand"><img src=
 function home(){return `<main id="main" class="home"><div class="home-intro"><div><h1>今天想推进什么研究？</h1><p>说说你的目标，带上已有数据，一起安排下一步实验。</p></div><span class="intro-mark" aria-hidden="true">A</span></div>
 <form id="new-form" class="composer-home"><textarea id="new-goal" aria-label="描述研究问题" placeholder="例如：我想提高纳米晶的发光表现，这一轮最多测试3种配体。"></textarea><div class="composer-bottom"><small>目标、实验条件或一个待解决的问题，都可以从这里开始。</small><button class="btn primary" ${!local?'disabled':''}>开始研究 ${icon('arrow')}</button></div></form>
 ${!local?`<div class="offline">这里提供完整案例回放。<a href="http://127.0.0.1:8787/">打开本机工作台</a>，即可对话、上传数据和保存研究项目。</div>`:''}
-<div class="case-row"><section class="case-feature"><div><h2>纳米晶发光优化</h2><p>公开实测案例 · 18种候选配体<br>从预测推荐走到实验计划与结果对照。</p>${local?'<button class="btn" data-do="example">载入案例 '+icon('arrow')+'</button>':'<a class="btn" href="./classic.html">进入案例回放 '+icon('arrow')+'</a>'}</div><img class="case-structure" src="./case-molecule.svg" alt="案例中的配体分子结构"></section><div class="entry-list"><button data-do="csv-project" ${!local?'disabled':''}><strong>从自己的实验数据开始</strong><small>上传历史数据和候选表，比较模型并安排测试。</small></button><button data-do="literature-project" ${!local?'disabled':''}><strong>先查资料，形成研究思路</strong><small>结合公开研究，整理可执行的实验行动。</small></button></div></div>
+<div class="case-row"><section class="case-feature"><div><h2>纳米晶发光优化</h2><p>公开实测案例 · 18种候选配体<br>从预测推荐走到实验计划与结果对照。</p>${local?'<button class="btn primary" data-do="auto-demo">一键自动演示</button> <button class="btn" data-do="example">载入案例 '+icon('arrow')+'</button>':'<a class="btn" href="./classic.html">进入案例回放 '+icon('arrow')+'</a>'}</div><img class="case-structure" src="./case-molecule.svg" alt="案例中的配体分子结构"></section><div class="entry-list"><button data-do="csv-project" ${!local?'disabled':''}><strong>从自己的实验数据开始</strong><small>上传历史数据和候选表，比较模型并安排测试。</small></button><button data-do="literature-project" ${!local?'disabled':''}><strong>先查资料，形成研究思路</strong><small>结合公开研究，整理可执行的实验行动。</small></button></div></div>
 <section><div class="section-title"><h2>最近的研究</h2><small>${projects.length} 个项目</small></div>${projects.length?projects.map(x=>`<button class="recent-row" data-project="${x.id}"><div><strong>${esc(x.title)}</strong><small>${esc(x.task.goal||'继续补充研究目标')}</small></div><small>第 ${x.round} 轮<br>${date(x.updated)}</small></button>`).join(''):'<p class="empty">创建第一个项目，研究记录会保存在这里。</p>'}</section></main>`;}
 function chat(){return `<section class="conversation" aria-label="研究对话"><div class="chat-heading">${icon('spark')}<strong>与 Amadeus 一起研究</strong></div><div class="messages" id="messages">${p.messages.length?p.messages.map(m=>`<article class="message ${m.role}"><div class="role">${m.role==='user'?'你':'Amadeus'}</div><p>${rich(m.content)}</p></article>`).join(''):`<div class="chat-empty"><h3>从问题开始</h3><p>告诉我希望改善什么、已有多少数据，或这一轮可以安排多少实验。</p><button class="suggestion" data-say="载入CsPbBr3发光配体筛选示例，帮我推荐3个候选">载入纳米晶案例，推荐3个候选</button><button class="suggestion" data-say="请帮我检索提高CsPbBr3纳米晶耐湿稳定性的研究，并整理实验行动卡">查找纳米晶稳定性的研究思路</button></div>`}</div><form class="chat-form" id="chat-form"><textarea id="chat-input" aria-label="向 Amadeus 提问" placeholder="继续提问，或说：第二个买不到，换一个…" ${running()?'disabled':''}>${esc(chatDraft)}</textarea><div class="btn-row"><small>对话会同步更新工作区</small><button class="btn primary small" ${running()?'disabled':''}>发送 ${icon('send')}</button></div></form></section>`;}
 function status(){const o=p.operation;if(o.status==='running')return `<div class="status" role="status"><span><i class="spinner"></i>${esc(o.message)}</span><button class="btn small" data-do="cancel">停止</button></div>`;if(['failed','interrupted'].includes(o.status))return `<div class="status error" role="alert"><span>${esc(o.message)}</span><button class="btn small" data-do="dismiss-error">知道了</button></div>`;return '';}
@@ -34,7 +35,7 @@ function draftItems(){const current=plan(),map=known(),prior=Object.fromEntries(
 function planView(){const items=draftItems();return `<div class="page-intro"><h1>安排本轮实验</h1><p>把建议调整为实际要测试的名单，补充条件后保存。</p></div><section class="sheet"><div class="section-title"><h2>第 ${p.round} 轮计划</h2>${plan()?'<span class="pill">版本 '+plan().version+(JSON.stringify(items.map(i=>i.candidate_id))===JSON.stringify(plan().items.map(i=>i.candidate_id))?' · 已保存':' · 名单已调整')+'</span>':'<span class="pill">草稿</span>'}</div>${items.length?`<form id="plan-form"><div class="table-wrap"><table><thead><tr><th>候选 / 行动</th><th>测试条件</th><th>指标</th><th>单位</th><th>备注</th></tr></thead><tbody>${items.map(i=>`<tr data-plan-id="${esc(i.candidate_id)}" data-name="${esc(i.name)}"><td class="wrap">${esc(i.name)}</td><td><input data-field="condition" aria-label="${esc(i.name)}测试条件" value="${esc(i.condition)}" placeholder="填写条件或用量"></td><td><input data-field="metric" aria-label="${esc(i.name)}指标" value="${esc(i.metric)}"></td><td><input data-field="unit" aria-label="${esc(i.name)}单位" value="${esc(i.unit)}"></td><td><input data-field="note" aria-label="${esc(i.name)}备注" value="${esc(i.note)}"></td></tr>`).join('')}</tbody></table></div><label class="field" style="margin:18px 0"><span>本轮备注</span><textarea id="plan-notes" placeholder="例如：统一使用同一批纳米晶，记录测试条件。">${esc(plan()?.notes||'')}</textarea></label><div class="btn-row"><button class="btn primary" ${running()?'disabled':''}>保存本轮计划</button>${plan()?`<a class="btn" href="/api/projects/${p.id}/csv" download>导出已保存实验表</a><button class="btn" type="button" data-view="results">记录实验结果</button>`:''}</div></form>`:'<div class="empty"><p>先在工作区生成候选建议或实验行动卡，再安排本轮计划。</p><div class="btn-row"><button class="btn" data-view="overview">返回研究工作区</button></div></div>'}</section>${p.plans.length?`<section class="sheet"><h2>已保存的计划</h2>${p.plans.slice().reverse().map(q=>`<div class="saved-row"><span>第 ${q.round} 轮 · 版本 ${q.version} · ${q.items.length} 项实验</span><small>${date(q.created)}</small></div>`).join('')}</section>`:''}`;}
 function resultsView(){const q=plan();const a=p.analysis;return `<div class="page-intro"><h1>记录实验结果</h1><p>记录这轮发生了什么，继续安排下一轮。</p></div>${q?`<section class="sheet"><div class="section-title"><h2>第 ${p.round} 轮</h2>${a?.kind==='specialist'?`<button class="btn small" data-do="history-results" ${running()?'disabled':''}>载入历史实测结果</button>`:''}</div><form id="results-form"><div class="table-wrap"><table><thead><tr><th>候选 / 行动</th><th>测量值</th><th>单位</th><th>状态</th><th>说明</th></tr></thead><tbody>${q.items.map(i=>`<tr data-result-id="${esc(i.candidate_id)}" data-condition="${esc(i.condition)}"><td class="wrap">${esc(i.name)}</td><td><input data-field="value" aria-label="${esc(i.name)}测量值" type="number" step="any" placeholder="输入实测"></td><td><input data-field="unit" aria-label="${esc(i.name)}结果单位" value="${esc(i.unit)}"></td><td><select data-field="status" aria-label="${esc(i.name)}状态"><option value="completed">完成</option><option value="failed">失败</option><option value="pending">待测</option></select></td><td><input data-field="note" aria-label="${esc(i.name)}结果说明" placeholder="实验现象或失败原因"></td></tr>`).join('')}</tbody></table></div><div class="btn-row" style="margin-top:18px"><button class="btn primary" ${running()?'disabled':''}>保存填写的结果</button><label class="btn">导入结果 CSV<input type="file" accept=".csv" data-upload="results" hidden ${running()?'disabled':''}></label></div></form><p class="step-note">只保存已填写的行；重复测量保留为新记录。${a?.task==='classification'?'二分类填 1 表示目标类别，0 表示另一类别；也可在说明中填原始类别名称。':''}</p></section>`:'<section class="sheet empty"><h3>先安排本轮实验</h3><p>保存计划后，即可录入测量或导入结果。</p><div class="btn-row"><button class="btn" data-view="plan">查看实验计划</button></div></section>'}${p.measurements.length?`<section class="sheet"><div class="section-title"><h2>研究进展</h2><span class="pill">${p.measurements.filter(m=>m.status==='completed').length} 项已记录</span></div><div class="table-wrap"><table><thead><tr><th>轮次</th><th>候选</th><th>结果</th><th>状态</th><th>来源</th></tr></thead><tbody>${p.measurements.slice().reverse().map(m=>`<tr><td>${m.round}</td><td>${esc(m.candidate_id)}</td><td class="wrap">${m.value!=null?num(m.value)+' '+esc(m.unit):esc(m.note)}</td><td>${({completed:'完成',failed:'失败',pending:'待测'})[m.status]}</td><td>${esc(m.source)}</td></tr>`).join('')}</tbody></table></div><div class="btn-row" style="margin-top:20px"><button class="btn primary" data-do="next-round" ${running()||!p.measurements.some(m=>m.round===p.round)?'disabled':''}>安排下一轮 ${icon('arrow')}</button>${a?.kind==='tabular'?`<button class="btn" data-do="retrain" ${running()?'disabled':''}>使用新结果更新分析</button>`:''}<button class="btn" data-view="report">生成研究报告</button></div></section>`:''}${a?.evidence?`<section class="sheet"><h2>原案例同预算对照</h2><p class="step-note">固定案例原始名单 · 推荐 ${a.legacy_job.budget} 个；当前用户计划见上方记录。</p><div class="table-wrap"><table><thead><tr><th>方法</th><th>原始名单最佳实测 Q</th></tr></thead><tbody>${[['paired_ET','成对 ET'],['direct_Q_ET','直接评分 ET'],['equal_rank','等权融合'],['paired_RF','成对 RF']].map(([k,l])=>`<tr><td>${l}</td><td>${num(a.evidence.metrics[k].selected_best)}</td></tr>`).join('')}</tbody></table></div></section>`:''}`;}
 function reportView(){const a=p.analysis;return `<div class="page-intro"><h1>研究报告</h1><p>汇总目标、分析、实验安排和已记录的结果。</p></div><div class="btn-row" style="margin-bottom:22px"><a class="btn primary" href="/api/projects/${p.id}/report" target="_blank">打开完整报告 / 保存 PDF</a>${plan()?`<a class="btn" href="/api/projects/${p.id}/csv" download>导出已保存实验表</a>`:''}</div><article class="sheet report-preview"><div class="wordmark">Amadeus</div><h1>${esc(p.title)}</h1><h2>研究目标</h2><p>${esc(p.task.goal)}</p><h2>分析与决策</h2><p>${a?esc(a.model)+'\n历史记录：'+a.training_count+'，候选：'+a.candidates.length: '结合检索资料与实验行动卡开展研究。'}</p>${a?.scores?scoreTable(a):''}<h2>实验进展</h2><p>已保存 ${p.plans.length} 份计划，记录 ${p.measurements.length} 条实验结果，当前第 ${p.round} 轮。</p>${p.messages.filter(m=>m.role==='assistant').slice(-1).map(m=>'<h2>最近的研究建议</h2><p>'+rich(m.content)+'</p>').join('')}<details><summary>运行与数据记录</summary><p>${a?.source?esc(a.source):'使用项目中载入的数据与资料。'}</p><a href="/api/projects/${p.id}/export" download>导出项目 JSON</a></details></article>${sources()}`;}
-function render(){const scroll=$('.workspace-body')?.scrollTop||0;$('#app').innerHTML=side()+`<div class="shell"><header class="top"><div><span class="crumb">${p?'研究项目':'我的工作台'}</span><strong>${p?esc(p.title):'Amadeus'}</strong></div><div class="round"><span class="pill">${p?'第 '+p.round+' 轮':local?'本机研究工作台':'在线案例'}</span>${p?'<button class="btn small" data-view="report">导出报告</button>':''}</div></header>${p?`<main id="main" class="project-layout">${chat()}<div class="workspace-body">${status()}${view==='overview'?task()+recommendations()+actions()+sources():view==='data'?dataView():view==='plan'?planView():view==='results'?resultsView():reportView()}</div></main>`:home()}</div>`;if($('.workspace-body'))$('.workspace-body').scrollTop=scroll;const messages=$('#messages');if(messages)messages.scrollTop=messages.scrollHeight;}
+function render(){const scroll=$('.workspace-body')?.scrollTop||0;$('#app').innerHTML=side()+`<div class="shell"><header class="top"><div><span class="crumb">${p?'研究项目':'我的工作台'}</span><strong>${p?esc(p.title):'Amadeus'}</strong></div><div class="round"><span class="pill">${p?'第 '+p.round+' 轮':local?'本机研究工作台':'在线案例'}</span>${autoDemo?'<span class="pill">自动演示 '+autoDemo.step+'/6</span><button class="btn small" data-do="stop-demo">停止演示</button>':local?'<button class="btn small" data-do="auto-demo">一键自动演示</button>':''}${p?'<button class="btn small" data-view="report">导出报告</button>':''}</div></header>${p?`<main id="main" class="project-layout">${chat()}<div class="workspace-body">${status()}${view==='overview'?task()+recommendations()+actions()+sources():view==='data'?dataView():view==='plan'?planView():view==='results'?resultsView():reportView()}</div></main>`:home()}</div>`;if($('.workspace-body'))$('.workspace-body').scrollTop=scroll;const messages=$('#messages');if(messages)messages.scrollTop=messages.scrollHeight;}
 async function refreshList(){projects=await api('/api/projects');}
 async function openProject(id){clearTimeout(poll);p=await api('/api/projects/'+id);view='overview';selectedDetail=null;chatDraft='';history.replaceState(null,'','#'+id);render();if(running())watch();}
 async function newProject(goal='',title='新的研究项目'){if(!local){toast('请打开本机工作台创建研究项目。');return;}p=await api('/api/projects',{goal,title});view='overview';history.replaceState(null,'','#'+p.id);await refreshList();render();return p;}
@@ -42,17 +43,60 @@ async function act(action,args={},after){if(busy||running())return;busy=true;con
 async function watch(after){const id=p.id;for(;;){await new Promise(r=>setTimeout(r,650));if(!p||p.id!==id)return;p=await api('/api/projects/'+id);render();if(!running()){await refreshList();if(p.operation.status==='failed'){toast(p.operation.message);}else if(after){view=after;render();}return;}}}
 async function say(message){if(!message.trim())return;chatDraft='';await act('chat',{message});}
 async function sample(){const hist=await fetch('./sample-history.csv').then(r=>r.text()),cand=await fetch('./sample-candidates.csv').then(r=>r.text());await act('upload',{kind:'training',text:hist,filename:'公开纳米晶配方-历史.csv'});await act('upload',{kind:'candidates',text:cand,filename:'公开纳米晶配方-候选.csv'});view='data';render();}
+const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+async function playDemo(){
+ if(autoDemo||busy||running())return;
+ const run={step:0,stopped:false};autoDemo=run;
+ try{
+  await newProject('提高 CsPbBr₃ 纳米晶的发光表现。','纳米晶发光优化 · 自动演示');
+  const id=p.id;
+  const steps=[
+   ['请载入CsPbBr3公开案例，实际运行模型，推荐3个配体。','overview'],
+   ['第二个买不到，换一个，这一轮改为测试4个。','overview'],
+   ['就按当前4个候选保存本轮实验计划。','plan'],
+   ['载入这份计划对应的公开历史实测结果。','results'],
+   ['根据已经记录的结果，安排下一轮候选。','overview'],
+   ['总结本项目已完成的分析、计划和历史结果，准备研究报告。','report']
+  ];
+  for(let i=0;i<steps.length;i++){
+   if(run.stopped||p?.id!==id)break;
+   run.step=i+1;view=steps[i][1];chatDraft='';render();
+   const box=$('#chat-input');box.readOnly=true;box.focus();
+   for(const char of steps[i][0]){
+    if(run.stopped||p?.id!==id)break;
+    chatDraft+=char;box.value=chatDraft;box.scrollTop=box.scrollHeight;
+    await pause(/[，。？]/.test(char)?280:45+Math.random()*70);
+   }
+   if(run.stopped||p?.id!==id)break;
+   await pause(450);
+   if(run.stopped)break;
+   await say(steps[i][0]);
+   if(p.operation.status!=='complete')throw Error(p.operation.message||'本步骤未完成');
+   view=steps[i][1];render();
+   await pause(1800);
+  }
+  if(!run.stopped)toast('演示完成，研究报告和项目记录已保存。');
+ }catch(e){toast(e.message);}finally{if(autoDemo===run)autoDemo=null;render();}
+}
+async function stopDemo(){
+ if(!autoDemo)return;autoDemo.stopped=true;
+ if(running())await api('/api/projects/'+p.id+'/cancel',{});
+ toast('已停止演示，已完成的内容保留在项目中。');
+}
 function readRows(selector){return [...document.querySelectorAll(selector)].map(tr=>{const row={};for(const el of tr.querySelectorAll('[data-field]'))row[el.dataset.field]=el.value;return {...row,candidate_id:tr.dataset.planId||tr.dataset.resultId,name:tr.dataset.name,condition:row.condition??tr.dataset.condition};});}
 document.addEventListener('input',e=>{if(e.target.id==='chat-input')chatDraft=e.target.value;});
 document.addEventListener('keydown',e=>{if(e.target.id==='chat-input'&&e.key==='Enter'&&(e.metaKey||e.ctrlKey)){e.preventDefault();$('#chat-form').requestSubmit();}});
 document.addEventListener('click',async e=>{const b=e.target.closest('button,[data-view]');if(!b||b.disabled)return;try{
+ if(b.dataset.do==='stop-demo'){await stopDemo();return;}
+ if(autoDemo){toast('演示正在进行，点击停止演示即可接手。');return;}
  if(b.dataset.view){view=b.dataset.view;render();return;}
  if(b.dataset.project){await openProject(b.dataset.project);return;}
  if(b.dataset.say){await say(b.dataset.say);return;}
  if(b.dataset.detail){selectedDetail=b.dataset.detail;render();return;}
  if(b.dataset.exclude){await act('adjust',{exclude:[b.dataset.exclude]});return;}
  if(b.dataset.restore){await act('adjust',{restore:[b.dataset.restore]});return;}
- switch(b.dataset.do){case 'home':p=null;history.replaceState(null,'',location.pathname);await refreshList();render();break;
+ switch(b.dataset.do){case 'auto-demo':await playDemo();break;
+ case 'home':p=null;history.replaceState(null,'',location.pathname);await refreshList();render();break;
  case 'example':await newProject('提高 CsPbBr₃ 纳米晶的发光表现，这一轮优先测试3种配体。','纳米晶发光优化');await act('specialist');break;
  case 'example-here':await act('specialist');break;
  case 'csv-project':await newProject('根据历史实验数据预测候选表现，安排下一轮测试。','实验数据建模');view='data';render();break;
@@ -68,7 +112,7 @@ document.addEventListener('change',async e=>{try{if(e.target.dataset.upload){con
  if(e.target.dataset.actionId){await act('select_actions',{ids:[...document.querySelectorAll('[data-action-id]:checked')].map(x=>x.dataset.actionId)});}
  if(['map-target','map-id','map-group'].includes(e.target.id)){const blocked=[$('#map-target').value,$('#map-id').value,$('#map-group').value];document.querySelectorAll('[name=feature]').forEach(x=>{if(blocked.includes(x.value))x.checked=false;});}
  }catch(err){toast(err.message);}});
-document.addEventListener('submit',async e=>{e.preventDefault();try{switch(e.target.id){case 'new-form':{const goal=$('#new-goal').value.trim();if(!goal){toast('先描述一下研究问题。');return;}await newProject(goal,goal.slice(0,24));await say(goal);break;}
+document.addEventListener('submit',async e=>{e.preventDefault();if(autoDemo)return;try{switch(e.target.id){case 'new-form':{const goal=$('#new-goal').value.trim();if(!goal){toast('先描述一下研究问题。');return;}await newProject(goal,goal.slice(0,24));await say(goal);break;}
  case 'chat-form':await say($('#chat-input').value);break;
  case 'task-form':await act('task',{goal:$('#task-goal').value,budget:Number($('#task-budget').value)});break;
  case 'train-form':{const mapping={target:$('#map-target').value,id:$('#map-id').value,task:$('#map-task').value,direction:$('#map-direction').value,group:$('#map-group').value,unit:$('#map-unit').value,positive:$('#map-positive').value,features:[...document.querySelectorAll('[name=feature]:checked')].map(x=>x.value)};await act('train',{mapping},'overview');break;}
