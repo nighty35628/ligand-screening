@@ -4,7 +4,7 @@
 
 **[在线案例展示](https://nighty35628.github.io/ligand-screening/)** · [四分钟演示](docs/DEMO.md) · [验收记录](docs/DELIVERY.md) · [原计算流程](PIPELINE.md) · [资源归属](THIRD_PARTY.md)
 
-![Amadeus研究工作区](docs/screenshots/workspace-desktop.jpg)
+![Amadeus研究工作区](docs/screenshots/workspace-final.jpg)
 
 ## 本机启动
 
