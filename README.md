@@ -4,6 +4,8 @@
 
 本仓库包含可运行代码、冻结输入与预测、统一基线比较、测试及离线可视化演示。无需实验设备即可复核历史数据上的筛选效果。
 
+**[直接打开在线演示](https://nighty35628.github.io/ligand-screening/)** — 无需登录、下载代码或安装环境。
+
 ## 快速开始
 
 需要 Python 3.12 或 uv。首次运行会创建环境并安装锁定依赖；已有环境可用 `ALLIS_PYTHON=/path/to/python` 指定。
@@ -18,6 +20,8 @@ cd ligand-screening
 
 ## 看演示
 
+组员与评委可直接访问 **https://nighty35628.github.io/ligand-screening/**。在线版与下方本地版使用相同的冻结数据和页面，支持手机和电脑浏览。
+
 ```bash
 ./run_demo.sh
 ```
@@ -27,6 +31,8 @@ cd ligand-screening
 ![演示界面](demo/final/qa/desktop-overview.png)
 
 页面展示已生成的固定结果，不在浏览器现场训练；真正训练和预测使用命令行入口。
+
+`main` 分支的 `demo/final/` 更新后会自动发布到 GitHub Pages。发布前自动核对页面与数据的 SHA256；也可在 Actions 中手动运行 `Deploy demo to GitHub Pages`。
 
 ## 统一结果
 

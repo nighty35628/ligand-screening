@@ -1,0 +1,56 @@
+name: Deploy demo to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'demo/final/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Verify frozen demo files
+        run: |
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('demo/final')
+          manifest = json.loads((root / 'manifest.json').read_text())
+          for name, digest in manifest['files'].items():
+              actual = hashlib.sha256((root / name).read_bytes()).hexdigest()
+              if actual != digest:
+                  raise SystemExit(f'Demo integrity check failed: {name}')
+          print('All frozen demo files verified; no model training required.')
+          PY
+      - name: Prepare static site
+        run: |
+          mkdir _site
+          cp demo/final/{index.html,data.json,manifest.json,app.js,style.css,template.html} _site/
+          touch _site/.nojekyll
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy site
+        id: deployment
+        uses: actions/deploy-pages@v4
