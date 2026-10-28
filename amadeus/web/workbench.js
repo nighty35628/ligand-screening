@@ -76,7 +76,7 @@ async function playDemo(){
   ];
   for(let i=0;i<steps.length;i++){
    if(run.stopped||p?.id!==id)break;
-   run.step=i+1;run.phase=['想一想研究目标','查看排名，调整名额','整理这一轮计划','准备查看实测结果','比较结果，继续筛选','整理研究报告'][i];view=steps[i][1];chatDraft='';render();await pause(650+Math.random()*850);if(run.stopped)break;run.phase='正在输入…';render();
+   run.step=i+1;run.phase=['想一想研究目标','查看排名，调整名额','整理这一轮计划','准备查看实测结果','比较结果，继续筛选','整理研究报告'][i];if(i!==5)view=steps[i][1];chatDraft='';render();await pause(650+Math.random()*850);if(run.stopped)break;run.phase='正在输入…';render();
    const box=$('#chat-input');box.readOnly=true;box.focus();
    let burst=0;
    for(const char of steps[i][0]){
@@ -102,13 +102,20 @@ async function playDemo(){
     }
     if(!run.stopped)await act('save_plan',{items:readRows('[data-plan-id]'),notes:'按公开历史数据条件演示实验安排；实测结果来自历史记录。'},'plan');
    }
+   if(i===5&&!run.stopped){
+    run.phase='打开研究报告';render();
+    const reportButton=document.querySelector('[data-view="report"]');
+    if(reportButton&&!reducedMotion())reportButton.animate([{background:'#d5d7dd',transform:'scale(1)'},{background:'#c4cfdf',transform:'scale(.97)'},{background:'#d5d7dd',transform:'scale(1)'}],{duration:450});
+    await pause(700);
+    if(run.stopped)break;
+   }
    run.completed=i+1;run.phase='查看'+['候选排序','更新后的名单','已保存计划','历史实测','下一轮建议','研究报告'][i];view=steps[i][1];render();
    await pause(900);
    const pane=$('.workspace-body');
    if(pane&&!run.stopped){
     const distance=pane.scrollHeight-pane.clientHeight;
     for(let y=Math.min(420,distance);distance>0&&y<=distance&&!run.stopped;y=Math.min(y+420,distance)){
-     pane.scrollTo({top:y,behavior:reducedMotion()?'instant':'smooth'});await pause(i===5?1600:1100);
+     pane.scrollTo({top:y,behavior:reducedMotion()?'instant':'smooth'});await pause(i===5?2200:1600);
      if(y===distance)break;
     }
     if(!run.stopped){pane.scrollTo({top:0,behavior:reducedMotion()?'instant':'smooth'});await pause(800);}
