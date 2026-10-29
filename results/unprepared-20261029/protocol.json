@@ -1,0 +1,49 @@
+{
+  "pool": [
+    "citrine_thermal_conductivity",
+    "matbench_expt_gap",
+    "double_perovskites_gap",
+    "elastic_tensor_2015"
+  ],
+  "eligibility": "Public small-to-medium scalar regression material datasets with explicit composition and source metadata; none is a built-in example. Includes experimental and DFT labels.",
+  "seed": 1453976176,
+  "selected": [
+    "double_perovskites_gap",
+    "citrine_thermal_conductivity"
+  ],
+  "split": "15% normalized-composition group holdout, random_state 42",
+  "model_policy": "Existing 6 default regressors, 3 feature recipes, existing 4-trial nested optimization. No changes after holdout evaluation.",
+  "features": "Existing steel representation: element fractions + seven periodic-table summaries. Any dataset conditions are included only when observed and defined before fitting.",
+  "schema_only_before_freeze": {
+    "double_perovskites_gap": {
+      "columns": {
+        "a_1": "Species occupying the a1 perovskite site",
+        "a_2": "Species occupying the a2 site",
+        "b_1": "Species occupying the b1 site",
+        "b_2": "Species occupying the b2 site",
+        "formula": "Chemical formula of the entry",
+        "gap gllbsc": "electronic band gap (in eV) calculated via gllbsc"
+      },
+      "description": "Band gap of 1306 double perovskites (a_1-b_1-a_2-b_2-O6) calculated using ﻿Gritsenko, van Leeuwen, van Lenthe and Baerends potential (gllbsc) in GPAW.",
+      "num_entries": 1306,
+      "hash": "746072db995ec46f44b67c3f55fccdc24a7ec6233be1b96cc52dab8db4bf0ba4",
+      "url": "https://ndownloader.figshare.com/files/13309157"
+    },
+    "citrine_thermal_conductivity": {
+      "columns": {
+        "formula": "Chemical formula of the dataset entry",
+        "k-units": "units of thermal conductivity",
+        "k_condition": "Temperature description of testing conditions",
+        "k_condition_units": "units of testing condition temperature representation",
+        "k_expt": "the experimentally measured thermal conductivity in SI units of W/m.K"
+      },
+      "description": "Thermal conductivity of 872 compounds measured experimentally and retrieved from Citrine database from various references. The reported values are measured at various temperatures of which 295 are at room temperature.",
+      "num_entries": 872,
+      "hash": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "url": "https://ndownloader.figshare.com/files/13314470"
+    }
+  },
+  "preprocessing_policy": "Use original recorded site elements or temperature context. Identical composition+context records aggregate by median, retaining all source rows. Composition groups never cross train/test.",
+  "screening_policy": "Maximize gap for wide-gap oxide screening; maximize conductivity for heat transport. Budgets 1,3,5; compare exact random expected best. No outcome-dependent reconfiguration.",
+  "prepared_at_utc": "2026-10-29T11:16:49.930265+00:00"
+}

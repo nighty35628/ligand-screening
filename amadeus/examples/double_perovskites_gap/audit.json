@@ -1,0 +1,36 @@
+{
+  "dataset": "double_perovskites_gap",
+  "source": {
+    "bibtex_refs": [
+      "@Article{Pilania2016,\nauthor={Pilania, G.\nand Mannodi-Kanakkithodi, A.\nand Uberuaga, B. P.\nand Ramprasad, R.\nand Gubernatis, J. E.\nand Lookman, T.},\ntitle={Machine learning bandgaps of double perovskites},\njournal={Scientific Reports},\nyear={2016},\nmonth={Jan},\nday={19},\npublisher={The Author(s)},\nvolume={6},\npages={19375},\nnote={Article},\nurl={http://dx.doi.org/10.1038/srep19375}\n}",
+      "@misc{Computational Materials Repository,\ntitle = {Computational Materials Repository},\nhowpublished = {\\url{https://cmr.fysik.dtu.dk/}},\n}"
+    ],
+    "columns": {
+      "a_1": "Species occupying the a1 perovskite site",
+      "a_2": "Species occupying the a2 site",
+      "b_1": "Species occupying the b1 site",
+      "b_2": "Species occupying the b2 site",
+      "formula": "Chemical formula of the entry",
+      "gap gllbsc": "electronic band gap (in eV) calculated via gllbsc"
+    },
+    "description": "Band gap of 1306 double perovskites (a_1-b_1-a_2-b_2-O6) calculated using ﻿Gritsenko, van Leeuwen, van Lenthe and Baerends potential (gllbsc) in GPAW.",
+    "file_type": "json.gz",
+    "hash": "746072db995ec46f44b67c3f55fccdc24a7ec6233be1b96cc52dab8db4bf0ba4",
+    "num_entries": 1306,
+    "reference": "Dataset discussed in:\nPilania, G. et al. Machine learning bandgaps of double perovskites. Sci. Rep. 6, 19375; doi: 10.1038/srep19375 (2016).\nDataset sourced from:\nhttps://cmr.fysik.dtu.dk/",
+    "url": "https://ndownloader.figshare.com/files/13309157"
+  },
+  "label_origin": "GLLB-SC electronic-structure calculations; not experimental measurements",
+  "raw_rows": 1306,
+  "usable_rows": 1306,
+  "exclusions": [],
+  "duplicate_policy": "Median target for identical normalized composition and recorded context; all records and values retained in this audit. No target threshold filtering.",
+  "aggregates": [],
+  "train_rows": 1111,
+  "candidate_rows": 195,
+  "train_groups": 1033,
+  "candidate_groups": 183,
+  "group_overlap": 0,
+  "feature_count": 40,
+  "temperature_policy": "Exact numeric temperatures only when units are Kelvin; room/standard remain categorical with numeric temperature missing. No assumed conversion."
+}

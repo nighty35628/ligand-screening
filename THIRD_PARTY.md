@@ -26,3 +26,9 @@ I-Cheng Yeh, Concrete Compressive Strength, UCI Machine Learning Repository, DOI
 ## 钢合金案例
 
 Matbench v0.1 matbench_steels，312种实验钢合金组成/屈服强度；数据来自Citrine，原始引用与元数据保存在 amadeus/examples/steels/source_metadata.json。Matbench参考：Dunn et al., npj Computational Materials 6, 138 (2020), DOI 10.1038/s41524-020-00406-3。组成描述与自定义划分是本项目处理；不作为官方Matbench成绩。
+
+## 双钙钛矿带隙与热导率案例
+
+- `double_perovskites_gap`：Pilania et al., *Machine learning bandgaps of double perovskites*, Scientific Reports 6, 19375 (2016), DOI https://doi.org/10.1038/srep19375 。经 Matminer 获取公开的 GLLB-SC 计算带隙数据，下载 https://ndownloader.figshare.com/files/13309157 。标签为电子结构计算结果。
+- `citrine_thermal_conductivity`：Matminer 汇集的 Citrine 公开实验热导率数据，下载 https://ndownloader.figshare.com/files/13314470 。原始元数据、引用、文件哈希与处理记录见各案例的 `audit.json`。
+- 两者的组成特征、相同组成/条件记录的中位数汇总、分组划分与模型比较属于本项目处理；不宣称官方基准成绩。保留上游来源和适用条款，不对源数据另作统一许可声明。

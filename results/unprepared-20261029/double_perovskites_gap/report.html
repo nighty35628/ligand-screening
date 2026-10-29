@@ -1,0 +1,455 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Amadeus 研究报告</title><style>.figures{display:grid;grid-template-columns:1fr 1fr;gap:24px}figure{margin:0;break-inside:avoid}figure svg{max-width:100%;font:12px system-ui}.molecule svg{width:150px;height:90px}figcaption,figure p{font-size:12px}.barrow{display:grid;grid-template-columns:180px 1fr 65px;gap:15px;align-items:center;margin:12px 0}.track{background:#eceef2;height:14px}.track i{display:block;background:#245dcc;height:100%}body{font:15px/1.8 system-ui;color:#25262b;max-width:1000px;margin:40px auto;padding:24px}h1{font-size:30px}h2{margin-top:32px;font-size:20px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid #ddd;overflow-wrap:anywhere}a{color:#275e47}@media print{button{display:none}body{margin:0;padding:10px}tr{break-inside:avoid}}</style><button onclick="print()">打印 / 保存 PDF</button><h1>Amadeus · 随机抽测 · 双钙钛矿带隙</h1><p>根据元素组成及晶格位点元素筛选宽带隙双钙钛矿候选</p><p>第 2 轮 · 更新于 2026-10-29T11:20:44.428095+00:00</p><h2>分析结果</h2><p>combined / ET</p><table><thead><tr><th>候选</th><th>预测 band_gap_ev</th><th>直接评分</th><th>融合名次</th></tr></thead><tbody><tr><td>double_perovskites_gap_48</td><td>7.0688</td><td></td><td></td></tr><tr><td>double_perovskites_gap_282</td><td>7.06</td><td></td><td></td></tr><tr><td>double_perovskites_gap_62</td><td>7.0226</td><td></td><td></td></tr></tbody></table><p>5折按组验证</p><table><thead><tr><th>模型</th><th>MAE</th></tr></thead><tbody><tr><td>element_fraction / Dummy</td><td>1.2968</td></tr><tr><td>element_fraction / Ridge</td><td>0.48859</td></tr><tr><td>element_fraction / RF</td><td>0.28142</td></tr><tr><td>element_fraction / ET</td><td>0.26757</td></tr><tr><td>element_fraction / XGBoost</td><td>0.48009</td></tr><tr><td>element_fraction / LightGBM</td><td>0.31523</td></tr><tr><td>chemistry_descriptor / Dummy</td><td>1.2968</td></tr><tr><td>chemistry_descriptor / Ridge</td><td>0.48929</td></tr><tr><td>chemistry_descriptor / RF</td><td>0.36122</td></tr><tr><td>chemistry_descriptor / ET</td><td>0.26464</td></tr><tr><td>chemistry_descriptor / XGBoost</td><td>0.46195</td></tr><tr><td>chemistry_descriptor / LightGBM</td><td>0.36737</td></tr><tr><td>combined / Dummy</td><td>1.2968</td></tr><tr><td>combined / Ridge</td><td>0.48862</td></tr><tr><td>combined / RF</td><td>0.32363</td></tr><tr><td>combined / ET</td><td>0.23649</td></tr><tr><td>combined / XGBoost</td><td>0.4281</td></tr><tr><td>combined / LightGBM</td><td>0.31018</td></tr><tr><td>combined / RF / optimized</td><td>0.49285</td></tr><tr><td>combined / ET / optimized</td><td>0.47254</td></tr><tr><td>combined / XGBoost / optimized</td><td>0.52175</td></tr><tr><td>combined / LightGBM / optimized</td><td>0.52563</td></tr></tbody></table><h2>候选结构与响应曲线</h2><div class="figures"><figure><h3>double_perovskites_gap_271</h3><div class="molecule"></div><figcaption>预测 7.175 · 实测 6.892</figcaption></figure><figure><h3>double_perovskites_gap_185</h3><div class="molecule"></div><figcaption>预测 7.166 · 实测 7.104</figcaption></figure><figure><h3>double_perovskites_gap_63</h3><div class="molecule"></div><figcaption>预测 7.142 · 实测 7.087</figcaption></figure></div><h2>已记录结果对比</h2><div class="barrow"><span>double_perovskites_gap_185</span><div class="track"><i style="width:100.0%"></i></div><b>7.104</b></div><div class="barrow"><span>double_perovskites_gap_63</span><div class="track"><i style="width:99.75639344478957%"></i></div><b>7.087</b></div><div class="barrow"><span>double_perovskites_gap_271</span><div class="track"><i style="width:97.00413851631274%"></i></div><b>6.892</b></div><h2>数据与模型运行依据</h2><pre>{
+  &quot;research_context&quot;: {
+    &quot;material&quot;: &quot;随机抽测 · 双钙钛矿带隙&quot;,
+    &quot;goal&quot;: &quot;根据元素组成及晶格位点元素筛选宽带隙双钙钛矿候选&quot;,
+    &quot;source&quot;: {
+      &quot;bibtex_refs&quot;: [
+        &quot;@Article{Pilania2016,\nauthor={Pilania, G.\nand Mannodi-Kanakkithodi, A.\nand Uberuaga, B. P.\nand Ramprasad, R.\nand Gubernatis, J. E.\nand Lookman, T.},\ntitle={Machine learning bandgaps of double perovskites},\njournal={Scientific Reports},\nyear={2016},\nmonth={Jan},\nday={19},\npublisher={The Author(s)},\nvolume={6},\npages={19375},\nnote={Article},\nurl={http://dx.doi.org/10.1038/srep19375}\n}&quot;,
+        &quot;@misc{Computational Materials Repository,\ntitle = {Computational Materials Repository},\nhowpublished = {\\url{https://cmr.fysik.dtu.dk/}},\n}&quot;
+      ],
+      &quot;columns&quot;: {
+        &quot;a_1&quot;: &quot;Species occupying the a1 perovskite site&quot;,
+        &quot;a_2&quot;: &quot;Species occupying the a2 site&quot;,
+        &quot;b_1&quot;: &quot;Species occupying the b1 site&quot;,
+        &quot;b_2&quot;: &quot;Species occupying the b2 site&quot;,
+        &quot;formula&quot;: &quot;Chemical formula of the entry&quot;,
+        &quot;gap gllbsc&quot;: &quot;electronic band gap (in eV) calculated via gllbsc&quot;
+      },
+      &quot;description&quot;: &quot;Band gap of 1306 double perovskites (a_1-b_1-a_2-b_2-O6) calculated using ﻿Gritsenko, van Leeuwen, van Lenthe and Baerends potential (gllbsc) in GPAW.&quot;,
+      &quot;file_type&quot;: &quot;json.gz&quot;,
+      &quot;hash&quot;: &quot;746072db995ec46f44b67c3f55fccdc24a7ec6233be1b96cc52dab8db4bf0ba4&quot;,
+      &quot;num_entries&quot;: 1306,
+      &quot;reference&quot;: &quot;Dataset discussed in:\nPilania, G. et al. Machine learning bandgaps of double perovskites. Sci. Rep. 6, 19375; doi: 10.1038/srep19375 (2016).\nDataset sourced from:\nhttps://cmr.fysik.dtu.dk/&quot;,
+      &quot;url&quot;: &quot;https://ndownloader.figshare.com/files/13309157&quot;
+    },
+    &quot;evaluation&quot;: &quot;random unfamiliar dataset, no built-in preset&quot;
+  },
+  &quot;data_versions&quot;: [
+    {
+      &quot;id&quot;: &quot;6a7f03a370bc&quot;,
+      &quot;kind&quot;: &quot;training&quot;,
+      &quot;reason&quot;: &quot;导入 double_perovskites_gap-training.csv&quot;,
+      &quot;rows&quot;: 1111
+    },
+    {
+      &quot;id&quot;: &quot;38ef8a6aff47&quot;,
+      &quot;kind&quot;: &quot;candidates&quot;,
+      &quot;reason&quot;: &quot;导入 double_perovskites_gap-candidates.csv&quot;,
+      &quot;rows&quot;: 195
+    }
+  ],
+  &quot;processing&quot;: [],
+  &quot;validation&quot;: &quot;5折按组验证&quot;,
+  &quot;selected_features&quot;: [
+    &quot;numeric__x0&quot;,
+    &quot;numeric__x1&quot;,
+    &quot;numeric__x2&quot;,
+    &quot;numeric__x3&quot;,
+    &quot;numeric__x4&quot;,
+    &quot;numeric__x5&quot;,
+    &quot;numeric__x6&quot;,
+    &quot;numeric__x7&quot;,
+    &quot;numeric__x8&quot;,
+    &quot;numeric__x9&quot;,
+    &quot;numeric__x10&quot;,
+    &quot;numeric__x11&quot;,
+    &quot;numeric__x12&quot;,
+    &quot;numeric__x13&quot;,
+    &quot;numeric__x14&quot;,
+    &quot;numeric__x15&quot;,
+    &quot;numeric__x16&quot;,
+    &quot;numeric__x17&quot;,
+    &quot;numeric__x18&quot;,
+    &quot;numeric__x19&quot;,
+    &quot;numeric__x20&quot;,
+    &quot;numeric__x21&quot;,
+    &quot;numeric__x22&quot;,
+    &quot;numeric__x23&quot;,
+    &quot;numeric__x24&quot;,
+    &quot;numeric__x25&quot;,
+    &quot;numeric__x26&quot;,
+    &quot;numeric__x27&quot;,
+    &quot;numeric__x28&quot;,
+    &quot;numeric__x29&quot;,
+    &quot;numeric__x30&quot;,
+    &quot;numeric__x31&quot;,
+    &quot;numeric__x32&quot;,
+    &quot;numeric__x33&quot;,
+    &quot;numeric__x34&quot;,
+    &quot;numeric__x35&quot;,
+    &quot;category__x36_Ag&quot;,
+    &quot;category__x36_Ba&quot;,
+    &quot;category__x36_Ca&quot;,
+    &quot;category__x36_Cs&quot;,
+    &quot;category__x36_Ga&quot;,
+    &quot;category__x36_Ge&quot;,
+    &quot;category__x36_In&quot;,
+    &quot;category__x36_K&quot;,
+    &quot;category__x36_La&quot;,
+    &quot;category__x36_Li&quot;,
+    &quot;category__x36_Mg&quot;,
+    &quot;category__x36_Na&quot;,
+    &quot;category__x36_Pb&quot;,
+    &quot;category__x36_Rb&quot;,
+    &quot;category__x36_Sn&quot;,
+    &quot;category__x36_Sr&quot;,
+    &quot;category__x36_Tl&quot;,
+    &quot;category__x37_Al&quot;,
+    &quot;category__x37_Ga&quot;,
+    &quot;category__x37_Ge&quot;,
+    &quot;category__x37_Hf&quot;,
+    &quot;category__x37_In&quot;,
+    &quot;category__x37_Nb&quot;,
+    &quot;category__x37_Sb&quot;,
+    &quot;category__x37_Sc&quot;,
+    &quot;category__x37_Si&quot;,
+    &quot;category__x37_Sn&quot;,
+    &quot;category__x37_Ta&quot;,
+    &quot;category__x37_Ti&quot;,
+    &quot;category__x37_V&quot;,
+    &quot;category__x37_Zr&quot;,
+    &quot;category__x38_Ag&quot;,
+    &quot;category__x38_Ba&quot;,
+    &quot;category__x38_Ca&quot;,
+    &quot;category__x38_Cs&quot;,
+    &quot;category__x38_Ga&quot;,
+    &quot;category__x38_In&quot;,
+    &quot;category__x38_K&quot;,
+    &quot;category__x38_La&quot;,
+    &quot;category__x38_Li&quot;,
+    &quot;category__x38_Mg&quot;,
+    &quot;category__x38_Na&quot;,
+    &quot;category__x38_Pb&quot;,
+    &quot;category__x38_Rb&quot;,
+    &quot;category__x38_Sn&quot;,
+    &quot;category__x38_Sr&quot;,
+    &quot;category__x38_Tl&quot;,
+    &quot;category__x38_Y&quot;,
+    &quot;category__x39_Al&quot;,
+    &quot;category__x39_Ga&quot;,
+    &quot;category__x39_Ge&quot;,
+    &quot;category__x39_Hf&quot;,
+    &quot;category__x39_In&quot;,
+    &quot;category__x39_Nb&quot;,
+    &quot;category__x39_Sb&quot;,
+    &quot;category__x39_Sc&quot;,
+    &quot;category__x39_Si&quot;,
+    &quot;category__x39_Sn&quot;,
+    &quot;category__x39_Ta&quot;,
+    &quot;category__x39_Ti&quot;,
+    &quot;category__x39_V&quot;,
+    &quot;category__x39_Zr&quot;
+  ],
+  &quot;search&quot;: [
+    {
+      &quot;name&quot;: &quot;combined-RF-0&quot;,
+      &quot;best_inner_score&quot;: 0.5666412321394666,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-1&quot;,
+      &quot;best_inner_score&quot;: 0.5117867029192634,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-2&quot;,
+      &quot;best_inner_score&quot;: 0.5319523238673795,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-3&quot;,
+      &quot;best_inner_score&quot;: 0.527822136195982,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-4&quot;,
+      &quot;best_inner_score&quot;: 0.5333269188992523,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-0&quot;,
+      &quot;best_inner_score&quot;: 0.5518473623688346,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-1&quot;,
+      &quot;best_inner_score&quot;: 0.490704798753767,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-2&quot;,
+      &quot;best_inner_score&quot;: 0.5066159657166048,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-3&quot;,
+      &quot;best_inner_score&quot;: 0.5291722033795717,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-4&quot;,
+      &quot;best_inner_score&quot;: 0.5061143230371997,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-0&quot;,
+      &quot;best_inner_score&quot;: 0.5664621398359353,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;learning_rate&quot;: 0.07982611757123356,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-1&quot;,
+      &quot;best_inner_score&quot;: 0.5138190697179083,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;learning_rate&quot;: 0.07982611757123356,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-2&quot;,
+      &quot;best_inner_score&quot;: 0.5242741729218703,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-3&quot;,
+      &quot;best_inner_score&quot;: 0.5356416495952406,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;learning_rate&quot;: 0.07982611757123356,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-4&quot;,
+      &quot;best_inner_score&quot;: 0.5570195978511694,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-0&quot;,
+      &quot;best_inner_score&quot;: 0.5739660977902008,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;learning_rate&quot;: 0.07982611757123356,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-1&quot;,
+      &quot;best_inner_score&quot;: 0.5363158181699554,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-2&quot;,
+      &quot;best_inner_score&quot;: 0.5325799624525795,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-3&quot;,
+      &quot;best_inner_score&quot;: 0.5499073651210361,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-4&quot;,
+      &quot;best_inner_score&quot;: 0.5628403243745287,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 20,
+        &quot;learning_rate&quot;: 0.07982611757123356,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    }
+  ],
+  &quot;scores&quot;: [
+    {
+      &quot;model&quot;: &quot;element_fraction / Dummy&quot;,
+      &quot;mae&quot;: 1.2968032457611485
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / Ridge&quot;,
+      &quot;mae&quot;: 0.48859021099458844
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / RF&quot;,
+      &quot;mae&quot;: 0.2814156601402115
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / ET&quot;,
+      &quot;mae&quot;: 0.26757447801666284
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / XGBoost&quot;,
+      &quot;mae&quot;: 0.48008543840483947
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / LightGBM&quot;,
+      &quot;mae&quot;: 0.31523432532256207
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / Dummy&quot;,
+      &quot;mae&quot;: 1.2968032457611485
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / Ridge&quot;,
+      &quot;mae&quot;: 0.48928773772746526
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / RF&quot;,
+      &quot;mae&quot;: 0.361218636238175
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / ET&quot;,
+      &quot;mae&quot;: 0.26464329959867233
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / XGBoost&quot;,
+      &quot;mae&quot;: 0.4619532781067364
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / LightGBM&quot;,
+      &quot;mae&quot;: 0.3673748909673254
+    },
+    {
+      &quot;model&quot;: &quot;combined / Dummy&quot;,
+      &quot;mae&quot;: 1.2968032457611485
+    },
+    {
+      &quot;model&quot;: &quot;combined / Ridge&quot;,
+      &quot;mae&quot;: 0.48862067769487355
+    },
+    {
+      &quot;model&quot;: &quot;combined / RF&quot;,
+      &quot;mae&quot;: 0.3236267613817394
+    },
+    {
+      &quot;model&quot;: &quot;combined / ET&quot;,
+      &quot;mae&quot;: 0.23648950329195528
+    },
+    {
+      &quot;model&quot;: &quot;combined / XGBoost&quot;,
+      &quot;mae&quot;: 0.42810187087910867
+    },
+    {
+      &quot;model&quot;: &quot;combined / LightGBM&quot;,
+      &quot;mae&quot;: 0.31017733845067097
+    },
+    {
+      &quot;model&quot;: &quot;combined / RF / optimized&quot;,
+      &quot;mae&quot;: 0.49285206633630757
+    },
+    {
+      &quot;model&quot;: &quot;combined / ET / optimized&quot;,
+      &quot;mae&quot;: 0.4725364956155546
+    },
+    {
+      &quot;model&quot;: &quot;combined / XGBoost / optimized&quot;,
+      &quot;mae&quot;: 0.5217457387473252
+    },
+    {
+      &quot;model&quot;: &quot;combined / LightGBM / optimized&quot;,
+      &quot;mae&quot;: 0.5256320231984497
+    }
+  ]
+}</pre><h2>第 1 轮实验计划 · 版本 1</h2><table><thead><tr><th>候选/行动</th><th>条件</th><th>指标</th><th>备注</th></tr></thead><tbody><tr><td>double_perovskites_gap_271</td><td></td><td>band_gap_ev</td><td></td></tr><tr><td>double_perovskites_gap_185</td><td></td><td>band_gap_ev</td><td></td></tr><tr><td>double_perovskites_gap_63</td><td></td><td>band_gap_ev</td><td></td></tr></tbody></table><h2>已记录结果</h2><table><thead><tr><th>轮次</th><th>候选/行动</th><th>测量值</th><th>单位</th><th>状态</th><th>来源</th></tr></thead><tbody><tr><td>1</td><td>double_perovskites_gap_271</td><td>6.891564761</td><td>eV</td><td>completed</td><td>GLLB-SC electronic-structure calculations; not experimental measurements</td></tr><tr><td>1</td><td>double_perovskites_gap_185</td><td>7.104402829</td><td>eV</td><td>completed</td><td>GLLB-SC electronic-structure calculations; not experimental measurements</td></tr><tr><td>1</td><td>double_perovskites_gap_63</td><td>7.087096038</td><td>eV</td><td>completed</td><td>GLLB-SC electronic-structure calculations; not experimental measurements</td></tr></tbody></table><h2>研究记录</h2><h2>资料来源</h2><p><a href="https://ndownloader.figshare.com/files/13309157">double_perovskites_gap</a></p></html>

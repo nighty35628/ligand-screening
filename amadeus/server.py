@@ -251,7 +251,7 @@ class Handler(BaseHTTPRequestHandler):
             # Explicit static allowlist: raw data, models and archived answers are not served locally.
             files = {'/': 'index.html', '/index.html': 'index.html', '/app.js': 'app.js',
                      '/style.css': 'style.css', '/mark.svg': 'mark.svg', '/classic.html':'classic.html',
-                     '/logo.svg':'logo.svg', '/wordmark.svg':'wordmark.svg', '/logo-source.png':'logo-source.png',
+                     '/research-cases.json':'research-cases.json', '/logo.svg':'logo.svg', '/wordmark.svg':'wordmark.svg', '/logo-source.png':'logo-source.png',
                      '/demo-adapter.js':'demo-adapter.js', '/workbench.js':'workbench.js', '/workbench.css':'workbench.css', '/case-molecule.svg':'case-molecule.svg',
                      '/sample-history.csv':'sample-history.csv', '/sample-candidates.csv':'sample-candidates.csv'}
             if path in files:

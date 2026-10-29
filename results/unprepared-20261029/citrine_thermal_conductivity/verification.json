@@ -1,0 +1,70 @@
+{
+  "case": "citrine_thermal_conductivity",
+  "project_id": "e743056eebf9",
+  "model": "element_fraction / XGBoost",
+  "training_count": 642,
+  "candidate_count": 120,
+  "cv_mae": 11.379339966595492,
+  "holdout_mae": 7.7139169847793125,
+  "holdout_rmse": 32.10000739388661,
+  "holdout_r2": 0.26833349820568675,
+  "holdout_spearman": 0.6866875818791783,
+  "mean_baseline_mae": 17.646351326333956,
+  "median_baseline_mae": 10.625182697833335,
+  "target_range": [
+    0.409,
+    372.0
+  ],
+  "unit": "W/(m K)",
+  "screening": {
+    "1": {
+      "selected_ids": [
+        "citrine_thermal_conductivity_28"
+      ],
+      "selected_best": 90.4,
+      "pool_best": 372.0,
+      "regret": 281.6,
+      "random_expected_best": 12.424725666166667,
+      "unique_compositions": 1,
+      "top_decile_hits": 1
+    },
+    "3": {
+      "selected_ids": [
+        "citrine_thermal_conductivity_28",
+        "citrine_thermal_conductivity_794",
+        "citrine_thermal_conductivity_783"
+      ],
+      "selected_best": 110.0,
+      "pool_best": 372.0,
+      "regret": 262.0,
+      "random_expected_best": 29.894578194809025,
+      "unique_compositions": 3,
+      "top_decile_hits": 2
+    },
+    "5": {
+      "selected_ids": [
+        "citrine_thermal_conductivity_28",
+        "citrine_thermal_conductivity_794",
+        "citrine_thermal_conductivity_783",
+        "citrine_thermal_conductivity_9",
+        "citrine_thermal_conductivity_787"
+      ],
+      "selected_best": 372.0,
+      "pool_best": 372.0,
+      "regret": 0.0,
+      "random_expected_best": 44.23183749156293,
+      "unique_compositions": 4,
+      "top_decile_hits": 4
+    }
+  },
+  "finalization_seconds": 0.06,
+  "reused_completed_training": true,
+  "engine_seconds": 124.38,
+  "model_configurations": 22,
+  "round": 2,
+  "recorded": 3,
+  "dataset_versions": 2,
+  "label_origin": "Published experimental thermal conductivity measurements",
+  "engine_code_sha256": "091cbd4e21d0292e9c0aca6f8b79278bfac00d8f207702a847b83493f4c6099a",
+  "model_sha256": "3a70b31f3a30a1c5d7aacf044bd1343f7ef23a570a365623880fce94603ee771"
+}

@@ -1,0 +1,120 @@
+{
+  "double_perovskites_gap": {
+    "independent_mae": 0.21066141389391027,
+    "independent_r2": 0.9630362627277509,
+    "group_overlap": 0,
+    "candidate_target_hidden": true,
+    "duplicate_candidate_inputs": 0,
+    "outer_folds_disjoint": true,
+    "worst_errors": [
+      {
+        "id": "double_perovskites_gap_395",
+        "formula": "CsVGaTaO6",
+        "condition": {},
+        "measured_or_calculated": 0.427417209,
+        "prediction": 1.740038611424999,
+        "absolute_error": 1.3126214024249991
+      },
+      {
+        "id": "double_perovskites_gap_519",
+        "formula": "InNbGaNbO6",
+        "condition": {},
+        "measured_or_calculated": 0.128888784,
+        "prediction": 1.1950300262000002,
+        "absolute_error": 1.0661412422000003
+      },
+      {
+        "id": "double_perovskites_gap_394",
+        "formula": "CsVGaNbO6",
+        "condition": {},
+        "measured_or_calculated": 0.725860475,
+        "prediction": 1.7593321939,
+        "absolute_error": 1.0334717189
+      },
+      {
+        "id": "double_perovskites_gap_818",
+        "formula": "NaSbCaGeO6",
+        "condition": {},
+        "measured_or_calculated": 2.826551875,
+        "prediction": 1.999225800112503,
+        "absolute_error": 0.8273260748874969
+      },
+      {
+        "id": "double_perovskites_gap_795",
+        "formula": "MgZrTlNbO6",
+        "condition": {},
+        "measured_or_calculated": 3.544579097,
+        "prediction": 2.717724387724996,
+        "absolute_error": 0.826854709275004
+      }
+    ],
+    "http_accessible": true
+  },
+  "citrine_thermal_conductivity": {
+    "independent_mae": 7.7139169847793125,
+    "independent_r2": 0.26833349820568686,
+    "group_overlap": 0,
+    "candidate_target_hidden": true,
+    "duplicate_candidate_inputs": 0,
+    "outer_folds_disjoint": true,
+    "worst_errors": [
+      {
+        "id": "citrine_thermal_conductivity_9",
+        "formula": "SiC",
+        "condition": {
+          "temperature_k": "",
+          "temperature_kind": "room temperature"
+        },
+        "measured_or_calculated": 372.0,
+        "prediction": 44.20000076293945,
+        "absolute_error": 327.79999923706055
+      },
+      {
+        "id": "citrine_thermal_conductivity_28",
+        "formula": "BeTe",
+        "condition": {
+          "temperature_k": "",
+          "temperature_kind": "room temperature"
+        },
+        "measured_or_calculated": 90.4,
+        "prediction": 160.1080780029297,
+        "absolute_error": 69.70807800292968
+      },
+      {
+        "id": "citrine_thermal_conductivity_820",
+        "formula": "SiC",
+        "condition": {
+          "temperature_k": "373.0",
+          "temperature_kind": "explicit_kelvin"
+        },
+        "measured_or_calculated": 90.0,
+        "prediction": 29.71947479248047,
+        "absolute_error": 60.28052520751953
+      },
+      {
+        "id": "citrine_thermal_conductivity_794",
+        "formula": "SiC",
+        "condition": {
+          "temperature_k": "298.0",
+          "temperature_kind": "explicit_kelvin"
+        },
+        "measured_or_calculated": 110.0,
+        "prediction": 53.93343734741211,
+        "absolute_error": 56.06656265258789
+      },
+      {
+        "id": "citrine_thermal_conductivity_842",
+        "formula": "SiC",
+        "condition": {
+          "temperature_k": "773.0",
+          "temperature_kind": "explicit_kelvin"
+        },
+        "measured_or_calculated": 65.0,
+        "prediction": 29.730674743652344,
+        "absolute_error": 35.269325256347656
+      }
+    ],
+    "http_accessible": true
+  },
+  "engine_unchanged_from_HEAD": true
+}

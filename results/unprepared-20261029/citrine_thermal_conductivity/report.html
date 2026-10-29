@@ -1,0 +1,421 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Amadeus 研究报告</title><style>.figures{display:grid;grid-template-columns:1fr 1fr;gap:24px}figure{margin:0;break-inside:avoid}figure svg{max-width:100%;font:12px system-ui}.molecule svg{width:150px;height:90px}figcaption,figure p{font-size:12px}.barrow{display:grid;grid-template-columns:180px 1fr 65px;gap:15px;align-items:center;margin:12px 0}.track{background:#eceef2;height:14px}.track i{display:block;background:#245dcc;height:100%}body{font:15px/1.8 system-ui;color:#25262b;max-width:1000px;margin:40px auto;padding:24px}h1{font-size:30px}h2{margin-top:32px;font-size:20px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid #ddd;overflow-wrap:anywhere}a{color:#275e47}@media print{button{display:none}body{margin:0;padding:10px}tr{break-inside:avoid}}</style><button onclick="print()">打印 / 保存 PDF</button><h1>Amadeus · 随机抽测 · 材料热导率</h1><p>根据元素组成与记录的测试温度筛选高热导率材料条件</p><p>第 2 轮 · 更新于 2026-10-29T11:20:26.315428+00:00</p><h2>分析结果</h2><p>element_fraction / XGBoost</p><table><thead><tr><th>候选</th><th>预测 thermal_conductivity</th><th>直接评分</th><th>融合名次</th></tr></thead><tbody><tr><td>citrine_thermal_conductivity_9</td><td>44.2</td><td></td><td></td></tr><tr><td>citrine_thermal_conductivity_787</td><td>43.015</td><td></td><td></td></tr><tr><td>citrine_thermal_conductivity_16</td><td>35.9099</td><td></td><td></td></tr></tbody></table><p>5折按组验证</p><table><thead><tr><th>模型</th><th>MAE</th></tr></thead><tbody><tr><td>element_fraction / Dummy</td><td>21.11888</td></tr><tr><td>element_fraction / Ridge</td><td>44.30491</td></tr><tr><td>element_fraction / RF</td><td>18.77423</td></tr><tr><td>element_fraction / ET</td><td>15.70162</td></tr><tr><td>element_fraction / XGBoost</td><td>11.37934</td></tr><tr><td>element_fraction / LightGBM</td><td>19.1059</td></tr><tr><td>chemistry_descriptor / Dummy</td><td>21.11888</td></tr><tr><td>chemistry_descriptor / Ridge</td><td>23.88027</td></tr><tr><td>chemistry_descriptor / RF</td><td>17.51587</td></tr><tr><td>chemistry_descriptor / ET</td><td>15.87508</td></tr><tr><td>chemistry_descriptor / XGBoost</td><td>21.93106</td></tr><tr><td>chemistry_descriptor / LightGBM</td><td>21.99459</td></tr><tr><td>combined / Dummy</td><td>21.11888</td></tr><tr><td>combined / Ridge</td><td>48.58377</td></tr><tr><td>combined / RF</td><td>18.87154</td></tr><tr><td>combined / ET</td><td>19.969</td></tr><tr><td>combined / XGBoost</td><td>12.08918</td></tr><tr><td>combined / LightGBM</td><td>20.053</td></tr><tr><td>combined / RF / optimized</td><td>13.63277</td></tr><tr><td>combined / ET / optimized</td><td>12.19906</td></tr><tr><td>combined / XGBoost / optimized</td><td>14.5863</td></tr><tr><td>combined / LightGBM / optimized</td><td>15.1897</td></tr></tbody></table><h2>候选结构与响应曲线</h2><div class="figures"><figure><h3>citrine_thermal_conductivity_28</h3><div class="molecule"></div><figcaption>预测 160.108 · 实测 90.4</figcaption></figure><figure><h3>citrine_thermal_conductivity_794</h3><div class="molecule"></div><figcaption>预测 53.933 · 实测 110.0</figcaption></figure><figure><h3>citrine_thermal_conductivity_783</h3><div class="molecule"></div><figcaption>预测 46.377 · 实测 30.0</figcaption></figure></div><h2>已记录结果对比</h2><div class="barrow"><span>citrine_thermal_conductivity_794</span><div class="track"><i style="width:100.0%"></i></div><b>110.0</b></div><div class="barrow"><span>citrine_thermal_conductivity_28</span><div class="track"><i style="width:82.18181818181819%"></i></div><b>90.4</b></div><div class="barrow"><span>citrine_thermal_conductivity_783</span><div class="track"><i style="width:27.27272727272727%"></i></div><b>30.0</b></div><h2>数据与模型运行依据</h2><pre>{
+  &quot;research_context&quot;: {
+    &quot;material&quot;: &quot;随机抽测 · 材料热导率&quot;,
+    &quot;goal&quot;: &quot;根据元素组成与记录的测试温度筛选高热导率材料条件&quot;,
+    &quot;source&quot;: {
+      &quot;bibtex_refs&quot;: [
+        &quot;@misc{Citrine Informatics,\ntitle = {Citrination},\nhowpublished = {\\url{https://www.citrination.com/}},\n}&quot;
+      ],
+      &quot;columns&quot;: {
+        &quot;formula&quot;: &quot;Chemical formula of the dataset entry&quot;,
+        &quot;k-units&quot;: &quot;units of thermal conductivity&quot;,
+        &quot;k_condition&quot;: &quot;Temperature description of testing conditions&quot;,
+        &quot;k_condition_units&quot;: &quot;units of testing condition temperature representation&quot;,
+        &quot;k_expt&quot;: &quot;the experimentally measured thermal conductivity in SI units of W/m.K&quot;
+      },
+      &quot;description&quot;: &quot;Thermal conductivity of 872 compounds measured experimentally and retrieved from Citrine database from various references. The reported values are measured at various temperatures of which 295 are at room temperature.&quot;,
+      &quot;file_type&quot;: &quot;json.gz&quot;,
+      &quot;hash&quot;: &quot;8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c&quot;,
+      &quot;num_entries&quot;: 872,
+      &quot;reference&quot;: &quot;https://www.citrination.com&quot;,
+      &quot;url&quot;: &quot;https://ndownloader.figshare.com/files/13314470&quot;
+    },
+    &quot;evaluation&quot;: &quot;random unfamiliar dataset, no built-in preset&quot;
+  },
+  &quot;data_versions&quot;: [
+    {
+      &quot;id&quot;: &quot;d8bb539df22c&quot;,
+      &quot;kind&quot;: &quot;training&quot;,
+      &quot;reason&quot;: &quot;导入 citrine_thermal_conductivity-training.csv&quot;,
+      &quot;rows&quot;: 642
+    },
+    {
+      &quot;id&quot;: &quot;6c26954b94d8&quot;,
+      &quot;kind&quot;: &quot;candidates&quot;,
+      &quot;reason&quot;: &quot;导入 citrine_thermal_conductivity-candidates.csv&quot;,
+      &quot;rows&quot;: 120
+    }
+  ],
+  &quot;processing&quot;: [],
+  &quot;validation&quot;: &quot;5折按组验证&quot;,
+  &quot;selected_features&quot;: [
+    &quot;numeric__x0&quot;,
+    &quot;numeric__x1&quot;,
+    &quot;numeric__x2&quot;,
+    &quot;numeric__x3&quot;,
+    &quot;numeric__x4&quot;,
+    &quot;numeric__x5&quot;,
+    &quot;numeric__x6&quot;,
+    &quot;numeric__x7&quot;,
+    &quot;numeric__x8&quot;,
+    &quot;numeric__x9&quot;,
+    &quot;numeric__x10&quot;,
+    &quot;numeric__x11&quot;,
+    &quot;numeric__x12&quot;,
+    &quot;numeric__x13&quot;,
+    &quot;numeric__x14&quot;,
+    &quot;numeric__x15&quot;,
+    &quot;numeric__x16&quot;,
+    &quot;numeric__x17&quot;,
+    &quot;numeric__x18&quot;,
+    &quot;numeric__x19&quot;,
+    &quot;numeric__x20&quot;,
+    &quot;numeric__x21&quot;,
+    &quot;numeric__x22&quot;,
+    &quot;numeric__x23&quot;,
+    &quot;numeric__x24&quot;,
+    &quot;numeric__x25&quot;,
+    &quot;numeric__x26&quot;,
+    &quot;numeric__x27&quot;,
+    &quot;numeric__x28&quot;,
+    &quot;numeric__x29&quot;,
+    &quot;numeric__x30&quot;,
+    &quot;numeric__x31&quot;,
+    &quot;numeric__x32&quot;,
+    &quot;numeric__x33&quot;,
+    &quot;numeric__x34&quot;,
+    &quot;numeric__x35&quot;,
+    &quot;numeric__x36&quot;,
+    &quot;numeric__x37&quot;,
+    &quot;numeric__x38&quot;,
+    &quot;numeric__x39&quot;,
+    &quot;numeric__x40&quot;,
+    &quot;numeric__x41&quot;,
+    &quot;numeric__x42&quot;,
+    &quot;numeric__x43&quot;,
+    &quot;numeric__x44&quot;,
+    &quot;numeric__x45&quot;,
+    &quot;numeric__x46&quot;,
+    &quot;numeric__x47&quot;,
+    &quot;numeric__x48&quot;,
+    &quot;numeric__x49&quot;,
+    &quot;numeric__x50&quot;,
+    &quot;numeric__x51&quot;,
+    &quot;numeric__x52&quot;,
+    &quot;numeric__x53&quot;,
+    &quot;numeric__x54&quot;,
+    &quot;numeric__x55&quot;,
+    &quot;numeric__x56&quot;,
+    &quot;numeric__x57&quot;,
+    &quot;numeric__x58&quot;,
+    &quot;numeric__x59&quot;,
+    &quot;numeric__x60&quot;,
+    &quot;numeric__x61&quot;,
+    &quot;numeric__x62&quot;,
+    &quot;category__x63_explicit_kelvin&quot;,
+    &quot;category__x63_room temperature&quot;,
+    &quot;category__x63_standard&quot;
+  ],
+  &quot;search&quot;: [
+    {
+      &quot;name&quot;: &quot;combined-RF-0&quot;,
+      &quot;best_inner_score&quot;: 15.0085925892563,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;min_samples_leaf&quot;: 5,
+        &quot;max_features&quot;: 0.9936721802710883
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-1&quot;,
+      &quot;best_inner_score&quot;: 20.914665219320554,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-2&quot;,
+      &quot;best_inner_score&quot;: 18.81939065476126,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 1,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6635591653821216
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-3&quot;,
+      &quot;best_inner_score&quot;: 17.923735100737755,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;min_samples_leaf&quot;: 5,
+        &quot;max_features&quot;: 0.8540362888980227
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-4&quot;,
+      &quot;best_inner_score&quot;: 9.401738147668363,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-0&quot;,
+      &quot;best_inner_score&quot;: 14.103743148593551,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;min_samples_leaf&quot;: 5,
+        &quot;max_features&quot;: 0.9936721802710883
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-1&quot;,
+      &quot;best_inner_score&quot;: 20.187706566186268,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-2&quot;,
+      &quot;best_inner_score&quot;: 17.50833304129856,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;min_samples_leaf&quot;: 5,
+        &quot;max_features&quot;: 0.9936721802710883
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-3&quot;,
+      &quot;best_inner_score&quot;: 18.64930159251255,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;min_samples_leaf&quot;: 5,
+        &quot;max_features&quot;: 0.9936721802710883
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-4&quot;,
+      &quot;best_inner_score&quot;: 8.312891079981014,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-0&quot;,
+      &quot;best_inner_score&quot;: 17.913081481984594,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 1,
+        &quot;learning_rate&quot;: 0.023518701245504797,
+        &quot;max_depth&quot;: 4
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-1&quot;,
+      &quot;best_inner_score&quot;: 18.09874497484517,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;learning_rate&quot;: 0.02252595219072087,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-2&quot;,
+      &quot;best_inner_score&quot;: 18.20478955485002,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 1,
+        &quot;learning_rate&quot;: 0.023518701245504797,
+        &quot;max_depth&quot;: 4
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-3&quot;,
+      &quot;best_inner_score&quot;: 20.85958410138485,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;learning_rate&quot;: 0.02252595219072087,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-4&quot;,
+      &quot;best_inner_score&quot;: 10.043891223637974,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-0&quot;,
+      &quot;best_inner_score&quot;: 17.805513899618287,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 1,
+        &quot;learning_rate&quot;: 0.02354968307149923,
+        &quot;max_depth&quot;: 4
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-1&quot;,
+      &quot;best_inner_score&quot;: 23.15464359687509,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;learning_rate&quot;: 0.02252595219072087,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-2&quot;,
+      &quot;best_inner_score&quot;: 18.221004241468872,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 1,
+        &quot;learning_rate&quot;: 0.02354968307149923,
+        &quot;max_depth&quot;: 4
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-3&quot;,
+      &quot;best_inner_score&quot;: 19.69350981556532,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;learning_rate&quot;: 0.02252595219072087,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-4&quot;,
+      &quot;best_inner_score&quot;: 10.622774690613747,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 35,
+        &quot;learning_rate&quot;: 0.02252595219072087,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    }
+  ],
+  &quot;scores&quot;: [
+    {
+      &quot;model&quot;: &quot;element_fraction / Dummy&quot;,
+      &quot;mae&quot;: 21.1188827826998
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / Ridge&quot;,
+      &quot;mae&quot;: 44.30490892852375
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / RF&quot;,
+      &quot;mae&quot;: 18.7742294834654
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / ET&quot;,
+      &quot;mae&quot;: 15.70162284513388
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / XGBoost&quot;,
+      &quot;mae&quot;: 11.379339966595492
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / LightGBM&quot;,
+      &quot;mae&quot;: 19.105901113365213
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / Dummy&quot;,
+      &quot;mae&quot;: 21.1188827826998
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / Ridge&quot;,
+      &quot;mae&quot;: 23.880266858948875
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / RF&quot;,
+      &quot;mae&quot;: 17.515869436660523
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / ET&quot;,
+      &quot;mae&quot;: 15.87507508447392
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / XGBoost&quot;,
+      &quot;mae&quot;: 21.931061530565135
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / LightGBM&quot;,
+      &quot;mae&quot;: 21.99459400809156
+    },
+    {
+      &quot;model&quot;: &quot;combined / Dummy&quot;,
+      &quot;mae&quot;: 21.1188827826998
+    },
+    {
+      &quot;model&quot;: &quot;combined / Ridge&quot;,
+      &quot;mae&quot;: 48.58377321987283
+    },
+    {
+      &quot;model&quot;: &quot;combined / RF&quot;,
+      &quot;mae&quot;: 18.871538116323393
+    },
+    {
+      &quot;model&quot;: &quot;combined / ET&quot;,
+      &quot;mae&quot;: 19.96899536097141
+    },
+    {
+      &quot;model&quot;: &quot;combined / XGBoost&quot;,
+      &quot;mae&quot;: 12.089175306361069
+    },
+    {
+      &quot;model&quot;: &quot;combined / LightGBM&quot;,
+      &quot;mae&quot;: 20.05299533889494
+    },
+    {
+      &quot;model&quot;: &quot;combined / RF / optimized&quot;,
+      &quot;mae&quot;: 13.632765492524275
+    },
+    {
+      &quot;model&quot;: &quot;combined / ET / optimized&quot;,
+      &quot;mae&quot;: 12.19906055373274
+    },
+    {
+      &quot;model&quot;: &quot;combined / XGBoost / optimized&quot;,
+      &quot;mae&quot;: 14.586301547264323
+    },
+    {
+      &quot;model&quot;: &quot;combined / LightGBM / optimized&quot;,
+      &quot;mae&quot;: 15.189697445488719
+    }
+  ]
+}</pre><h2>第 1 轮实验计划 · 版本 1</h2><table><thead><tr><th>候选/行动</th><th>条件</th><th>指标</th><th>备注</th></tr></thead><tbody><tr><td>citrine_thermal_conductivity_28</td><td></td><td>thermal_conductivity</td><td></td></tr><tr><td>citrine_thermal_conductivity_794</td><td></td><td>thermal_conductivity</td><td></td></tr><tr><td>citrine_thermal_conductivity_783</td><td></td><td>thermal_conductivity</td><td></td></tr></tbody></table><h2>已记录结果</h2><table><thead><tr><th>轮次</th><th>候选/行动</th><th>测量值</th><th>单位</th><th>状态</th><th>来源</th></tr></thead><tbody><tr><td>1</td><td>citrine_thermal_conductivity_28</td><td>90.4</td><td>W/(m K)</td><td>completed</td><td>Published experimental thermal conductivity measurements</td></tr><tr><td>1</td><td>citrine_thermal_conductivity_794</td><td>110.0</td><td>W/(m K)</td><td>completed</td><td>Published experimental thermal conductivity measurements</td></tr><tr><td>1</td><td>citrine_thermal_conductivity_783</td><td>30.0</td><td>W/(m K)</td><td>completed</td><td>Published experimental thermal conductivity measurements</td></tr></tbody></table><h2>研究记录</h2><h2>资料来源</h2><p><a href="https://ndownloader.figshare.com/files/13314470">citrine_thermal_conductivity</a></p></html>

@@ -1,0 +1,11 @@
+{
+  "source": [
+    "double_perovskites_gap/verification.json",
+    "citrine_thermal_conductivity/verification.json"
+  ],
+  "definition": "Maximum reference label among the top k predicted candidates. Random curve is the exact expected maximum of k uniformly selected distinct candidate rows.",
+  "label_origin": "Left: GLLB-SC calculation. Right: published experimental conductivity.",
+  "uncertainty": "One frozen composition-group holdout per task; no confidence intervals inferred.",
+  "transformation": "None; plotted directly from verified result JSON.",
+  "matplotlib_version": "3.11.2"
+}

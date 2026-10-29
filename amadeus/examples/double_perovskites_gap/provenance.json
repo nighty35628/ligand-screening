@@ -1,0 +1,11 @@
+{
+  "source": "https://ndownloader.figshare.com/files/13309157",
+  "reference": "Dataset discussed in:\nPilania, G. et al. Machine learning bandgaps of double perovskites. Sci. Rep. 6, 19375; doi: 10.1038/srep19375 (2016).\nDataset sourced from:\nhttps://cmr.fysik.dtu.dk/",
+  "label_origin": "GLLB-SC electronic-structure calculations; not experimental measurements",
+  "raw_sha256": "746072db995ec46f44b67c3f55fccdc24a7ec6233be1b96cc52dab8db4bf0ba4",
+  "split": "15% normalized-composition group holdout, seed 42",
+  "duplicate_policy": "Median target for identical normalized composition and recorded context; all records and values retained in this audit. No target threshold filtering.",
+  "training": 1111,
+  "candidates": 195,
+  "temperature_policy": "Exact numeric temperatures only when units are Kelvin; room/standard remain categorical with numeric temperature missing. No assumed conversion."
+}

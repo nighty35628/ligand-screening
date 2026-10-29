@@ -26,6 +26,7 @@ LOCK = threading.RLock()
 CANCEL = {}
 PROCESSES = {}
 SPECIAL = None
+MATERIAL_CASES = json.loads((ROOT/'amadeus/web/research-cases.json').read_text())
 
 
 def now(): return datetime.now(timezone.utc).isoformat()
@@ -234,11 +235,12 @@ def record(p, records, source='用户录入'):
 
 def historical_results(p):
     example=p.get('research_context',{}).get('example','concrete' if p.get('research_context',{}).get('material')=='混凝土' else '')
-    targets={'concrete':'strength_mpa','steels':'yield_strength_mpa'}
-    if example in targets and (p.get('analysis') or {}).get('metric')==targets[example]:
+    cfg=MATERIAL_CASES.get(example)
+    if cfg and (p.get('analysis') or {}).get('metric')==cfg['target']:
         oracle=json.loads((ROOT/'amadeus/examples'/example/'oracle.json').read_text());plan=current_plan(p)
-        rows=[{'candidate_id':i['candidate_id'],'value':oracle[i['candidate_id']],'status':'completed','unit':'MPa','note':'独立候选的公开历史实测'} for i in plan['items'] if not any(m['plan_id']==plan['id'] and m['candidate_id']==i['candidate_id'] for m in p['measurements'])]
-        return record(p,rows,'公开材料历史实测')
+        source='公开'+cfg['label']
+        rows=[{'candidate_id':i['candidate_id'],'value':oracle[i['candidate_id']],'status':'completed','unit':cfg['unit'],'note':source} for i in plan['items'] if not any(m['plan_id']==plan['id'] and m['candidate_id']==i['candidate_id'] for m in p['measurements'])]
+        return record(p,rows,source)
     if not p.get('analysis') or p['analysis']['kind'] != 'specialist': raise ValueError('历史结果可在纳米晶案例中载入。')
     plan = current_plan(p)
     existing = {m['candidate_id'] for m in p['measurements'] if m['plan_id']==plan['id'] and m['source']=='公开历史实测'}
@@ -336,17 +338,21 @@ def calculate_plqy(p,inputs):
     result=data_engine.plqy(inputs);p.setdefault('processing_history',[]).append({'at':now(),'operation':'PLQY计算','result':result});return result
 
 
-def load_material_example(p,example='concrete'):
-    cases={'concrete':('混凝土','用配方与养护龄期预测抗压强度','UCI Concrete Compressive Strength'), 'steels':('钢合金','根据化学组成筛选高屈服强度钢合金','Matbench experimental steel yield strength')}
-    if example not in cases:raise ValueError('材料案例不存在。')
-    material,goal,title=cases[example];root=ROOT/'amadeus/examples'/example
+def load_material_example(p,example='concrete',replay=False):
+    if example not in MATERIAL_CASES:raise ValueError('材料案例不存在。')
+    cfg=MATERIAL_CASES[example];root=ROOT/'amadeus/examples'/example
     if p['plans'] or p['measurements']:p['round']=max([p['round']]+[x['round'] for x in p['plans']])+1
     p['excluded']=[]
     for kind in ('training','candidates'):upload(p,kind,(root/f'{kind}.csv').read_text(),f'{example}-{kind}.csv')
     p['mapping']=json.loads((root/'mapping.json').read_text());provenance=json.loads((root/'provenance.json').read_text())
-    p['sources'].append({'id':uid(),'title':title,'url':provenance['source'],'summary':goal+'；采用公开实测，独立组成分组候选。','content':json.dumps(provenance)})
-    p['research_context']={'material':material,'example':example,'goal':goal,'source':provenance}
-    p['task'].update(goal=goal,metric=p['mapping']['target'],unit='MPa',direction='max')
+    p['sources'].append({'id':uid(),'title':cfg['source_title'],'url':provenance['source'],'summary':cfg['goal']+'；公开'+cfg['label']+'，按组成分组保留候选。','content':json.dumps(provenance)})
+    p['research_context']={'material':cfg['material'],'example':example,'goal':cfg['goal'],'source':provenance,'label':cfg['label']}
+    p['task'].update(goal=cfg['goal'],metric=p['mapping']['target'],unit=cfg['unit'],direction='max')
+    if replay:
+        snapshot=json.loads((ROOT/'amadeus/web'/cfg['snapshot']).read_text())
+        p['analysis']={**snapshot['analysis'],'id':uid(),'data_id':p['datasets']['training']['id'],'created':now(),'replay':True}
+        refresh_selection(p)
+        p['messages'].append({'role':'assistant','content':f"已整理 {p['analysis']['training_count']} 条历史记录和 {len(p['analysis']['candidates'])} 条候选。沿用已完成的特征与模型比较，采用 {p['analysis']['model']}。本轮优先建议已列在右侧，可调整名单、保存计划，再查看对应的{cfg['label']}。",'at':now()})
     return inspect(p)
 
 
@@ -480,7 +486,7 @@ TOOLS=[
  tool('accept_experiments','接受已检查的提取草稿为实验表。',{'draft_id':S,'kind':{'type':'string','enum':['training','candidates']}},['draft_id']),
  tool('process_dataset','实际转换实验表单位，或生成分子结构特征。rules每项含column,output,operation；amount_nmol另需concentration_column。',{'kind':S,'rules':{'type':'array','items':{'type':'object'}},'structure_column':S}),
  tool('calculate_plqy','参数完整时计算相对法PLQY，inputs包括参比量子产率、样品/参比积分发光、激发吸光度、折射率和sources；计算值独立保存。',{'inputs':{'type':'object'}},['inputs']),
- tool('load_material_example','载入公开材料案例：concrete为混凝土组成与龄期；steels为钢合金组成与实验屈服强度。',{'example':{'type':'string','enum':['concrete','steels']}}),
+ tool('load_material_example','选择公开材料案例：concrete混凝土、steels钢合金、double_perovskites_gap计算带隙、citrine_thermal_conductivity实验热导率。',{'example':{'type':'string','enum':list(MATERIAL_CASES)},'replay':{'type':'boolean','description':'使用已保存的分析结果，不训练'}}),
  tool('set_task','设置研究目标与测试名额。改变指标会开启新分析；一般改写目标描述不要传metric。',{'goal':S,'budget':{'type':'integer'},'metric':S,'direction':{'type':'string','enum':['max','min']}}),
  tool('run_specialist','载入CsPbBr3纳米晶公开示例并实际运行固定发光配体筛选模型。仅用于此案例。',{}),
  tool('adjust_candidates','根据当前显示顺序解析到候选ID，排除/恢复/指定名单或调整名额。',{'budget':{'type':'integer'},'exclude':IDS,'restore':IDS,'selected':IDS}),
@@ -612,7 +618,7 @@ def export_csv(p):
 def report_figures(p):
     e=html.escape; a=p.get('analysis') or {}; known=candidate_map(p)
     latest={m['candidate_id']:m for m in p['measurements'] if m.get('analysis_id')==a.get('id') and m['value'] is not None}
-    ids=list(latest) or p['selected']; output='<h2>候选结构与响应曲线</h2><div class="figures">'
+    ids=list(latest) or p['selected']; label=p.get('research_context',{}).get('label','历史实测'); heading='候选预测与'+label if a.get('kind')=='tabular' else '候选结构与响应曲线'; output='<h2>'+heading+'</h2><div class="figures">'
     for ident in ids[:6]:
         c=known.get(ident)
         if not c: continue
@@ -629,7 +635,7 @@ def report_figures(p):
             if measured: output+='<polyline points="'+points(measured)+'" fill="none" stroke="#99582a" stroke-width="2"/>'
             output+=f'<text x="40" y="175">{dose[0]:.1f}</text><text x="415" y="175">{dose[-1]:.1f}</text><text x="170" y="195">加入量 / nmol</text></svg><p>蓝：预测 FOM · 棕：历史实测 FOM</p>'
         output+='<figcaption>预测 '+str(round(c['prediction'],3))
-        if ident in latest: output+=' · 实测 '+str(round(latest[ident]['value'],3))
+        if ident in latest: output+=' · '+label+' '+str(round(latest[ident]['value'],3))
         output+='</figcaption></figure>'
     output+='</div>'
     if latest:

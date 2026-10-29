@@ -1,0 +1,50 @@
+{
+  "concrete": {
+    "title": "混凝土配方筛选",
+    "material": "混凝土",
+    "goal": "根据配方与养护龄期筛选高抗压强度混凝土",
+    "unit": "MPa",
+    "target": "strength_mpa",
+    "snapshot": "engine-case.json",
+    "description": "配方与养护龄期 → 抗压强度",
+    "detail": "859 条历史记录 · 171 条候选",
+    "label": "历史实测",
+    "source_title": "UCI Concrete Compressive Strength"
+  },
+  "steels": {
+    "title": "钢合金组成筛选",
+    "material": "钢合金",
+    "goal": "根据化学组成筛选高屈服强度钢合金",
+    "unit": "MPa",
+    "target": "yield_strength_mpa",
+    "snapshot": "steels-case.json",
+    "description": "元素比例与材料描述符 → 屈服强度",
+    "detail": "265 条历史记录 · 47 条候选",
+    "label": "历史实测",
+    "source_title": "Matbench experimental steel yield strength"
+  },
+  "double_perovskites_gap": {
+    "title": "双钙钛矿带隙筛选",
+    "material": "双钙钛矿",
+    "goal": "根据元素组成与晶格位点筛选宽带隙双钙钛矿候选",
+    "unit": "eV",
+    "target": "band_gap_ev",
+    "snapshot": "perovskites-case.json",
+    "description": "元素组成与晶格位点 → GLLB-SC 计算带隙",
+    "detail": "1,111 条历史记录 · 195 条候选",
+    "label": "计算参考值",
+    "source_title": "Pilania et al. · Machine learning bandgaps of double perovskites"
+  },
+  "citrine_thermal_conductivity": {
+    "title": "材料热导率筛选",
+    "material": "热导率材料",
+    "goal": "根据元素组成与记录的测试温度筛选高热导率材料条件",
+    "unit": "W/(m K)",
+    "target": "thermal_conductivity",
+    "snapshot": "thermal-case.json",
+    "description": "元素组成与测试温度 → 实验热导率",
+    "detail": "642 条历史记录 · 120 条候选",
+    "label": "历史实测",
+    "source_title": "Citrine thermal conductivity · Matminer"
+  }
+}

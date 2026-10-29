@@ -1,0 +1,905 @@
+{
+  "dataset": "citrine_thermal_conductivity",
+  "source": {
+    "bibtex_refs": [
+      "@misc{Citrine Informatics,\ntitle = {Citrination},\nhowpublished = {\\url{https://www.citrination.com/}},\n}"
+    ],
+    "columns": {
+      "formula": "Chemical formula of the dataset entry",
+      "k-units": "units of thermal conductivity",
+      "k_condition": "Temperature description of testing conditions",
+      "k_condition_units": "units of testing condition temperature representation",
+      "k_expt": "the experimentally measured thermal conductivity in SI units of W/m.K"
+    },
+    "description": "Thermal conductivity of 872 compounds measured experimentally and retrieved from Citrine database from various references. The reported values are measured at various temperatures of which 295 are at room temperature.",
+    "file_type": "json.gz",
+    "hash": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+    "num_entries": 872,
+    "reference": "https://www.citrination.com",
+    "url": "https://ndownloader.figshare.com/files/13314470"
+  },
+  "label_origin": "Published experimental thermal conductivity measurements",
+  "raw_rows": 872,
+  "usable_rows": 762,
+  "exclusions": [],
+  "duplicate_policy": "Median target for identical normalized composition and recorded context; all records and values retained in this audit. No target threshold filtering.",
+  "aggregates": [
+    {
+      "id": "citrine_thermal_conductivity_1",
+      "raw_rows": [
+        1,
+        32
+      ],
+      "values": [
+        19.9,
+        19.9
+      ],
+      "median": 19.9
+    },
+    {
+      "id": "citrine_thermal_conductivity_2",
+      "raw_rows": [
+        2,
+        23
+      ],
+      "values": [
+        181.0,
+        181.0
+      ],
+      "median": 181.0
+    },
+    {
+      "id": "citrine_thermal_conductivity_3",
+      "raw_rows": [
+        3,
+        6
+      ],
+      "values": [
+        64.5,
+        64.5
+      ],
+      "median": 64.5
+    },
+    {
+      "id": "citrine_thermal_conductivity_7",
+      "raw_rows": [
+        7,
+        12
+      ],
+      "values": [
+        447.0,
+        447.0
+      ],
+      "median": 447.0
+    },
+    {
+      "id": "citrine_thermal_conductivity_9",
+      "raw_rows": [
+        9,
+        34
+      ],
+      "values": [
+        372.0,
+        372.0
+      ],
+      "median": 372.0
+    },
+    {
+      "id": "citrine_thermal_conductivity_14",
+      "raw_rows": [
+        14,
+        38
+      ],
+      "values": [
+        2.75,
+        2.75
+      ],
+      "median": 2.75
+    },
+    {
+      "id": "citrine_thermal_conductivity_17",
+      "raw_rows": [
+        17,
+        18
+      ],
+      "values": [
+        7.1,
+        7.1
+      ],
+      "median": 7.1
+    },
+    {
+      "id": "citrine_thermal_conductivity_21",
+      "raw_rows": [
+        21,
+        31
+      ],
+      "values": [
+        1.26,
+        1.26
+      ],
+      "median": 1.26
+    },
+    {
+      "id": "citrine_thermal_conductivity_24",
+      "raw_rows": [
+        24,
+        40
+      ],
+      "values": [
+        2.44,
+        2.44
+      ],
+      "median": 2.44
+    },
+    {
+      "id": "citrine_thermal_conductivity_25",
+      "raw_rows": [
+        25,
+        36
+      ],
+      "values": [
+        235.0,
+        235.0
+      ],
+      "median": 235.0
+    },
+    {
+      "id": "citrine_thermal_conductivity_44",
+      "raw_rows": [
+        44,
+        279
+      ],
+      "values": [
+        4.016716418,
+        1.468195804
+      ],
+      "median": 2.742456111
+    },
+    {
+      "id": "citrine_thermal_conductivity_48",
+      "raw_rows": [
+        48,
+        193
+      ],
+      "values": [
+        8.62,
+        8.57
+      ],
+      "median": 8.594999999999999
+    },
+    {
+      "id": "citrine_thermal_conductivity_50",
+      "raw_rows": [
+        50,
+        139,
+        635,
+        733
+      ],
+      "values": [
+        0.75,
+        0.6638,
+        0.743,
+        0.74
+      ],
+      "median": 0.7415
+    },
+    {
+      "id": "citrine_thermal_conductivity_55",
+      "raw_rows": [
+        55,
+        277
+      ],
+      "values": [
+        2.4757700000000002,
+        2.5704700000000003
+      ],
+      "median": 2.5231200000000005
+    },
+    {
+      "id": "citrine_thermal_conductivity_62",
+      "raw_rows": [
+        62,
+        233
+      ],
+      "values": [
+        1.518351106,
+        2.18525
+      ],
+      "median": 1.851800553
+    },
+    {
+      "id": "citrine_thermal_conductivity_75",
+      "raw_rows": [
+        75,
+        265
+      ],
+      "values": [
+        2.0205,
+        2.0205
+      ],
+      "median": 2.0205
+    },
+    {
+      "id": "citrine_thermal_conductivity_76",
+      "raw_rows": [
+        76,
+        632
+      ],
+      "values": [
+        6.0761,
+        7.72
+      ],
+      "median": 6.89805
+    },
+    {
+      "id": "citrine_thermal_conductivity_84",
+      "raw_rows": [
+        84,
+        460
+      ],
+      "values": [
+        1.91,
+        1.37
+      ],
+      "median": 1.6400000000000001
+    },
+    {
+      "id": "citrine_thermal_conductivity_102",
+      "raw_rows": [
+        102,
+        152
+      ],
+      "values": [
+        4.0,
+        6.15
+      ],
+      "median": 5.075
+    },
+    {
+      "id": "citrine_thermal_conductivity_107",
+      "raw_rows": [
+        107,
+        611
+      ],
+      "values": [
+        6.14,
+        4.92
+      ],
+      "median": 5.529999999999999
+    },
+    {
+      "id": "citrine_thermal_conductivity_108",
+      "raw_rows": [
+        108,
+        691
+      ],
+      "values": [
+        4.7639,
+        2.2237
+      ],
+      "median": 3.4938
+    },
+    {
+      "id": "citrine_thermal_conductivity_117",
+      "raw_rows": [
+        117,
+        121
+      ],
+      "values": [
+        5.09,
+        6.75
+      ],
+      "median": 5.92
+    },
+    {
+      "id": "citrine_thermal_conductivity_118",
+      "raw_rows": [
+        118,
+        485
+      ],
+      "values": [
+        1.9040000000000001,
+        19.08
+      ],
+      "median": 10.491999999999999
+    },
+    {
+      "id": "citrine_thermal_conductivity_119",
+      "raw_rows": [
+        119,
+        478
+      ],
+      "values": [
+        5.51,
+        4.5516
+      ],
+      "median": 5.030799999999999
+    },
+    {
+      "id": "citrine_thermal_conductivity_120",
+      "raw_rows": [
+        120,
+        462,
+        624,
+        633
+      ],
+      "values": [
+        1.3,
+        1.62,
+        2.0,
+        1.56
+      ],
+      "median": 1.59
+    },
+    {
+      "id": "citrine_thermal_conductivity_123",
+      "raw_rows": [
+        123,
+        451,
+        743
+      ],
+      "values": [
+        3.56184,
+        16.23,
+        2.9898
+      ],
+      "median": 3.56184
+    },
+    {
+      "id": "citrine_thermal_conductivity_129",
+      "raw_rows": [
+        129,
+        555
+      ],
+      "values": [
+        1.5871,
+        1.571097028
+      ],
+      "median": 1.579098514
+    },
+    {
+      "id": "citrine_thermal_conductivity_134",
+      "raw_rows": [
+        134,
+        554
+      ],
+      "values": [
+        2.8369999999999997,
+        1.75
+      ],
+      "median": 2.2935
+    },
+    {
+      "id": "citrine_thermal_conductivity_137",
+      "raw_rows": [
+        137,
+        231,
+        299,
+        577
+      ],
+      "values": [
+        3.06714,
+        3.3060699999999996,
+        2.9729900000000002,
+        3.1783
+      ],
+      "median": 3.12272
+    },
+    {
+      "id": "citrine_thermal_conductivity_138",
+      "raw_rows": [
+        138,
+        338
+      ],
+      "values": [
+        1.75635,
+        1.574660559
+      ],
+      "median": 1.6655052795
+    },
+    {
+      "id": "citrine_thermal_conductivity_163",
+      "raw_rows": [
+        163,
+        196,
+        352,
+        466
+      ],
+      "values": [
+        2.0467299999999997,
+        3.3114,
+        2.15813,
+        2.16539
+      ],
+      "median": 2.16176
+    },
+    {
+      "id": "citrine_thermal_conductivity_174",
+      "raw_rows": [
+        174,
+        578
+      ],
+      "values": [
+        2.675,
+        3.18
+      ],
+      "median": 2.9275
+    },
+    {
+      "id": "citrine_thermal_conductivity_182",
+      "raw_rows": [
+        182,
+        270,
+        344,
+        482
+      ],
+      "values": [
+        1.79,
+        1.42,
+        1.63,
+        2.0
+      ],
+      "median": 1.71
+    },
+    {
+      "id": "citrine_thermal_conductivity_190",
+      "raw_rows": [
+        190,
+        357
+      ],
+      "values": [
+        2.555,
+        3.14
+      ],
+      "median": 2.8475
+    },
+    {
+      "id": "citrine_thermal_conductivity_200",
+      "raw_rows": [
+        200,
+        259,
+        574,
+        597
+      ],
+      "values": [
+        1.94,
+        1.7,
+        1.52,
+        2.0
+      ],
+      "median": 1.8199999999999998
+    },
+    {
+      "id": "citrine_thermal_conductivity_205",
+      "raw_rows": [
+        205,
+        534
+      ],
+      "values": [
+        6.72,
+        5.1951
+      ],
+      "median": 5.9575499999999995
+    },
+    {
+      "id": "citrine_thermal_conductivity_214",
+      "raw_rows": [
+        214,
+        390
+      ],
+      "values": [
+        1.8,
+        3.15
+      ],
+      "median": 2.475
+    },
+    {
+      "id": "citrine_thermal_conductivity_219",
+      "raw_rows": [
+        219,
+        650
+      ],
+      "values": [
+        1.6040432519999999,
+        1.84225
+      ],
+      "median": 1.723146626
+    },
+    {
+      "id": "citrine_thermal_conductivity_223",
+      "raw_rows": [
+        223,
+        240,
+        416,
+        536
+      ],
+      "values": [
+        0.7829999999999999,
+        0.77,
+        0.76,
+        1.01
+      ],
+      "median": 0.7765
+    },
+    {
+      "id": "citrine_thermal_conductivity_260",
+      "raw_rows": [
+        260,
+        737
+      ],
+      "values": [
+        1.93658,
+        1.9414
+      ],
+      "median": 1.93899
+    },
+    {
+      "id": "citrine_thermal_conductivity_268",
+      "raw_rows": [
+        268,
+        644
+      ],
+      "values": [
+        5.205245902,
+        3.377777778
+      ],
+      "median": 4.29151184
+    },
+    {
+      "id": "citrine_thermal_conductivity_285",
+      "raw_rows": [
+        285,
+        695
+      ],
+      "values": [
+        2.06759,
+        1.545616006
+      ],
+      "median": 1.806603003
+    },
+    {
+      "id": "citrine_thermal_conductivity_307",
+      "raw_rows": [
+        307,
+        411
+      ],
+      "values": [
+        4.29,
+        3.99643
+      ],
+      "median": 4.143215
+    },
+    {
+      "id": "citrine_thermal_conductivity_315",
+      "raw_rows": [
+        315,
+        732
+      ],
+      "values": [
+        4.087,
+        3.948955807
+      ],
+      "median": 4.0179779035
+    },
+    {
+      "id": "citrine_thermal_conductivity_319",
+      "raw_rows": [
+        319,
+        371,
+        397,
+        428
+      ],
+      "values": [
+        2.06537,
+        2.09242,
+        1.6787400000000001,
+        3.4447
+      ],
+      "median": 2.078895
+    },
+    {
+      "id": "citrine_thermal_conductivity_320",
+      "raw_rows": [
+        320,
+        399,
+        541,
+        693
+      ],
+      "values": [
+        0.6933,
+        0.75,
+        0.743,
+        0.74
+      ],
+      "median": 0.7415
+    },
+    {
+      "id": "citrine_thermal_conductivity_328",
+      "raw_rows": [
+        328,
+        612
+      ],
+      "values": [
+        5.7025,
+        2.093
+      ],
+      "median": 3.89775
+    },
+    {
+      "id": "citrine_thermal_conductivity_333",
+      "raw_rows": [
+        333,
+        362
+      ],
+      "values": [
+        4.5,
+        7.25
+      ],
+      "median": 5.875
+    },
+    {
+      "id": "citrine_thermal_conductivity_353",
+      "raw_rows": [
+        353,
+        380,
+        423,
+        595
+      ],
+      "values": [
+        2.0,
+        1.6,
+        1.43,
+        1.26
+      ],
+      "median": 1.5150000000000001
+    },
+    {
+      "id": "citrine_thermal_conductivity_367",
+      "raw_rows": [
+        367,
+        427
+      ],
+      "values": [
+        7.96,
+        10.42
+      ],
+      "median": 9.19
+    },
+    {
+      "id": "citrine_thermal_conductivity_376",
+      "raw_rows": [
+        376,
+        581
+      ],
+      "values": [
+        2.23936,
+        1.470944215
+      ],
+      "median": 1.8551521075
+    },
+    {
+      "id": "citrine_thermal_conductivity_379",
+      "raw_rows": [
+        379,
+        491,
+        531
+      ],
+      "values": [
+        1.6669999999999998,
+        1.6669999999999998,
+        1.6669999999999998
+      ],
+      "median": 1.6669999999999998
+    },
+    {
+      "id": "citrine_thermal_conductivity_393",
+      "raw_rows": [
+        393,
+        649
+      ],
+      "values": [
+        3.51,
+        2.0
+      ],
+      "median": 2.755
+    },
+    {
+      "id": "citrine_thermal_conductivity_394",
+      "raw_rows": [
+        394,
+        602
+      ],
+      "values": [
+        2.1717,
+        2.1717
+      ],
+      "median": 2.1717
+    },
+    {
+      "id": "citrine_thermal_conductivity_450",
+      "raw_rows": [
+        450,
+        676
+      ],
+      "values": [
+        1.9,
+        3.444
+      ],
+      "median": 2.6719999999999997
+    },
+    {
+      "id": "citrine_thermal_conductivity_455",
+      "raw_rows": [
+        455,
+        464
+      ],
+      "values": [
+        3.25,
+        3.05
+      ],
+      "median": 3.15
+    },
+    {
+      "id": "citrine_thermal_conductivity_476",
+      "raw_rows": [
+        476,
+        715
+      ],
+      "values": [
+        1.44,
+        1.39286
+      ],
+      "median": 1.41643
+    },
+    {
+      "id": "citrine_thermal_conductivity_503",
+      "raw_rows": [
+        503,
+        596
+      ],
+      "values": [
+        1.834,
+        13.53
+      ],
+      "median": 7.6819999999999995
+    },
+    {
+      "id": "citrine_thermal_conductivity_527",
+      "raw_rows": [
+        527,
+        645
+      ],
+      "values": [
+        2.2137700000000002,
+        2.08031
+      ],
+      "median": 2.14704
+    },
+    {
+      "id": "citrine_thermal_conductivity_593",
+      "raw_rows": [
+        593,
+        614
+      ],
+      "values": [
+        3.2739999999999996,
+        3.113096927
+      ],
+      "median": 3.1935484635
+    },
+    {
+      "id": "citrine_thermal_conductivity_599",
+      "raw_rows": [
+        599,
+        706
+      ],
+      "values": [
+        6.4417,
+        7.71
+      ],
+      "median": 7.07585
+    },
+    {
+      "id": "citrine_thermal_conductivity_753",
+      "raw_rows": [
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        760,
+        761,
+        762,
+        763,
+        764,
+        765,
+        766,
+        767,
+        768,
+        769,
+        770,
+        771,
+        772,
+        773,
+        774
+      ],
+      "values": [
+        0.44,
+        0.38,
+        0.53,
+        0.34,
+        1.11,
+        0.38,
+        0.59,
+        1.29,
+        1.05,
+        1.26,
+        1.05,
+        0.46,
+        0.32,
+        1.21,
+        0.39,
+        2.54,
+        0.38,
+        1.02,
+        0.39,
+        0.87,
+        0.29,
+        0.48
+      ],
+      "median": 0.505
+    },
+    {
+      "id": "citrine_thermal_conductivity_776",
+      "raw_rows": [
+        776,
+        795,
+        796
+      ],
+      "values": [
+        1.6,
+        6.5,
+        11.0
+      ],
+      "median": 6.5
+    },
+    {
+      "id": "citrine_thermal_conductivity_802",
+      "raw_rows": [
+        802,
+        821,
+        822
+      ],
+      "values": [
+        1.7,
+        5.0,
+        8.3
+      ],
+      "median": 5.0
+    },
+    {
+      "id": "citrine_thermal_conductivity_828",
+      "raw_rows": [
+        828,
+        843,
+        844
+      ],
+      "values": [
+        2.1,
+        3.6,
+        5.0
+      ],
+      "median": 3.6
+    }
+  ],
+  "train_rows": 642,
+  "candidate_rows": 120,
+  "train_groups": 211,
+  "candidate_groups": 38,
+  "group_overlap": 0,
+  "feature_count": 71,
+  "temperature_policy": "Exact numeric temperatures only when units are Kelvin; room/standard remain categorical with numeric temperature missing. No assumed conversion."
+}

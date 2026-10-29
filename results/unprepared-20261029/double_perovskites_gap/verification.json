@@ -1,0 +1,70 @@
+{
+  "case": "double_perovskites_gap",
+  "project_id": "2e7f35e1f7fc",
+  "model": "combined / ET",
+  "training_count": 1111,
+  "candidate_count": 195,
+  "cv_mae": 0.23648950329195528,
+  "holdout_mae": 0.21066141389391027,
+  "holdout_rmse": 0.30106520924024727,
+  "holdout_r2": 0.9630362627277509,
+  "holdout_spearman": 0.9854877081681204,
+  "mean_baseline_mae": 1.258908300756491,
+  "median_baseline_mae": 1.2706085044102564,
+  "target_range": [
+    0.128888784,
+    7.331300549
+  ],
+  "unit": "eV",
+  "screening": {
+    "1": {
+      "selected_ids": [
+        "double_perovskites_gap_271"
+      ],
+      "selected_best": 6.891564761,
+      "pool_best": 7.331300549,
+      "regret": 0.4397357880000001,
+      "random_expected_best": 3.9629799268615398,
+      "unique_compositions": 1,
+      "top_decile_hits": 1
+    },
+    "3": {
+      "selected_ids": [
+        "double_perovskites_gap_271",
+        "double_perovskites_gap_185",
+        "double_perovskites_gap_63"
+      ],
+      "selected_best": 7.104402829,
+      "pool_best": 7.331300549,
+      "regret": 0.2268977200000002,
+      "random_expected_best": 5.312596121049883,
+      "unique_compositions": 3,
+      "top_decile_hits": 3
+    },
+    "5": {
+      "selected_ids": [
+        "double_perovskites_gap_271",
+        "double_perovskites_gap_185",
+        "double_perovskites_gap_63",
+        "double_perovskites_gap_48",
+        "double_perovskites_gap_282"
+      ],
+      "selected_best": 7.124555422,
+      "pool_best": 7.331300549,
+      "regret": 0.20674512699999958,
+      "random_expected_best": 5.826030902814278,
+      "unique_compositions": 5,
+      "top_decile_hits": 5
+    }
+  },
+  "finalization_seconds": 0.07,
+  "reused_completed_training": true,
+  "engine_seconds": 162.98,
+  "model_configurations": 22,
+  "round": 2,
+  "recorded": 3,
+  "dataset_versions": 2,
+  "label_origin": "GLLB-SC electronic-structure calculations; not experimental measurements",
+  "engine_code_sha256": "091cbd4e21d0292e9c0aca6f8b79278bfac00d8f207702a847b83493f4c6099a",
+  "model_sha256": "b573a11db2af578d0bda0a68f8bb4352b04cd917e58abcac9b3526e497e19152"
+}

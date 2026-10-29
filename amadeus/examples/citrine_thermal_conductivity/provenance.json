@@ -1,0 +1,11 @@
+{
+  "source": "https://ndownloader.figshare.com/files/13314470",
+  "reference": "https://www.citrination.com",
+  "label_origin": "Published experimental thermal conductivity measurements",
+  "raw_sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+  "split": "15% normalized-composition group holdout, seed 42",
+  "duplicate_policy": "Median target for identical normalized composition and recorded context; all records and values retained in this audit. No target threshold filtering.",
+  "training": 642,
+  "candidates": 120,
+  "temperature_policy": "Exact numeric temperatures only when units are Kelvin; room/standard remain categorical with numeric temperature missing. No assumed conversion."
+}
