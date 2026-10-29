@@ -1,0 +1,12 @@
+{
+  "source": "https://archive.ics.uci.edu/dataset/165/concrete+compressive+strength",
+  "doi": "10.24432/C5PK67",
+  "author": "I-Cheng Yeh",
+  "license": "CC BY 4.0",
+  "raw_sha256": "710076c66b9ca3f8050e7942f3dcbdbe04013534daeb0077ffd3079a52d8e0c4",
+  "rows": 1030,
+  "training": 859,
+  "candidates": 171,
+  "split": "15% composition-group holdout; age does not change group identity",
+  "note": "Engineering validation of materials workflow, not perovskite evidence."
+}

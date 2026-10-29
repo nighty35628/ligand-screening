@@ -18,3 +18,7 @@
 `amadeus/web/sample-history.csv`（80行）与 `sample-candidates.csv`（12行）来自已有公开配方数据审计结果。按原 group 前80组/后续12组选取，历史与候选不共享group；候选文件去除目标peak。字段保留PbBr2、Cs-oleate、Aceton加入体积。用于功能演示，不作为本项目新增性能结论。
 
 Lampe et al., *Rapid Data-Efficient Optimization of Perovskite Nanocrystal Syntheses through Machine Learning Algorithm Fusion*, DOI https://doi.org/10.1002/adma.202208772 。作者代码 https://github.com/benkour/Quantum_Dot_optimization ，审计固定提交 `659e2c37ec6cf11e3f972ca21e7b6745c49285a4`。
+
+## 新材料表格验收数据
+
+I-Cheng Yeh, Concrete Compressive Strength, UCI Machine Learning Repository, DOI [10.24432/C5PK67](https://doi.org/10.24432/C5PK67), CC BY 4.0。原始数据与标准化拆分位于 amadeus/examples/concrete；配方分组、字段改名和候选标签隔离为本项目处理。

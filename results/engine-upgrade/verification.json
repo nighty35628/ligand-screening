@@ -1,0 +1,19 @@
+{
+  "project_id": "bedbe6e2000b",
+  "first_model": "combined / ET",
+  "cv_mae": 3.7294808210837203,
+  "independent_candidate_mae": 5.195274610833232,
+  "candidate_count": 171,
+  "recommendations": [
+    "concrete_0176",
+    "concrete_0178",
+    "concrete_0180"
+  ],
+  "selected_best_measured": 79.29663476,
+  "pool_best": 79.98611076,
+  "dataset_versions": 4,
+  "processing_steps": 2,
+  "retrain_count": 862,
+  "round": 2,
+  "second_model": "combined / ET"
+}

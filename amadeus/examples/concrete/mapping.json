@@ -1,0 +1,35 @@
+{
+  "target": "strength_mpa",
+  "id": "id",
+  "group": "mix_group",
+  "task": "regression",
+  "direction": "max",
+  "unit": "MPa",
+  "features": [
+    "cement",
+    "slag",
+    "fly_ash",
+    "water",
+    "superplasticizer",
+    "coarse_aggregate",
+    "fine_aggregate",
+    "age_day"
+  ],
+  "feature_groups": {
+    "composition": [
+      "cement",
+      "slag",
+      "fly_ash",
+      "water",
+      "superplasticizer",
+      "coarse_aggregate",
+      "fine_aggregate"
+    ],
+    "condition": [
+      "age_day"
+    ]
+  },
+  "optimize": true,
+  "search_trials": 4,
+  "selection_metric": "mae"
+}

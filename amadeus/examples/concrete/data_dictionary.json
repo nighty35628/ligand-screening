@@ -1,0 +1,23 @@
+{
+  "composition": {
+    "columns": [
+      "cement",
+      "slag",
+      "fly_ash",
+      "water",
+      "superplasticizer",
+      "coarse_aggregate",
+      "fine_aggregate"
+    ],
+    "unit": "kg/m3"
+  },
+  "condition": {
+    "age_day": "day"
+  },
+  "target": {
+    "strength_mpa": "MPa"
+  },
+  "id": "原始XLS数据行编号，首条数据为concrete_0001",
+  "mix_group": "由七种配方组分生成的分组ID，非实测批次号",
+  "candidate_labels": "oracle.json为独立候选历史测量，仅评价/显式揭晓时读取"
+}

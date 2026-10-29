@@ -21,6 +21,9 @@ def parse_csv(text):
 
 
 def fit(payload, directory):
+    if payload['mapping'].get('task','regression') == 'regression':
+        from .engine import run
+        return run(payload,directory)
     import numpy as np
     import joblib
     from sklearn.compose import ColumnTransformer

@@ -16,4 +16,10 @@ if [[ ! -x "$PYTHON_BIN" ]]; then
   fi
   PYTHON_BIN="$PROJECT_DIR/.venv-allis/bin/python"
 fi
+# Install newly introduced engine dependencies for an existing environment too.
+if command -v uv >/dev/null 2>&1; then
+  uv pip install --python "$PYTHON_BIN" -r requirements-allis.txt
+else
+  "$PYTHON_BIN" -m pip install -r requirements-allis.txt
+fi
 exec "$PYTHON_BIN" -m amadeus.server "$@"
