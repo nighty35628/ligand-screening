@@ -647,7 +647,8 @@ def export_report(p):
     def table(headers, rows):
         return '<table><thead><tr>'+''.join('<th>'+e(str(h))+'</th>' for h in headers)+'</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+e(str(v))+'</td>' for v in row)+'</tr>' for row in rows)+'</tbody></table>'
     a=p.get('analysis') or {}; known=candidate_map(p)
-    body='<h1>Amadeus · '+e(p['title'])+'</h1><p>'+e(p['task']['goal'])+'</p>'
+    logo=(ROOT/'amadeus/web/logo.svg').read_text()
+    body='<div style="width:220px;max-width:100%;margin:24px 0">'+logo+'</div><h1>'+e(p['title'])+'</h1><p>'+e(p['task']['goal'])+'</p>'
     body+=f'<p>第 {p["round"]} 轮 · 更新于 {e(p["updated"])}</p>'
     if a:
         body+='<h2>分析结果</h2><p>'+e(a['model'])+'</p>'

@@ -186,7 +186,7 @@ def report(job, include_measured=False):
         measured += '</tbody></table></section>'
     return f'''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Amadeus · 实验决策报告</title>
 <style>body{{font:15px/1.7 system-ui,sans-serif;color:#243a34;max-width:1050px;margin:50px auto;padding:0 25px}}h1{{font-size:32px}}h2{{font-size:19px}}table{{border-collapse:collapse;width:100%;font-size:12px}}td,th{{padding:10px 8px;border-bottom:1px solid #ddd;text-align:left}}section{{break-inside:avoid;border-top:1px solid #ddd;padding-top:18px;margin-top:30px}}section>svg{{max-width:480px;vertical-align:middle}}.structure{{display:inline-block;width:230px;vertical-align:middle}}.structure svg{{width:100%;height:150px}}small,p{{color:#53645c}}@media print{{body{{margin:0}}button{{display:none}}}}</style>
-<button onclick="window.print()">打印 / 保存为 PDF</button><h1>Amadeus · 实验决策报告</h1>
+<button onclick="window.print()">打印 / 保存为 PDF</button><div style="width:220px;max-width:100%;margin:24px 0">{(WEB / "logo.svg").read_text()}</div><h1>实验决策报告</h1>
 <p>任务：CsPbBr₃纳米晶配体筛选 · 目标：提高推荐集中的最佳发光表现</p>
 <p>候选组 {esc(job['pool'])} · 36个历史配体 / 18个候选 · 本轮推荐 {job['budget']} 个<br>运行方式：{mode} · 耗时 {job['seconds']} 秒<br>记录：{esc(job['id'])} · {esc(job['created_at'])}</p>
 <table><thead><tr>{''.join(f'<th>{v}</th>' for v in ['优先级','标识','候选','曲线预测Q','直接预测Q','曲线名次','直接名次','融合名次值'])}</tr></thead><tbody>{body}</tbody></table>
@@ -251,6 +251,7 @@ class Handler(BaseHTTPRequestHandler):
             # Explicit static allowlist: raw data, models and archived answers are not served locally.
             files = {'/': 'index.html', '/index.html': 'index.html', '/app.js': 'app.js',
                      '/style.css': 'style.css', '/mark.svg': 'mark.svg', '/classic.html':'classic.html',
+                     '/logo.svg':'logo.svg', '/wordmark.svg':'wordmark.svg', '/logo-source.png':'logo-source.png',
                      '/demo-adapter.js':'demo-adapter.js', '/workbench.js':'workbench.js', '/workbench.css':'workbench.css', '/case-molecule.svg':'case-molecule.svg',
                      '/sample-history.csv':'sample-history.csv', '/sample-candidates.csv':'sample-candidates.csv'}
             if path in files:
