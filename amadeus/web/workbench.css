@@ -31,3 +31,5 @@
 .research-example .btn{flex-shrink:0}.custom-entry{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:34px}
 .case-picker{display:flex;gap:16px;align-items:end;margin-top:18px}.case-picker .field{flex:1}.case-picker .btn{flex-shrink:0}
 @media(max-width:600px){.research-example{align-items:start;flex-direction:column;gap:14px;padding:22px 0}.custom-entry{grid-template-columns:1fr;gap:0}.case-picker{align-items:stretch;flex-direction:column}}
+
+.research-guide{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 22px;margin:0 0 22px;background:#eaf0fc;border-radius:12px}.research-guide h2{font-size:17px;margin-bottom:7px}.research-guide p{font-size:13px;line-height:1.75;max-width:65ch}.research-guide .btn{flex-shrink:0}@media(max-width:850px){.research-guide{flex-direction:column;align-items:stretch;gap:14px}}
