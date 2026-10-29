@@ -1,0 +1,64 @@
+{
+  "mapping": {
+    "target": "yield_strength_mpa",
+    "id": "id",
+    "group": "composition_group",
+    "task": "regression",
+    "direction": "max",
+    "unit": "MPa",
+    "features": [
+      "fraction_Al",
+      "fraction_C",
+      "fraction_Co",
+      "fraction_Cr",
+      "fraction_Fe",
+      "fraction_Mn",
+      "fraction_Mo",
+      "fraction_N",
+      "fraction_Nb",
+      "fraction_Ni",
+      "fraction_Si",
+      "fraction_Ti",
+      "fraction_V",
+      "fraction_W",
+      "element_count",
+      "mixing_entropy",
+      "mean_atomic_number",
+      "std_atomic_number",
+      "mean_atomic_mass",
+      "mean_covalent_radius",
+      "mean_outer_electrons"
+    ],
+    "feature_groups": {
+      "element_fraction": [
+        "fraction_Al",
+        "fraction_C",
+        "fraction_Co",
+        "fraction_Cr",
+        "fraction_Fe",
+        "fraction_Mn",
+        "fraction_Mo",
+        "fraction_N",
+        "fraction_Nb",
+        "fraction_Ni",
+        "fraction_Si",
+        "fraction_Ti",
+        "fraction_V",
+        "fraction_W"
+      ],
+      "chemistry_descriptor": [
+        "element_count",
+        "mixing_entropy",
+        "mean_atomic_number",
+        "std_atomic_number",
+        "mean_atomic_mass",
+        "mean_covalent_radius",
+        "mean_outer_electrons"
+      ]
+    },
+    "optimize": true,
+    "search_trials": 4,
+    "selection_metric": "mae"
+  },
+  "data_sha256": "ddf36d5bdf7aa1195cce1037d0e2a4d5ebc80380ec4ea18e40d762175b9e2bcb"
+}

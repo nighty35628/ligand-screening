@@ -1,0 +1,372 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Amadeus 研究报告</title><style>.figures{display:grid;grid-template-columns:1fr 1fr;gap:24px}figure{margin:0;break-inside:avoid}figure svg{max-width:100%;font:12px system-ui}.molecule svg{width:150px;height:90px}figcaption,figure p{font-size:12px}.barrow{display:grid;grid-template-columns:180px 1fr 65px;gap:15px;align-items:center;margin:12px 0}.track{background:#eceef2;height:14px}.track i{display:block;background:#245dcc;height:100%}body{font:15px/1.8 system-ui;color:#25262b;max-width:1000px;margin:40px auto;padding:24px}h1{font-size:30px}h2{margin-top:32px;font-size:20px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid #ddd;overflow-wrap:anywhere}a{color:#275e47}@media print{button{display:none}body{margin:0;padding:10px}tr{break-inside:avoid}}</style><button onclick="print()">打印 / 保存 PDF</button><h1>Amadeus · 钢合金屈服强度 · 真实闭环</h1><p>根据化学组成筛选高屈服强度钢合金</p><p>第 2 轮 · 更新于 2026-10-29T11:00:42.194717+00:00</p><h2>分析结果</h2><p>combined / ET</p><table><thead><tr><th>候选</th><th>预测 yield_strength_mpa</th><th>直接评分</th><th>融合名次</th></tr></thead><tbody><tr><td>steel_273</td><td>1786.4413</td><td></td><td></td></tr><tr><td>steel_295</td><td>1785.9062</td><td></td><td></td></tr><tr><td>steel_297</td><td>1780.8238</td><td></td><td></td></tr></tbody></table><p>5折按组验证</p><table><thead><tr><th>模型</th><th>MAE</th></tr></thead><tbody><tr><td>element_fraction / Dummy</td><td>232.27734</td></tr><tr><td>element_fraction / Ridge</td><td>159.29458</td></tr><tr><td>element_fraction / RF</td><td>96.51829</td></tr><tr><td>element_fraction / ET</td><td>81.87732</td></tr><tr><td>element_fraction / XGBoost</td><td>105.45044</td></tr><tr><td>element_fraction / LightGBM</td><td>102.74166</td></tr><tr><td>chemistry_descriptor / Dummy</td><td>232.27734</td></tr><tr><td>chemistry_descriptor / Ridge</td><td>204.7351</td></tr><tr><td>chemistry_descriptor / RF</td><td>122.05943</td></tr><tr><td>chemistry_descriptor / ET</td><td>108.76369</td></tr><tr><td>chemistry_descriptor / XGBoost</td><td>131.6945</td></tr><tr><td>chemistry_descriptor / LightGBM</td><td>127.13401</td></tr><tr><td>combined / Dummy</td><td>232.27734</td></tr><tr><td>combined / Ridge</td><td>159.64134</td></tr><tr><td>combined / RF</td><td>97.42836</td></tr><tr><td>combined / ET</td><td>80.84036</td></tr><tr><td>combined / XGBoost</td><td>103.56947</td></tr><tr><td>combined / LightGBM</td><td>111.49177</td></tr><tr><td>combined / RF / optimized</td><td>104.77409</td></tr><tr><td>combined / ET / optimized</td><td>96.06455</td></tr><tr><td>combined / XGBoost / optimized</td><td>112.4147</td></tr><tr><td>combined / LightGBM / optimized</td><td>114.81972</td></tr></tbody></table><h2>候选结构与响应曲线</h2><div class="figures"><figure><h3>steel_0</h3><div class="molecule"></div><figcaption>预测 2417.27 · 实测 2411.5</figcaption></figure><figure><h3>steel_13</h3><div class="molecule"></div><figcaption>预测 2397.939 · 实测 2402.3</figcaption></figure><figure><h3>steel_256</h3><div class="molecule"></div><figcaption>预测 1870.678 · 实测 1730.2</figcaption></figure></div><h2>已记录结果对比</h2><div class="barrow"><span>steel_0</span><div class="track"><i style="width:100.0%"></i></div><b>2411.5</b></div><div class="barrow"><span>steel_13</span><div class="track"><i style="width:99.61849471283433%"></i></div><b>2402.3</b></div><div class="barrow"><span>steel_256</span><div class="track"><i style="width:71.7478747667427%"></i></div><b>1730.2</b></div><h2>数据与模型运行依据</h2><pre>{
+  &quot;research_context&quot;: {
+    &quot;material&quot;: &quot;钢合金&quot;,
+    &quot;example&quot;: &quot;steels&quot;,
+    &quot;goal&quot;: &quot;根据化学组成筛选高屈服强度钢合金&quot;,
+    &quot;source&quot;: {
+      &quot;source&quot;: &quot;https://hackingmaterials.lbl.gov/automatminer/datasets.html&quot;,
+      &quot;download&quot;: &quot;https://ml.materialsproject.org/projects/matbench_steels.json.gz&quot;,
+      &quot;original_source&quot;: &quot;https://citrination.com/datasets/153092/&quot;,
+      &quot;license&quot;: &quot;Public Matbench dataset; retain upstream source attribution and terms.&quot;,
+      &quot;raw_sha256&quot;: &quot;473bc4957b2ea5e6465aef84bc29bb48ac34db27d69ea4ec5f508745c6fae252&quot;,
+      &quot;rows&quot;: 312,
+      &quot;unique_compositions&quot;: 312,
+      &quot;training&quot;: 265,
+      &quot;candidates&quot;: 47,
+      &quot;split&quot;: &quot;15% normalized-composition group holdout, seed 42; not the official Matbench evaluation&quot;,
+      &quot;features&quot;: &quot;Normalized element amounts from composition plus explicit RDKit periodic-table summaries. No tensile strength, elongation or processing data used.&quot;,
+      &quot;metadata_source&quot;: &quot;https://raw.githubusercontent.com/hackingmaterials/matminer/master/matminer/datasets/dataset_metadata.json&quot;
+    }
+  },
+  &quot;data_versions&quot;: [
+    {
+      &quot;id&quot;: &quot;f53668f06b92&quot;,
+      &quot;kind&quot;: &quot;training&quot;,
+      &quot;reason&quot;: &quot;导入 steels-training.csv&quot;,
+      &quot;rows&quot;: 265
+    },
+    {
+      &quot;id&quot;: &quot;0d4726edb7e1&quot;,
+      &quot;kind&quot;: &quot;candidates&quot;,
+      &quot;reason&quot;: &quot;导入 steels-candidates.csv&quot;,
+      &quot;rows&quot;: 47
+    }
+  ],
+  &quot;processing&quot;: [],
+  &quot;validation&quot;: &quot;5折按组验证&quot;,
+  &quot;selected_features&quot;: [
+    &quot;numeric__x0&quot;,
+    &quot;numeric__x1&quot;,
+    &quot;numeric__x2&quot;,
+    &quot;numeric__x3&quot;,
+    &quot;numeric__x4&quot;,
+    &quot;numeric__x5&quot;,
+    &quot;numeric__x6&quot;,
+    &quot;numeric__x7&quot;,
+    &quot;numeric__x8&quot;,
+    &quot;numeric__x9&quot;,
+    &quot;numeric__x10&quot;,
+    &quot;numeric__x11&quot;,
+    &quot;numeric__x12&quot;,
+    &quot;numeric__x13&quot;,
+    &quot;numeric__x14&quot;,
+    &quot;numeric__x15&quot;,
+    &quot;numeric__x16&quot;,
+    &quot;numeric__x17&quot;,
+    &quot;numeric__x18&quot;,
+    &quot;numeric__x19&quot;,
+    &quot;numeric__x20&quot;
+  ],
+  &quot;search&quot;: [
+    {
+      &quot;name&quot;: &quot;combined-RF-0&quot;,
+      &quot;best_inner_score&quot;: 122.95329015761233,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-1&quot;,
+      &quot;best_inner_score&quot;: 123.55897216633132,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-2&quot;,
+      &quot;best_inner_score&quot;: 121.24103370221327,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-3&quot;,
+      &quot;best_inner_score&quot;: 115.48281832662644,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-RF-4&quot;,
+      &quot;best_inner_score&quot;: 120.49749664654587,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-0&quot;,
+      &quot;best_inner_score&quot;: 116.02603898390349,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-1&quot;,
+      &quot;best_inner_score&quot;: 100.42336183769288,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-2&quot;,
+      &quot;best_inner_score&quot;: 102.77744039235415,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-3&quot;,
+      &quot;best_inner_score&quot;: 102.75610663983908,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-ET-4&quot;,
+      &quot;best_inner_score&quot;: 102.04884221998653,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;min_samples_leaf&quot;: 1,
+        &quot;max_features&quot;: 0.6459943383056521
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-0&quot;,
+      &quot;best_inner_score&quot;: 129.91480085427932,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;learning_rate&quot;: 0.07982611757123356,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-1&quot;,
+      &quot;best_inner_score&quot;: 117.63318293550365,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;learning_rate&quot;: 0.07982611757123356,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-2&quot;,
+      &quot;best_inner_score&quot;: 117.60730222316975,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-3&quot;,
+      &quot;best_inner_score&quot;: 111.83677051894703,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-XGBoost-4&quot;,
+      &quot;best_inner_score&quot;: 128.75210112072173,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-0&quot;,
+      &quot;best_inner_score&quot;: 130.19470185041214,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-1&quot;,
+      &quot;best_inner_score&quot;: 121.36366796850218,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-2&quot;,
+      &quot;best_inner_score&quot;: 121.98444640518926,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-3&quot;,
+      &quot;best_inner_score&quot;: 113.65471338977353,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    },
+    {
+      &quot;name&quot;: &quot;combined-LightGBM-4&quot;,
+      &quot;best_inner_score&quot;: 126.33640297124434,
+      &quot;metric&quot;: &quot;mae&quot;,
+      &quot;params&quot;: {
+        &quot;k&quot;: 10,
+        &quot;learning_rate&quot;: 0.1264752257614643,
+        &quot;max_depth&quot;: 5
+      },
+      &quot;trials&quot;: 4
+    }
+  ],
+  &quot;scores&quot;: [
+    {
+      &quot;model&quot;: &quot;element_fraction / Dummy&quot;,
+      &quot;mae&quot;: 232.277344250623
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / Ridge&quot;,
+      &quot;mae&quot;: 159.29458310420344
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / RF&quot;,
+      &quot;mae&quot;: 96.51828773584911
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / ET&quot;,
+      &quot;mae&quot;: 81.87731603773595
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / XGBoost&quot;,
+      &quot;mae&quot;: 105.4504367813974
+    },
+    {
+      &quot;model&quot;: &quot;element_fraction / LightGBM&quot;,
+      &quot;mae&quot;: 102.74166111105843
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / Dummy&quot;,
+      &quot;mae&quot;: 232.277344250623
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / Ridge&quot;,
+      &quot;mae&quot;: 204.7351031510624
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / RF&quot;,
+      &quot;mae&quot;: 122.0594339622642
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / ET&quot;,
+      &quot;mae&quot;: 108.76368867924536
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / XGBoost&quot;,
+      &quot;mae&quot;: 131.6944955962559
+    },
+    {
+      &quot;model&quot;: &quot;chemistry_descriptor / LightGBM&quot;,
+      &quot;mae&quot;: 127.1340068768181
+    },
+    {
+      &quot;model&quot;: &quot;combined / Dummy&quot;,
+      &quot;mae&quot;: 232.277344250623
+    },
+    {
+      &quot;model&quot;: &quot;combined / Ridge&quot;,
+      &quot;mae&quot;: 159.6413405976019
+    },
+    {
+      &quot;model&quot;: &quot;combined / RF&quot;,
+      &quot;mae&quot;: 97.4283584905661
+    },
+    {
+      &quot;model&quot;: &quot;combined / ET&quot;,
+      &quot;mae&quot;: 80.84036320754726
+    },
+    {
+      &quot;model&quot;: &quot;combined / XGBoost&quot;,
+      &quot;mae&quot;: 103.56947440669221
+    },
+    {
+      &quot;model&quot;: &quot;combined / LightGBM&quot;,
+      &quot;mae&quot;: 111.49176568260533
+    },
+    {
+      &quot;model&quot;: &quot;combined / RF / optimized&quot;,
+      &quot;mae&quot;: 104.7740896226416
+    },
+    {
+      &quot;model&quot;: &quot;combined / ET / optimized&quot;,
+      &quot;mae&quot;: 96.06455188679259
+    },
+    {
+      &quot;model&quot;: &quot;combined / XGBoost / optimized&quot;,
+      &quot;mae&quot;: 112.41469694317513
+    },
+    {
+      &quot;model&quot;: &quot;combined / LightGBM / optimized&quot;,
+      &quot;mae&quot;: 114.8197208080371
+    }
+  ]
+}</pre><h2>第 1 轮实验计划 · 版本 1</h2><table><thead><tr><th>候选/行动</th><th>条件</th><th>指标</th><th>备注</th></tr></thead><tbody><tr><td>steel_0</td><td></td><td>yield_strength_mpa</td><td></td></tr><tr><td>steel_13</td><td></td><td>yield_strength_mpa</td><td></td></tr><tr><td>steel_256</td><td></td><td>yield_strength_mpa</td><td></td></tr></tbody></table><h2>已记录结果</h2><table><thead><tr><th>轮次</th><th>候选/行动</th><th>测量值</th><th>单位</th><th>状态</th><th>来源</th></tr></thead><tbody><tr><td>1</td><td>steel_0</td><td>2411.5</td><td>MPa</td><td>completed</td><td>公开材料历史实测</td></tr><tr><td>1</td><td>steel_13</td><td>2402.3</td><td>MPa</td><td>completed</td><td>公开材料历史实测</td></tr><tr><td>1</td><td>steel_256</td><td>1730.2</td><td>MPa</td><td>completed</td><td>公开材料历史实测</td></tr></tbody></table><h2>研究记录</h2><h2>资料来源</h2><p><a href="https://hackingmaterials.lbl.gov/automatminer/datasets.html">Matbench experimental steel yield strength</a></p></html>

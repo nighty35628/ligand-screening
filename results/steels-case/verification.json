@@ -1,0 +1,30 @@
+{
+  "project_id": "60daba2fc368",
+  "train": 265,
+  "candidates": 47,
+  "model": "combined / ET",
+  "cv_mae": 80.84036320754726,
+  "holdout_mae": 85.28486702127667,
+  "holdout_r2": 0.8322821517713967,
+  "selected": [
+    {
+      "id": "steel_0",
+      "formula": "Fe0.620C0.000953Mn0.000521Si0.00102Cr0.000110Ni0.192Mo0.0176V0.000112Nb0.0000616Co0.146Al0.00318Ti0.0185",
+      "measured": 2411.5
+    },
+    {
+      "id": "steel_13",
+      "formula": "Fe0.655Mn0.000522Si0.00102Cr0.000110Ni0.176Mo0.0215V0.00563Nb0.0000617Co0.117Al0.000425Ti0.0228",
+      "measured": 2402.3
+    },
+    {
+      "id": "steel_256",
+      "formula": "Fe0.785C0.000931Mn0.000102Si0.000199Cr0.000108Ni0.167Mo0.000117V0.0209Nb0.0000602Co0.0000949Al0.00187Ti0.0241",
+      "measured": 1730.2
+    }
+  ],
+  "pool_best": 2411.5,
+  "round": 2,
+  "recorded": 3,
+  "unique_candidate_inputs": 47
+}

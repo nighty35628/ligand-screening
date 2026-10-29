@@ -22,3 +22,7 @@ Lampe et al., *Rapid Data-Efficient Optimization of Perovskite Nanocrystal Synth
 ## 新材料表格验收数据
 
 I-Cheng Yeh, Concrete Compressive Strength, UCI Machine Learning Repository, DOI [10.24432/C5PK67](https://doi.org/10.24432/C5PK67), CC BY 4.0。原始数据与标准化拆分位于 amadeus/examples/concrete；配方分组、字段改名和候选标签隔离为本项目处理。
+
+## 钢合金案例
+
+Matbench v0.1 matbench_steels，312种实验钢合金组成/屈服强度；数据来自Citrine，原始引用与元数据保存在 amadeus/examples/steels/source_metadata.json。Matbench参考：Dunn et al., npj Computational Materials 6, 138 (2020), DOI 10.1038/s41524-020-00406-3。组成描述与自定义划分是本项目处理；不作为官方Matbench成绩。

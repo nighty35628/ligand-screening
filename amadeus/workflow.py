@@ -233,10 +233,12 @@ def record(p, records, source='用户录入'):
 
 
 def historical_results(p):
-    if p.get('research_context',{}).get('material')=='混凝土' and (p.get('analysis') or {}).get('metric')=='strength_mpa':
-        oracle=json.loads((ROOT/'amadeus/examples/concrete/oracle.json').read_text());plan=current_plan(p)
-        rows=[{'candidate_id':i['candidate_id'],'value':oracle[i['candidate_id']],'status':'completed','unit':'MPa','note':'UCI独立候选的公开历史实测'} for i in plan['items'] if not any(m['plan_id']==plan['id'] and m['candidate_id']==i['candidate_id'] for m in p['measurements'])]
-        return record(p,rows,'UCI公开历史实测')
+    example=p.get('research_context',{}).get('example','concrete' if p.get('research_context',{}).get('material')=='混凝土' else '')
+    targets={'concrete':'strength_mpa','steels':'yield_strength_mpa'}
+    if example in targets and (p.get('analysis') or {}).get('metric')==targets[example]:
+        oracle=json.loads((ROOT/'amadeus/examples'/example/'oracle.json').read_text());plan=current_plan(p)
+        rows=[{'candidate_id':i['candidate_id'],'value':oracle[i['candidate_id']],'status':'completed','unit':'MPa','note':'独立候选的公开历史实测'} for i in plan['items'] if not any(m['plan_id']==plan['id'] and m['candidate_id']==i['candidate_id'] for m in p['measurements'])]
+        return record(p,rows,'公开材料历史实测')
     if not p.get('analysis') or p['analysis']['kind'] != 'specialist': raise ValueError('历史结果可在纳米晶案例中载入。')
     plan = current_plan(p)
     existing = {m['candidate_id'] for m in p['measurements'] if m['plan_id']==plan['id'] and m['source']=='公开历史实测'}
@@ -334,14 +336,17 @@ def calculate_plqy(p,inputs):
     result=data_engine.plqy(inputs);p.setdefault('processing_history',[]).append({'at':now(),'operation':'PLQY计算','result':result});return result
 
 
-def load_material_example(p):
-    root=ROOT/'amadeus/examples/concrete'
-    for kind in ('training','candidates'):upload(p,kind,(root/f'{kind}.csv').read_text(),f'concrete-{kind}.csv')
-    p['mapping']=json.loads((root/'mapping.json').read_text())
-    provenance=json.loads((root/'provenance.json').read_text())
-    p['sources'].append({'id':uid(),'title':'UCI Concrete Compressive Strength','url':provenance['source'],'summary':'配方组成与养护龄期预测抗压强度，CC BY 4.0；保留独立配方候选。','content':json.dumps(provenance)})
-    p['research_context']={'material':'混凝土','condition':'养护龄期 / day','goal':'预测抗压强度并优先选择高强度配方','source':provenance}
-    p['task'].update(goal=p['research_context']['goal'],metric='strength_mpa',unit='MPa',direction='max')
+def load_material_example(p,example='concrete'):
+    cases={'concrete':('混凝土','用配方与养护龄期预测抗压强度','UCI Concrete Compressive Strength'), 'steels':('钢合金','根据化学组成筛选高屈服强度钢合金','Matbench experimental steel yield strength')}
+    if example not in cases:raise ValueError('材料案例不存在。')
+    material,goal,title=cases[example];root=ROOT/'amadeus/examples'/example
+    if p['plans'] or p['measurements']:p['round']=max([p['round']]+[x['round'] for x in p['plans']])+1
+    p['excluded']=[]
+    for kind in ('training','candidates'):upload(p,kind,(root/f'{kind}.csv').read_text(),f'{example}-{kind}.csv')
+    p['mapping']=json.loads((root/'mapping.json').read_text());provenance=json.loads((root/'provenance.json').read_text())
+    p['sources'].append({'id':uid(),'title':title,'url':provenance['source'],'summary':goal+'；采用公开实测，独立组成分组候选。','content':json.dumps(provenance)})
+    p['research_context']={'material':material,'example':example,'goal':goal,'source':provenance}
+    p['task'].update(goal=goal,metric=p['mapping']['target'],unit='MPa',direction='max')
     return inspect(p)
 
 
@@ -475,7 +480,7 @@ TOOLS=[
  tool('accept_experiments','接受已检查的提取草稿为实验表。',{'draft_id':S,'kind':{'type':'string','enum':['training','candidates']}},['draft_id']),
  tool('process_dataset','实际转换实验表单位，或生成分子结构特征。rules每项含column,output,operation；amount_nmol另需concentration_column。',{'kind':S,'rules':{'type':'array','items':{'type':'object'}},'structure_column':S}),
  tool('calculate_plqy','参数完整时计算相对法PLQY，inputs包括参比量子产率、样品/参比积分发光、激发吸光度、折射率和sources；计算值独立保存。',{'inputs':{'type':'object'}},['inputs']),
- tool('load_material_example','载入真实混凝土配方与养护条件验收案例，不适用于用户指定钙钛矿的问题。',{}),
+ tool('load_material_example','载入公开材料案例：concrete为混凝土组成与龄期；steels为钢合金组成与实验屈服强度。',{'example':{'type':'string','enum':['concrete','steels']}}),
  tool('set_task','设置研究目标与测试名额。改变指标会开启新分析；一般改写目标描述不要传metric。',{'goal':S,'budget':{'type':'integer'},'metric':S,'direction':{'type':'string','enum':['max','min']}}),
  tool('run_specialist','载入CsPbBr3纳米晶公开示例并实际运行固定发光配体筛选模型。仅用于此案例。',{}),
  tool('adjust_candidates','根据当前显示顺序解析到候选ID，排除/恢复/指定名单或调整名额。',{'budget':{'type':'integer'},'exclude':IDS,'restore':IDS,'selected':IDS}),
@@ -567,7 +572,7 @@ def start(ident, data):
             elif action=='extract': extract_experiments(p,**args)
             elif action=='accept_extraction': accept_experiments(p,**args)
             elif action=='process': process_dataset(p,**args)
-            elif action=='material_example': load_material_example(p)
+            elif action=='material_example': load_material_example(p,**args)
             elif action=='research_context': p['research_context']=args
             elif action=='train': train_table(p,**args)
             elif action=='adjust': adjust(p,**args)

@@ -2,7 +2,7 @@
   "app.js": "7d908bbbdc6904bac395ed4d3d6a14e769c3796b545e60ba64c67dab75dc127b",
   "case-molecule.svg": "7a436fbe0d5f54fcd047ae56aff7394382992fa42dec617559e2e53f207afb79",
   "classic.html": "30f08dd2792d6c7e155e2f75d03237da97bdf4788b70fceb46f75bea9c66d747",
-  "demo-adapter.js": "c285e666fd2f5d159035f3ed09d766db9d181c2cc07318e449aac356fe11e5a5",
+  "demo-adapter.js": "58921bc4da469f5f1030371d1d7e337ea5b3832c9d91b0fb8876774185c3b109",
   "demo-case.json": "2c245ce3adb1ad98c15bd029b78bd4a833c665bf5cafebe379d914d12951efe8",
   "engine-case.json": "a8eab0a4a0aaf2e8c7707f6b6736107e3e42694a7f6bce3e3531cff71e85dbe2",
   "index.html": "ff67669b7b75432cfe753d2d270743b90a2a97560374b048f10a5d57ffbb23e6",
@@ -10,7 +10,8 @@
   "replay.json": "1bccc8f19e9ad932373157b2d7410705fe74de66b3c661de0230db5b04637666",
   "sample-candidates.csv": "b37cd28ed2e2f2828479124c65fc1704f9dba8d9cb965adb50b9f16e182ac9ca",
   "sample-history.csv": "61f57f9f2c96e155fba2f64b46f6a6f365a605fdc23d7c7554ddeb74da755563",
+  "steels-case.json": "1309425a8a0ed17dddc0f1c14cb6c2decfa0089cfd89cb4d67802f06835f40f7",
   "style.css": "6a57fc16ceafbe53d030fe4c09624cf400decb4255ba25aedfbf4b66e1f4be25",
   "workbench.css": "c1789159e3d9815592c4b2c0de60beb59472c52ef8add0f4a5e10aef5dc1291f",
-  "workbench.js": "d1c6bc178c1f4e63f40b032836bb07771ab2ff063a11e33294c6bb27256b3f11"
+  "workbench.js": "11912639ae7f290bea7dba10e90d60230d241fa525defca5c5ee21c431b4347e"
 }

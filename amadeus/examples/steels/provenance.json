@@ -1,0 +1,14 @@
+{
+  "source": "https://hackingmaterials.lbl.gov/automatminer/datasets.html",
+  "download": "https://ml.materialsproject.org/projects/matbench_steels.json.gz",
+  "original_source": "https://citrination.com/datasets/153092/",
+  "license": "Public Matbench dataset; retain upstream source attribution and terms.",
+  "raw_sha256": "473bc4957b2ea5e6465aef84bc29bb48ac34db27d69ea4ec5f508745c6fae252",
+  "rows": 312,
+  "unique_compositions": 312,
+  "training": 265,
+  "candidates": 47,
+  "split": "15% normalized-composition group holdout, seed 42; not the official Matbench evaluation",
+  "features": "Normalized element amounts from composition plus explicit RDKit periodic-table summaries. No tensile strength, elongation or processing data used.",
+  "metadata_source": "https://raw.githubusercontent.com/hackingmaterials/matminer/master/matminer/datasets/dataset_metadata.json"
+}
