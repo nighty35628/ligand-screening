@@ -9,3 +9,4 @@ lightgbm==4.7.0
 optuna==5.0.0
 pypdf==6.21.4
 rdkit==2026.9.1
+xlrd==2.0.2
