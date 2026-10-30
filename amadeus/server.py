@@ -253,6 +253,7 @@ class Handler(BaseHTTPRequestHandler):
                      '/style.css': 'style.css', '/mark.svg': 'mark.svg', '/classic.html':'classic.html',
                      '/research-cases.json':'research-cases.json', '/logo.svg':'logo.svg', '/wordmark.svg':'wordmark.svg', '/logo-source.png':'logo-source.png',
                      '/demo-adapter.js':'demo-adapter.js', '/workbench.js':'workbench.js', '/workbench.css':'workbench.css', '/case-molecule.svg':'case-molecule.svg',
+                     '/evidence.html':'evidence.html', '/evidence-data.json':'evidence-data.json',
                      '/sample-history.csv':'sample-history.csv', '/sample-candidates.csv':'sample-candidates.csv'}
             if path in files:
                 file = WEB / files[path]

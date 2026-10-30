@@ -1,0 +1,6 @@
+{
+  "pass": true,
+  "max_error": 4.440892098500626e-16,
+  "new_local_fits": 0,
+  "checked": "Direct, Curve, Ridge, COMB rankings and all gap/best_Q/AUR values recomputed from downloaded predictions"
+}

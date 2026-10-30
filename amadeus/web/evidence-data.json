@@ -1,0 +1,4596 @@
+{
+  "date": "2026-10-30",
+  "concrete": {
+    "scores": [
+      {
+        "model": "composition / Dummy",
+        "estimator": "Dummy",
+        "recipe": "composition",
+        "optimized": false,
+        "score": 13.297493925497058,
+        "fold_mae": [
+          14.41637816756926,
+          13.243887469652009,
+          12.775496869395045,
+          13.592402612754693,
+          12.454402815614962
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 32.9697770536,
+            "mean_selected_best": 46.2978997144,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 28.8744275088,
+            "mean_selected_best": 50.393249259200005,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 22.523526177599997,
+            "mean_selected_best": 56.7441505904,
+            "best_hit_rate": 0.0
+          }
+        }
+      },
+      {
+        "model": "composition / Ridge",
+        "estimator": "Ridge",
+        "recipe": "composition",
+        "optimized": false,
+        "score": 10.033678622907233,
+        "fold_mae": [
+          9.645355153638164,
+          10.060521852817846,
+          9.656418350797153,
+          10.99200418026925,
+          9.812809453938357
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 36.005815672,
+            "mean_selected_best": 43.261861096,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 15.765558215999999,
+            "mean_selected_best": 63.50211855199999,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 9.460989672,
+            "mean_selected_best": 69.806687096,
+            "best_hit_rate": 0.2
+          }
+        }
+      },
+      {
+        "model": "composition / RF",
+        "estimator": "RF",
+        "recipe": "composition",
+        "optimized": false,
+        "score": 8.76205089854445,
+        "fold_mae": [
+          9.12845264790646,
+          8.644502683147595,
+          8.29687042867667,
+          9.328809099690279,
+          8.409570327656548
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 33.540249496,
+            "mean_selected_best": 45.727427272,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 18.319377319999997,
+            "mean_selected_best": 60.948299448,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 10.737899224,
+            "mean_selected_best": 68.52977754399998,
+            "best_hit_rate": 0.2
+          }
+        }
+      },
+      {
+        "model": "composition / ET",
+        "estimator": "ET",
+        "recipe": "composition",
+        "optimized": false,
+        "score": 8.488625506670878,
+        "fold_mae": [
+          8.783708271100837,
+          8.383681273328808,
+          7.904167574061782,
+          8.917960418617755,
+          8.453405227178392
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 25.956978762400002,
+            "mean_selected_best": 53.3106980056,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 14.321795472000002,
+            "mean_selected_best": 64.945881296,
+            "best_hit_rate": 0.2
+          },
+          "5": {
+            "mean_regret": 12.482273504,
+            "mean_selected_best": 66.785403264,
+            "best_hit_rate": 0.2
+          }
+        }
+      },
+      {
+        "model": "composition / XGBoost",
+        "estimator": "XGBoost",
+        "recipe": "composition",
+        "optimized": false,
+        "score": 8.812905821267574,
+        "fold_mae": [
+          9.363593725908876,
+          8.533889299345873,
+          8.60042759530745,
+          9.173242922505096,
+          8.390922169948949
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 21.7718594424,
+            "mean_selected_best": 57.4958173256,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 17.0517067464,
+            "mean_selected_best": 62.2159700216,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 11.59698632,
+            "mean_selected_best": 67.670690448,
+            "best_hit_rate": 0.2
+          }
+        }
+      },
+      {
+        "model": "composition / LightGBM",
+        "estimator": "LightGBM",
+        "recipe": "composition",
+        "optimized": false,
+        "score": 8.570092483063323,
+        "fold_mae": [
+          9.021863564283201,
+          8.639981727399816,
+          7.911161435653055,
+          8.92902464385865,
+          8.347134778397093
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 15.114279186400001,
+            "mean_selected_best": 64.15339758159999,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 13.094114506399999,
+            "mean_selected_best": 66.17356226160001,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 8.978356471999998,
+            "mean_selected_best": 70.289320296,
+            "best_hit_rate": 0.2
+          }
+        }
+      },
+      {
+        "model": "condition / Dummy",
+        "estimator": "Dummy",
+        "recipe": "condition",
+        "optimized": false,
+        "score": 13.297493925497058,
+        "fold_mae": [
+          14.41637816756926,
+          13.243887469652009,
+          12.775496869395045,
+          13.592402612754693,
+          12.454402815614962
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 32.9697770536,
+            "mean_selected_best": 46.2978997144,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 28.8744275088,
+            "mean_selected_best": 50.393249259200005,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 22.523526177599997,
+            "mean_selected_best": 56.7441505904,
+            "best_hit_rate": 0.0
+          }
+        }
+      },
+      {
+        "model": "condition / Ridge",
+        "estimator": "Ridge",
+        "recipe": "condition",
+        "optimized": false,
+        "score": 12.448612358300082,
+        "fold_mae": [
+          13.780450560239162,
+          12.24141256777615,
+          11.94925267741953,
+          12.615318503978761,
+          11.651995991582632
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 34.021779534400004,
+            "mean_selected_best": 45.2458972336,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 27.432733192800004,
+            "mean_selected_best": 51.8349435752,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 26.578196638399998,
+            "mean_selected_best": 52.6894801296,
+            "best_hit_rate": 0.0
+          }
+        }
+      },
+      {
+        "model": "condition / RF",
+        "estimator": "RF",
+        "recipe": "condition",
+        "optimized": false,
+        "score": 10.089316993714897,
+        "fold_mae": [
+          11.169313568049608,
+          9.748913850002683,
+          9.615590971828237,
+          10.210978779282392,
+          9.699521546813301
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 21.51854596,
+            "mean_selected_best": 57.749130808000004,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 14.913365879999997,
+            "mean_selected_best": 64.354310888,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 12.031356200000003,
+            "mean_selected_best": 67.236320568,
+            "best_hit_rate": 0.2
+          }
+        }
+      },
+      {
+        "model": "condition / ET",
+        "estimator": "ET",
+        "recipe": "condition",
+        "optimized": false,
+        "score": 10.102980571025366,
+        "fold_mae": [
+          11.158019180311355,
+          9.792750679141925,
+          9.604500154439478,
+          10.256716224044935,
+          9.700577061903545
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 21.51854596,
+            "mean_selected_best": 57.749130808000004,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 14.913365879999997,
+            "mean_selected_best": 64.354310888,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 12.031356200000003,
+            "mean_selected_best": 67.236320568,
+            "best_hit_rate": 0.2
+          }
+        }
+      },
+      {
+        "model": "condition / XGBoost",
+        "estimator": "XGBoost",
+        "recipe": "condition",
+        "optimized": false,
+        "score": 10.101018506808598,
+        "fold_mae": [
+          11.16405812398612,
+          9.792918313920154,
+          9.61645826251841,
+          10.229388663097001,
+          9.699937303057645
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 21.51854596,
+            "mean_selected_best": 57.749130808000004,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 14.913365879999997,
+            "mean_selected_best": 64.354310888,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 12.031356200000003,
+            "mean_selected_best": 67.236320568,
+            "best_hit_rate": 0.2
+          }
+        }
+      },
+      {
+        "model": "condition / LightGBM",
+        "estimator": "LightGBM",
+        "recipe": "condition",
+        "optimized": false,
+        "score": 10.10154009206739,
+        "fold_mae": [
+          11.163619595915993,
+          9.791927292504182,
+          9.641090695254809,
+          10.209979718485425,
+          9.69874130476197
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 21.51854596,
+            "mean_selected_best": 57.749130808000004,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 14.913365879999997,
+            "mean_selected_best": 64.354310888,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 12.031356200000003,
+            "mean_selected_best": 67.236320568,
+            "best_hit_rate": 0.2
+          }
+        }
+      },
+      {
+        "model": "combined / Dummy",
+        "estimator": "Dummy",
+        "recipe": "combined",
+        "optimized": false,
+        "score": 13.297493925497058,
+        "fold_mae": [
+          14.41637816756926,
+          13.243887469652009,
+          12.775496869395045,
+          13.592402612754693,
+          12.454402815614962
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate",
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 32.9697770536,
+            "mean_selected_best": 46.2978997144,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 28.8744275088,
+            "mean_selected_best": 50.393249259200005,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 22.523526177599997,
+            "mean_selected_best": 56.7441505904,
+            "best_hit_rate": 0.0
+          }
+        }
+      },
+      {
+        "model": "combined / Ridge",
+        "estimator": "Ridge",
+        "recipe": "combined",
+        "optimized": false,
+        "score": 8.268844930777313,
+        "fold_mae": [
+          7.656265216731814,
+          8.341669338665998,
+          8.185821719873257,
+          9.145063975125973,
+          8.013922295142809
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate",
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 14.958733400800003,
+            "mean_selected_best": 64.30894336719999,
+            "best_hit_rate": 0.2
+          },
+          "3": {
+            "mean_regret": 10.005675712000002,
+            "mean_selected_best": 69.262001056,
+            "best_hit_rate": 0.2
+          },
+          "5": {
+            "mean_regret": 8.506754888,
+            "mean_selected_best": 70.76092188,
+            "best_hit_rate": 0.2
+          }
+        }
+      },
+      {
+        "model": "combined / RF",
+        "estimator": "RF",
+        "recipe": "combined",
+        "optimized": false,
+        "score": 4.226771295619084,
+        "fold_mae": [
+          4.296205596471339,
+          4.167976354442822,
+          4.0109141725957675,
+          4.656482976830444,
+          4.000964547826021
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate",
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 9.460989672,
+            "mean_selected_best": 69.806687096,
+            "best_hit_rate": 0.2
+          },
+          "3": {
+            "mean_regret": 7.4408249920000005,
+            "mean_selected_best": 71.826851776,
+            "best_hit_rate": 0.4
+          },
+          "5": {
+            "mean_regret": 4.755020476375921,
+            "mean_selected_best": 74.51265629162407,
+            "best_hit_rate": 0.4
+          }
+        }
+      },
+      {
+        "model": "combined / ET",
+        "estimator": "ET",
+        "recipe": "combined",
+        "optimized": false,
+        "score": 3.7294808210837203,
+        "fold_mae": [
+          3.881554125205969,
+          3.8528583588561456,
+          3.530577777585317,
+          3.795522108733267,
+          3.586057880733542
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate",
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 10.180802616,
+            "mean_selected_best": 69.08687415200001,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 5.660597960000001,
+            "mean_selected_best": 73.607078808,
+            "best_hit_rate": 0.4
+          },
+          "5": {
+            "mean_regret": 3.897312332375921,
+            "mean_selected_best": 75.37036443562407,
+            "best_hit_rate": 0.6
+          }
+        }
+      },
+      {
+        "model": "combined / XGBoost",
+        "estimator": "XGBoost",
+        "recipe": "combined",
+        "optimized": false,
+        "score": 4.417223011462462,
+        "fold_mae": [
+          4.690663625348787,
+          4.391709076403651,
+          4.382756520817758,
+          4.492164240938274,
+          4.127135035805838
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate",
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 15.001618808,
+            "mean_selected_best": 64.26605796,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 10.615566476375921,
+            "mean_selected_best": 68.65211029162408,
+            "best_hit_rate": 0.2
+          },
+          "5": {
+            "mean_regret": 3.897312332375921,
+            "mean_selected_best": 75.37036443562407,
+            "best_hit_rate": 0.6
+          }
+        }
+      },
+      {
+        "model": "combined / LightGBM",
+        "estimator": "LightGBM",
+        "recipe": "combined",
+        "optimized": false,
+        "score": 4.062443950530876,
+        "fold_mae": [
+          4.362895460401261,
+          4.359056721660817,
+          3.653346265894428,
+          4.066302234335607,
+          3.8694972874373086
+        ],
+        "fold_choices": [
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          },
+          {
+            "params": {},
+            "k": "all"
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate",
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 9.460989672,
+            "mean_selected_best": 69.806687096,
+            "best_hit_rate": 0.2
+          },
+          "3": {
+            "mean_regret": 9.460989672,
+            "mean_selected_best": 69.806687096,
+            "best_hit_rate": 0.2
+          },
+          "5": {
+            "mean_regret": 3.7162756400000005,
+            "mean_selected_best": 75.551401128,
+            "best_hit_rate": 0.6
+          }
+        }
+      },
+      {
+        "model": "combined / RF / optimized",
+        "estimator": "RF",
+        "recipe": "combined",
+        "optimized": true,
+        "score": 5.503524572415238,
+        "fold_mae": [
+          5.737682777350529,
+          5.484094814074451,
+          5.000468915702664,
+          5.887310213437365,
+          5.4075079050731505
+        ],
+        "fold_choices": [
+          {
+            "params": {
+              "min_samples_leaf": 1,
+              "max_features": 0.6459943383056521
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "min_samples_leaf": 1,
+              "max_features": 0.6459943383056521
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "min_samples_leaf": 1,
+              "max_features": 0.6459943383056521
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "min_samples_leaf": 1,
+              "max_features": 0.6459943383056521
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "min_samples_leaf": 1,
+              "max_features": 0.6459943383056521
+            },
+            "k": 4
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate",
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 17.258963232000003,
+            "mean_selected_best": 62.008713535999995,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 11.5831968,
+            "mean_selected_best": 67.68447996799999,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 9.33589902037592,
+            "mean_selected_best": 69.93177774762407,
+            "best_hit_rate": 0.0
+          }
+        }
+      },
+      {
+        "model": "combined / ET / optimized",
+        "estimator": "ET",
+        "recipe": "combined",
+        "optimized": true,
+        "score": 5.186845415345184,
+        "fold_mae": [
+          5.638627802274076,
+          5.419324044238547,
+          4.588159289832468,
+          5.285238836122175,
+          5.001801266182128
+        ],
+        "fold_choices": [
+          {
+            "params": {
+              "min_samples_leaf": 1,
+              "max_features": 0.6459943383056521
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "min_samples_leaf": 1,
+              "max_features": 0.6459943383056521
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "min_samples_leaf": 1,
+              "max_features": 0.6459943383056521
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "min_samples_leaf": 1,
+              "max_features": 0.6459943383056521
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "min_samples_leaf": 1,
+              "max_features": 0.6459943383056521
+            },
+            "k": 4
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate",
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 12.269126922837597,
+            "mean_selected_best": 66.9985498451624,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 9.975732748375922,
+            "mean_selected_best": 69.29194401962408,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 7.13509162837592,
+            "mean_selected_best": 72.13258513962407,
+            "best_hit_rate": 0.0
+          }
+        }
+      },
+      {
+        "model": "combined / XGBoost / optimized",
+        "estimator": "XGBoost",
+        "recipe": "combined",
+        "optimized": true,
+        "score": 5.851542878984246,
+        "fold_mae": [
+          6.24286552915311,
+          5.822289136969081,
+          5.3787544434340155,
+          5.959998283568628,
+          5.853820242280675
+        ],
+        "fold_choices": [
+          {
+            "params": {
+              "learning_rate": 0.1264752257614643,
+              "max_depth": 5
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "learning_rate": 0.07982611757123356,
+              "max_depth": 5
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "learning_rate": 0.1264752257614643,
+              "max_depth": 5
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "learning_rate": 0.1264752257614643,
+              "max_depth": 5
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "learning_rate": 0.07982611757123356,
+              "max_depth": 5
+            },
+            "k": 4
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate",
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 16.412286704,
+            "mean_selected_best": 62.85539006399999,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 12.69916294837592,
+            "mean_selected_best": 66.56851381962407,
+            "best_hit_rate": 0.2
+          },
+          "5": {
+            "mean_regret": 7.180597044375918,
+            "mean_selected_best": 72.08707972362409,
+            "best_hit_rate": 0.2
+          }
+        }
+      },
+      {
+        "model": "combined / LightGBM / optimized",
+        "estimator": "LightGBM",
+        "recipe": "combined",
+        "optimized": true,
+        "score": 5.895664425842292,
+        "fold_mae": [
+          6.252293382455661,
+          6.03775432862845,
+          5.428762507325493,
+          6.053133040425824,
+          5.70527193730313
+        ],
+        "fold_choices": [
+          {
+            "params": {
+              "learning_rate": 0.07982611757123356,
+              "max_depth": 5
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "learning_rate": 0.1264752257614643,
+              "max_depth": 5
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "learning_rate": 0.1264752257614643,
+              "max_depth": 5
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "learning_rate": 0.1264752257614643,
+              "max_depth": 5
+            },
+            "k": 4
+          },
+          {
+            "params": {
+              "learning_rate": 0.07982611757123356,
+              "max_depth": 5
+            },
+            "k": 4
+          }
+        ],
+        "features": [
+          "cement",
+          "slag",
+          "fly_ash",
+          "water",
+          "superplasticizer",
+          "coarse_aggregate",
+          "fine_aggregate",
+          "age_day"
+        ],
+        "screening": {
+          "1": {
+            "mean_regret": 19.796234911999996,
+            "mean_selected_best": 59.471441856,
+            "best_hit_rate": 0.0
+          },
+          "3": {
+            "mean_regret": 12.408204076375918,
+            "mean_selected_best": 66.85947269162408,
+            "best_hit_rate": 0.0
+          },
+          "5": {
+            "mean_regret": 9.317972644375919,
+            "mean_selected_best": 69.94970412362407,
+            "best_hit_rate": 0.0
+          }
+        }
+      }
+    ],
+    "rows": [
+      {
+        "id": "concrete_0176",
+        "name": "concrete_0176",
+        "prediction": 68.38966740234997,
+        "features": {
+          "id": "concrete_0176",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "91.0"
+        },
+        "measured": 79.29663476
+      },
+      {
+        "id": "concrete_0178",
+        "name": "concrete_0178",
+        "prediction": 68.38966740234997,
+        "features": {
+          "id": "concrete_0178",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "91.0"
+        },
+        "measured": 79.29663476
+      },
+      {
+        "id": "concrete_0180",
+        "name": "concrete_0180",
+        "prediction": 68.38966740234997,
+        "features": {
+          "id": "concrete_0180",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "91.0"
+        },
+        "measured": 79.29663476
+      },
+      {
+        "id": "concrete_0183",
+        "name": "concrete_0183",
+        "prediction": 68.38966740234997,
+        "features": {
+          "id": "concrete_0183",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "91.0"
+        },
+        "measured": 79.29663476
+      },
+      {
+        "id": "concrete_0757",
+        "name": "concrete_0757",
+        "prediction": 65.60338284649998,
+        "features": {
+          "id": "concrete_0757",
+          "mix_group": "31076f9ac0dc4e18",
+          "cement": "540.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "173.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1125.0",
+          "fine_aggregate": "613.0",
+          "age_day": "270.0"
+        },
+        "measured": 74.16693332
+      },
+      {
+        "id": "concrete_0380",
+        "name": "concrete_0380",
+        "prediction": 64.58873272799997,
+        "features": {
+          "id": "concrete_0380",
+          "mix_group": "f8e84d3d60d20852",
+          "cement": "500.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "140.0",
+          "superplasticizer": "4.0",
+          "coarse_aggregate": "966.0",
+          "fine_aggregate": "853.0",
+          "age_day": "28.0"
+        },
+        "measured": 67.568648
+      },
+      {
+        "id": "concrete_0153",
+        "name": "concrete_0153",
+        "prediction": 64.16335189135002,
+        "features": {
+          "id": "concrete_0153",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "56.0"
+        },
+        "measured": 77.29715436
+      },
+      {
+        "id": "concrete_0156",
+        "name": "concrete_0156",
+        "prediction": 64.16335189135002,
+        "features": {
+          "id": "concrete_0156",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "56.0"
+        },
+        "measured": 77.29715436
+      },
+      {
+        "id": "concrete_0158",
+        "name": "concrete_0158",
+        "prediction": 64.16335189135002,
+        "features": {
+          "id": "concrete_0158",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "56.0"
+        },
+        "measured": 77.29715436
+      },
+      {
+        "id": "concrete_0161",
+        "name": "concrete_0161",
+        "prediction": 64.16335189135002,
+        "features": {
+          "id": "concrete_0161",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "56.0"
+        },
+        "measured": 77.29715436
+      },
+      {
+        "id": "concrete_0485",
+        "name": "concrete_0485",
+        "prediction": 62.00989549669161,
+        "features": {
+          "id": "concrete_0485",
+          "mix_group": "293696d232ebf7c8",
+          "cement": "446.0",
+          "slag": "24.0",
+          "fly_ash": "79.0",
+          "water": "162.0",
+          "superplasticizer": "10.3",
+          "coarse_aggregate": "967.0",
+          "fine_aggregate": "712.0",
+          "age_day": "56.0"
+        },
+        "measured": 54.765078679999995
+      },
+      {
+        "id": "concrete_0001",
+        "name": "concrete_0001",
+        "prediction": 61.85633934000002,
+        "features": {
+          "id": "concrete_0001",
+          "mix_group": "e0b4fc7e4677e89a",
+          "cement": "540.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "162.0",
+          "superplasticizer": "2.5",
+          "coarse_aggregate": "1040.0",
+          "fine_aggregate": "676.0",
+          "age_day": "28.0"
+        },
+        "measured": 79.98611076
+      },
+      {
+        "id": "concrete_0756",
+        "name": "concrete_0756",
+        "prediction": 61.50841251350005,
+        "features": {
+          "id": "concrete_0756",
+          "mix_group": "31076f9ac0dc4e18",
+          "cement": "540.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "173.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1125.0",
+          "fine_aggregate": "613.0",
+          "age_day": "180.0"
+        },
+        "measured": 71.62276688
+      },
+      {
+        "id": "concrete_0319",
+        "name": "concrete_0319",
+        "prediction": 60.48591960549997,
+        "features": {
+          "id": "concrete_0319",
+          "mix_group": "7a2ecf976f77f25e",
+          "cement": "251.81",
+          "slag": "0.0",
+          "fly_ash": "99.94",
+          "water": "146.14",
+          "superplasticizer": "12.35",
+          "coarse_aggregate": "1006.0",
+          "fine_aggregate": "899.76",
+          "age_day": "100.0"
+        },
+        "measured": 45.3675208
+      },
+      {
+        "id": "concrete_0397",
+        "name": "concrete_0397",
+        "prediction": 60.04869701855004,
+        "features": {
+          "id": "concrete_0397",
+          "mix_group": "684cc59de04570f9",
+          "cement": "516.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "162.0",
+          "superplasticizer": "8.26",
+          "coarse_aggregate": "801.0",
+          "fine_aggregate": "802.0",
+          "age_day": "28.0"
+        },
+        "measured": 41.36856
+      },
+      {
+        "id": "concrete_0385",
+        "name": "concrete_0385",
+        "prediction": 59.897219141350035,
+        "features": {
+          "id": "concrete_0385",
+          "mix_group": "1c0f820ab58be18b",
+          "cement": "516.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "162.0",
+          "superplasticizer": "8.2",
+          "coarse_aggregate": "801.0",
+          "fine_aggregate": "802.0",
+          "age_day": "28.0"
+        },
+        "measured": 41.36856
+      },
+      {
+        "id": "concrete_0755",
+        "name": "concrete_0755",
+        "prediction": 59.06961524319995,
+        "features": {
+          "id": "concrete_0755",
+          "mix_group": "31076f9ac0dc4e18",
+          "cement": "540.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "173.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1125.0",
+          "fine_aggregate": "613.0",
+          "age_day": "90.0"
+        },
+        "measured": 69.65776027999999
+      },
+      {
+        "id": "concrete_0130",
+        "name": "concrete_0130",
+        "prediction": 59.04786227540004,
+        "features": {
+          "id": "concrete_0130",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "28.0"
+        },
+        "measured": 71.29871315999999
+      },
+      {
+        "id": "concrete_0133",
+        "name": "concrete_0133",
+        "prediction": 59.04786227540004,
+        "features": {
+          "id": "concrete_0133",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "28.0"
+        },
+        "measured": 71.29871315999999
+      },
+      {
+        "id": "concrete_0135",
+        "name": "concrete_0135",
+        "prediction": 59.04786227540004,
+        "features": {
+          "id": "concrete_0135",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "28.0"
+        },
+        "measured": 71.29871315999999
+      },
+      {
+        "id": "concrete_0138",
+        "name": "concrete_0138",
+        "prediction": 59.04786227540004,
+        "features": {
+          "id": "concrete_0138",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "28.0"
+        },
+        "measured": 71.29871315999999
+      },
+      {
+        "id": "concrete_0754",
+        "name": "concrete_0754",
+        "prediction": 57.5607832017,
+        "features": {
+          "id": "concrete_0754",
+          "mix_group": "31076f9ac0dc4e18",
+          "cement": "540.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "173.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1125.0",
+          "fine_aggregate": "613.0",
+          "age_day": "28.0"
+        },
+        "measured": 67.30664712
+      },
+      {
+        "id": "concrete_0401",
+        "name": "concrete_0401",
+        "prediction": 57.468755392599974,
+        "features": {
+          "id": "concrete_0401",
+          "mix_group": "2af86bab433b6157",
+          "cement": "250.0",
+          "slag": "180.0",
+          "fly_ash": "95.0",
+          "water": "159.0",
+          "superplasticizer": "9.45",
+          "coarse_aggregate": "860.0",
+          "fine_aggregate": "800.0",
+          "age_day": "28.0"
+        },
+        "measured": 67.86512268
+      },
+      {
+        "id": "concrete_0384",
+        "name": "concrete_0384",
+        "prediction": 57.28028712800003,
+        "features": {
+          "id": "concrete_0384",
+          "mix_group": "9cfeb78f7b9681a4",
+          "cement": "451.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "165.0",
+          "superplasticizer": "11.25",
+          "coarse_aggregate": "1030.0",
+          "fine_aggregate": "745.0",
+          "age_day": "28.0"
+        },
+        "measured": 78.80021203999999
+      },
+      {
+        "id": "concrete_0475",
+        "name": "concrete_0475",
+        "prediction": 56.97312557000006,
+        "features": {
+          "id": "concrete_0475",
+          "mix_group": "293696d232ebf7c8",
+          "cement": "446.0",
+          "slag": "24.0",
+          "fly_ash": "79.0",
+          "water": "162.0",
+          "superplasticizer": "10.3",
+          "coarse_aggregate": "967.0",
+          "fine_aggregate": "712.0",
+          "age_day": "28.0"
+        },
+        "measured": 53.38612668
+      },
+      {
+        "id": "concrete_0318",
+        "name": "concrete_0318",
+        "prediction": 55.38733076999995,
+        "features": {
+          "id": "concrete_0318",
+          "mix_group": "7a2ecf976f77f25e",
+          "cement": "251.81",
+          "slag": "0.0",
+          "fly_ash": "99.94",
+          "water": "146.14",
+          "superplasticizer": "12.35",
+          "coarse_aggregate": "1006.0",
+          "fine_aggregate": "899.76",
+          "age_day": "56.0"
+        },
+        "measured": 44.14025352
+      },
+      {
+        "id": "concrete_0229",
+        "name": "concrete_0229",
+        "prediction": 54.07955731731827,
+        "features": {
+          "id": "concrete_0229",
+          "mix_group": "9c6a353ac4fce5ff",
+          "cement": "167.95",
+          "slag": "42.08",
+          "fly_ash": "163.83",
+          "water": "121.75",
+          "superplasticizer": "5.72",
+          "coarse_aggregate": "1058.7",
+          "fine_aggregate": "780.11",
+          "age_day": "100.0"
+        },
+        "measured": 39.2311844
+      },
+      {
+        "id": "concrete_0239",
+        "name": "concrete_0239",
+        "prediction": 53.83876767400005,
+        "features": {
+          "id": "concrete_0239",
+          "mix_group": "28908aa40104d36a",
+          "cement": "213.76",
+          "slag": "98.06",
+          "fly_ash": "24.52",
+          "water": "181.74",
+          "superplasticizer": "6.65",
+          "coarse_aggregate": "1066.0",
+          "fine_aggregate": "785.52",
+          "age_day": "100.0"
+        },
+        "measured": 49.973220479999995
+      },
+      {
+        "id": "concrete_0460",
+        "name": "concrete_0460",
+        "prediction": 53.110836150100035,
+        "features": {
+          "id": "concrete_0460",
+          "mix_group": "cf9e7bf9abb9d682",
+          "cement": "165.0",
+          "slag": "128.5",
+          "fly_ash": "132.1",
+          "water": "175.06",
+          "superplasticizer": "8.08",
+          "coarse_aggregate": "1005.8",
+          "fine_aggregate": "746.6",
+          "age_day": "100.0"
+        },
+        "measured": 55.020184799999996
+      },
+      {
+        "id": "concrete_0374",
+        "name": "concrete_0374",
+        "prediction": 51.38750812500001,
+        "features": {
+          "id": "concrete_0374",
+          "mix_group": "0005c3e6430c7c9d",
+          "cement": "218.85",
+          "slag": "0.0",
+          "fly_ash": "124.13",
+          "water": "158.49",
+          "superplasticizer": "11.33",
+          "coarse_aggregate": "1078.7",
+          "fine_aggregate": "794.91",
+          "age_day": "100.0"
+        },
+        "measured": 46.2293658
+      },
+      {
+        "id": "concrete_0447",
+        "name": "concrete_0447",
+        "prediction": 50.90260827265003,
+        "features": {
+          "id": "concrete_0447",
+          "mix_group": "cf9e7bf9abb9d682",
+          "cement": "165.0",
+          "slag": "128.5",
+          "fly_ash": "132.1",
+          "water": "175.06",
+          "superplasticizer": "8.08",
+          "coarse_aggregate": "1005.8",
+          "fine_aggregate": "746.6",
+          "age_day": "56.0"
+        },
+        "measured": 53.72396992
+      },
+      {
+        "id": "concrete_0238",
+        "name": "concrete_0238",
+        "prediction": 50.710959800000055,
+        "features": {
+          "id": "concrete_0238",
+          "mix_group": "28908aa40104d36a",
+          "cement": "213.76",
+          "slag": "98.06",
+          "fly_ash": "24.52",
+          "water": "181.74",
+          "superplasticizer": "6.65",
+          "coarse_aggregate": "1066.0",
+          "fine_aggregate": "785.52",
+          "age_day": "56.0"
+        },
+        "measured": 47.13257936
+      },
+      {
+        "id": "concrete_0753",
+        "name": "concrete_0753",
+        "prediction": 50.344460213750004,
+        "features": {
+          "id": "concrete_0753",
+          "mix_group": "31076f9ac0dc4e18",
+          "cement": "540.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "173.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1125.0",
+          "fine_aggregate": "613.0",
+          "age_day": "14.0"
+        },
+        "measured": 59.76377968
+      },
+      {
+        "id": "concrete_0228",
+        "name": "concrete_0228",
+        "prediction": 49.03512682161818,
+        "features": {
+          "id": "concrete_0228",
+          "mix_group": "9c6a353ac4fce5ff",
+          "cement": "167.95",
+          "slag": "42.08",
+          "fly_ash": "163.83",
+          "water": "121.75",
+          "superplasticizer": "5.72",
+          "coarse_aggregate": "1058.7",
+          "fine_aggregate": "780.11",
+          "age_day": "56.0"
+        },
+        "measured": 32.8535314
+      },
+      {
+        "id": "concrete_0314",
+        "name": "concrete_0314",
+        "prediction": 48.80476919640908,
+        "features": {
+          "id": "concrete_0314",
+          "mix_group": "507e525e6f046ed4",
+          "cement": "295.71",
+          "slag": "0.0",
+          "fly_ash": "95.64",
+          "water": "171.54",
+          "superplasticizer": "8.87",
+          "coarse_aggregate": "955.14",
+          "fine_aggregate": "859.2",
+          "age_day": "100.0"
+        },
+        "measured": 52.04164848
+      },
+      {
+        "id": "concrete_0317",
+        "name": "concrete_0317",
+        "prediction": 48.081643073999956,
+        "features": {
+          "id": "concrete_0317",
+          "mix_group": "7a2ecf976f77f25e",
+          "cement": "251.81",
+          "slag": "0.0",
+          "fly_ash": "99.94",
+          "water": "146.14",
+          "superplasticizer": "12.35",
+          "coarse_aggregate": "1006.0",
+          "fine_aggregate": "899.76",
+          "age_day": "28.0"
+        },
+        "measured": 33.94290348
+      },
+      {
+        "id": "concrete_0373",
+        "name": "concrete_0373",
+        "prediction": 47.007784204000004,
+        "features": {
+          "id": "concrete_0373",
+          "mix_group": "0005c3e6430c7c9d",
+          "cement": "218.85",
+          "slag": "0.0",
+          "fly_ash": "124.13",
+          "water": "158.49",
+          "superplasticizer": "11.33",
+          "coarse_aggregate": "1078.7",
+          "fine_aggregate": "794.91",
+          "age_day": "56.0"
+        },
+        "measured": 37.2661778
+      },
+      {
+        "id": "concrete_0536",
+        "name": "concrete_0536",
+        "prediction": 46.09071217640006,
+        "features": {
+          "id": "concrete_0536",
+          "mix_group": "570667aa8d359274",
+          "cement": "393.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "940.6",
+          "fine_aggregate": "785.6",
+          "age_day": "90.0"
+        },
+        "measured": 48.846616696
+      },
+      {
+        "id": "concrete_0313",
+        "name": "concrete_0313",
+        "prediction": 45.61691535002739,
+        "features": {
+          "id": "concrete_0313",
+          "mix_group": "507e525e6f046ed4",
+          "cement": "295.71",
+          "slag": "0.0",
+          "fly_ash": "95.64",
+          "water": "171.54",
+          "superplasticizer": "8.87",
+          "coarse_aggregate": "955.14",
+          "fine_aggregate": "859.2",
+          "age_day": "56.0"
+        },
+        "measured": 48.718374159999996
+      },
+      {
+        "id": "concrete_0721",
+        "name": "concrete_0721",
+        "prediction": 45.60178135182732,
+        "features": {
+          "id": "concrete_0721",
+          "mix_group": "67726f5d80c65170",
+          "cement": "203.5",
+          "slag": "305.3",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "963.4",
+          "fine_aggregate": "630.0",
+          "age_day": "90.0"
+        },
+        "measured": 51.863763672
+      },
+      {
+        "id": "concrete_0237",
+        "name": "concrete_0237",
+        "prediction": 45.53189187839997,
+        "features": {
+          "id": "concrete_0237",
+          "mix_group": "28908aa40104d36a",
+          "cement": "213.76",
+          "slag": "98.06",
+          "fly_ash": "24.52",
+          "water": "181.74",
+          "superplasticizer": "6.65",
+          "coarse_aggregate": "1066.0",
+          "fine_aggregate": "785.52",
+          "age_day": "28.0"
+        },
+        "measured": 40.2309246
+      },
+      {
+        "id": "concrete_0752",
+        "name": "concrete_0752",
+        "prediction": 44.71431985604998,
+        "features": {
+          "id": "concrete_0752",
+          "mix_group": "31076f9ac0dc4e18",
+          "cement": "540.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "173.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1125.0",
+          "fine_aggregate": "613.0",
+          "age_day": "7.0"
+        },
+        "measured": 52.61391356
+      },
+      {
+        "id": "concrete_0972",
+        "name": "concrete_0972",
+        "prediction": 44.62685982545007,
+        "features": {
+          "id": "concrete_0972",
+          "mix_group": "1281e4efe7ab09c9",
+          "cement": "312.7",
+          "slag": "144.7",
+          "fly_ash": "0.0",
+          "water": "127.3",
+          "superplasticizer": "8.0",
+          "coarse_aggregate": "999.7",
+          "fine_aggregate": "822.2",
+          "age_day": "28.0"
+        },
+        "measured": 44.523602176000004
+      },
+      {
+        "id": "concrete_0499",
+        "name": "concrete_0499",
+        "prediction": 44.28521584900004,
+        "features": {
+          "id": "concrete_0499",
+          "mix_group": "545597e922e09f5e",
+          "cement": "355.0",
+          "slag": "19.0",
+          "fly_ash": "97.0",
+          "water": "145.0",
+          "superplasticizer": "12.25",
+          "coarse_aggregate": "967.0",
+          "fine_aggregate": "871.0",
+          "age_day": "28.0"
+        },
+        "measured": 55.45455468
+      },
+      {
+        "id": "concrete_0913",
+        "name": "concrete_0913",
+        "prediction": 43.54527882425005,
+        "features": {
+          "id": "concrete_0913",
+          "mix_group": "8b757b4d58c84107",
+          "cement": "277.0",
+          "slag": "117.0",
+          "fly_ash": "91.0",
+          "water": "191.0",
+          "superplasticizer": "7.0",
+          "coarse_aggregate": "946.0",
+          "fine_aggregate": "666.0",
+          "age_day": "28.0"
+        },
+        "measured": 43.5748832
+      },
+      {
+        "id": "concrete_0107",
+        "name": "concrete_0107",
+        "prediction": 43.2922472883226,
+        "features": {
+          "id": "concrete_0107",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "7.0"
+        },
+        "measured": 55.89581932
+      },
+      {
+        "id": "concrete_0110",
+        "name": "concrete_0110",
+        "prediction": 43.2922472883226,
+        "features": {
+          "id": "concrete_0110",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "7.0"
+        },
+        "measured": 55.89581932
+      },
+      {
+        "id": "concrete_0112",
+        "name": "concrete_0112",
+        "prediction": 43.2922472883226,
+        "features": {
+          "id": "concrete_0112",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "7.0"
+        },
+        "measured": 55.89581932
+      },
+      {
+        "id": "concrete_0115",
+        "name": "concrete_0115",
+        "prediction": 43.2922472883226,
+        "features": {
+          "id": "concrete_0115",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "7.0"
+        },
+        "measured": 22.89749796
+      },
+      {
+        "id": "concrete_0853",
+        "name": "concrete_0853",
+        "prediction": 42.897490266899936,
+        "features": {
+          "id": "concrete_0853",
+          "mix_group": "5743b7f5b018db86",
+          "cement": "298.0",
+          "slag": "0.0",
+          "fly_ash": "107.0",
+          "water": "186.0",
+          "superplasticizer": "6.0",
+          "coarse_aggregate": "879.0",
+          "fine_aggregate": "815.0",
+          "age_day": "28.0"
+        },
+        "measured": 42.63719584
+      },
+      {
+        "id": "concrete_0204",
+        "name": "concrete_0204",
+        "prediction": 42.13965272149995,
+        "features": {
+          "id": "concrete_0204",
+          "mix_group": "fbfd117ee8c416c6",
+          "cement": "190.68",
+          "slag": "0.0",
+          "fly_ash": "125.4",
+          "water": "162.14",
+          "superplasticizer": "7.77",
+          "coarse_aggregate": "1090.0",
+          "fine_aggregate": "804.01",
+          "age_day": "100.0"
+        },
+        "measured": 40.56876784
+      },
+      {
+        "id": "concrete_0961",
+        "name": "concrete_0961",
+        "prediction": 41.41454804920003,
+        "features": {
+          "id": "concrete_0961",
+          "mix_group": "2632d7b21f560323",
+          "cement": "284.0",
+          "slag": "119.7",
+          "fly_ash": "0.0",
+          "water": "168.3",
+          "superplasticizer": "7.2",
+          "coarse_aggregate": "970.4",
+          "fine_aggregate": "794.2",
+          "age_day": "28.0"
+        },
+        "measured": 40.934879596
+      },
+      {
+        "id": "concrete_0316",
+        "name": "concrete_0316",
+        "prediction": 40.864553043999976,
+        "features": {
+          "id": "concrete_0316",
+          "mix_group": "7a2ecf976f77f25e",
+          "cement": "251.81",
+          "slag": "0.0",
+          "fly_ash": "99.94",
+          "water": "146.14",
+          "superplasticizer": "12.35",
+          "coarse_aggregate": "1006.0",
+          "fine_aggregate": "899.76",
+          "age_day": "14.0"
+        },
+        "measured": 33.35684888
+      },
+      {
+        "id": "concrete_0372",
+        "name": "concrete_0372",
+        "prediction": 40.75560721754998,
+        "features": {
+          "id": "concrete_0372",
+          "mix_group": "0005c3e6430c7c9d",
+          "cement": "218.85",
+          "slag": "0.0",
+          "fly_ash": "124.13",
+          "water": "158.49",
+          "superplasticizer": "11.33",
+          "coarse_aggregate": "1078.7",
+          "fine_aggregate": "794.91",
+          "age_day": "28.0"
+        },
+        "measured": 30.219733079999997
+      },
+      {
+        "id": "concrete_0227",
+        "name": "concrete_0227",
+        "prediction": 40.50542223250002,
+        "features": {
+          "id": "concrete_0227",
+          "mix_group": "9c6a353ac4fce5ff",
+          "cement": "167.95",
+          "slag": "42.08",
+          "fly_ash": "163.83",
+          "water": "121.75",
+          "superplasticizer": "5.72",
+          "coarse_aggregate": "1058.7",
+          "fine_aggregate": "780.11",
+          "age_day": "28.0"
+        },
+        "measured": 24.24197616
+      },
+      {
+        "id": "concrete_1014",
+        "name": "concrete_1014",
+        "prediction": 40.36319195214998,
+        "features": {
+          "id": "concrete_1014",
+          "mix_group": "97b8c4160711a5cb",
+          "cement": "355.9",
+          "slag": "0.0",
+          "fly_ash": "141.6",
+          "water": "193.3",
+          "superplasticizer": "11.0",
+          "coarse_aggregate": "801.4",
+          "fine_aggregate": "778.4",
+          "age_day": "28.0"
+        },
+        "measured": 40.8686899
+      },
+      {
+        "id": "concrete_0970",
+        "name": "concrete_0970",
+        "prediction": 40.16551918295001,
+        "features": {
+          "id": "concrete_0970",
+          "mix_group": "d7ab08d2691b4742",
+          "cement": "266.2",
+          "slag": "112.3",
+          "fly_ash": "87.5",
+          "water": "177.9",
+          "superplasticizer": "10.4",
+          "coarse_aggregate": "909.7",
+          "fine_aggregate": "744.5",
+          "age_day": "28.0"
+        },
+        "measured": 39.421479776
+      },
+      {
+        "id": "concrete_0224",
+        "name": "concrete_0224",
+        "prediction": 39.73536372491382,
+        "features": {
+          "id": "concrete_0224",
+          "mix_group": "e16a02317afe97b5",
+          "cement": "166.09",
+          "slag": "0.0",
+          "fly_ash": "163.27",
+          "water": "176.46",
+          "superplasticizer": "4.49",
+          "coarse_aggregate": "1058.6",
+          "fine_aggregate": "780.09",
+          "age_day": "100.0"
+        },
+        "measured": 33.5430074
+      },
+      {
+        "id": "concrete_1011",
+        "name": "concrete_1011",
+        "prediction": 39.68072275200005,
+        "features": {
+          "id": "concrete_1011",
+          "mix_group": "602d156726781ce7",
+          "cement": "317.9",
+          "slag": "0.0",
+          "fly_ash": "126.5",
+          "water": "209.7",
+          "superplasticizer": "5.7",
+          "coarse_aggregate": "860.5",
+          "fine_aggregate": "736.6",
+          "age_day": "28.0"
+        },
+        "measured": 40.062002979999995
+      },
+      {
+        "id": "concrete_0067",
+        "name": "concrete_0067",
+        "prediction": 39.64917922499999,
+        "features": {
+          "id": "concrete_0067",
+          "mix_group": "e0464b9ce10eb912",
+          "cement": "139.6",
+          "slag": "209.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1047.0",
+          "fine_aggregate": "806.9",
+          "age_day": "360.0"
+        },
+        "measured": 44.698039603999995
+      },
+      {
+        "id": "concrete_0995",
+        "name": "concrete_0995",
+        "prediction": 39.55678082254997,
+        "features": {
+          "id": "concrete_0995",
+          "mix_group": "68f638a0f7d6cdb6",
+          "cement": "374.3",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "190.2",
+          "superplasticizer": "6.7",
+          "coarse_aggregate": "1013.2",
+          "fine_aggregate": "730.4",
+          "age_day": "28.0"
+        },
+        "measured": 39.056057496
+      },
+      {
+        "id": "concrete_0203",
+        "name": "concrete_0203",
+        "prediction": 39.37235461099996,
+        "features": {
+          "id": "concrete_0203",
+          "mix_group": "fbfd117ee8c416c6",
+          "cement": "190.68",
+          "slag": "0.0",
+          "fly_ash": "125.4",
+          "water": "162.14",
+          "superplasticizer": "7.77",
+          "coarse_aggregate": "1090.0",
+          "fine_aggregate": "804.01",
+          "age_day": "56.0"
+        },
+        "measured": 35.34253976
+      },
+      {
+        "id": "concrete_0867",
+        "name": "concrete_0867",
+        "prediction": 39.308491896499966,
+        "features": {
+          "id": "concrete_0867",
+          "mix_group": "e6093f0687c5c312",
+          "cement": "160.0",
+          "slag": "250.0",
+          "fly_ash": "0.0",
+          "water": "168.0",
+          "superplasticizer": "12.0",
+          "coarse_aggregate": "1049.0",
+          "fine_aggregate": "688.0",
+          "age_day": "28.0"
+        },
+        "measured": 39.45181672
+      },
+      {
+        "id": "concrete_0434",
+        "name": "concrete_0434",
+        "prediction": 39.01597308504996,
+        "features": {
+          "id": "concrete_0434",
+          "mix_group": "cf9e7bf9abb9d682",
+          "cement": "165.0",
+          "slag": "128.5",
+          "fly_ash": "132.1",
+          "water": "175.06",
+          "superplasticizer": "8.08",
+          "coarse_aggregate": "1005.8",
+          "fine_aggregate": "746.6",
+          "age_day": "28.0"
+        },
+        "measured": 46.38794528
+      },
+      {
+        "id": "concrete_0470",
+        "name": "concrete_0470",
+        "prediction": 39.000382309000024,
+        "features": {
+          "id": "concrete_0470",
+          "mix_group": "03bfef61ed941ab8",
+          "cement": "194.68",
+          "slag": "0.0",
+          "fly_ash": "100.52",
+          "water": "170.17",
+          "superplasticizer": "7.48",
+          "coarse_aggregate": "998.0",
+          "fine_aggregate": "901.8",
+          "age_day": "100.0"
+        },
+        "measured": 44.27814872
+      },
+      {
+        "id": "concrete_0024",
+        "name": "concrete_0024",
+        "prediction": 38.62629848674999,
+        "features": {
+          "id": "concrete_0024",
+          "mix_group": "e0464b9ce10eb912",
+          "cement": "139.6",
+          "slag": "209.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1047.0",
+          "fine_aggregate": "806.9",
+          "age_day": "180.0"
+        },
+        "measured": 44.207822168
+      },
+      {
+        "id": "concrete_0808",
+        "name": "concrete_0808",
+        "prediction": 38.260496994950024,
+        "features": {
+          "id": "concrete_0808",
+          "mix_group": "9daec4bc5765e89c",
+          "cement": "382.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "185.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1047.0",
+          "fine_aggregate": "739.0",
+          "age_day": "28.0"
+        },
+        "measured": 37.42475728
+      },
+      {
+        "id": "concrete_0770",
+        "name": "concrete_0770",
+        "prediction": 38.16784003899999,
+        "features": {
+          "id": "concrete_0770",
+          "mix_group": "932d3962e0a33538",
+          "cement": "331.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.0",
+          "fine_aggregate": "825.0",
+          "age_day": "360.0"
+        },
+        "measured": 41.244454319999996
+      },
+      {
+        "id": "concrete_0699",
+        "name": "concrete_0699",
+        "prediction": 37.87677774560001,
+        "features": {
+          "id": "concrete_0699",
+          "mix_group": "67726f5d80c65170",
+          "cement": "203.5",
+          "slag": "305.3",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "963.4",
+          "fine_aggregate": "630.0",
+          "age_day": "28.0"
+        },
+        "measured": 41.684340008
+      },
+      {
+        "id": "concrete_0017",
+        "name": "concrete_0017",
+        "prediction": 37.743519271699995,
+        "features": {
+          "id": "concrete_0017",
+          "mix_group": "e0464b9ce10eb912",
+          "cement": "139.6",
+          "slag": "209.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1047.0",
+          "fine_aggregate": "806.9",
+          "age_day": "90.0"
+        },
+        "measured": 39.358047983999995
+      },
+      {
+        "id": "concrete_0788",
+        "name": "concrete_0788",
+        "prediction": 37.476381795500025,
+        "features": {
+          "id": "concrete_0788",
+          "mix_group": "932d3962e0a33538",
+          "cement": "331.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.0",
+          "fine_aggregate": "825.0",
+          "age_day": "90.0"
+        },
+        "measured": 37.231704
+      },
+      {
+        "id": "concrete_0769",
+        "name": "concrete_0769",
+        "prediction": 37.36622076759998,
+        "features": {
+          "id": "concrete_0769",
+          "mix_group": "932d3962e0a33538",
+          "cement": "331.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.0",
+          "fine_aggregate": "825.0",
+          "age_day": "180.0"
+        },
+        "measured": 38.99676256
+      },
+      {
+        "id": "concrete_0005",
+        "name": "concrete_0005",
+        "prediction": 37.13756959540469,
+        "features": {
+          "id": "concrete_0005",
+          "mix_group": "5fb27d97649ed1fc",
+          "cement": "198.6",
+          "slag": "132.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.4",
+          "fine_aggregate": "825.5",
+          "age_day": "360.0"
+        },
+        "measured": 44.296075096
+      },
+      {
+        "id": "concrete_0708",
+        "name": "concrete_0708",
+        "prediction": 36.68523024715469,
+        "features": {
+          "id": "concrete_0708",
+          "mix_group": "198ad3d70ce083b6",
+          "cement": "200.0",
+          "slag": "133.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "965.4",
+          "fine_aggregate": "806.2",
+          "age_day": "90.0"
+        },
+        "measured": 43.25082948
+      },
+      {
+        "id": "concrete_0991",
+        "name": "concrete_0991",
+        "prediction": 36.55567278200003,
+        "features": {
+          "id": "concrete_0991",
+          "mix_group": "a9752699c2ce3ed4",
+          "cement": "151.8",
+          "slag": "178.1",
+          "fly_ash": "138.7",
+          "water": "167.5",
+          "superplasticizer": "18.3",
+          "coarse_aggregate": "944.0",
+          "fine_aggregate": "694.6",
+          "age_day": "28.0"
+        },
+        "measured": 36.349864196
+      },
+      {
+        "id": "concrete_0640",
+        "name": "concrete_0640",
+        "prediction": 36.51122743535001,
+        "features": {
+          "id": "concrete_0640",
+          "mix_group": "de7eae131bfc207f",
+          "cement": "400.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "187.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1025.0",
+          "fine_aggregate": "745.0",
+          "age_day": "28.0"
+        },
+        "measured": 43.69898888
+      },
+      {
+        "id": "concrete_0800",
+        "name": "concrete_0800",
+        "prediction": 36.270463647381725,
+        "features": {
+          "id": "concrete_0800",
+          "mix_group": "31076f9ac0dc4e18",
+          "cement": "540.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "173.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1125.0",
+          "fine_aggregate": "613.0",
+          "age_day": "3.0"
+        },
+        "measured": 41.63745564
+      },
+      {
+        "id": "concrete_0914",
+        "name": "concrete_0914",
+        "prediction": 36.16720476669993,
+        "features": {
+          "id": "concrete_0914",
+          "mix_group": "242d9bdd5269b211",
+          "cement": "298.0",
+          "slag": "0.0",
+          "fly_ash": "107.0",
+          "water": "164.0",
+          "superplasticizer": "13.0",
+          "coarse_aggregate": "953.0",
+          "fine_aggregate": "784.0",
+          "age_day": "28.0"
+        },
+        "measured": 35.85964676
+      },
+      {
+        "id": "concrete_0033",
+        "name": "concrete_0033",
+        "prediction": 36.15611774630468,
+        "features": {
+          "id": "concrete_0033",
+          "mix_group": "5fb27d97649ed1fc",
+          "cement": "198.6",
+          "slag": "132.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.4",
+          "fine_aggregate": "825.5",
+          "age_day": "180.0"
+        },
+        "measured": 41.719503284
+      },
+      {
+        "id": "concrete_0011",
+        "name": "concrete_0011",
+        "prediction": 36.10135611500469,
+        "features": {
+          "id": "concrete_0011",
+          "mix_group": "5fb27d97649ed1fc",
+          "cement": "198.6",
+          "slag": "132.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.4",
+          "fine_aggregate": "825.5",
+          "age_day": "90.0"
+        },
+        "measured": 38.074243671999994
+      },
+      {
+        "id": "concrete_0312",
+        "name": "concrete_0312",
+        "prediction": 35.966463829300004,
+        "features": {
+          "id": "concrete_0312",
+          "mix_group": "507e525e6f046ed4",
+          "cement": "295.71",
+          "slag": "0.0",
+          "fly_ash": "95.64",
+          "water": "171.54",
+          "superplasticizer": "8.87",
+          "coarse_aggregate": "955.14",
+          "fine_aggregate": "859.2",
+          "age_day": "28.0"
+        },
+        "measured": 39.94134468
+      },
+      {
+        "id": "concrete_0815",
+        "name": "concrete_0815",
+        "prediction": 35.689777110499996,
+        "features": {
+          "id": "concrete_0815",
+          "mix_group": "4d7f170731236962",
+          "cement": "310.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "970.0",
+          "fine_aggregate": "850.0",
+          "age_day": "360.0"
+        },
+        "measured": 38.11423328
+      },
+      {
+        "id": "concrete_0457",
+        "name": "concrete_0457",
+        "prediction": 34.75843292969994,
+        "features": {
+          "id": "concrete_0457",
+          "mix_group": "03bfef61ed941ab8",
+          "cement": "194.68",
+          "slag": "0.0",
+          "fly_ash": "100.52",
+          "water": "170.17",
+          "superplasticizer": "7.48",
+          "coarse_aggregate": "998.0",
+          "fine_aggregate": "901.8",
+          "age_day": "56.0"
+        },
+        "measured": 43.388724679999996
+      },
+      {
+        "id": "concrete_0814",
+        "name": "concrete_0814",
+        "prediction": 34.733215344999984,
+        "features": {
+          "id": "concrete_0814",
+          "mix_group": "4d7f170731236962",
+          "cement": "310.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "970.0",
+          "fine_aggregate": "850.0",
+          "age_day": "180.0"
+        },
+        "measured": 37.32823064
+      },
+      {
+        "id": "concrete_0676",
+        "name": "concrete_0676",
+        "prediction": 34.56221052247734,
+        "features": {
+          "id": "concrete_0676",
+          "mix_group": "f52c35e71268663f",
+          "cement": "183.9",
+          "slag": "122.6",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "959.2",
+          "fine_aggregate": "800.0",
+          "age_day": "90.0"
+        },
+        "measured": 32.53292506
+      },
+      {
+        "id": "concrete_0223",
+        "name": "concrete_0223",
+        "prediction": 34.22577578335027,
+        "features": {
+          "id": "concrete_0223",
+          "mix_group": "e16a02317afe97b5",
+          "cement": "166.09",
+          "slag": "0.0",
+          "fly_ash": "163.27",
+          "water": "176.46",
+          "superplasticizer": "4.49",
+          "coarse_aggregate": "1058.6",
+          "fine_aggregate": "780.09",
+          "age_day": "56.0"
+        },
+        "measured": 28.62704352
+      },
+      {
+        "id": "concrete_0537",
+        "name": "concrete_0537",
+        "prediction": 33.94498914490004,
+        "features": {
+          "id": "concrete_0537",
+          "mix_group": "570667aa8d359274",
+          "cement": "393.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "940.6",
+          "fine_aggregate": "785.6",
+          "age_day": "28.0"
+        },
+        "measured": 39.604880392
+      },
+      {
+        "id": "concrete_0883",
+        "name": "concrete_0883",
+        "prediction": 33.91273890499998,
+        "features": {
+          "id": "concrete_0883",
+          "mix_group": "7d28aaf331dfb7e1",
+          "cement": "140.0",
+          "slag": "133.0",
+          "fly_ash": "103.0",
+          "water": "200.0",
+          "superplasticizer": "7.0",
+          "coarse_aggregate": "916.0",
+          "fine_aggregate": "753.0",
+          "age_day": "28.0"
+        },
+        "measured": 36.4388066
+      },
+      {
+        "id": "concrete_0311",
+        "name": "concrete_0311",
+        "prediction": 33.75821871495002,
+        "features": {
+          "id": "concrete_0311",
+          "mix_group": "507e525e6f046ed4",
+          "cement": "295.71",
+          "slag": "0.0",
+          "fly_ash": "95.64",
+          "water": "171.54",
+          "superplasticizer": "8.87",
+          "coarse_aggregate": "955.14",
+          "fine_aggregate": "859.2",
+          "age_day": "14.0"
+        },
+        "measured": 35.2322236
+      },
+      {
+        "id": "concrete_0639",
+        "name": "concrete_0639",
+        "prediction": 33.69266678425002,
+        "features": {
+          "id": "concrete_0639",
+          "mix_group": "31f6f11ccb9e461f",
+          "cement": "375.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "186.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1038.0",
+          "fine_aggregate": "758.0",
+          "age_day": "28.0"
+        },
+        "measured": 38.21075992
+      },
+      {
+        "id": "concrete_0813",
+        "name": "concrete_0813",
+        "prediction": 33.40224225615002,
+        "features": {
+          "id": "concrete_0813",
+          "mix_group": "4d7f170731236962",
+          "cement": "310.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "970.0",
+          "fine_aggregate": "850.0",
+          "age_day": "90.0"
+        },
+        "measured": 34.6806428
+      },
+      {
+        "id": "concrete_1029",
+        "name": "concrete_1029",
+        "prediction": 32.94634348805,
+        "features": {
+          "id": "concrete_1029",
+          "mix_group": "f9fce8a1d48ced9f",
+          "cement": "159.1",
+          "slag": "186.7",
+          "fly_ash": "0.0",
+          "water": "175.6",
+          "superplasticizer": "11.3",
+          "coarse_aggregate": "989.6",
+          "fine_aggregate": "788.9",
+          "age_day": "28.0"
+        },
+        "measured": 32.768036376000005
+      },
+      {
+        "id": "concrete_0660",
+        "name": "concrete_0660",
+        "prediction": 32.65173285562733,
+        "features": {
+          "id": "concrete_0660",
+          "mix_group": "4dbc0ac7825e7d5e",
+          "cement": "108.3",
+          "slag": "162.4",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "938.2",
+          "fine_aggregate": "849.0",
+          "age_day": "90.0"
+        },
+        "measured": 29.231713971999998
+      },
+      {
+        "id": "concrete_0803",
+        "name": "concrete_0803",
+        "prediction": 32.33039148500005,
+        "features": {
+          "id": "concrete_0803",
+          "mix_group": "b8fe41ee23b31d47",
+          "cement": "339.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "185.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1060.0",
+          "fine_aggregate": "754.0",
+          "age_day": "28.0"
+        },
+        "measured": 31.6469484
+      },
+      {
+        "id": "concrete_0084",
+        "name": "concrete_0084",
+        "prediction": 31.96796103838178,
+        "features": {
+          "id": "concrete_0084",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "3.0"
+        },
+        "measured": 35.3011712
+      },
+      {
+        "id": "concrete_0087",
+        "name": "concrete_0087",
+        "prediction": 31.96796103838178,
+        "features": {
+          "id": "concrete_0087",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "3.0"
+        },
+        "measured": 35.3011712
+      },
+      {
+        "id": "concrete_0089",
+        "name": "concrete_0089",
+        "prediction": 31.96796103838178,
+        "features": {
+          "id": "concrete_0089",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "3.0"
+        },
+        "measured": 35.3011712
+      },
+      {
+        "id": "concrete_0092",
+        "name": "concrete_0092",
+        "prediction": 31.96796103838178,
+        "features": {
+          "id": "concrete_0092",
+          "mix_group": "3c439863a2f8d0cb",
+          "cement": "362.6",
+          "slag": "189.0",
+          "fly_ash": "0.0",
+          "water": "164.9",
+          "superplasticizer": "11.6",
+          "coarse_aggregate": "944.7",
+          "fine_aggregate": "755.8",
+          "age_day": "3.0"
+        },
+        "measured": 35.3011712
+      },
+      {
+        "id": "concrete_0824",
+        "name": "concrete_0824",
+        "prediction": 31.933460151799995,
+        "features": {
+          "id": "concrete_0824",
+          "mix_group": "0f055c384eb0f535",
+          "cement": "322.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "203.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "974.0",
+          "fine_aggregate": "800.0",
+          "age_day": "180.0"
+        },
+        "measured": 29.58541516
+      },
+      {
+        "id": "concrete_0865",
+        "name": "concrete_0865",
+        "prediction": 31.73885555079997,
+        "features": {
+          "id": "concrete_0865",
+          "mix_group": "6ebb418738b6f480",
+          "cement": "298.0",
+          "slag": "0.0",
+          "fly_ash": "107.0",
+          "water": "210.0",
+          "superplasticizer": "11.0",
+          "coarse_aggregate": "880.0",
+          "fine_aggregate": "744.0",
+          "age_day": "28.0"
+        },
+        "measured": 31.874475479999997
+      },
+      {
+        "id": "concrete_1027",
+        "name": "concrete_1027",
+        "prediction": 31.46520252640001,
+        "features": {
+          "id": "concrete_1027",
+          "mix_group": "e66d78c67d1832df",
+          "cement": "322.2",
+          "slag": "0.0",
+          "fly_ash": "115.6",
+          "water": "196.0",
+          "superplasticizer": "10.4",
+          "coarse_aggregate": "817.9",
+          "fine_aggregate": "813.4",
+          "age_day": "28.0"
+        },
+        "measured": 31.178794196000002
+      },
+      {
+        "id": "concrete_0787",
+        "name": "concrete_0787",
+        "prediction": 31.38677463139998,
+        "features": {
+          "id": "concrete_0787",
+          "mix_group": "932d3962e0a33538",
+          "cement": "331.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.0",
+          "fine_aggregate": "825.0",
+          "age_day": "28.0"
+        },
+        "measured": 31.44700036
+      },
+      {
+        "id": "concrete_0421",
+        "name": "concrete_0421",
+        "prediction": 31.22590264370001,
+        "features": {
+          "id": "concrete_0421",
+          "mix_group": "cf9e7bf9abb9d682",
+          "cement": "165.0",
+          "slag": "128.5",
+          "fly_ash": "132.1",
+          "water": "175.06",
+          "superplasticizer": "8.08",
+          "coarse_aggregate": "1005.8",
+          "fine_aggregate": "746.6",
+          "age_day": "14.0"
+        },
+        "measured": 33.08795324
+      },
+      {
+        "id": "concrete_0931",
+        "name": "concrete_0931",
+        "prediction": 31.13330601689999,
+        "features": {
+          "id": "concrete_0931",
+          "mix_group": "67098a709742439c",
+          "cement": "159.0",
+          "slag": "209.0",
+          "fly_ash": "161.0",
+          "water": "201.0",
+          "superplasticizer": "7.0",
+          "coarse_aggregate": "848.0",
+          "fine_aggregate": "669.0",
+          "age_day": "28.0"
+        },
+        "measured": 30.881630039999997
+      },
+      {
+        "id": "concrete_0371",
+        "name": "concrete_0371",
+        "prediction": 30.690115768940892,
+        "features": {
+          "id": "concrete_0371",
+          "mix_group": "0005c3e6430c7c9d",
+          "cement": "218.85",
+          "slag": "0.0",
+          "fly_ash": "124.13",
+          "water": "158.49",
+          "superplasticizer": "11.33",
+          "coarse_aggregate": "1078.7",
+          "fine_aggregate": "794.91",
+          "age_day": "14.0"
+        },
+        "measured": 26.04840328
+      },
+      {
+        "id": "concrete_0236",
+        "name": "concrete_0236",
+        "prediction": 30.545691477450028,
+        "features": {
+          "id": "concrete_0236",
+          "mix_group": "28908aa40104d36a",
+          "cement": "213.76",
+          "slag": "98.06",
+          "fly_ash": "24.52",
+          "water": "181.74",
+          "superplasticizer": "6.65",
+          "coarse_aggregate": "1066.0",
+          "fine_aggregate": "785.52",
+          "age_day": "14.0"
+        },
+        "measured": 17.83674412
+      },
+      {
+        "id": "concrete_0533",
+        "name": "concrete_0533",
+        "prediction": 30.280355257299995,
+        "features": {
+          "id": "concrete_0533",
+          "mix_group": "c130904650b869e5",
+          "cement": "289.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "913.2",
+          "fine_aggregate": "895.3",
+          "age_day": "90.0"
+        },
+        "measured": 32.068218236
+      },
+      {
+        "id": "concrete_0226",
+        "name": "concrete_0226",
+        "prediction": 30.08336457688177,
+        "features": {
+          "id": "concrete_0226",
+          "mix_group": "9c6a353ac4fce5ff",
+          "cement": "167.95",
+          "slag": "42.08",
+          "fly_ash": "163.83",
+          "water": "121.75",
+          "superplasticizer": "5.72",
+          "coarse_aggregate": "1058.7",
+          "fine_aggregate": "780.11",
+          "age_day": "14.0"
+        },
+        "measured": 17.8229546
+      },
+      {
+        "id": "concrete_0925",
+        "name": "concrete_0925",
+        "prediction": 30.000781357749986,
+        "features": {
+          "id": "concrete_0925",
+          "mix_group": "f0439093539581f1",
+          "cement": "136.0",
+          "slag": "196.0",
+          "fly_ash": "98.0",
+          "water": "199.0",
+          "superplasticizer": "6.0",
+          "coarse_aggregate": "847.0",
+          "fine_aggregate": "783.0",
+          "age_day": "28.0"
+        },
+        "measured": 26.96540636
+      },
+      {
+        "id": "concrete_0965",
+        "name": "concrete_0965",
+        "prediction": 29.720517982199983,
+        "features": {
+          "id": "concrete_0965",
+          "mix_group": "08f2a40733ad73a3",
+          "cement": "143.7",
+          "slag": "170.2",
+          "fly_ash": "132.6",
+          "water": "191.6",
+          "superplasticizer": "8.5",
+          "coarse_aggregate": "814.1",
+          "fine_aggregate": "805.3",
+          "age_day": "28.0"
+        },
+        "measured": 29.870858223999996
+      },
+      {
+        "id": "concrete_0399",
+        "name": "concrete_0399",
+        "prediction": 29.59102577095,
+        "features": {
+          "id": "concrete_0399",
+          "mix_group": "8450911edc4145f4",
+          "cement": "160.0",
+          "slag": "128.0",
+          "fly_ash": "122.0",
+          "water": "182.0",
+          "superplasticizer": "6.4",
+          "coarse_aggregate": "824.0",
+          "fine_aggregate": "879.0",
+          "age_day": "28.0"
+        },
+        "measured": 39.39665864
+      },
+      {
+        "id": "concrete_0202",
+        "name": "concrete_0202",
+        "prediction": 29.490698394500026,
+        "features": {
+          "id": "concrete_0202",
+          "mix_group": "fbfd117ee8c416c6",
+          "cement": "190.68",
+          "slag": "0.0",
+          "fly_ash": "125.4",
+          "water": "162.14",
+          "superplasticizer": "7.77",
+          "coarse_aggregate": "1090.0",
+          "fine_aggregate": "804.01",
+          "age_day": "28.0"
+        },
+        "measured": 26.40003604
+      },
+      {
+        "id": "concrete_0916",
+        "name": "concrete_0916",
+        "prediction": 28.873307110299976,
+        "features": {
+          "id": "concrete_0916",
+          "mix_group": "0a59bdbaa51b87a4",
+          "cement": "155.0",
+          "slag": "184.0",
+          "fly_ash": "143.0",
+          "water": "194.0",
+          "superplasticizer": "9.0",
+          "coarse_aggregate": "880.0",
+          "fine_aggregate": "699.0",
+          "age_day": "28.0"
+        },
+        "measured": 28.98557104
+      },
+      {
+        "id": "concrete_0704",
+        "name": "concrete_0704",
+        "prediction": 28.129405598550004,
+        "features": {
+          "id": "concrete_0704",
+          "mix_group": "198ad3d70ce083b6",
+          "cement": "200.0",
+          "slag": "133.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "965.4",
+          "fine_aggregate": "806.2",
+          "age_day": "28.0"
+        },
+        "measured": 30.439675923999996
+      },
+      {
+        "id": "concrete_0012",
+        "name": "concrete_0012",
+        "prediction": 27.280358996799997,
+        "features": {
+          "id": "concrete_0012",
+          "mix_group": "5fb27d97649ed1fc",
+          "cement": "198.6",
+          "slag": "132.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.4",
+          "fine_aggregate": "825.5",
+          "age_day": "28.0"
+        },
+        "measured": 28.021683592
+      },
+      {
+        "id": "concrete_1020",
+        "name": "concrete_1020",
+        "prediction": 26.97032749494998,
+        "features": {
+          "id": "concrete_1020",
+          "mix_group": "2c7aa8c9062d00e2",
+          "cement": "139.7",
+          "slag": "163.9",
+          "fly_ash": "127.7",
+          "water": "236.7",
+          "superplasticizer": "5.8",
+          "coarse_aggregate": "868.6",
+          "fine_aggregate": "655.6",
+          "age_day": "28.0"
+        },
+        "measured": 35.225328839999996
+      },
+      {
+        "id": "concrete_0823",
+        "name": "concrete_0823",
+        "prediction": 26.956038104849995,
+        "features": {
+          "id": "concrete_0823",
+          "mix_group": "0f055c384eb0f535",
+          "cement": "322.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "203.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "974.0",
+          "fine_aggregate": "800.0",
+          "age_day": "28.0"
+        },
+        "measured": 25.17966352
+      },
+      {
+        "id": "concrete_0812",
+        "name": "concrete_0812",
+        "prediction": 26.842102195849993,
+        "features": {
+          "id": "concrete_0812",
+          "mix_group": "4d7f170731236962",
+          "cement": "310.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "970.0",
+          "fine_aggregate": "850.0",
+          "age_day": "28.0"
+        },
+        "measured": 27.923778
+      },
+      {
+        "id": "concrete_0863",
+        "name": "concrete_0863",
+        "prediction": 26.76380357759998,
+        "features": {
+          "id": "concrete_0863",
+          "mix_group": "edadc516062f5a62",
+          "cement": "140.0",
+          "slag": "164.0",
+          "fly_ash": "128.0",
+          "water": "237.0",
+          "superplasticizer": "6.0",
+          "coarse_aggregate": "869.0",
+          "fine_aggregate": "656.0",
+          "age_day": "28.0"
+        },
+        "measured": 35.225328839999996
+      },
+      {
+        "id": "concrete_0683",
+        "name": "concrete_0683",
+        "prediction": 26.079619305899996,
+        "features": {
+          "id": "concrete_0683",
+          "mix_group": "f52c35e71268663f",
+          "cement": "183.9",
+          "slag": "122.6",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "959.2",
+          "fine_aggregate": "800.0",
+          "age_day": "28.0"
+        },
+        "measured": 24.046164976
+      },
+      {
+        "id": "concrete_0939",
+        "name": "concrete_0939",
+        "prediction": 25.865795561399988,
+        "features": {
+          "id": "concrete_0939",
+          "mix_group": "fbb6f12800af7d46",
+          "cement": "154.8",
+          "slag": "183.4",
+          "fly_ash": "0.0",
+          "water": "193.3",
+          "superplasticizer": "9.1",
+          "coarse_aggregate": "1047.4",
+          "fine_aggregate": "696.7",
+          "age_day": "28.0"
+        },
+        "measured": 18.287661424
+      },
+      {
+        "id": "concrete_0637",
+        "name": "concrete_0637",
+        "prediction": 25.833148872799985,
+        "features": {
+          "id": "concrete_0637",
+          "mix_group": "0fb4bd7eab92e12c",
+          "cement": "300.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "184.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1075.0",
+          "fine_aggregate": "795.0",
+          "age_day": "28.0"
+        },
+        "measured": 26.848195439999998
+      },
+      {
+        "id": "concrete_0444",
+        "name": "concrete_0444",
+        "prediction": 25.80596628150001,
+        "features": {
+          "id": "concrete_0444",
+          "mix_group": "03bfef61ed941ab8",
+          "cement": "194.68",
+          "slag": "0.0",
+          "fly_ash": "100.52",
+          "water": "170.17",
+          "superplasticizer": "7.48",
+          "coarse_aggregate": "998.0",
+          "fine_aggregate": "901.8",
+          "age_day": "28.0"
+        },
+        "measured": 37.2661778
+      },
+      {
+        "id": "concrete_0876",
+        "name": "concrete_0876",
+        "prediction": 25.78461838084999,
+        "features": {
+          "id": "concrete_0876",
+          "mix_group": "2ae9d2b7cdf16b28",
+          "cement": "155.0",
+          "slag": "183.0",
+          "fly_ash": "0.0",
+          "water": "193.0",
+          "superplasticizer": "9.0",
+          "coarse_aggregate": "1047.0",
+          "fine_aggregate": "697.0",
+          "age_day": "28.0"
+        },
+        "measured": 18.28490352
+      },
+      {
+        "id": "concrete_0641",
+        "name": "concrete_0641",
+        "prediction": 24.67095089029997,
+        "features": {
+          "id": "concrete_0641",
+          "mix_group": "de7eae131bfc207f",
+          "cement": "400.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "187.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1025.0",
+          "fine_aggregate": "745.0",
+          "age_day": "7.0"
+        },
+        "measured": 30.143890719999998
+      },
+      {
+        "id": "concrete_0201",
+        "name": "concrete_0201",
+        "prediction": 24.584731916500033,
+        "features": {
+          "id": "concrete_0201",
+          "mix_group": "fbfd117ee8c416c6",
+          "cement": "190.68",
+          "slag": "0.0",
+          "fly_ash": "125.4",
+          "water": "162.14",
+          "superplasticizer": "7.77",
+          "coarse_aggregate": "1090.0",
+          "fine_aggregate": "804.01",
+          "age_day": "14.0"
+        },
+        "measured": 21.063491799999998
+      },
+      {
+        "id": "concrete_0549",
+        "name": "concrete_0549",
+        "prediction": 24.31067382494999,
+        "features": {
+          "id": "concrete_0549",
+          "mix_group": "c130904650b869e5",
+          "cement": "289.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "913.2",
+          "fine_aggregate": "895.3",
+          "age_day": "28.0"
+        },
+        "measured": 25.573354316
+      },
+      {
+        "id": "concrete_0807",
+        "name": "concrete_0807",
+        "prediction": 24.281345239600018,
+        "features": {
+          "id": "concrete_0807",
+          "mix_group": "9daec4bc5765e89c",
+          "cement": "382.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "185.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1047.0",
+          "fine_aggregate": "739.0",
+          "age_day": "7.0"
+        },
+        "measured": 24.00065956
+      },
+      {
+        "id": "concrete_0431",
+        "name": "concrete_0431",
+        "prediction": 23.96472062349996,
+        "features": {
+          "id": "concrete_0431",
+          "mix_group": "03bfef61ed941ab8",
+          "cement": "194.68",
+          "slag": "0.0",
+          "fly_ash": "100.52",
+          "water": "170.17",
+          "superplasticizer": "7.48",
+          "coarse_aggregate": "998.0",
+          "fine_aggregate": "901.8",
+          "age_day": "14.0"
+        },
+        "measured": 24.28334472
+      },
+      {
+        "id": "concrete_0910",
+        "name": "concrete_0910",
+        "prediction": 23.929350504700004,
+        "features": {
+          "id": "concrete_0910",
+          "mix_group": "6102803987fa5af3",
+          "cement": "146.0",
+          "slag": "173.0",
+          "fly_ash": "0.0",
+          "water": "182.0",
+          "superplasticizer": "3.0",
+          "coarse_aggregate": "986.0",
+          "fine_aggregate": "817.0",
+          "age_day": "28.0"
+        },
+        "measured": 23.73865868
+      },
+      {
+        "id": "concrete_0658",
+        "name": "concrete_0658",
+        "prediction": 23.417250824150013,
+        "features": {
+          "id": "concrete_0658",
+          "mix_group": "4dbc0ac7825e7d5e",
+          "cement": "108.3",
+          "slag": "162.4",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "938.2",
+          "fine_aggregate": "849.0",
+          "age_day": "28.0"
+        },
+        "measured": 20.593958644
+      },
+      {
+        "id": "concrete_0022",
+        "name": "concrete_0022",
+        "prediction": 23.35543930075,
+        "features": {
+          "id": "concrete_0022",
+          "mix_group": "e0464b9ce10eb912",
+          "cement": "139.6",
+          "slag": "209.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1047.0",
+          "fine_aggregate": "806.9",
+          "age_day": "28.0"
+        },
+        "measured": 28.23748958
+      },
+      {
+        "id": "concrete_0222",
+        "name": "concrete_0222",
+        "prediction": 22.593714834400004,
+        "features": {
+          "id": "concrete_0222",
+          "mix_group": "e16a02317afe97b5",
+          "cement": "166.09",
+          "slag": "0.0",
+          "fly_ash": "163.27",
+          "water": "176.46",
+          "superplasticizer": "4.49",
+          "coarse_aggregate": "1058.6",
+          "fine_aggregate": "780.09",
+          "age_day": "28.0"
+        },
+        "measured": 21.53923024
+      },
+      {
+        "id": "concrete_0310",
+        "name": "concrete_0310",
+        "prediction": 21.87782451638178,
+        "features": {
+          "id": "concrete_0310",
+          "mix_group": "507e525e6f046ed4",
+          "cement": "295.71",
+          "slag": "0.0",
+          "fly_ash": "95.64",
+          "water": "171.54",
+          "superplasticizer": "8.87",
+          "coarse_aggregate": "955.14",
+          "fine_aggregate": "859.2",
+          "age_day": "3.0"
+        },
+        "measured": 22.94576128
+      },
+      {
+        "id": "concrete_0638",
+        "name": "concrete_0638",
+        "prediction": 21.764370009349978,
+        "features": {
+          "id": "concrete_0638",
+          "mix_group": "31f6f11ccb9e461f",
+          "cement": "375.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "186.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1038.0",
+          "fine_aggregate": "758.0",
+          "age_day": "7.0"
+        },
+        "measured": 26.0621928
+      },
+      {
+        "id": "concrete_0646",
+        "name": "concrete_0646",
+        "prediction": 21.67292825485002,
+        "features": {
+          "id": "concrete_0646",
+          "mix_group": "67726f5d80c65170",
+          "cement": "203.5",
+          "slag": "305.3",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "963.4",
+          "fine_aggregate": "630.0",
+          "age_day": "7.0"
+        },
+        "measured": 19.539060364
+      },
+      {
+        "id": "concrete_0551",
+        "name": "concrete_0551",
+        "prediction": 21.645206394809108,
+        "features": {
+          "id": "concrete_0551",
+          "mix_group": "570667aa8d359274",
+          "cement": "393.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "940.6",
+          "fine_aggregate": "785.6",
+          "age_day": "7.0"
+        },
+        "measured": 27.742445811999996
+      },
+      {
+        "id": "concrete_0315",
+        "name": "concrete_0315",
+        "prediction": 21.547417767499965,
+        "features": {
+          "id": "concrete_0315",
+          "mix_group": "7a2ecf976f77f25e",
+          "cement": "251.81",
+          "slag": "0.0",
+          "fly_ash": "99.94",
+          "water": "146.14",
+          "superplasticizer": "12.35",
+          "coarse_aggregate": "1006.0",
+          "fine_aggregate": "899.76",
+          "age_day": "3.0"
+        },
+        "measured": 21.02212324
+      },
+      {
+        "id": "concrete_0822",
+        "name": "concrete_0822",
+        "prediction": 21.316314030750004,
+        "features": {
+          "id": "concrete_0822",
+          "mix_group": "0f055c384eb0f535",
+          "cement": "322.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "203.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "974.0",
+          "fine_aggregate": "800.0",
+          "age_day": "14.0"
+        },
+        "measured": 20.77391188
+      },
+      {
+        "id": "concrete_0221",
+        "name": "concrete_0221",
+        "prediction": 20.700732621050008,
+        "features": {
+          "id": "concrete_0221",
+          "mix_group": "e16a02317afe97b5",
+          "cement": "166.09",
+          "slag": "0.0",
+          "fly_ash": "163.27",
+          "water": "176.46",
+          "superplasticizer": "4.49",
+          "coarse_aggregate": "1058.6",
+          "fine_aggregate": "780.09",
+          "age_day": "14.0"
+        },
+        "measured": 25.48303296
+      },
+      {
+        "id": "concrete_0225",
+        "name": "concrete_0225",
+        "prediction": 19.814132970272645,
+        "features": {
+          "id": "concrete_0225",
+          "mix_group": "9c6a353ac4fce5ff",
+          "cement": "167.95",
+          "slag": "42.08",
+          "fly_ash": "163.83",
+          "water": "121.75",
+          "superplasticizer": "5.72",
+          "coarse_aggregate": "1058.7",
+          "fine_aggregate": "780.11",
+          "age_day": "3.0"
+        },
+        "measured": 7.74971024
+      },
+      {
+        "id": "concrete_0889",
+        "name": "concrete_0889",
+        "prediction": 19.554564955550003,
+        "features": {
+          "id": "concrete_0889",
+          "mix_group": "2580181c0a86bbf9",
+          "cement": "153.0",
+          "slag": "145.0",
+          "fly_ash": "0.0",
+          "water": "178.0",
+          "superplasticizer": "8.0",
+          "coarse_aggregate": "1000.0",
+          "fine_aggregate": "822.0",
+          "age_day": "28.0"
+        },
+        "measured": 19.00885332
+      },
+      {
+        "id": "concrete_0786",
+        "name": "concrete_0786",
+        "prediction": 19.46644130429999,
+        "features": {
+          "id": "concrete_0786",
+          "mix_group": "932d3962e0a33538",
+          "cement": "331.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.0",
+          "fine_aggregate": "825.0",
+          "age_day": "7.0"
+        },
+        "measured": 16.26473884
+      },
+      {
+        "id": "concrete_0629",
+        "name": "concrete_0629",
+        "prediction": 19.31243822124999,
+        "features": {
+          "id": "concrete_0629",
+          "mix_group": "447da9d411ea2723",
+          "cement": "200.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "180.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1125.0",
+          "fine_aggregate": "845.0",
+          "age_day": "28.0"
+        },
+        "measured": 12.24509376
+      },
+      {
+        "id": "concrete_0811",
+        "name": "concrete_0811",
+        "prediction": 18.79194417039998,
+        "features": {
+          "id": "concrete_0811",
+          "mix_group": "4d7f170731236962",
+          "cement": "310.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "970.0",
+          "fine_aggregate": "850.0",
+          "age_day": "7.0"
+        },
+        "measured": 14.98920824
+      },
+      {
+        "id": "concrete_0887",
+        "name": "concrete_0887",
+        "prediction": 17.959470847999988,
+        "features": {
+          "id": "concrete_0887",
+          "mix_group": "5d614f788ec31ecb",
+          "cement": "148.0",
+          "slag": "0.0",
+          "fly_ash": "137.0",
+          "water": "158.0",
+          "superplasticizer": "16.0",
+          "coarse_aggregate": "1002.0",
+          "fine_aggregate": "830.0",
+          "age_day": "28.0"
+        },
+        "measured": 17.95395504
+      },
+      {
+        "id": "concrete_0370",
+        "name": "concrete_0370",
+        "prediction": 17.771674822499985,
+        "features": {
+          "id": "concrete_0370",
+          "mix_group": "0005c3e6430c7c9d",
+          "cement": "218.85",
+          "slag": "0.0",
+          "fly_ash": "124.13",
+          "water": "158.49",
+          "superplasticizer": "11.33",
+          "coarse_aggregate": "1078.7",
+          "fine_aggregate": "794.91",
+          "age_day": "3.0"
+        },
+        "measured": 15.340841
+      },
+      {
+        "id": "concrete_0235",
+        "name": "concrete_0235",
+        "prediction": 17.696983641190858,
+        "features": {
+          "id": "concrete_0235",
+          "mix_group": "28908aa40104d36a",
+          "cement": "213.76",
+          "slag": "98.06",
+          "fly_ash": "24.52",
+          "water": "181.74",
+          "superplasticizer": "6.65",
+          "coarse_aggregate": "1066.0",
+          "fine_aggregate": "785.52",
+          "age_day": "3.0"
+        },
+        "measured": 13.18278112
+      },
+      {
+        "id": "concrete_0535",
+        "name": "concrete_0535",
+        "prediction": 16.786982436200013,
+        "features": {
+          "id": "concrete_0535",
+          "mix_group": "570667aa8d359274",
+          "cement": "393.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "940.6",
+          "fine_aggregate": "785.6",
+          "age_day": "3.0"
+        },
+        "measured": 19.199148695999998
+      },
+      {
+        "id": "concrete_0545",
+        "name": "concrete_0545",
+        "prediction": 16.6390208866,
+        "features": {
+          "id": "concrete_0545",
+          "mix_group": "c130904650b869e5",
+          "cement": "289.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "913.2",
+          "fine_aggregate": "895.3",
+          "age_day": "7.0"
+        },
+        "measured": 14.596896395999998
+      },
+      {
+        "id": "concrete_0636",
+        "name": "concrete_0636",
+        "prediction": 16.132376684899995,
+        "features": {
+          "id": "concrete_0636",
+          "mix_group": "0fb4bd7eab92e12c",
+          "cement": "300.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "184.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1075.0",
+          "fine_aggregate": "795.0",
+          "age_day": "7.0"
+        },
+        "measured": 15.575262839999999
+      },
+      {
+        "id": "concrete_0836",
+        "name": "concrete_0836",
+        "prediction": 15.771229156099997,
+        "features": {
+          "id": "concrete_0836",
+          "mix_group": "297a5bc195825943",
+          "cement": "144.0",
+          "slag": "0.0",
+          "fly_ash": "175.0",
+          "water": "158.0",
+          "superplasticizer": "18.0",
+          "coarse_aggregate": "943.0",
+          "fine_aggregate": "844.0",
+          "age_day": "28.0"
+        },
+        "measured": 15.41668336
+      },
+      {
+        "id": "concrete_0408",
+        "name": "concrete_0408",
+        "prediction": 15.01411186689088,
+        "features": {
+          "id": "concrete_0408",
+          "mix_group": "cf9e7bf9abb9d682",
+          "cement": "165.0",
+          "slag": "128.5",
+          "fly_ash": "132.1",
+          "water": "175.06",
+          "superplasticizer": "8.08",
+          "coarse_aggregate": "1005.8",
+          "fine_aggregate": "746.6",
+          "age_day": "3.0"
+        },
+        "measured": 19.41564416
+      },
+      {
+        "id": "concrete_0703",
+        "name": "concrete_0703",
+        "prediction": 14.409056047190594,
+        "features": {
+          "id": "concrete_0703",
+          "mix_group": "198ad3d70ce083b6",
+          "cement": "200.0",
+          "slag": "133.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "965.4",
+          "fine_aggregate": "806.2",
+          "age_day": "7.0"
+        },
+        "measured": 17.165883972
+      },
+      {
+        "id": "concrete_0220",
+        "name": "concrete_0220",
+        "prediction": 14.346242321040876,
+        "features": {
+          "id": "concrete_0220",
+          "mix_group": "e16a02317afe97b5",
+          "cement": "166.09",
+          "slag": "0.0",
+          "fly_ash": "163.27",
+          "water": "176.46",
+          "superplasticizer": "4.49",
+          "coarse_aggregate": "1058.6",
+          "fine_aggregate": "780.09",
+          "age_day": "3.0"
+        },
+        "measured": 10.76272036
+      },
+      {
+        "id": "concrete_0772",
+        "name": "concrete_0772",
+        "prediction": 13.81472896625001,
+        "features": {
+          "id": "concrete_0772",
+          "mix_group": "932d3962e0a33538",
+          "cement": "331.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.0",
+          "fine_aggregate": "825.0",
+          "age_day": "3.0"
+        },
+        "measured": 13.52062436
+      },
+      {
+        "id": "concrete_0056",
+        "name": "concrete_0056",
+        "prediction": 13.404435342027057,
+        "features": {
+          "id": "concrete_0056",
+          "mix_group": "5fb27d97649ed1fc",
+          "cement": "198.6",
+          "slag": "132.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.4",
+          "fine_aggregate": "825.5",
+          "age_day": "7.0"
+        },
+        "measured": 14.638264955999999
+      },
+      {
+        "id": "concrete_0969",
+        "name": "concrete_0969",
+        "prediction": 13.27564491874999,
+        "features": {
+          "id": "concrete_0969",
+          "mix_group": "ce200bc9383c8ad5",
+          "cement": "134.7",
+          "slag": "0.0",
+          "fly_ash": "165.7",
+          "water": "180.2",
+          "superplasticizer": "10.0",
+          "coarse_aggregate": "961.0",
+          "fine_aggregate": "804.9",
+          "age_day": "28.0"
+        },
+        "measured": 13.293786756
+      },
+      {
+        "id": "concrete_0418",
+        "name": "concrete_0418",
+        "prediction": 12.984039663000008,
+        "features": {
+          "id": "concrete_0418",
+          "mix_group": "03bfef61ed941ab8",
+          "cement": "194.68",
+          "slag": "0.0",
+          "fly_ash": "100.52",
+          "water": "170.17",
+          "superplasticizer": "7.48",
+          "coarse_aggregate": "998.0",
+          "fine_aggregate": "901.8",
+          "age_day": "3.0"
+        },
+        "measured": 12.17614616
+      },
+      {
+        "id": "concrete_0697",
+        "name": "concrete_0697",
+        "prediction": 12.4312719795359,
+        "features": {
+          "id": "concrete_0697",
+          "mix_group": "f52c35e71268663f",
+          "cement": "183.9",
+          "slag": "122.6",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "959.2",
+          "fine_aggregate": "800.0",
+          "age_day": "7.0"
+        },
+        "measured": 10.787541496
+      },
+      {
+        "id": "concrete_0200",
+        "name": "concrete_0200",
+        "prediction": 12.26620896249998,
+        "features": {
+          "id": "concrete_0200",
+          "mix_group": "fbfd117ee8c416c6",
+          "cement": "190.68",
+          "slag": "0.0",
+          "fly_ash": "125.4",
+          "water": "162.14",
+          "superplasticizer": "7.77",
+          "coarse_aggregate": "1090.0",
+          "fine_aggregate": "804.01",
+          "age_day": "3.0"
+        },
+        "measured": 15.04436632
+      },
+      {
+        "id": "concrete_0700",
+        "name": "concrete_0700",
+        "prediction": 11.766489069845298,
+        "features": {
+          "id": "concrete_0700",
+          "mix_group": "67726f5d80c65170",
+          "cement": "203.5",
+          "slag": "305.3",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "963.4",
+          "fine_aggregate": "630.0",
+          "age_day": "3.0"
+        },
+        "measured": 9.561653168
+      },
+      {
+        "id": "concrete_0628",
+        "name": "concrete_0628",
+        "prediction": 10.958687907331761,
+        "features": {
+          "id": "concrete_0628",
+          "mix_group": "447da9d411ea2723",
+          "cement": "200.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "180.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1125.0",
+          "fine_aggregate": "845.0",
+          "age_day": "7.0"
+        },
+        "measured": 7.8393421199999995
+      },
+      {
+        "id": "concrete_0534",
+        "name": "concrete_0534",
+        "prediction": 10.930633621349987,
+        "features": {
+          "id": "concrete_0534",
+          "mix_group": "c130904650b869e5",
+          "cement": "289.0",
+          "slag": "0.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "913.2",
+          "fine_aggregate": "895.3",
+          "age_day": "3.0"
+        },
+        "measured": 11.654902304
+      },
+      {
+        "id": "concrete_0698",
+        "name": "concrete_0698",
+        "prediction": 10.89569442505,
+        "features": {
+          "id": "concrete_0698",
+          "mix_group": "4dbc0ac7825e7d5e",
+          "cement": "108.3",
+          "slag": "162.4",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "938.2",
+          "fine_aggregate": "849.0",
+          "age_day": "7.0"
+        },
+        "measured": 7.723510152
+      },
+      {
+        "id": "concrete_0055",
+        "name": "concrete_0055",
+        "prediction": 10.13064323700001,
+        "features": {
+          "id": "concrete_0055",
+          "mix_group": "e0464b9ce10eb912",
+          "cement": "139.6",
+          "slag": "209.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1047.0",
+          "fine_aggregate": "806.9",
+          "age_day": "7.0"
+        },
+        "measured": 14.589312159999999
+      },
+      {
+        "id": "concrete_0657",
+        "name": "concrete_0657",
+        "prediction": 9.551850296913246,
+        "features": {
+          "id": "concrete_0657",
+          "mix_group": "198ad3d70ce083b6",
+          "cement": "200.0",
+          "slag": "133.0",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "965.4",
+          "fine_aggregate": "806.2",
+          "age_day": "3.0"
+        },
+        "measured": 11.414275179999999
+      },
+      {
+        "id": "concrete_0058",
+        "name": "concrete_0058",
+        "prediction": 8.913492786240596,
+        "features": {
+          "id": "concrete_0058",
+          "mix_group": "5fb27d97649ed1fc",
+          "cement": "198.6",
+          "slag": "132.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "978.4",
+          "fine_aggregate": "825.5",
+          "age_day": "3.0"
+        },
+        "measured": 9.131420144
+      },
+      {
+        "id": "concrete_0023",
+        "name": "concrete_0023",
+        "prediction": 7.482969212499998,
+        "features": {
+          "id": "concrete_0023",
+          "mix_group": "e0464b9ce10eb912",
+          "cement": "139.6",
+          "slag": "209.4",
+          "fly_ash": "0.0",
+          "water": "192.0",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "1047.0",
+          "fine_aggregate": "806.9",
+          "age_day": "3.0"
+        },
+        "measured": 8.06342182
+      },
+      {
+        "id": "concrete_0652",
+        "name": "concrete_0652",
+        "prediction": 6.657074230085902,
+        "features": {
+          "id": "concrete_0652",
+          "mix_group": "f52c35e71268663f",
+          "cement": "183.9",
+          "slag": "122.6",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "959.2",
+          "fine_aggregate": "800.0",
+          "age_day": "3.0"
+        },
+        "measured": 4.9035533120000006
+      },
+      {
+        "id": "concrete_0689",
+        "name": "concrete_0689",
+        "prediction": 4.516205695199999,
+        "features": {
+          "id": "concrete_0689",
+          "mix_group": "4dbc0ac7825e7d5e",
+          "cement": "108.3",
+          "slag": "162.4",
+          "fly_ash": "0.0",
+          "water": "203.5",
+          "superplasticizer": "0.0",
+          "coarse_aggregate": "938.2",
+          "fine_aggregate": "849.0",
+          "age_day": "3.0"
+        },
+        "measured": 2.331807832
+      }
+    ],
+    "verification": {
+      "project_id": "bedbe6e2000b",
+      "first_model": "combined / ET",
+      "cv_mae": 3.7294808210837203,
+      "independent_candidate_mae": 5.195274610833232,
+      "candidate_count": 171,
+      "recommendations": [
+        "concrete_0176",
+        "concrete_0178",
+        "concrete_0180"
+      ],
+      "selected_best_measured": 79.29663476,
+      "pool_best": 79.98611076,
+      "dataset_versions": 4,
+      "processing_steps": 2,
+      "retrain_count": 862,
+      "round": 2,
+      "second_model": "combined / ET"
+    },
+    "seconds": 16.06,
+    "training": 859
+  },
+  "sources": [
+    {
+      "path": "results/engine-upgrade/result.json",
+      "sha256": "20b807181e270ea795d799709c059419e160f5c92f8857f3cc496f14a395147e"
+    },
+    {
+      "path": "results/engine-upgrade/verification.json",
+      "sha256": "785123ae7fe3c90fe14fff14ccb54a94e00ce93d39536ce84909ebac88d9ba4d"
+    },
+    {
+      "path": "results/engine-upgrade/run_config.json",
+      "sha256": "6c36bd46710fa0a89f47bfe0c8d9ec926b3c21706cf12ea64d777fe9aa282e5e"
+    },
+    {
+      "path": "results/engine-upgrade/split_manifest.json",
+      "sha256": "408d32c6caff139139818021692d5f15d1b4ae7362c8ace0d1673571af40eeb3"
+    },
+    {
+      "path": "results/engine-upgrade/oof_predictions.json",
+      "sha256": "1dbe14ca27b2351ac4ed5b2e1e738ab1b9e1573e1ae7c419b6c57b559c550668"
+    },
+    {
+      "path": "amadeus/examples/concrete/oracle.json",
+      "sha256": "b81fde73edfbdd519613e208b56bc73fdc9184a68c08fc66d4e57aaa8d356f8e"
+    },
+    {
+      "path": "amadeus/examples/concrete/provenance.json",
+      "sha256": "c934880b8f5f0ac8db0a4ea0c36d1a6215aa1d2e8ec1bc2307dff5c57447bd42"
+    },
+    {
+      "path": "results/reference/REPORT.md",
+      "sha256": "d9367c7da184e120fc20d0686c3b9c3e9299380f92392d619c254a89123e4057"
+    },
+    {
+      "path": "results/steels-case/verification.json",
+      "sha256": "44229e385f504e708ca8837662cc86776d4458a119233eba18c70d92e9c425f5"
+    },
+    {
+      "path": "results/unprepared-20261029/independent_checks.json",
+      "sha256": "5c773716af6e9bc3b5c05da53130556449325d18fc92dfb4ef0857300f0f4fdc"
+    },
+    {
+      "path": "results/unprepared-20261029/README.md",
+      "sha256": "f13c2b89f90d4c4b78aceb0692c1da601707780e371695943fc4685f8d35d765"
+    },
+    {
+      "path": "docs/ENGINE_UPGRADE_RESULTS.md",
+      "sha256": "78dd3536b3055a39a5af1ef4e40ac5521b7e3f310f045bedc5cb8ed6d7f5b27c"
+    },
+    {
+      "path": "docs/STEELS_CASE.md",
+      "sha256": "b9eec065bc984de3d56d46471ce5c1642bd6acfe7e01e476fd049874774f3e63"
+    },
+    {
+      "path": "docs/NEW_RESEARCH_CASES.md",
+      "sha256": "e52ff48f665bbec5471654bbde583c8868d8681f1594e54cbccdc0776a631fe5"
+    },
+    {
+      "path": "docs/evidence/research-records.md",
+      "sha256": "94296388c79ea7bb644dcb59b63269952f7d87afbca4896444c7d3f62fbe9785"
+    },
+    {
+      "path": "docs/evidence/research-excerpts.md",
+      "sha256": "874fce10088bab46db0db049530ec0ebfd8b56d817202b0489cf676f81f02a8c"
+    },
+    {
+      "path": "docs/evidence/sciencepal-results.md",
+      "sha256": "8eef20519b3c94606bb8e9de3504aae25a1de5f9f324eff086c03b91610a0c37"
+    },
+    {
+      "path": "docs/evidence/sciencepal-check.json",
+      "sha256": "53ecd784369d581216bc2226e7db4c896e00461f506699e00d6895cb2b5c20cd"
+    },
+    {
+      "path": "amadeus/data_engine.py",
+      "sha256": "59710084a5a350f5091ef5b3c825c8c1b5bf4271082f64cc9944150c2cf36998"
+    },
+    {
+      "path": "amadeus/engine.py",
+      "sha256": "091cbd4e21d0292e9c0aca6f8b79278bfac00d8f207702a847b83493f4c6099a"
+    },
+    {
+      "path": "amadeus/workflow.py",
+      "sha256": "2780499dcc2d01c667e43e92f5650511bb1c8daecbb9866c7ce95e73cd69742a"
+    },
+    {
+      "path": "amadeus/provider.py",
+      "sha256": "b39b387b4222fd6a93be3be4e1e69c95badf335248deb9fabaebf09d0e7cec6c"
+    }
+  ]
+}

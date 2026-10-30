@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-30",
+  "new_training_runs": 0,
+  "repo_link_targets": 28,
+  "source_hashes": 22,
+  "concrete_candidates": 171,
+  "model_settings": 22,
+  "recomputed_mae": 5.195274610833232,
+  "missing_targets": [],
+  "javascript_syntax": "pass"
+}

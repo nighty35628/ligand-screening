@@ -1,5 +1,7 @@
 # Amadeus · 科研助手
 
+[研发历程与技术证据](https://nighty35628.github.io/ligand-screening/evidence.html)：分析流程、模型实现、五案例结果、科研历程和可复核运行档案。
+
 把研究问题、数据分析和下一轮实验安排放在同一个工作区。
 
 **[在线案例展示](https://nighty35628.github.io/ligand-screening/)** · [四分钟演示](docs/DEMO.md) · [验收记录](docs/DELIVERY.md) · [原计算流程](PIPELINE.md) · [资源归属](THIRD_PARTY.md)

@@ -19,5 +19,7 @@
   "thermal-case.json": "e17b3e4d6932cce9c753cbd07f24318d9c23b0e7d5772c3ddbec399a21e7c244",
   "wordmark.svg": "a32516ed019138aaccf4ccb86c3e81b44844a68de28b088737f22f3ca00faf1e",
   "workbench.css": "c7f8546b978106847bdf9882c55b24cd285411b1d5b341a73f440f758f750d29",
-  "workbench.js": "9d6fabb80758ef3fef81e3c54384fa428e26db011bdab7b51553e1eeb1e0089e"
+  "workbench.js": "301428a3b309d6e62ad289128abced95335c46f8b5d0a145722c6822215ce96c",
+  "evidence-data.json": "41f7baca1887f10db86d4c11f8766afc051263afac96ed5df8f85910ce39b3d1",
+  "evidence.html": "d2a9bae34bfb7fa998f59542e5232928b1379cfe3e15dc8aaac2e9295d1866a3"
 }
