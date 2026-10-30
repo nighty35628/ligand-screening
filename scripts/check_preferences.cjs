@@ -37,7 +37,17 @@ const mode=process.argv[2]||'verify',han=/[\u3400-\u9fff]/;let extra=new Set();
  await page.setViewportSize({width:390,height:844});await page.goto('http://127.0.0.1:8799/?demo',{waitUntil:'networkidle'});await page.evaluate(()=>document.getAnimations().filter(a=>a.effect?.getTiming().iterations!==Infinity).forEach(a=>a.finish()));await page.screenshot({path:out+'/mobile-dark-en.png',fullPage:true});const mobile=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth}));if(mobile.scroll>mobile.width+2)throw Error('Mobile horizontal overflow: '+JSON.stringify(mobile));
  await page.locator('[data-preference="theme"]').click();await page.locator('[data-preference="language"]').click();await page.evaluate(()=>document.getAnimations().filter(a=>a.effect?.getTiming().iterations!==Infinity).forEach(a=>a.finish()));await page.screenshot({path:out+'/mobile-light-zh.png',fullPage:true});
  await page.setViewportSize({width:1600,height:1050});await page.goto('http://127.0.0.1:8799/?demo',{waitUntil:'networkidle'});await page.evaluate(()=>document.getAnimations().filter(a=>a.effect?.getTiming().iterations!==Infinity).forEach(a=>a.finish()));await page.screenshot({path:out+'/desktop-light-zh.png'});
+ // Regression: language switches reformat dates, and long titles cannot squeeze row metadata.
+ await page.evaluate(async()=>{for(const title of ['Concrete formulation screening','High-strength steel alloy candidates under different treatment conditions'])await window.AmadeusDemo.api('/api/projects',{title,goal:'Compare available historical records and experimental conditions.'});});
+ await page.reload({waitUntil:'networkidle'});await page.locator('[data-preference="language"]').click();
+ let dateRows=0;
+ for(const width of [1440,768,390]){
+  await page.setViewportSize({width,height:1050});
+  const rows=await page.locator('.recent-row').evaluateAll(rows=>rows.map(row=>{const text=row.querySelector('.recent-summary').getBoundingClientRect(),meta=row.querySelector('.recent-meta').getBoundingClientRect();return {overlap:text.right>meta.left,day:row.querySelector('.ui-date-day').textContent,clock:row.querySelector('.ui-date-clock').textContent,wrapped:[...row.querySelectorAll('.recent-round,.ui-date-day,.ui-date-clock')].some(el=>el.getBoundingClientRect().height>parseFloat(getComputedStyle(el).lineHeight)+1)}}));
+  if(rows.some(row=>row.overlap||row.wrapped||!/[A-Z][a-z]{2}/.test(row.day)||!/^\d{2}:\d{2}$/.test(row.clock)))throw Error('Date layout/locale regression: '+JSON.stringify({width,rows}));dateRows+=rows.length;
+ }
+ await page.locator('[data-preference="language"]').click();if(!await page.locator('.ui-date-day').first().innerText().then(text=>/\d{4}\/\d{2}\/\d{2}/.test(text)))throw Error('Chinese date format was not restored');
  if(errors.length)throw Error(errors.join('\n'));
- fs.writeFileSync(out+'/remaining-zh.json',JSON.stringify([...extra].sort(),null,2));fs.writeFileSync(out+'/verification.json',JSON.stringify({five_case_views:35,scientific_state_unchanged:true,preference_persistence:true,language_roundtrip:true,english_wiki_search:true,mobile,page_errors:errors},null,2));console.log('Preferences browser verification passed.');
+ fs.writeFileSync(out+'/remaining-zh.json',JSON.stringify([...extra].sort(),null,2));fs.writeFileSync(out+'/verification.json',JSON.stringify({five_case_views:35,scientific_state_unchanged:true,preference_persistence:true,language_roundtrip:true,english_wiki_search:true,date_layout_rows_checked:dateRows,date_language_roundtrip:true,mobile,page_errors:errors},null,2));console.log('Preferences browser verification passed.');
  }finally{if(browser)await browser.close();server.kill()}
 })().catch(e=>{console.error(e);process.exitCode=1});

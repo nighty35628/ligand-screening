@@ -54,3 +54,17 @@ html[data-theme=dark] .flow-steps .passed{color:#c2c9d5}
 html[data-theme=dark] .flow-steps .current{color:#9ebeff}
 @media(max-width:480px){html[lang=en] .composer-home textarea{min-height:180px}html[lang=en] .case-structure{width:86px}html[lang=en] .case-feature{gap:16px}}
 html[data-theme=dark] .sidebar .brand{background:transparent}
+/* Dates and row metadata keep their own columns in either language. */
+.recent-row{display:grid;grid-template-columns:minmax(0,1fr) max-content;gap:24px;align-items:center}
+.recent-summary{min-width:0}
+.recent-summary strong,.recent-summary small{overflow-wrap:anywhere}
+.recent-row .recent-meta{display:grid;justify-items:end;gap:3px;margin:0;min-width:110px;text-align:right}
+.recent-round{white-space:nowrap}
+.ui-date{display:inline-flex;align-items:baseline;gap:8px;white-space:nowrap;font-variant-numeric:tabular-nums;line-height:1.6}
+.ui-date-day,.ui-date-clock{display:block;white-space:nowrap}
+.saved-row{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:baseline;gap:12px 20px}
+.saved-row>span{min-width:0;overflow-wrap:anywhere}
+.saved-row>small{margin:0}
+.shell>.top>div:first-child{min-width:0}
+.shell>.top .round{flex:none;align-items:center}
+@media(max-width:600px){.recent-row{gap:16px;align-items:start}.recent-row .recent-meta{min-width:95px}.recent-meta .ui-date{display:grid;justify-items:end;gap:0}.saved-row{grid-template-columns:minmax(0,1fr);gap:5px}.saved-row>small{justify-self:start}}

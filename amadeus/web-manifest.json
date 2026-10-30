@@ -13,8 +13,8 @@
   "logo.svg": "4027b203b9119baeff044e72000d0e86e1a44d8c2350c043deb4a62413c5f3b4",
   "mark.svg": "15bf4c41b4d72f47e74c7d48943c800b0d3933f4bdf7ef6715af51a0b810f548",
   "perovskites-case.json": "14a2e06c87f010ef05cfdac8780ebe3cfdc9a454997ba25afe135802b03f2304",
-  "preferences.css": "5c861aa5c6cfa0575fe0efbddad286878bd1908fe6c341799096c6ccd7c5fc51",
-  "preferences.js": "2409fde2d6afe5b3886ca9b34d6bbe74d761aa7e32092a5ec07418b22f266a18",
+  "preferences.css": "c3ecea427570af5cfe79e3c76b113c3de8f15b3ced96e0256e4c19a28cba37ec",
+  "preferences.js": "d4e1a81c4ecfb9cc4447b3483add689b51417a6fe94113ae0fd4e0ba27556a6f",
   "replay.json": "1bccc8f19e9ad932373157b2d7410705fe74de66b3c661de0230db5b04637666",
   "research-cases.json": "39df83fd5b90d1c2692e11d103e89ecc4c2c296d70d64992caf0df0b863dc725",
   "sample-candidates.csv": "b37cd28ed2e2f2828479124c65fc1704f9dba8d9cb965adb50b9f16e182ac9ca",
@@ -48,5 +48,5 @@
   "wiki/wiki.js": "1f50dfca6abdd0445df98827ae9ae9922a9131b8f39eb96faf09c0557a951b75",
   "wordmark.svg": "a32516ed019138aaccf4ccb86c3e81b44844a68de28b088737f22f3ca00faf1e",
   "workbench.css": "c7f8546b978106847bdf9882c55b24cd285411b1d5b341a73f440f758f750d29",
-  "workbench.js": "71d3fd8b9d7e06f6b665942a74a934f04edc208686e26dbb93ef9d80ecf01742"
+  "workbench.js": "1ac4a5aaca412a9e21a671ff7c4ea4bf8c57056f1e61e42d69f800a7d4ac8525"
 }

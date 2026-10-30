@@ -23,5 +23,13 @@
   "preset_message_language_roundtrip": true,
   "local_http_assets": "pass",
   "model_training": false,
-  "visual_review": "desktop and 390px mobile screenshots reviewed; controls, chart contrast and English wrapping confirmed"
+  "visual_review": "desktop and 390px mobile screenshots reviewed; controls, chart contrast and English wrapping confirmed",
+  "date_layout_rows_checked": 9,
+  "date_language_roundtrip": true,
+  "date_layout_viewports": [
+    1440,
+    768,
+    390
+  ],
+  "date_metadata_alignment": "separate date/time elements; no text overlap or wrapped date components"
 }

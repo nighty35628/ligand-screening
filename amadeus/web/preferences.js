@@ -19,6 +19,11 @@ function translate(source){
  result=result.replace(matcher,key=>dict[key]);
  result=leading+result+trailing;cache.set(source,result);return result;
 }
+function dateParts(value){
+ const date=new Date(value);if(!Number.isFinite(date.getTime()))return {day:'—',clock:''};
+ const locale=language==='en'?'en-GB':'zh-CN';
+ return {day:new Intl.DateTimeFormat(locale,{year:'numeric',month:language==='en'?'short':'2-digit',day:'2-digit'}).format(date),clock:new Intl.DateTimeFormat(locale,{hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(date)};
+}
 function setRoot(){root.dataset.theme=theme;root.lang=language==='en'?'en':'zh-CN';root.style.colorScheme=theme;}
 setRoot();
 function controls(){
@@ -34,10 +39,14 @@ function controls(){
  mode.title=label;mode.setAttribute('aria-label',label);mode.setAttribute('aria-pressed',String(theme==='dark'));
  mode.innerHTML=theme==='dark'?'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>':'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.1A8.5 8.5 0 0 1 9.9 4a8.5 8.5 0 1 0 10.1 10.1Z"/></svg>';
 }
-const skip=el=>el.closest('script,style,code,textarea,input,.message.user p:not(.demo-prompt),[data-user-content],[contenteditable="true"],.amadeus-preferences')||(el.closest('pre')&&!el.closest('button'));
+const skip=el=>el.closest('script,style,code,textarea,input,[data-localized-date],.message.user p:not(.demo-prompt),[data-user-content],[contenteditable="true"],.amadeus-preferences')||(el.closest('pre')&&!el.closest('button'));
 function apply(){
  if(!document.body)return;
  if(observer)observer.disconnect();setRoot();controls();
+ for(const time of document.querySelectorAll('[data-localized-date]')){
+  const parts=dateParts(time.dataset.localizedDate);
+  for(const [selector,value] of [['.ui-date-day',parts.day],['.ui-date-clock',parts.clock]]){const span=time.querySelector(selector);if(span&&span.textContent!==value)span.textContent=value;}
+ }
  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node;
  while((node=walker.nextNode())){
   if(!node.parentElement||skip(node.parentElement))continue;
@@ -64,7 +73,7 @@ function apply(){
 function schedule(){if(queued)return;queued=true;queueMicrotask(()=>{queued=false;apply()})}
 function setLanguage(value){language=value==='en'?'en':'zh';write('amadeus-language',language);cache.clear();apply();document.dispatchEvent(new CustomEvent('amadeus:preferences',{detail:{language,theme}}));}
 function setTheme(value){theme=value==='dark'?'dark':'light';write('amadeus-theme',theme);apply();}
-window.AmadeusUI={get language(){return language},get theme(){return theme},translate,apply,setLanguage,setTheme};
+window.AmadeusUI={get language(){return language},get theme(){return theme},dateParts,translate,apply,setLanguage,setTheme};
 document.addEventListener('click',e=>{const button=e.target.closest('[data-preference]');if(!button)return;if(button.dataset.preference==='language')setLanguage(language==='en'?'zh':'en');else setTheme(theme==='dark'?'light':'dark');});
 media.addEventListener('change',e=>{if(!read('amadeus-theme')){theme=e.matches?'dark':'light';apply()}});
 window.addEventListener('storage',e=>{if(['amadeus-theme','amadeus-language'].includes(e.key)){theme=read('amadeus-theme')||(media.matches?'dark':'light');language=read('amadeus-language')==='en'?'en':'zh';apply()}});
