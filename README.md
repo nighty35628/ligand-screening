@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="amadeus/web/logo.svg" alt="Amadeus" width="340">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/branding/amadeus-logo-dark.svg">
+    <img src="amadeus/web/logo.svg" alt="Amadeus" width="340">
+  </picture>
 </p>
 
 <p align="center">材料研究的数据分析与建模助手</p>
