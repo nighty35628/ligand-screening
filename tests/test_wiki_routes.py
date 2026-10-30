@@ -16,7 +16,7 @@ class WikiRoutes(unittest.TestCase):
  @classmethod
  def tearDownClass(cls):cls.server.shutdown();cls.server.server_close();cls.thread.join()
  def test_documentation_and_assets(self):
-  for path,mime in [('/wiki/','text/html'),('/wiki/models/','text/html'),('/wiki/wiki.css','text/css'),('/wiki/search-index.json','application/json'),('/sitemap.xml','application/xml')]:
+  for path,mime in [('/preferences.js','javascript'),('/preferences.css','text/css'),('/locale-en.js','javascript'),('/wiki/','text/html'),('/wiki/models/','text/html'),('/wiki/wiki.css','text/css'),('/wiki/search-index.json','application/json'),('/sitemap.xml','application/xml')]:
    with self.subTest(path=path),urllib.request.urlopen(self.base+path) as response:
     self.assertEqual(response.status,200);self.assertIn(mime,response.headers['Content-Type']);self.assertGreater(len(response.read()),100)
  def test_directory_redirect(self):

@@ -523,6 +523,8 @@ def converse(p, message):
 预测来自工具，不编造数值或化学机理。不推测模型噪声量级、统计显著性或置信度；只有工具给出的相关指标才能这样解读。融合名次代表优先顺序，prediction只是曲线分支分数；不要按这个单独分数擅自重排。右侧已有候选表，对话不用重复Markdown表格，只解释本次变化。数据不足时继续提供文献建议和实验行动。
 不要反复免责声明，不说“作为AI”“无法保证”，只解释与当前决定有关的事实。使用短段落，依据就近附链接。
 当前项目：'''+json.dumps(context(p),ensure_ascii=False)
+    if p.get('ui_language')=='en': system=system.replace('中文交流','使用英语交流')
+    system+='\nReply in English. Keep tool argument names, candidate IDs, numeric values and scientific units unchanged.' if p.get('ui_language')=='en' else '\n请用中文回复。'
     messages=[{'role':'system','content':system}]+[{'role':m['role'],'content':m['content']} for m in p['messages'][-12:]]
     functions={'calculate_plqy':calculate_plqy,'extract_experiments':extract_experiments,'accept_experiments':accept_experiments,'process_dataset':process_dataset,'load_material_example':load_material_example,'set_task':set_task,'run_specialist':run_specialist,'adjust_candidates':adjust,'save_plan':save_plan,
                'historical_results':historical_results,'next_round':next_round,'inspect_dataset':inspect,
@@ -560,6 +562,7 @@ def start(ident, data):
     token=str(data.get('operation_id') or uid())
     with LOCK:
         p=load(ident)
+        p['ui_language']='en' if data.get('ui_language')=='en' else 'zh'
         if token in p['receipts']: return visible(p)
         if p['operation']['status']=='running': raise ValueError('当前分析正在运行，可以等待完成或点击停止。')
         p['receipts']=(p['receipts']+[token])[-100:]
@@ -654,7 +657,7 @@ def export_report(p):
         return '<table><thead><tr>'+''.join('<th>'+e(str(h))+'</th>' for h in headers)+'</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+e(str(v))+'</td>' for v in row)+'</tr>' for row in rows)+'</tbody></table>'
     a=p.get('analysis') or {}; known=candidate_map(p)
     logo=(ROOT/'amadeus/web/logo.svg').read_text()
-    body='<div style="width:220px;max-width:100%;margin:24px 0">'+logo+'</div><h1>'+e(p['title'])+'</h1><p>'+e(p['task']['goal'])+'</p>'
+    body='<div class="report-brand" style="width:220px;max-width:100%;margin:24px 0">'+logo+'</div><h1>'+e(p['title'])+'</h1><p>'+e(p['task']['goal'])+'</p>'
     body+=f'<p>第 {p["round"]} 轮 · 更新于 {e(p["updated"])}</p>'
     if a:
         body+='<h2>分析结果</h2><p>'+e(a['model'])+'</p>'
@@ -672,4 +675,4 @@ def export_report(p):
         if m['role']=='assistant': body+='<p style="white-space:pre-wrap">'+e(m['content'])+'</p>'
     if a.get('source'): body+='<p>'+e(a['source'])+'</p>'
     if p['sources']: body+='<h2>资料来源</h2>'+''.join('<p><a href="'+e(s['url'],quote=True)+'">'+e(s['title'])+'</a></p>' for s in p['sources'])
-    return ('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Amadeus 研究报告</title><style>.figures{display:grid;grid-template-columns:1fr 1fr;gap:24px}figure{margin:0;break-inside:avoid}figure svg{max-width:100%;font:12px system-ui}.molecule svg{width:150px;height:90px}figcaption,figure p{font-size:12px}.barrow{display:grid;grid-template-columns:180px 1fr 65px;gap:15px;align-items:center;margin:12px 0}.track{background:#eceef2;height:14px}.track i{display:block;background:#245dcc;height:100%}body{font:15px/1.8 system-ui;color:#25262b;max-width:1000px;margin:40px auto;padding:24px}h1{font-size:30px}h2{margin-top:32px;font-size:20px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid #ddd;overflow-wrap:anywhere}a{color:#275e47}@media print{button{display:none}body{margin:0;padding:10px}tr{break-inside:avoid}}</style><button onclick="print()">打印 / 保存 PDF</button>'+body+'</html>').encode()
+    return ('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Amadeus 研究报告</title><script src="/preferences.js"></script><link rel="stylesheet" href="/preferences.css"><script defer src="/locale-en.js"></script><style>.figures{display:grid;grid-template-columns:1fr 1fr;gap:24px}figure{margin:0;break-inside:avoid}figure svg{max-width:100%;font:12px system-ui}.molecule svg{width:150px;height:90px}figcaption,figure p{font-size:12px}.barrow{display:grid;grid-template-columns:180px 1fr 65px;gap:15px;align-items:center;margin:12px 0}.track{background:#eceef2;height:14px}.track i{display:block;background:#245dcc;height:100%}body{font:15px/1.8 system-ui;color:#25262b;max-width:1000px;margin:40px auto;padding:24px}h1{font-size:30px}h2{margin-top:32px;font-size:20px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid #ddd;overflow-wrap:anywhere}a{color:#275e47}@media print{button{display:none}body{margin:0;padding:10px}tr{break-inside:avoid}}</style><button onclick="print()">打印 / 保存 PDF</button>'+body+'</html>').encode()

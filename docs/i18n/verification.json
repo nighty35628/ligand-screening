@@ -1,0 +1,27 @@
+{
+  "five_case_views": 35,
+  "scientific_state_unchanged": true,
+  "preference_persistence": true,
+  "language_roundtrip": true,
+  "english_wiki_search": true,
+  "mobile": {
+    "width": 390,
+    "scroll": 390
+  },
+  "page_errors": [],
+  "date": "2026-10-30",
+  "catalogue_source_strings": 2046,
+  "theme_values": [
+    "light",
+    "dark"
+  ],
+  "languages": [
+    "zh-CN",
+    "en"
+  ],
+  "custom_input_preserved": true,
+  "preset_message_language_roundtrip": true,
+  "local_http_assets": "pass",
+  "model_training": false,
+  "visual_review": "desktop and 390px mobile screenshots reviewed; controls, chart contrast and English wrapping confirmed"
+}

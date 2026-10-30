@@ -1,0 +1,56 @@
+/* Shared controls and graphite dark theme for the workbench and project documentation. */
+:root{--ui-control-bg:#fff;--ui-control-hover:#eef0f4;--ui-control-ink:#454951;--ui-control-line:#dedfe3}
+.amadeus-preferences{display:inline-flex;align-items:center;gap:3px;flex:none;margin-inline-start:8px;padding:3px;border:1px solid var(--ui-control-line);border-radius:9px;background:var(--ui-control-bg);line-height:1}
+.amadeus-preferences button{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:32px;border:0;border-radius:6px;padding:0 8px;background:transparent;color:var(--ui-control-ink);cursor:pointer;font:600 12px/1.2 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.amadeus-preferences button:hover{background:var(--ui-control-hover)}
+.amadeus-preferences button:focus-visible{outline:2px solid #719bff;outline-offset:2px}
+.amadeus-preferences svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.preferences-standalone{display:flex;width:max-content;margin:12px 0 12px auto}
+html[data-theme=dark]{color-scheme:dark;--ink:#edf0f4;--muted:#a6abb5;--paper:#16181d;--bg:#16181d;--line:#343840;--dark:#1c1f25;--blue:#8aafff;--green:#8aafff;--orange:#d69a70;--rust:#d69a70;--green-soft:#26334b;--selected:#293953;--hover:#272b33;--ui-control-bg:#23262e;--ui-control-hover:#353b47;--ui-control-ink:#e4e8ee;--ui-control-line:#414650;background:#16181d;color:var(--ink)}
+html[data-theme=dark] body{background:#16181d;color:var(--ink)}
+html[data-theme=dark] :is(.top,.topbar,.conversation){background:#1b1e24;color:var(--ink)}
+html[data-theme=dark] :is(.side,.sidebar){background:#1e2128;color:var(--ink)}
+html[data-theme=dark] :is(.side-caption,.side small,.side-bottom a,.side button,.sidebar a,.sidebar summary,.brand-caption,.breadcrumb,.description,.meta,.doc-footer,.toc a,.top-nav a,.top-actions a){color:var(--muted)}
+html[data-theme=dark] :is(.side button:hover,.side button.active,.sidebar a:hover,.sidebar a[aria-current=page]){background:#303642;color:#f1f4fa}
+html[data-theme=dark] :is(.side .new-project,.btn:not(.primary),.suggestion,.composer-home,.sheet,.surface,.paper,.search-box,.copy,.menu-toggle,.search-open kbd,.candidate-card,.report-paper,.history-row,.sealed-panel,.mode-option,.budget-button){background:#20242c;border-color:var(--line);color:var(--ink)}
+html[data-theme=dark] :is(input,textarea,select,.input,.chat-form textarea[readonly]){background:#1b1e25;border-color:#464d59;color:var(--ink);caret-color:var(--blue)}
+html[data-theme=dark] :is(input,textarea)::placeholder{color:#a2a8b3;opacity:1}
+html[data-theme=dark] :is(.btn.primary,.primary){background:#326bd9;border-color:#326bd9;color:#fff}
+html[data-theme=dark] :is(.btn.primary:hover,.primary:hover){background:#3b76e8}
+html[data-theme=dark] :is(.btn:not(.primary):hover,.suggestion:hover,.entry-list button:hover,.recent-row:hover,.candidate:hover){background:#2b303a;color:var(--ink)}
+html[data-theme=dark] :is(.case-feature,.engine,.message.user,.flow-meter,.offline,.badge-done,.search-open,.toc-mobile,.pipeline div,.branch div,.metric-choice>div:first-child,.processing-outcome,.decision-change){background:#242b37;color:var(--ink)}
+html[data-theme=dark] :is(.case-feature p,.engine-grid p,.metric-choice p,.sidebar a,.search-open,.search-open kbd,.search-head button,.menu-toggle,.message.user .role){color:#b4bdcc}
+html[data-theme=dark] :is(.research-guide,.status,.result-context,.evidence-lead){background:#253550;color:#e1eaff}
+html[data-theme=dark] .status.error{background:#442b27;color:#ffc9b4}
+html[data-theme=dark] :is(.pill,.badge,.tag){background:#2a3850;color:#c1d4ff}
+html[data-theme=dark] :is(th,.search-head button){background:#272c35;color:var(--muted)}
+html[data-theme=dark] :is(pre,code){background:#20242b;color:#d7dfeb}
+html[data-theme=dark] pre code{background:none}
+html[data-theme=dark] :is(.flow-track,.bar-track,.track,.activity-track){background:#363d4b}
+html[data-theme=dark] :is(.bar-track i,.activity-track i,.flow-track i){background:#739fff}
+html[data-theme=dark] :is(.chart text,.chart .value){fill:#b9c2d1}
+html[data-theme=dark] :is(.chart line,.chart path[stroke="#dfe4eb"],.chart path[stroke="#e2e5eb"]){stroke:#454d5c}
+html[data-theme=dark] :is(.brand-logo,.brand-compact,.identity img,.topbar>img,.topbar>a img,.intro-mark,.report-logo,.wordmark img,.report-brand>svg,.case-structure,.structure svg,.molecule svg){filter:invert(1) hue-rotate(180deg)}
+html[data-theme=dark] .section-nav{background:#16181d}
+html[data-theme=dark] :is(.search-results a:hover,.search-results a:focus){background:#2b3950}
+html[data-theme=dark] .search-box::backdrop{background:#0009}
+html[data-theme=dark] #toast{background:#dfe7f5;color:#18202e}
+html[data-theme=dark] ::selection{background:#3b527d;color:#fff}
+html[data-theme=dark] :is(.workspace-body,.messages,.table-wrap,.sidebar,.search-results){scrollbar-color:#596170 transparent}
+html[lang=en] :is(.side nav button,.sidebar a){line-height:1.5}
+html[lang=en] .flow-steps{gap:10px}
+html[lang=en] .flow-steps span{white-space:normal;line-height:1.5}
+html[lang=en] :is(.top strong,.research-guide strong,.task-line h2){overflow-wrap:anywhere}
+html[lang=en] .top .round{gap:8px;flex-shrink:0}
+@media(max-width:850px){.amadeus-preferences{margin-inline-start:0}.amadeus-preferences button{min-width:32px;height:32px;padding-inline:6px}html[lang=en] .top{height:auto;min-height:76px;padding-block:12px;flex-wrap:wrap}.top .round{flex-wrap:wrap;justify-content:flex-end}.top-nav{flex-wrap:wrap}html[lang=en] .project-layout{height:auto;min-height:calc(100vh - 76px)}}
+@media(max-width:480px){.top{padding-inline:16px;gap:8px}.top .round{gap:6px}.top-nav{gap:6px}.identity span{display:none}.top-nav .search-open{padding-inline:7px}.amadeus-preferences{gap:0}.topbar{flex-wrap:wrap;height:auto;min-height:76px;padding-block:12px}.top-actions{gap:12px}}
+@media(prefers-reduced-motion:no-preference){.amadeus-preferences button{transition:background .16s ease,color .16s ease}}
+@media print{.amadeus-preferences{display:none!important}html[data-theme]{color-scheme:light;--ink:#202124;--muted:#64676d;--line:#dedfe3;--paper:#fff;--bg:#fff;--blue:#245dcc;--green:#245dcc;background:#fff;color:#202124}html[data-theme=dark] body{background:#fff;color:#202124}html[data-theme=dark] :is(.sheet,.paper,.surface,.report-paper,table,th,pre,code){background:#fff;color:#202124}html[data-theme=dark] :is(.brand-logo,.brand-compact,.identity img,.report-logo,.wordmark img,.report-brand>svg,.case-structure,.structure svg,.molecule svg){filter:none}}
+html[data-theme=dark] figure>svg text{fill:#b9c2d1}
+@media(max-width:480px){body[data-wiki-base] .search-open span{font-size:0}body[data-wiki-base] .search-open span:before{content:'⌕';font-size:20px;line-height:1}body[data-wiki-base] .top{flex-wrap:nowrap;gap:8px}body[data-wiki-base] .identity img{width:110px}body[data-wiki-base] .menu-toggle{padding-inline:7px}}
+@media print{html[data-theme=dark] figure>svg text{fill:#626873}}
+html[data-theme=dark] .flow-steps{color:#a6abb5}
+html[data-theme=dark] .flow-steps .passed{color:#c2c9d5}
+html[data-theme=dark] .flow-steps .current{color:#9ebeff}
+@media(max-width:480px){html[lang=en] .composer-home textarea{min-height:180px}html[lang=en] .case-structure{width:86px}html[lang=en] .case-feature{gap:16px}}
+html[data-theme=dark] .sidebar .brand{background:transparent}

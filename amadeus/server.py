@@ -274,6 +274,7 @@ class Handler(BaseHTTPRequestHandler):
             files = {'/': 'index.html', '/index.html': 'index.html', '/app.js': 'app.js',
                      '/style.css': 'style.css', '/mark.svg': 'mark.svg', '/classic.html':'classic.html',
                      '/research-cases.json':'research-cases.json', '/logo.svg':'logo.svg', '/wordmark.svg':'wordmark.svg', '/logo-source.png':'logo-source.png',
+                     '/preferences.js':'preferences.js', '/preferences.css':'preferences.css', '/locale-en.js':'locale-en.js',
                      '/demo-adapter.js':'demo-adapter.js', '/workbench.js':'workbench.js', '/workbench.css':'workbench.css', '/case-molecule.svg':'case-molecule.svg',
                      '/sitemap.xml':'sitemap.xml', '/evidence.html':'evidence.html', '/evidence-data.json':'evidence-data.json',
                      '/sample-history.csv':'sample-history.csv', '/sample-candidates.csv':'sample-candidates.csv'}
