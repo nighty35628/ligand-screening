@@ -1,0 +1,626 @@
+[
+  {
+    "title": "Amadeus 项目文档",
+    "section": "",
+    "text": "材料研究的数据分析与建模助手：从资料整理、材料表示，到模型验证、预测与报告。 开始使用 在线体验、本机安装与首次运行 接入自己的数据 准备历史记录、候选表与字段映射 理解模型 通用回归与纳米晶双路预测 参与开发 接口、扩展方法、测试与部署",
+    "path": ""
+  },
+  {
+    "title": "Amadeus 项目文档",
+    "section": "Amadeus 做什么",
+    "text": "Amadeus把材料研究中的资料整理、数据分析和预测放在同一个项目里。你可以从一个研究问题、已有实验表或公开案例开始，整理可比较的记录，构造材料特征，比较模型，再查看候选预测和分析报告。 需要安排实验时，可以继续编辑名单、保存计划、记录结果，并将新增测量带入后续分析。结果回填是分析流程的延伸，不是每项研究的必选终点。",
+    "path": "#section-1"
+  },
+  {
+    "title": "Amadeus 项目文档",
+    "section": "输入与输出",
+    "text": "你提供 系统完成 你得到 研究目标、文献正文或文本PDF 检索、信息提取与原文核对 来源记录、实验信息草稿和可编辑数据表 历史表、候选表、字段含义 数据检查、特征与模型比较 验证分数、候选预测、排名和报告 公开案例或已完成项目 加载模型／分析记录，展示对照 完整流程体验及可追溯结果",
+    "path": "#section-2"
+  },
+  {
+    "title": "Amadeus 项目文档",
+    "section": "选择运行方式",
+    "text": "在线工作台 可直接体验五个案例，无需账号或API Key；它使用已完成的计算结果。本机版本运行实际数据处理、模型训练、固定模型推断和项目管理。联网对话、检索和文献提取需要配置DeepSeek接口。",
+    "path": "#section-3"
+  },
+  {
+    "title": "Amadeus 项目文档",
+    "section": "阅读路线",
+    "text": "第一次使用： 快速开始 → 工作台使用指南 → 案例手册 。 带着自己的数据： 数据规范 → 材料表示 → 验证与指标 。 查看技术实现： 系统架构 → 接口与工具 → 开发与部署 。 比赛评审或快速了解研发成果，可阅读独立的 研发与技术证据页 。研究历程、版本变化与资源归属收录在本站最后一个栏目。",
+    "path": "#section-4"
+  },
+  {
+    "title": "快速开始",
+    "section": "",
+    "text": "选择在线体验，或在本机启动完整工作台。 ",
+    "path": "quickstart/"
+  },
+  {
+    "title": "快速开始",
+    "section": "在线体验",
+    "text": "打开 Amadeus工作台 ，选择一项研究。 纳米晶案例展示自动引导流程；混凝土、钢合金、带隙和热导率案例会预填内容，按照页面提示逐步操作。 查看模型分析与候选结果，保存计划，再揭晓公开参考值并生成报告。 在线项目记录保存在当前浏览器。需要保留时下载项目或报告；清除站点存储、切换浏览器不会自动迁移记录。",
+    "path": "quickstart/#section-1"
+  },
+  {
+    "title": "快速开始",
+    "section": "本机安装",
+    "text": "安装Git，以及uv或Python 3.12。首次运行会创建环境并安装 requirements-allis.txt 中的依赖。下列命令在终端执行。 git clone https://github.com/nighty35628/ligand-screening.git cd ligand-screening ./run_amadeus.sh 打开 http://127.0.0.1:8787/ 。数据导入、模型计算与图表操作可以通过工作台使用；联网功能按下一节配置。",
+    "path": "quickstart/#section-2"
+  },
+  {
+    "title": "快速开始",
+    "section": "配置对话与检索",
+    "text": "cp .env.example .env.local # 用文本编辑器打开 .env.local，填写自己的服务配置 ./run_amadeus.sh 变量 作用 DEEPSEEK_API_KEY 本机服务调用API所用凭据 DEEPSEEK_BASE_URL 服务地址，模板为 https://api.deepseek.com DEEPSEEK_MODEL 对话模型标识，模板为 deepseek-flash；以账号可用模型为准 配置由本机进程读取，同名环境变量优先于文件。密钥文件被Git忽略。对话、Search和Fetch的具体请求路径见 接口与工具 。",
+    "path": "quickstart/#section-3"
+  },
+  {
+    "title": "快速开始",
+    "section": "常用启动方式",
+    "text": "# 换一个本机端口 ./run_amadeus.sh --port 8788 # 使用已有Python环境 AMADEUS_PYTHON=/absolute/path/to/python ./run_amadeus.sh 工作台监听127.0.0.1。本机项目保存在 outputs/amadeus-workspace/ ，重启后可以继续。遇到安装或接口问题，查看 常见问题 。",
+    "path": "quickstart/#section-4"
+  },
+  {
+    "title": "工作台使用指南",
+    "section": "",
+    "text": "从问题、资料或实验表开始，完成一次可保存的分析。 ",
+    "path": "guide/"
+  },
+  {
+    "title": "工作台使用指南",
+    "section": "创建研究",
+    "text": "输入材料体系、想分析的性能，以及手头的数据。例：“我有混凝土配方与养护龄期记录，希望预测抗压强度并比较候选。”有自己的数据时，进入数据页上传历史表与候选表；只想体验时，直接选择首页研究案例。",
+    "path": "guide/#section-1"
+  },
+  {
+    "title": "工作台使用指南",
+    "section": "整理资料与字段",
+    "text": "正文和文本PDF先进入实验提取草稿。检查每条记录是否属于同一实验、数值与单位是否一致，再接受为实验表。数据页选择编号、目标、输入特征、分组与优化方向。目标列表示要预测的结果，不能同时选为输入特征。 在“资料与模型引擎”中查看缺失、重复和转换记录，按需要生成分子特征。详见 数据规范 。",
+    "path": "guide/#section-2"
+  },
+  {
+    "title": "工作台使用指南",
+    "section": "运行与阅读模型分析",
+    "text": "运行模型比较后，先看验证方式和模型分数，再看候选预测。回归通常以MAE选择模型；候选排序按“越大越好”或“越小越好”执行。纳米晶使用双路名次融合，因此应按融合排名阅读，不能只按曲线分支的单个预测值重排。 公开案例默认使用已有结果。想重新计算，在本机引擎中主动运行建模；在线版保留冻结分析。",
+    "path": "guide/#section-3"
+  },
+  {
+    "title": "工作台使用指南",
+    "section": "保存计划与记录结果",
+    "text": "调整测试名额、排除不可用候选，或指定名单。 保存本轮计划，让候选与分析版本对应。 填写实际结果，或显式选择公开案例的历史结果。带隙案例会标为计算参考值。 进入下一轮，已完成项会从待选名单中排除。表格工作流可将新增测量纳入重训。 修改名额或排除候选只改变选择结果，不会自动改变已有模型预测。切换目标指标会开启新的分析记录。",
+    "path": "guide/#section-4"
+  },
+  {
+    "title": "工作台使用指南",
+    "section": "导出与继续工作",
+    "text": "研究报告汇总目标、模型、图表、计划及结果。浏览器打印可保存PDF，计划可导出CSV，项目可导出JSON。本机重开项目保留分析历史；在线端和本机端的项目存储各自独立。",
+    "path": "guide/#section-5"
+  },
+  {
+    "title": "常见问题与排查",
+    "section": "",
+    "text": "解释运行差异、数据错误和结果保存。 ",
+    "path": "faq/"
+  },
+  {
+    "title": "常见问题与排查",
+    "section": "在线为什么不能训练自己的数据？",
+    "text": "GitHub Pages只提供静态文件。在线端用已有预测体验操作；自己的CSV建模、文献提取和联网对话使用 本机版本 。",
+    "path": "faq/#section-1"
+  },
+  {
+    "title": "常见问题与排查",
+    "section": "没有API Key能做什么？",
+    "text": "可以浏览Wiki和在线案例；本机的数据表操作、固定模型推断与模型训练不依赖大模型API。自由对话、联网检索和基于大模型的正文提取需要配置接口。",
+    "path": "faq/#section-2"
+  },
+  {
+    "title": "常见问题与排查",
+    "section": "模型标识或搜索接口报错",
+    "text": "检查 .env.local 中的base URL和模型是否在账号可用范围内。当前模板模型名来自项目配置，不保证所有账号均有权限。若对话可用而Search/Fetch报错，需核对这两个路径是否被服务端支持；适配位置在provider.py。",
+    "path": "faq/#section-3"
+  },
+  {
+    "title": "常见问题与排查",
+    "section": "字段不一致、编号重复或目标无效",
+    "text": "历史表与候选表必须包含全部输入特征；目标、编号和分组不要选为输入。候选ID不能为空或重复。回归目标需为有限数，表格至少有10条有标签历史记录。按组验证需要至少两个可区分的组。",
+    "path": "faq/#section-4"
+  },
+  {
+    "title": "常见问题与排查",
+    "section": "PDF提取不到记录",
+    "text": "确认PDF有可复制文本。扫描页先做OCR；正文需要包含可归属于同一实验的材料、条件和测量值。提取字段缺少匹配的原文证据时会被省略，检查返回的issues和草稿。",
+    "path": "faq/#section-5"
+  },
+  {
+    "title": "常见问题与排查",
+    "section": "进度停止或重启后显示中断",
+    "text": "先读取操作message。重启会将遗留running状态标为interrupted，项目数据仍保留。相同配置的优化可用原运行ID恢复搜索；修改数据后应建立新的运行。启动端口被占用时用 --port 8788 。",
+    "path": "faq/#section-6"
+  },
+  {
+    "title": "常见问题与排查",
+    "section": "为什么看起来误差低，但某个候选差很多？",
+    "text": "MAE是整体平均，不描述每个候选。长尾材料性能尤其需要看最大误差和散点图。筛选排名与绝对预测也应分别评价，参见 热导率案例 。",
+    "path": "faq/#section-7"
+  },
+  {
+    "title": "常见问题与排查",
+    "section": "记录存在哪里？",
+    "text": "本机项目在 outputs/amadeus-workspace/ ；在线记录在浏览器存储。两者不自动同步。重要研究请导出项目和报告，本机备份前先停止写入并保存整个工作目录中的相关数据。",
+    "path": "faq/#section-8"
+  },
+  {
+    "title": "数据格式与字段映射",
+    "section": "",
+    "text": "准备历史表与候选表，定义目标、分组及单位。 ",
+    "path": "data/"
+  },
+  {
+    "title": "数据格式与字段映射",
+    "section": "历史表与候选表",
+    "text": "历史表包含已知结果，候选表包含待预测对象。两表需要相同的输入特征列；候选编号必须非空且唯一。回归引擎要求至少10条有标签历史记录与非空候选表。CSV首行使用唯一列名，当前CSV入口最多20,000行、300列。 下面仅演示格式，不代表可直接训练的数据量。 # training.csv id,mix_group,cement,water,age_day,strength_mpa history_1,mix_a,300,180,28,35.2 history_2,mix_a,300,180,90,43.1 # candidates.csv id,mix_group,cement,water,age_day candidate_1,mix_b,340,170,28",
+    "path": "data/#section-1"
+  },
+  {
+    "title": "数据格式与字段映射",
+    "section": "字段映射",
+    "text": "{ \"id\": \"id\", \"target\": \"strength_mpa\", \"group\": \"mix_group\", \"features\": [\"cement\", \"water\", \"age_day\"], \"task\": \"regression\", \"direction\": \"max\", \"unit\": \"MPa\", \"feature_groups\": { \"composition\": [\"cement\", \"water\"], \"condition\": [\"age_day\"] }, \"optimize\": true, \"search_trials\": 4, \"selection_metric\": \"mae\" } group 应表达需要一起保留的材料或配方身份，例如同配方不同龄期。编号、目标和分组列不进入输入特征。分组名称不能代替真实批次信息；如果数据只支持组成分组，就按组成解释验证结果。",
+    "path": "data/#section-2"
+  },
+  {
+    "title": "数据格式与字段映射",
+    "section": "JSON与文献输入",
+    "text": "JSON接受非空对象数组，或包含 rows ／ records 的对象。带 reactions 数组的原始纳米晶档案走专用展平逻辑，分出样品、参照与空白。 文献正文及文本PDF由大模型提出记录，并为每个非编号字段提供原文片段。系统检查片段是否确实存在；它不能替代对实验归属、单位和数值含义的人工核对。扫描PDF需先提供OCR文本。超过8,000字符时分段提取，跨段关系在接受前检查。",
+    "path": "data/#section-3"
+  },
+  {
+    "title": "数据格式与字段映射",
+    "section": "单位转换与缺失值",
+    "text": "数据处理保留原值及修改记录。现成转换包括μL/mL、pmol/nmol、小时/天、百分数/比例。配体用量的换算为 amount_nmol = volume_ul × stock_um / 1000 ；原液浓度不是最终溶液浓度或表面覆盖度。 数值缺失可在模型训练管线内用中位数填补；目标必须为有限数。异常值、重复记录是否合并应根据实验含义决定，数据审计本身不自动判定科学上的重复实验。",
+    "path": "data/#section-4"
+  },
+  {
+    "title": "数据格式与字段映射",
+    "section": "可用模板",
+    "text": "仓库各案例的 training.csv 、 candidates.csv 、 mapping.json 和 data_dictionary.json 可用作格式参照。实际数据和字段说明位于 amadeus/examples/ 。",
+    "path": "data/#section-5"
+  },
+  {
+    "title": "材料表示与特征",
+    "section": "",
+    "text": "分清通用结构特征、专用配体表示，以及材料组成特征。 ",
+    "path": "features/"
+  },
+  {
+    "title": "材料表示与特征",
+    "section": "结构导入的通用特征",
+    "text": "molecular_features 支持SMILES与以 InChI= 开头的结构。RDKit生成分子量、LogP、氢键供体数、氢键受体数、可旋转键数和TPSA，以及radius=2的128位Morgan二值指纹。结构解析失败会返回行号和原始字符串，对应特征留空。",
+    "path": "features/#section-1"
+  },
+  {
+    "title": "材料表示与特征",
+    "section": "纳米晶专用模型表示",
+    "text": "冻结配体模型采用原42维描述符，加radius=2、2048维Morgan计数指纹。成对分支进一步使用两个测量点的表示及差值，并包含实际用量。它与通用导入工具的128位指纹是两套配置，不能直接互换模型输入。 分子指纹补充局部连接信息；描述符保留物化与拓扑概要。模型分数不直接等于已验证的配位机理，特征贡献需结合材料条件解释。",
+    "path": "features/#section-2"
+  },
+  {
+    "title": "材料表示与特征",
+    "section": "材料组成与实验条件",
+    "text": "钢合金、带隙和热导率案例将化学式解析为归一化元素比例，并生成元素数、组成熵、平均／标准差原子序数、平均原子质量、平均共价半径、平均外层电子数。周期表数值来自RDKit。 带隙案例另外保留晶格位点元素；热导率保留温度值和温度类别。室温文字不强行换成某个精确K值。当前化学式解析器支持显式元素与数量序列，遇到括号或未支持的复杂写法需要先规范化。",
+    "path": "features/#section-3"
+  },
+  {
+    "title": "材料表示与特征",
+    "section": "单类与组合特征比较",
+    "text": "通过 feature_groups 分别指定组成、材料描述符或实验条件。引擎为每组输入训练默认模型，再比较全部输入组合。互信息Top-K属于训练内选择，特征数与参数由内层验证决定。 混凝土仅配方ET开发MAE为8.489 MPa，加入龄期后为3.729 MPa。这个对照说明该数据中条件字段的价值；不意味着所有材料加入更多字段都会改善。",
+    "path": "features/#section-4"
+  },
+  {
+    "title": "模型引擎",
+    "section": "",
+    "text": "通用回归、二分类与纳米晶双路模型的执行方式。 ",
+    "path": "models/"
+  },
+  {
+    "title": "模型引擎",
+    "section": "通用回归流程",
+    "text": "核对目标、特征、编号和分组，提取有标签训练记录。 在训练折内进行数值中位数填补、标准化与类别One-hot编码。 比较Dummy、Ridge、RF、ET、XGBoost和LightGBM。 对各特征组及组合输入做外层五折验证；分组数量不足时折数相应减少。 可选启用四种树模型的Top-K与Optuna TPE优化。 按开发指标选择配置，用全部训练数据拟合并预测候选，保存模型与运行文件。 四个公开表格案例均比较三类输入×六种默认模型，加四种优化设置，共22组。自定义任务的设置数随特征组数量和优化开关变化。",
+    "path": "models/#section-1"
+  },
+  {
+    "title": "模型引擎",
+    "section": "搜索预算与目标",
+    "text": "optimize=true 开启优化； search_trials 设置每项搜索的目标试验数，案例为4。内层最多三折，搜索包含特征数量及模型参数。搜索存入SQLite，同一运行可恢复已完成试验。 selection_metric=mae 按误差选择； regret 按预算1、3、5的筛选差距选择。默认配置不一定输给优化配置：混凝土与钢合金的已完成小预算比较都选中了默认组合ET。",
+    "path": "models/#section-2"
+  },
+  {
+    "title": "模型引擎",
+    "section": "纳米晶：成对ET与直接评分ET",
+    "text": "成对ET学习两个历史实验点的相对发光差。预测候选时，针对历史参照预测差值，加回参照实测响应并聚合，得到40个用量点的曲线。取最高4点均值得到预测Q。 直接评分ET从配体表示直接预测Q。两个分支各自转换为名次，再按50%/50%平均名次排序。融合的是名次，不是不同尺度的预测分数。同分规则与评价中的随机平局期望见 验证与指标 。",
+    "path": "models/#section-3"
+  },
+  {
+    "title": "模型引擎",
+    "section": "二分类入口",
+    "text": "二分类由 tabular.py 执行，比较ExtraTreesClassifier、逻辑回归、HistGradientBoostingClassifier与DummyClassifier。按平衡准确率选择，候选按指定正类概率排序。当前使用最多三折分组或分层验证，不使用通用回归的22组嵌套搜索。五个公开案例均为回归或排序任务。",
+    "path": "models/#section-4"
+  },
+  {
+    "title": "模型引擎",
+    "section": "保存的分析结果",
+    "text": "回归运行保存配置、划分、逐折分数、折外预测、选中特征、搜索记录、候选预测及 model.joblib 。模型保存后会重载并核对预测一致性。 系统架构 说明这些文件如何关联到项目。",
+    "path": "models/#section-5"
+  },
+  {
+    "title": "验证设计与指标",
+    "section": "",
+    "text": "区分开发比较、留出评价、筛选效果和工程复核。 ",
+    "path": "validation/"
+  },
+  {
+    "title": "验证设计与指标",
+    "section": "训练、开发与候选",
+    "text": "训练内部交叉验证用于比较模型与选择参数；留出候选用于评价最终预测。相同组成或配方的相关记录应归到同组。预处理和特征选择在训练管线内拟合，候选标签不进入模型输入。 公开案例的候选划分由准备脚本完成。自定义上传时，用户需要检查历史表与候选表的身份关系；引擎的内部GroupKFold不能自动补足所有科研场景的外部划分设计。",
+    "path": "validation/#section-1"
+  },
+  {
+    "title": "验证设计与指标",
+    "section": "误差与解释",
+    "text": "指标 含义 如何看 MAE 预测与参考值绝对差的平均 越低越好，保留目标单位 R² 相对常数均值预测的拟合表现 结合分布与大误差样本一起看 平衡准确率 各类别召回率的平均 用于二分类模型比较 开发集最佳CV分数已经参与模型选择，不能当作额外独立测试结果。热导率的MAE并不突出最大误差，因此案例同时报告高值SiC的低估。",
+    "path": "validation/#section-2"
+  },
+  {
+    "title": "验证设计与指标",
+    "section": "筛选指标Q与AUR",
+    "text": "纳米晶Q为每条40点曲线中最高4点相对发光FOM的均值。AUR为推荐预算1—5下，候选池最佳Q与已选最佳Q的平均差距，越低越好。B1/B3/B5分别描述对应推荐数量下找到的最好Q。 指标降幅表示筛选差距缩小，不是发光增幅。15个固定候选池来自90个配体的3套五折分配，配体在池间重复出现。最终报告按回顾性比较解释，保留每池及各预算结果。",
+    "path": "validation/#section-3"
+  },
+  {
+    "title": "验证设计与指标",
+    "section": "平局与可复算性",
+    "text": "名次构建采用平均名次处理相同分数。展示名单按固定规则打破平局；离线评价对并列组的随机选择计算精确期望，因此一次展示轨迹不必等于表格中的期望值。复算需使用同样的池、预算与平局规则。",
+    "path": "validation/#section-4"
+  },
+  {
+    "title": "验证设计与指标",
+    "section": "工程检查解决什么问题",
+    "text": "数值复算、保存重载、数据版本、候选标签隔离及快照一致性检查验证程序是否按设计执行。它们不能代替新增湿实验；公开带隙标签来自物理计算，也不称为本项目实际测量。",
+    "path": "validation/#section-5"
+  },
+  {
+    "title": "系统架构与状态",
+    "section": "",
+    "text": "前端、Agent、数据工具和模型进程如何共同完成一次分析。 ",
+    "path": "architecture/"
+  },
+  {
+    "title": "系统架构与状态",
+    "section": "模块关系",
+    "text": "工作台界面 workbench.js HTTP服务与项目状态 server.py · workflow.py 数据工具 / 模型引擎 / API data_engine · engine · provider 预测、报告与项目档案 JSON · SQLite · joblib 前端按钮与对话工具修改同一份项目。模型结果来自执行模块，界面从保存的分析中读取；操作结果也返回给对话助手。",
+    "path": "architecture/#section-1"
+  },
+  {
+    "title": "系统架构与状态",
+    "section": "Agent如何编排工具",
+    "text": "DeepSeek接收当前任务、字段、候选编号和已有选择，提出结构化工具调用。 converse 将工具名映射到实际函数，执行后将结果反馈给模型。一次对话最多12轮工具循环，重复的工具名与相同参数会复用本轮记录，避免重复执行。 资料搜索通过Search/Fetch；正文提取形成草稿；接受草稿后形成实验表；训练调用本机引擎。SciencePal参与方法研发，其研究档案放在 项目记录 ，不是运行时依赖。",
+    "path": "architecture/#section-2"
+  },
+  {
+    "title": "系统架构与状态",
+    "section": "项目与数据版本",
+    "text": "SQLite数据库位于 outputs/amadeus-workspace/projects.sqlite3 。项目包含任务、数据集、字段映射、分析历史、计划、测量、消息、来源和操作回执。数据版本保留处理前后的表与处理原因，计划和测量关联当时的分析。 前端读取的可见项目只包含数据表预览和摘要；完整数据保留在本机项目中。导出项目JSON包含更完整的研究记录，分享前应检查自己导入的内容。",
+    "path": "architecture/#section-3"
+  },
+  {
+    "title": "系统架构与状态",
+    "section": "执行与恢复",
+    "text": "HTTP动作启动后台线程；表格训练在子进程中执行，进度写入运行目录。页面轮询项目状态。取消请求设置停止标志，项目保存已经完成的内容。服务启动时将遗留的运行中状态标为interrupted，避免页面一直等待。 同一个 operation_id 用于去重操作回执；长任务完成后再发下一项动作。搜索恢复适用于相同数据和配置的运行，不能把旧试验直接当成新数据评价。",
+    "path": "architecture/#section-4"
+  },
+  {
+    "title": "系统架构与状态",
+    "section": "在线版的适配",
+    "text": "demo-adapter.js 在浏览器内提供案例数据和动作回放，使用冻结预测与公开答案，项目存入浏览器存储。静态站不调用本机Python或DeepSeek。两端共用前端展示，运行能力由所在环境决定。",
+    "path": "architecture/#section-5"
+  },
+  {
+    "title": "HTTP接口与Agent工具",
+    "section": "",
+    "text": "本机项目接口、异步动作和服务适配位置。 ",
+    "path": "api/"
+  },
+  {
+    "title": "HTTP接口与Agent工具",
+    "section": "本机HTTP入口",
+    "text": "默认地址为 http://127.0.0.1:8787 。以下为当前内部接口，适合本机集成和开发调试。 请求 用途 GET /api/config 本机标识与API是否已配置，不返回密钥 GET /api/projects 列出项目摘要 POST /api/projects 创建项目，接收title、goal GET /api/projects/{id} 读取可见项目和操作状态 POST /api/projects/{id}/action 提交异步动作，返回202 POST /api/projects/{id}/cancel 请求停止 GET /api/projects/{id}/report HTML报告 GET /api/projects/{id}/csv 计划CSV GET /api/projects/{id}/export 项目JSON",
+    "path": "api/#section-1"
+  },
+  {
+    "title": "HTTP接口与Agent工具",
+    "section": "动作请求示例",
+    "text": "先创建项目，从返回值取得真实id，再将它替换到请求路径。以下动作读取公开混凝土快照，不训练模型。 { \"action\": \"material_example\", \"operation_id\": \"my-unique-operation-001\", \"args\": {\"example\": \"concrete\", \"replay\": true} } 收到202表示动作已接受。继续读取项目，检查 operation.status 是否为complete或failed，并读取message。不要把HTTP请求接受当作模型已完成。",
+    "path": "api/#section-2"
+  },
+  {
+    "title": "HTTP接口与Agent工具",
+    "section": "常用动作名称",
+    "text": "动作 作用 chat / task 对话／设置研究任务 upload / extract / accept_extraction / process 导入、提取、接受草稿与数据处理 specialist / material_example / train 专用预测、公开案例与表格建模 adjust / save_plan / record / history_results 调整候选、保存计划、记录或揭晓结果 next_round 进入下一轮 动作参数由 workflow.start 分发到实际函数。Agent工具使用另一组函数名，例如 train_table 、 extract_experiments 和 record_results ；不要把工具名直接替换成HTTP动作名。",
+    "path": "api/#section-3"
+  },
+  {
+    "title": "HTTP接口与Agent工具",
+    "section": "DeepSeek适配",
+    "text": "provider.py 当前调用 /chat/completions 、 /v1/tools/search 和 /v1/tools/fetch 。Search每次请求5项结果，query截取128字符。服务适配器对部分超时、限流和服务端错误最多尝试3次。接口是否可用取决于配置地址和账号服务权限；更换服务时修改适配层与相应测试。",
+    "path": "api/#section-4"
+  },
+  {
+    "title": "开发、测试与部署",
+    "section": "",
+    "text": "定位模块，增加数据或模型，并部署工作台和文档。 ",
+    "path": "development/"
+  },
+  {
+    "title": "开发、测试与部署",
+    "section": "目录结构",
+    "text": "amadeus/ server.py HTTP服务与固定案例推断 workflow.py 项目、动作、Agent工具与导出 data_engine.py 提取、审计、转换与结构特征 engine.py 回归模型比较与搜索 tabular.py CSV入口与二分类 provider.py 对话、Search、Fetch适配 examples/ 标准案例数据、映射与来源 web/ 工作台、案例快照与生成的Wiki allis_delivery/ 纳米晶双路模型 allis_benchmark/ 统一基线与指标评价 results/ 已完成运行的公开结果 scripts/ 数据准备、核验和页面构建 docs/wiki/ Wiki源文章与样式 tests/ 单元与工作流检查",
+    "path": "development/#section-1"
+  },
+  {
+    "title": "开发、测试与部署",
+    "section": "接入新数据集",
+    "text": "将来源、许可、字段单位和样本身份写入数据说明。 准备历史表、候选表与mapping，先使用现有上传入口完成分析。 需要组成特征时参考现有准备脚本，不假定任意化学式都已被通用界面解析。 检查组隔离、候选标签、保存重开及导出。 需要成为内置案例时，再更新examples、research-cases元数据与快照构建脚本。",
+    "path": "development/#section-2"
+  },
+  {
+    "title": "开发、测试与部署",
+    "section": "增加模型或Agent工具",
+    "text": "回归模型在 engine.py 的估计器创建和比较列表中注册，新增搜索参数应放入内层优化。保存统一的scores、candidates、order等字段，保证前端继续读取。 新增Agent工具需要在TOOLS定义参数，在函数分发映射中接到实现，并确认状态与导出。新增HTTP动作还需要在 workflow.start 中接入；工具schema不会自动创建HTTP路由。",
+    "path": "development/#section-3"
+  },
+  {
+    "title": "开发、测试与部署",
+    "section": "必要测试",
+    "text": ".venv-allis/bin/python -m unittest discover -s tests -p test_data_engine.py .venv-allis/bin/python -m unittest discover -s tests -p test_material_snapshots.py node tests/test_demo_adapter.cjs python3 scripts/check_wiki.py 快照测试检查冻结结果接线，不重新训练；数据引擎测试模拟提取响应，不消耗API。真正的模型重训与完整工作流命令在各案例页单独说明。",
+    "path": "development/#section-4"
+  },
+  {
+    "title": "开发、测试与部署",
+    "section": "构建文档与在线部署",
+    "text": "python3 scripts/build_wiki.py python3 scripts/check_wiki.py Wiki由标准库Python构建，文章源在 docs/wiki/content.py 。生成独立HTML、搜索索引与站点地图，更新前端哈希清单。GitHub Actions在main分支相关路径变化后校验资产并发布Pages；在线站点只包含静态资源。 演示在网站根目录，文档位于 /wiki/ ，研发证据页位于 /evidence.html 。工作台、证据页与Wiki互相链接。",
+    "path": "development/#section-5"
+  },
+  {
+    "title": "案例手册",
+    "section": "",
+    "text": "五种材料任务共用工作台，分别查看数据、模型和评价口径。 ",
+    "path": "cases/"
+  },
+  {
+    "title": "案例手册",
+    "section": "选择案例",
+    "text": "案例 输入 → 目标 适合了解 纳米晶配体 分子结构与用量 → 相对发光 双路预测、融合排序和响应曲线 混凝土 配方与龄期 → 抗压强度 条件特征、模型比较和数据闭环 钢合金 元素组成 → 屈服强度 组成解析和材料描述符 双钙钛矿 组成与位点 → 计算带隙 计算标签与组成组隔离 热导率 组成与温度 → 实验热导率 长尾误差与排序效果的区别",
+    "path": "cases/#section-1"
+  },
+  {
+    "title": "案例手册",
+    "section": "共同操作路径",
+    "text": "从首页点击“选择这个研究”，阅读数据与模型分析，检查候选名单，再保存计划、查看参考结果和生成报告。四个表格案例提供预填内容及逐步提示；纳米晶提供自动流程展示。",
+    "path": "cases/#section-2"
+  },
+  {
+    "title": "案例手册",
+    "section": "如何理解已有结果",
+    "text": "本机首页选择案例时也可复用已有快照，便于快速体验。重新训练在本机引擎中主动发起。纳米晶是反复使用公开档案的回顾性研究，四个表格案例有各自固定留出划分。它们不共享一个可横向比较的“准确率”。",
+    "path": "cases/#section-3"
+  },
+  {
+    "title": "纳米晶发光配体",
+    "section": "",
+    "text": "利用分子结构与用量响应比较候选配体。 ",
+    "path": "nanocrystals/"
+  },
+  {
+    "title": "纳米晶发光配体",
+    "section": "问题与数据",
+    "text": "在固定CsPbBr₃后处理场景中，根据历史配体的用量响应预测候选优先级。作者公开档案含4,447条反应记录，分出样品、空白与参照后，使用90种具有完整40点响应曲线的配体。 FOM为相对发光响应，Q为最高4点FOM均值。这里没有把相对发光直接换成绝对PLQY。用量来自原液浓度和加入体积，显示单位与内部模型单位需对应。",
+    "path": "nanocrystals/#section-1"
+  },
+  {
+    "title": "纳米晶发光配体",
+    "section": "方法与划分",
+    "text": "每个固定池使用36种历史配体与18种候选；共3套五折的15池，池间身份重叠。输入为原42维描述符与2048维Morgan计数指纹。成对ET产生曲线评分，直接ET产生Q评分，再平均名次。",
+    "path": "nanocrystals/#section-2"
+  },
+  {
+    "title": "纳米晶发光配体",
+    "section": "当前结果",
+    "text": "策略 AUR ↓ 推荐3个的期望最好Q ↑ 随机 0.444518 1.484686 成对RF 0.293812 1.655376 成对ET 0.093398 1.860129 直接ET 0.109520 1.842430 等权排名融合 0.081803 1.853399 融合相对成对ET的平均筛选差距降低12.41%，前三次最好Q略低约0.36%。相对RF的变化还包含表示和估计器差异，不能全部归因于融合。",
+    "path": "nanocrystals/#section-3"
+  },
+  {
+    "title": "纳米晶发光配体",
+    "section": "体验与复算",
+    "text": "在首页选择纳米晶案例，查看两路预测、融合排名与用量曲线，完成计划后再揭晓参考测量。默认第一池提供保存的权重；其他候选池可以回放已有预测。 # 从封存预测复算统一指标 ./run_project.sh # 重新训练一个池的两个ET组件 ./run_project.sh models run --mode retrain --splits r0_f0 --output outputs/component_check 第二条会实际训练。完整多池命令、预算和评价文件见仓库PIPELINE.md。",
+    "path": "nanocrystals/#section-4"
+  },
+  {
+    "title": "混凝土抗压强度",
+    "section": "",
+    "text": "用配方与养护龄期跑通通用回归分析。 ",
+    "path": "concrete/"
+  },
+  {
+    "title": "混凝土抗压强度",
+    "section": "数据与输入",
+    "text": "UCI Concrete Compressive Strength包含1,030条公开历史测量，作者I-Cheng Yeh，DOI 10.24432/C5PK67。输入为水泥、矿渣、粉煤灰、水、减水剂、粗骨料、细骨料及养护龄期，目标为MPa抗压强度。 按配方组成分组，同配方不同龄期一起保留。859条训练，171条留出候选；分组表示组成身份，不是有记录的实验批次。",
+    "path": "concrete/#section-1"
+  },
+  {
+    "title": "混凝土抗压强度",
+    "section": "特征与模型比较",
+    "text": "输入 最佳默认模型 开发五折MAE / MPa 配方组成 ET 8.489 养护龄期 RF 10.089 配方 + 龄期 ET 3.729 22组设置中，优化配置未超过默认组合ET。最终模型的171条留出MAE为5.195 MPa。前3推荐的最好历史实测为79.297 MPa，候选池最好为79.986 MPa。",
+    "path": "concrete/#section-2"
+  },
+  {
+    "title": "混凝土抗压强度",
+    "section": "完整工作流",
+    "text": "选择研究后，页面加载训练表、候选表和已有分析。按提示保存计划、揭晓历史结果，回填3条后进入第二轮；真实验收曾使用862条记录重训，并完成保存重开和报告生成。",
+    "path": "concrete/#section-3"
+  },
+  {
+    "title": "混凝土抗压强度",
+    "section": "重跑与文件",
+    "text": "PYTHONPATH=. .venv-allis/bin/python scripts/verify_engine_workflow.py PYTHONPATH=. .venv-allis/bin/python scripts/run_material_benchmark.py 上述命令会执行实际流程或模型比较。已有结果在 results/engine-upgrade/ ；原始文件、标准表与字段说明在 amadeus/examples/concrete/ 。交互图表及完整证据可在 技术证据页 查看。",
+    "path": "concrete/#section-4"
+  },
+  {
+    "title": "钢合金屈服强度",
+    "section": "",
+    "text": "从化学组成构造特征，筛选高屈服强度候选。 ",
+    "path": "steels/"
+  },
+  {
+    "title": "钢合金屈服强度",
+    "section": "数据与任务",
+    "text": "使用Matbench v0.1的matbench_steels，312种组成与实验屈服强度。只使用化学组成，不把抗拉强度、延伸率等其他实测性能输入模型。该数据没有热处理等工艺字段，因此本例分析组成与强度的关系。",
+    "path": "steels/#section-1"
+  },
+  {
+    "title": "钢合金屈服强度",
+    "section": "表示与划分",
+    "text": "14种元素比例加7项周期表统计描述符。规范化组成共312组，固定seed 42留出47种候选，265种用于训练。此为项目自定义划分，不是Matbench官方排行榜分数。",
+    "path": "steels/#section-2"
+  },
+  {
+    "title": "钢合金屈服强度",
+    "section": "结果",
+    "text": "元素比例ET开发MAE为81.88 MPa，仅描述符ET为108.76 MPa，组合ET为80.84 MPa。小预算优化未超过默认组合ET。 47种候选留出MAE为85.28 MPa，R²为0.832。前三种不同组成的历史屈服强度为2411.5、2402.3、1730.2 MPa，包含候选池最高值。",
+    "path": "steels/#section-3"
+  },
+  {
+    "title": "钢合金屈服强度",
+    "section": "操作与复算",
+    "text": "首页选择钢合金研究，检查元素特征和模型比较，保存名单后查看历史实测。已有结果进入下一轮会排除已记录项。 # 从附带数据重建特征与划分 .venv-allis/bin/python scripts/prepare_steels.py # 执行建模和项目闭环 PYTHONPATH=. .venv-allis/bin/python scripts/verify_steels_workflow.py 重建脚本会更新示例数据文件；重新评价产生的新结果应与已提交的固定版本区分。已有运行文件在 results/steels-case/ 。",
+    "path": "steels/#section-4"
+  },
+  {
+    "title": "双钙钛矿带隙",
+    "section": "",
+    "text": "在新组成上预测GLLB-SC计算带隙。 ",
+    "path": "bandgap/"
+  },
+  {
+    "title": "双钙钛矿带隙",
+    "section": "数据来源与标签",
+    "text": "使用matminer公开的double_perovskites_gap。1,306条记录的目标来自GLLB-SC电子结构计算。界面和报告将其标为“计算参考值”，不是本项目或原始实验的光学测量。",
+    "path": "bandgap/#section-1"
+  },
+  {
+    "title": "双钙钛矿带隙",
+    "section": "输入与评价",
+    "text": "保留元素比例、周期表统计及A/B位点元素。按规范化组成分组，训练1,111条（1,033个组成组），候选195条（183组）。同组成不跨训练与候选，模型依据训练内五折结果选择。",
+    "path": "bandgap/#section-2"
+  },
+  {
+    "title": "双钙钛矿带隙",
+    "section": "当前结果",
+    "text": "选中组合特征ET，开发MAE约0.236 eV，留出MAE为0.210661 eV，R²为0.963036。训练中位数常数参考的留出MAE为1.271 eV。前三个推荐都落入候选池参考带隙的前10%。 本例目标是筛选高带隙候选。具体应用是否需要更高带隙、某个目标区间或其他性质约束，应在新的研究任务中另行定义。",
+    "path": "bandgap/#section-3"
+  },
+  {
+    "title": "双钙钛矿带隙",
+    "section": "查看结果",
+    "text": "首页选择双钙钛矿研究，查看模型与候选，保存计划后揭晓计算参考值。文件在 results/unprepared-20261029/double_perovskites_gap/ ，包括来源审计、封存预测、划分、模型比较与报告。 该案例是在四个满足规模和组成条件的数据集中预先抽取的两项之一，复用既有引擎。准备与执行脚本为 scripts/verify_unprepared_cases.py ，运行前应阅读脚本对已有评价的保护和本地原始文件依赖。",
+    "path": "bandgap/#section-4"
+  },
+  {
+    "title": "材料热导率",
+    "section": "",
+    "text": "结合材料组成与温度，分别检查数值预测和高值筛选。 ",
+    "path": "thermal/"
+  },
+  {
+    "title": "材料热导率",
+    "section": "数据与条件整理",
+    "text": "使用matminer的citrine_thermal_conductivity公开实验数据。原始872条，按组成与条件整理后762条；同一组成与相同条件的重复项取标签中位数并保留原始值。642条用于训练，120条为候选，对应211和38个组成组。 明确记录的K温度作为数值；room temperature和standard保留为类别，不推断精确温度。目标单位为W/(m·K)。候选单位是组成与条件，可能有同材料不同温度。",
+    "path": "thermal/#section-1"
+  },
+  {
+    "title": "材料热导率",
+    "section": "模型与结果",
+    "text": "沿用22组比较，选中元素比例及温度输入的XGBoost。留出MAE为7.713917 W/(m·K)，R²为0.268334；常数参考MAE为10.625 W/(m·K)。前三个推荐中2个位于候选前10%，前5包含池内最高值。",
+    "path": "thermal/#section-2"
+  },
+  {
+    "title": "材料热导率",
+    "section": "读结果时注意高值误差",
+    "text": "室温SiC参考值372 W/(m·K)，预测约44.2，排名第4。排序找到高值候选与数值准确是两个问题。本例可用于观察高值筛选，也清楚展示仅用组成和有限条件预测绝对热导率的不足。",
+    "path": "thermal/#section-3"
+  },
+  {
+    "title": "材料热导率",
+    "section": "操作和档案",
+    "text": "首页选择热导率研究，查看数据条件、模型分析和候选，再揭晓历史实测。记录结果时同时保留温度信息，不把同组成不同条件混为一个测量。 全部结果在 results/unprepared-20261029/citrine_thermal_conductivity/ ，最差误差样本与数值复算在父目录的 independent_checks.json 。",
+    "path": "thermal/#section-4"
+  },
+  {
+    "title": "研发历程与方法取舍",
+    "section": "",
+    "text": "记录影响当前产品的研究选择与实现阶段。 ",
+    "path": "history/"
+  },
+  {
+    "title": "研发历程与方法取舍",
+    "section": "从科学问题与公开数据开始",
+    "text": "2026年10月19日起，从纳米晶生长、配体发光与材料主动学习相近研究出发，核查公开数据是否支持可评分任务。将测量点与独立材料分开，区分相对发光与PLQY，并优先检查完整条件的强基线。",
+    "path": "history/#section-1"
+  },
+  {
+    "title": "研发历程与方法取舍",
+    "section": "收敛到纳米晶双路模型",
+    "text": "整曲线Ridge未在保留配体上重现开发收益，部分配位特征在RF上有提升但没有稳定超过强通用表示。随后保留Morgan与成对ET，测试直接Q预测和固定等权名次融合。 融合改善平均筛选差距，同时保留前三次推荐的微小取舍。对数用量与用量差分原型没有成为当前性能来源。完整正负结果及原报告节选见 研发证据页 。",
+    "path": "history/#section-2"
+  },
+  {
+    "title": "研发历程与方法取舍",
+    "section": "SciencePal方法研究",
+    "text": "SciencePal使用自带研究流程完成问题与数据核查，之后在只提供数据、问题和规则的条件下提出并运行Direct RF、Curve RF和Ridge，并尝试组合。五池研究中直接评分RF优于该次探索组合，结果经本机另一份评价实现复算。 该工作作为方法比较与研发依据，未替换Amadeus现有生产组件。团队与Codex完成模型实验、工程实现、核查与产品交付。",
+    "path": "history/#section-3"
+  },
+  {
+    "title": "研发历程与方法取舍",
+    "section": "工程交付阶段",
+    "text": "10月28日统一训练、预测和评价入口，建立本机工作台与在线回放。10月29日接通通用数据和模型引擎，加入混凝土、钢合金、带隙和热导率案例，并统一预填与逐步引导。10月30日整理技术证据页与正式Wiki。 研究档案的日期与Git提交日期各自保留；未把拟合次数、聊天量或提交次数换算为人工工时。",
+    "path": "history/#section-4"
+  },
+  {
+    "title": "资源、贡献与维护",
+    "section": "",
+    "text": "查找第三方资源、团队分工和文档维护方式。 ",
+    "path": "resources/"
+  },
+  {
+    "title": "资源、贡献与维护",
+    "section": "第三方资源",
+    "text": "数据、原论文和上游代码保留出处。Python环境版本在 requirements-allis.txt ，模型库包括scikit-learn、XGBoost与LightGBM，特征处理使用RDKit，参数搜索使用Optuna。 公开数据各自遵循来源许可，代码库许可不能自动代替数据许可。完整来源与使用说明以仓库THIRD_PARTY.md和各案例provenance／audit文件为准。",
+    "path": "resources/#section-1"
+  },
+  {
+    "title": "资源、贡献与维护",
+    "section": "团队协作",
+    "text": "材料方向成员负责科学问题、文献、字段与指标的专业核对。AI4Science方向成员共同完成数据、建模、Agent编排、界面和测试，其中一位主要负责架构与集成，另一位重点协作数据处理、联调和可视化。项目说明、演示与视频由团队共同交付。 SciencePal和Codex参与研发辅助。团队负责需求、方案取舍、材料判断、结果审阅和最终交付。",
+    "path": "resources/#section-2"
+  },
+  {
+    "title": "资源、贡献与维护",
+    "section": "修改文档",
+    "text": "各文章由 docs/wiki/content.py 中的页面定义维护。更新行为说明时同时核对所列代码文件；修改数字时附上运行结果来源。构建器生成本页目录、上一篇／下一篇、全文搜索和sitemap，避免手动维护多份导航。 发现问题可以在GitHub仓库提交Issue，附上所在页面、复现步骤、预期行为及相关公开日志。不要在Issue中粘贴密钥或私人实验数据。",
+    "path": "resources/#section-3"
+  },
+  {
+    "title": "资源、贡献与维护",
+    "section": "网站入口",
+    "text": "产品演示 ：体验五个研究案例。 项目Wiki ：使用、模型、接口与开发文档。 研发与技术证据 ：成果、运行档案与研究历程概览。 代码仓库 ：源文件、配置、结果与版本历史。",
+    "path": "resources/#section-4"
+  }
+]

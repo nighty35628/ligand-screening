@@ -6,6 +6,9 @@ on:
     paths:
       - 'demo/final/**'
       - 'amadeus/web/**'
+      - 'docs/wiki/**'
+      - 'scripts/build_wiki.py'
+      - 'scripts/check_wiki.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -48,13 +51,15 @@ jobs:
           PY
       - name: Prepare static site
         run: |
+          python3 scripts/check_wiki.py
+          node --check amadeus/web/wiki/wiki.js
           node --check amadeus/web/app.js
           node --check amadeus/web/workbench.js
           node --check amadeus/web/demo-adapter.js
           node tests/test_demo_adapter.cjs
           python3 -m compileall -q amadeus
           mkdir _site
-          cp amadeus/web/* _site/
+          cp -R amadeus/web/. _site/
           mkdir -p _site/legacy
           cp demo/final/{index.html,data.json,manifest.json,app.js,style.css,template.html} _site/legacy/
           touch _site/.nojekyll

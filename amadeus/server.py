@@ -16,7 +16,7 @@ import threading
 import time
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs, unquote
 from . import workflow
 import uuid
 
@@ -248,12 +248,34 @@ class Handler(BaseHTTPRequestHandler):
                     return self.send(report(job, measured), content_type='text/html; charset=utf-8')
                 if parts[3] == 'csv':
                     return self.send(csv_report(job), content_type='text/csv; charset=utf-8', filename=f'amadeus-{job["id"]}.csv')
+            # Generated Wiki is public documentation; serve only manifest-listed assets.
+            if path == '/wiki':
+                self.send_response(308)
+                self.send_header('Location', '/wiki/')
+                self.end_headers()
+                return
+            if path.startswith('/wiki/'):
+                relative = unquote(path).lstrip('/')
+                if '..' in Path(relative).parts or '\\' in relative:
+                    return self.send({'error': '路径不存在。'}, 404)
+                manifest = json.loads((ROOT / 'amadeus/web-manifest.json').read_text())
+                if not path.endswith('/') and relative + '/index.html' in manifest:
+                    self.send_response(308)
+                    self.send_header('Location', path + '/')
+                    self.end_headers()
+                    return
+                if path.endswith('/'):
+                    relative += 'index.html'
+                file = (WEB / relative).resolve()
+                if relative in manifest and file.is_relative_to((WEB / 'wiki').resolve()) and file.is_file():
+                    return self.send(file.read_bytes(), content_type=mimetypes.guess_type(file.name)[0] or 'application/octet-stream')
+                return self.send({'error': '路径不存在。'}, 404)
             # Explicit static allowlist: raw data, models and archived answers are not served locally.
             files = {'/': 'index.html', '/index.html': 'index.html', '/app.js': 'app.js',
                      '/style.css': 'style.css', '/mark.svg': 'mark.svg', '/classic.html':'classic.html',
                      '/research-cases.json':'research-cases.json', '/logo.svg':'logo.svg', '/wordmark.svg':'wordmark.svg', '/logo-source.png':'logo-source.png',
                      '/demo-adapter.js':'demo-adapter.js', '/workbench.js':'workbench.js', '/workbench.css':'workbench.css', '/case-molecule.svg':'case-molecule.svg',
-                     '/evidence.html':'evidence.html', '/evidence-data.json':'evidence-data.json',
+                     '/sitemap.xml':'sitemap.xml', '/evidence.html':'evidence.html', '/evidence-data.json':'evidence-data.json',
                      '/sample-history.csv':'sample-history.csv', '/sample-candidates.csv':'sample-candidates.csv'}
             if path in files:
                 file = WEB / files[path]
