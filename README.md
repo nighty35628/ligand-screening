@@ -133,8 +133,8 @@ cp .env.example .env.local
 
 | 文件 | 用途 |
 |---|---|
-| `Amadeus-v1.0.0-source.zip` | 完整源码、已保存权重、案例数据与结果、Wiki 和运行脚本 |
-| `Amadeus-v1.0.0-demo.zip` | 独立浏览器演示，无需 API Key |
+| `Amadeus-v1.1.0-source.zip` | 完整源码、已保存权重、案例数据与结果、Wiki 和运行脚本 |
+| `Amadeus-v1.1.0-demo.zip` | 独立浏览器演示，无需 API Key |
 | `QUICKSTART.md` | 下载包的启动说明 |
 | `SHA256SUMS.txt` | 文件完整性校验 |
 
